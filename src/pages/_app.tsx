@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import {JSX} from "@babel/types";
 import NextNProgress from "nextjs-progressbar";
 import Base from "../layouts/Base";
 

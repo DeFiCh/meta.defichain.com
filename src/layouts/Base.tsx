@@ -9,6 +9,7 @@ import {
   website,
 } from "@components/siteInfo";
 import clsx from "clsx";
+import { JSX } from "@babel/types";
 
 function Base({children}: PropsWithChildren<any>): JSX.Element | null {
   const [mounted, setMounted] = useState(false);
