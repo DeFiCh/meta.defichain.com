@@ -5,6 +5,6 @@ context("/ on iphone-x", () => {
   });
 
   it("should have wrytes logo displayed", () => {
-    cy.findByTestId("wrytes_logo").should("be.visible");
+    cy.findByTestId("title_keng_ye_delete_me").should('contain.text', 'DeFi Meta Chain')
   });
 });

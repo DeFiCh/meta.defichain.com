@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -39,4 +39,3 @@ video {
   box-shadow: rgb(55 47 71) 0px 0px 5px inset;
   border-radius: 10px;
 }
-
