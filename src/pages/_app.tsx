@@ -1,9 +1,12 @@
 import "../styles/globals.css";
-import {JSX} from "@babel/types";
+import { JSX } from "@babel/types";
 import NextNProgress from "nextjs-progressbar";
 import Base from "../layouts/Base";
 
-export default function DeFiMetaChainApp({Component, pageProps}): JSX.Element {
+export default function DeFiMetaChainApp({
+  Component,
+  pageProps,
+}): JSX.Element {
   return (
     <Base {...pageProps}>
       <NextNProgress
@@ -12,7 +15,7 @@ export default function DeFiMetaChainApp({Component, pageProps}): JSX.Element {
         showOnShallow
         color="#0468D6"
         height={4}
-        options={{showSpinner: false}}
+        options={{ showSpinner: false }}
       />
       <Component {...pageProps} />
     </Base>
