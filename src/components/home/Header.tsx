@@ -25,9 +25,11 @@ export default function Header(): JSX.Element {
               </span>
             </div>
           }
-          onClick={() => {/* TODO: add handler */}}
+          onClick={() => {
+            /* TODO: add handler */
+          }}
         />
       </nav>
     </header>
-  )
+  );
 }
