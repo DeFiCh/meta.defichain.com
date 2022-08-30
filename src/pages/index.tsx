@@ -1,5 +1,4 @@
-import { Header } from "@components/home/Header";
-import clsx from "clsx";
+import Header from "@components/home/Header";
 
 function Home() {
   return (

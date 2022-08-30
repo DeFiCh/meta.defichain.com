@@ -1,15 +1,15 @@
-import { Button } from "@components/ui/Button";
+import Button from "@components/ui/Button";
 import Image from "next/image";
 import Link from "next/link";
 
-export function Header(): JSX.Element {
+export default function Header(): JSX.Element {
   return (
     <header>
       <nav className="flex justify-between w-full ">
         <Link className="flex items-center" href="/src/pages">
           <div className="relative w-[149px]">
             <Image
-              data-testid="logo"
+              data-testid="dmc_logo"
               layout="fill"
               src="/logo.svg"
               alt="DeFi Meta Chain Logo"
@@ -25,7 +25,7 @@ export function Header(): JSX.Element {
               </span>
             </div>
           }
-          onClick={() => {/**TODO: add handler**/ }}
+          onClick={() => {/** TODO: add handler **/ }}
         />
       </nav>
     </header>
