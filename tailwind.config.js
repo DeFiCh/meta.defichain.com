@@ -10,6 +10,7 @@ module.exports = {
       sans: ['"Space Grotesk"', "sans-serif"],
     },
     colors: {
+      transparent: "rgba(0, 0, 0 ,0)",
       black: {
         50: "#737373",
         100: "#666666",
@@ -113,6 +114,20 @@ module.exports = {
       },
       screens: {
         '2.5xl': '1440px'
+      },
+      keyframes: {
+        'fade-in': {
+          '0%, 100%': { opacity: 0 },
+          '35%, 65%': { opacity: 1 }
+        },
+        'fade-out': {
+          '0%, 100%': { opacity: 1 },
+          '35%, 65%': { opacity: 0 }
+        }
+      },
+      animation: {
+        'infinite-fade-in': 'fade-in 10s ease-in-out infinite',
+        'infinite-fade-out': 'fade-out 10s ease-in-out infinite'
       }
     },
   },
