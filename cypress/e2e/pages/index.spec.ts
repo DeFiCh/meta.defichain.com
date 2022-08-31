@@ -4,7 +4,7 @@ context("/ on iphone-x", () => {
     cy.viewport("iphone-x");
   });
 
-  it("should have wrytes logo displayed", () => {
-    cy.findByTestId("title_keng_ye_delete_me").should('contain.text', 'DeFi Meta Chain')
+  it("should have DMC logo displayed", () => {
+    cy.findByTestId("dmc_logo").should('exist')
   });
 });
