@@ -117,17 +117,27 @@ module.exports = {
       },
       keyframes: {
         'fade-in': {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 }
+        },
+        'fade-out': {
+          '0%': { opacity: 1 },
+          '100%': { opacity: 0 }
+        },
+        'fade-in-out': {
           '0%, 100%': { opacity: 0 },
           '35%, 65%': { opacity: 1 }
         },
-        'fade-out': {
+        'fade-out-in': {
           '0%, 100%': { opacity: 1 },
           '35%, 65%': { opacity: 0 }
         }
       },
       animation: {
-        'infinite-fade-in': 'fade-in 10s ease-in-out infinite',
-        'infinite-fade-out': 'fade-out 10s ease-in-out infinite'
+        'fade-in': 'fade-in 150ms ease-in-out',
+        'fade-out': 'fade-out 150ms ease-in-out',
+        'infinite-fade-in': 'fade-in-out 10s ease-in-out infinite',
+        'infinite-fade-out': 'fade-out-in 10s ease-in-out infinite'
       }
     },
   },
