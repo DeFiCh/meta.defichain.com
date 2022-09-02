@@ -49,11 +49,20 @@ body {
   }
 
   .brand-gradient-1 {
-    background-image: linear-gradient(103.45deg, #FF12AF 22.86%, #0821BB 74.53%, #42F9C2 105.23%);
+    background-image: linear-gradient(
+      103.45deg,
+      #ff12af 22.86%,
+      #0821bb 74.53%,
+      #42f9c2 105.23%
+    );
   }
 
   .brand-gradient-2 {
-    background-image: linear-gradient(103.45deg, #42F9C2 3.99%, #082FD4 105.23%);
+    background-image: linear-gradient(
+      103.45deg,
+      #42f9c2 3.99%,
+      #082fd4 105.23%
+    );
   }
 
   .hover-menu-gap {

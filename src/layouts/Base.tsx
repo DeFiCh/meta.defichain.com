@@ -18,11 +18,6 @@ function Base({ children }: PropsWithChildren<any>): JSX.Element | null {
     setMounted(true);
   }, []);
 
-  if (!mounted) {
-    // to prevent flashes due to different color theme on user device when react hydration happens in client side
-    return null;
-  }
-
   return (
     <div className={clsx("flex flex-col min-h-screen")}>
       <Head>
@@ -77,7 +72,7 @@ function Base({ children }: PropsWithChildren<any>): JSX.Element | null {
           href="/favicon-32x32.png"
         />
       </Head>
-      <main className={clsx("flex-grow")}>{children}</main>
+      <main className={clsx("flex-grow")}>{mounted && children}</main>
     </div>
   );
 }
