@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@babel/types": "^7.18.13",
-    "@tailwindcss/line-clamp": "^0.4.0",
+    "@tailwindcss/line-clamp": "^0.4.1",
     "@types/react-type-animation": "^1.1.1",
     "clsx": "^1.2.1",
     "feather-icons": "^4.29.0",
