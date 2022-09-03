@@ -312,12 +312,16 @@ function NavMenuMobile({
 
   return (
     <>
-      <button
+      <div
         className={clsx(
           "h-full fixed top-0 right-0 z-10 bg-black-900/20 backdrop-blur-[56px] w-full",
           { block: isOpen, hidden: !isOpen }
         )}
         onClick={onClose}
+        onKeyDown={onClose}
+        role="button"
+        aria-label="Close Menu"
+        tabIndex={0}
       />
       <div
         className={clsx(
