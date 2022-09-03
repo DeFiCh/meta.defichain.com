@@ -21,59 +21,56 @@ export default function NavMenu(): JSX.Element {
           </span>
         }
         childContainerStyle={{ left: -58 }}
-        children={
-          <>
-            <NavMenuChildItem
-              href=""
-              imagePath="/menu/documentation.svg"
-              altLabel="Documentation"
-              label={
-                <span
-                  className={`${navChildItemStyle} before:content-['Documentation'] after:content-['Documentation']`}
-                >
-                  Documentation
-                </span>
-              }
-            />
-            <NavMenuChildItem
-              href=""
-              imagePath="/menu/releases.svg"
-              altLabel="Releases"
-              label={
-                <span
-                  className={`${navChildItemStyle} before:content-['Releases'] after:content-['Releases']`}
-                >
-                  Releases
-                </span>
-              }
-            />
-            <NavMenuChildItem
-              href=""
-              imagePath="/menu/github.svg"
-              altLabel="Github"
-              label={
-                <span
-                  className={`${navChildItemStyle} before:content-['Github'] after:content-['Github']`}
-                >
-                  Github
-                </span>
-              }
-            />
-            <NavMenuChildItem
-              href=""
-              imagePath="/menu/forum.svg"
-              altLabel="Technical Forum"
-              label={
-                <span
-                  className={`${navChildItemStyle} before:content-['Technical_Forum'] after:content-['Technical_Forum']`}
-                >
-                  Technical Forum
-                </span>
-              }
-            />
-          </>
-        }
-      />
+      >
+        <NavMenuChildItem
+          href=""
+          imagePath="/menu/documentation.svg"
+          altLabel="Documentation"
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['Documentation'] after:content-['Documentation']`}
+            >
+              Documentation
+            </span>
+          }
+        />
+        <NavMenuChildItem
+          href=""
+          imagePath="/menu/releases.svg"
+          altLabel="Releases"
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['Releases'] after:content-['Releases']`}
+            >
+              Releases
+            </span>
+          }
+        />
+        <NavMenuChildItem
+          href=""
+          imagePath="/menu/github.svg"
+          altLabel="Github"
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['Github'] after:content-['Github']`}
+            >
+              Github
+            </span>
+          }
+        />
+        <NavMenuChildItem
+          href=""
+          imagePath="/menu/forum.svg"
+          altLabel="Technical Forum"
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['Technical_Forum'] after:content-['Technical_Forum']`}
+            >
+              Technical Forum
+            </span>
+          }
+        />
+      </NavMenuItem>
       <NavMenuItem
         label={
           <span
@@ -83,59 +80,56 @@ export default function NavMenu(): JSX.Element {
           </span>
         }
         childContainerStyle={{ left: -54 }}
-        children={
-          <>
-            <NavMenuChildItem
-              href=""
-              imagePath="/menu/dmc-explorer.svg"
-              altLabel="DMC Explorer"
-              label={
-                <span
-                  className={`${navChildItemStyle} before:content-['DMC_Explorer'] after:content-['DMC_Explorer']`}
-                >
-                  DMC Explorer
-                </span>
-              }
-            />
-            <NavMenuChildItem
-              href=""
-              imagePath="/menu/defichain-com.svg"
-              altLabel="DeFiChain.com"
-              label={
-                <span
-                  className={`${navChildItemStyle} before:content-['DeFiChain.com'] after:content-['DeFiChain.com']`}
-                >
-                  DeFiChain.com
-                </span>
-              }
-            />
-            <NavMenuChildItem
-              href=""
-              imagePath="/menu/whitepaper.svg"
-              altLabel="Whitepaper"
-              label={
-                <span
-                  className={`${navChildItemStyle} before:content-['Whitepaper'] after:content-['Whitepaper']`}
-                >
-                  Whitepaper
-                </span>
-              }
-            />
-            <NavMenuChildItem
-              href=""
-              imagePath="/menu/wallets.svg"
-              altLabel="Wallets"
-              label={
-                <span
-                  className={`${navChildItemStyle} before:content-['Wallets'] after:content-['Wallets']`}
-                >
-                  Wallets
-                </span>
-              }
-            />
-          </>
-        }
-      />
+      >
+        <NavMenuChildItem
+          href=""
+          imagePath="/menu/dmc-explorer.svg"
+          altLabel="DMC Explorer"
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['DMC_Explorer'] after:content-['DMC_Explorer']`}
+            >
+              DMC Explorer
+            </span>
+          }
+        />
+        <NavMenuChildItem
+          href=""
+          imagePath="/menu/defichain-com.svg"
+          altLabel="DeFiChain.com"
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['DeFiChain.com'] after:content-['DeFiChain.com']`}
+            >
+              DeFiChain.com
+            </span>
+          }
+        />
+        <NavMenuChildItem
+          href=""
+          imagePath="/menu/whitepaper.svg"
+          altLabel="Whitepaper"
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['Whitepaper'] after:content-['Whitepaper']`}
+            >
+              Whitepaper
+            </span>
+          }
+        />
+        <NavMenuChildItem
+          href=""
+          imagePath="/menu/wallets.svg"
+          altLabel="Wallets"
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['Wallets'] after:content-['Wallets']`}
+            >
+              Wallets
+            </span>
+          }
+        />
+      </NavMenuItem>
       <NavMenuItem
         label={
           <span
@@ -145,73 +139,70 @@ export default function NavMenu(): JSX.Element {
           </span>
         }
         childContainerStyle={{ left: -51 }}
-        children={
-          <>
-            <NavMenuChildItem
-              href=""
-              imagePath="/menu/discord.svg"
-              altLabel="Discord"
-              label={
-                <span
-                  className={`${navChildItemStyle} before:content-['Discord'] after:content-['Discord']`}
-                >
-                  Discord
-                </span>
-              }
-            />
-            <NavMenuChildItem
-              href=""
-              imagePath="/menu/twitter.svg"
-              altLabel="Twitter"
-              label={
-                <span
-                  className={`${navChildItemStyle} before:content-['Twitter'] after:content-['Twitter']`}
-                >
-                  Twitter
-                </span>
-              }
-            />
-            <NavMenuChildItem
-              href=""
-              imagePath="/menu/github_bw.svg"
-              altLabel="Github"
-              label={
-                <span
-                  className={`${navChildItemStyle} before:content-['Github'] after:content-['Github']`}
-                >
-                  Github
-                </span>
-              }
-            />
-            <NavMenuChildItem
-              href=""
-              imagePath="/menu/youtube.svg"
-              altLabel="YouTube"
-              label={
-                <span
-                  className={`${navChildItemStyle} before:content-['YouTube'] after:content-['YouTube']`}
-                >
-                  YouTube
-                </span>
-              }
-            />
-            <NavMenuChildItem
-              href=""
-              imagePath="/menu/telegram.svg"
-              altLabel="Telegram"
-              label={
-                <span
-                  className={`${navChildItemStyle} before:content-['Telegram'] after:content-['Telegram']`}
-                >
-                  Telegram
-                </span>
-              }
-            />
-          </>
-        }
-      />
+      >
+        <NavMenuChildItem
+          href=""
+          imagePath="/menu/discord.svg"
+          altLabel="Discord"
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['Discord'] after:content-['Discord']`}
+            >
+              Discord
+            </span>
+          }
+        />
+        <NavMenuChildItem
+          href=""
+          imagePath="/menu/twitter.svg"
+          altLabel="Twitter"
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['Twitter'] after:content-['Twitter']`}
+            >
+              Twitter
+            </span>
+          }
+        />
+        <NavMenuChildItem
+          href=""
+          imagePath="/menu/github_bw.svg"
+          altLabel="Github"
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['Github'] after:content-['Github']`}
+            >
+              Github
+            </span>
+          }
+        />
+        <NavMenuChildItem
+          href=""
+          imagePath="/menu/youtube.svg"
+          altLabel="YouTube"
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['YouTube'] after:content-['YouTube']`}
+            >
+              YouTube
+            </span>
+          }
+        />
+        <NavMenuChildItem
+          href=""
+          imagePath="/menu/telegram.svg"
+          altLabel="Telegram"
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['Telegram'] after:content-['Telegram']`}
+            >
+              Telegram
+            </span>
+          }
+        />
+      </NavMenuItem>
       <div className="px-8 py-4 group cursor-pointer relative before:cta-border before:bg-white-50 before:opacity-100 hover:before:opacity-0 after:cta-border after:brand-gradient-1 after:opacity-0 hover:after:opacity-100">
-        <Link href="">
+        <Link href="/">
           <span
             className={`${navItemStyle} before:content-['Blog'] after:content-['Blog']`}
           >
@@ -363,7 +354,7 @@ function NavMenuMobile({
         onClick={() => onClickMenu(NavItem.Community)}
         childItems={MenuChildItems.community}
       />
-      <Link href="">
+      <Link href="/">
         <div className="px-8 py-5 flex items-center justify-between">
           <span className="font-medium text-gray-50">Blog</span>
           <svg className="feather w-6 h-6 stroke-gray-50">
@@ -388,9 +379,10 @@ function NavMenuMobileItem({
 }): JSX.Element {
   return (
     <div className="shadow-[inset_0_-1px_0_rgba(255,255,255,0.15)]">
-      <div
-        className="px-8 py-5 flex items-center justify-between transition"
+      <button
+        className="px-8 py-5 flex w-full items-center justify-between transition"
         onClick={onClick}
+        type='button'
       >
         <span className="font-medium text-gray-50">{label}</span>
         <svg
@@ -401,7 +393,7 @@ function NavMenuMobileItem({
         >
           <use href="/feather-sprite.svg#chevron-down" />
         </svg>
-      </div>
+      </button>
       <div
         className={clsx(
           "transition-[max-height] duration-300 overflow-hidden",
@@ -428,7 +420,7 @@ function NavMenuMobileChildItem({
   return (
     <>
       {items.map((item) => (
-        <Link href="">
+        <Link href="/">
           <div className="pl-12 pr-8 py-5 flex items-center justify-between">
             <div className="flex">
               <div className="w-5 h-5 relative">

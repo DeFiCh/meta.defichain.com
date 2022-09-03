@@ -1,8 +1,9 @@
 import Button from "@components/ui/Button";
-import { Canvas, MeshProps, useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useState } from "react";
+import Box from "./Box";
 import NavMenu from "./NavMenu";
 
 export default function Header(): JSX.Element {
@@ -35,7 +36,7 @@ export default function Header(): JSX.Element {
               onClick={() => {
                 /* TODO: add handler */
               }}
-              style="hidden md:block"
+              customStyle="hidden md:block"
             />
             <svg
               className="feather w-6 h-6 stroke-white-50 block lg:hidden md:ml-6"
@@ -57,30 +58,5 @@ export default function Header(): JSX.Element {
         </Canvas>
       </div>
     </section>
-  );
-}
-
-//TODO: to be replace with actual jellyfish 3d model when ready
-function Box() {
-  const myMesh = useRef<MeshProps>();
-
-  useFrame(({ clock }) => {
-    if (myMesh === undefined || myMesh.current === undefined) return;
-    const a = clock.getElapsedTime();
-    myMesh.current.position.y = 0.25 * Math.sin(a) - 1;
-    myMesh.current.position.x = 0.25 * Math.sin(a) - 1;
-  });
-
-  return (
-    <mesh
-      castShadow
-      ref={myMesh}
-      // position={[-1, -4, -2]}
-      rotation={[-1.5, 0.5, 0]}
-      // scale={[4, 2, 6]}
-    >
-      <boxGeometry />
-      <meshPhongMaterial color="royalblue" />
-    </mesh>
   );
 }
