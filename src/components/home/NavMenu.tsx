@@ -382,7 +382,7 @@ function NavMenuMobileItem({
       <button
         className="px-8 py-5 flex w-full items-center justify-between transition"
         onClick={onClick}
-        type='button'
+        type="button"
       >
         <span className="font-medium text-gray-50">{label}</span>
         <svg
