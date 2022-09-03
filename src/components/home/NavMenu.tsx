@@ -311,58 +311,67 @@ function NavMenuMobile({
   };
 
   return (
-    <div
-      className={clsx(
-        "h-full fixed top-0 right-0 z-10 bg-black-900 transition-[width] duration-300 overflow-auto",
-        { "w-full sm:w-[360px]": isOpen, "w-0": !isOpen }
-      )}
-    >
-      <div className="flex items-center justify-between p-8">
-        <Link className="flex items-center" href="/src/pages">
-          <div className="relative w-[149px] h-[43px]">
-            <Image
-              data-testid="dmc_logo"
-              layout="fill"
-              src="/logo.svg"
-              alt="DeFi Meta Chain Logo"
-              objectFit="contain"
-            />
-          </div>
-        </Link>
-        <svg
-          className="feather !stroke-[1.5] w-10 h-10 stroke-white-50"
-          onClick={onClose}
-        >
-          <use href="/feather-sprite.svg#x-circle" />
-        </svg>
-      </div>
-      <NavMenuMobileItem
-        label="Developers"
-        isActive={activeMenu === NavItem.Developers}
-        onClick={() => onClickMenu(NavItem.Developers)}
-        childItems={MenuChildItems.developers}
+    <>
+      <button
+        className={clsx(
+          "h-full fixed top-0 right-0 z-10 bg-black-900/20 backdrop-blur-[56px] w-full",
+          { block: isOpen, hidden: !isOpen }
+        )}
+        onClick={onClose}
       />
-      <NavMenuMobileItem
-        label="Ecosystem"
-        isActive={activeMenu === NavItem.Ecosystem}
-        onClick={() => onClickMenu(NavItem.Ecosystem)}
-        childItems={MenuChildItems.ecosystem}
-      />
-      <NavMenuMobileItem
-        label="Community"
-        isActive={activeMenu === NavItem.Community}
-        onClick={() => onClickMenu(NavItem.Community)}
-        childItems={MenuChildItems.community}
-      />
-      <Link href="/">
-        <div className="px-8 py-5 flex items-center justify-between">
-          <span className="font-medium text-gray-50">Blog</span>
-          <svg className="feather w-6 h-6 stroke-gray-50">
-            <use href="/feather-sprite.svg#arrow-up-right" />
+      <div
+        className={clsx(
+          "h-full fixed top-0 right-0 z-10 bg-black-900 transition-[width] duration-300 overflow-y-auto",
+          { "w-full sm:w-[360px]": isOpen, "w-0": !isOpen }
+        )}
+      >
+        <div className="flex items-center justify-between p-8">
+          <Link className="flex items-center" href="/src/pages">
+            <div className="relative w-[149px] h-[43px]">
+              <Image
+                data-testid="dmc_navmenu_logo"
+                layout="fill"
+                src="/logo.svg"
+                alt="DeFi Meta Chain Logo"
+                objectFit="contain"
+              />
+            </div>
+          </Link>
+          <svg
+            className="feather !stroke-1 w-10 h-10 stroke-white-50"
+            onClick={onClose}
+          >
+            <use href="/feather-sprite.svg#x-circle" />
           </svg>
         </div>
-      </Link>
-    </div>
+        <NavMenuMobileItem
+          label="Developers"
+          isActive={activeMenu === NavItem.Developers}
+          onClick={() => onClickMenu(NavItem.Developers)}
+          childItems={MenuChildItems.developers}
+        />
+        <NavMenuMobileItem
+          label="Ecosystem"
+          isActive={activeMenu === NavItem.Ecosystem}
+          onClick={() => onClickMenu(NavItem.Ecosystem)}
+          childItems={MenuChildItems.ecosystem}
+        />
+        <NavMenuMobileItem
+          label="Community"
+          isActive={activeMenu === NavItem.Community}
+          onClick={() => onClickMenu(NavItem.Community)}
+          childItems={MenuChildItems.community}
+        />
+        <Link href="/">
+          <div className="px-8 py-5 flex items-center justify-between">
+            <span className="font-medium text-gray-50">Blog</span>
+            <svg className="feather w-6 h-6 stroke-gray-50">
+              <use href="/feather-sprite.svg#arrow-up-right" />
+            </svg>
+          </div>
+        </Link>
+      </div>
+    </>
   );
 }
 
