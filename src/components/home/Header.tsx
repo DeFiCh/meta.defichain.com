@@ -51,7 +51,7 @@ export default function Header(): JSX.Element {
             />
           </nav>
         </header>
-        <div className="flex w-[300px] md:w-[500px] h-[600px]">
+        <div className="flex w-[250px] h-[300px]">
           <Canvas>
             <Box />
             <ambientLight intensity={0.5} />
@@ -69,8 +69,8 @@ function Box() {
   useFrame(({ clock }) => {
     if (myMesh === undefined || myMesh.current === undefined) return;
     const a = clock.getElapsedTime();
-    myMesh.current.position.y = Math.sin(a) - 1;
-    myMesh.current.position.x = Math.sin(a) - 1;
+    myMesh.current.position.y = 0.25 * Math.sin(a) - 1;
+    myMesh.current.position.x = 0.25 * Math.sin(a) - 1;
   });
 
   return (
