@@ -2,7 +2,6 @@ import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import React, { CSSProperties, useState } from "react";
-import { UrlObject } from "url";
 
 export default function NavMenu(): JSX.Element {
   const navItemStyle =
@@ -35,7 +34,7 @@ export default function NavMenu(): JSX.Element {
           }
         />
         <NavMenuChildItem
-          href=""
+          href="https://github.com/DeFiCh/metachain/releases"
           imagePath="/menu/releases.svg"
           altLabel="Releases"
           label={
@@ -47,7 +46,7 @@ export default function NavMenu(): JSX.Element {
           }
         />
         <NavMenuChildItem
-          href=""
+          href="https://github.com/DeFiCh/metachain"
           imagePath="/menu/github.svg"
           altLabel="Github"
           label={
@@ -94,7 +93,7 @@ export default function NavMenu(): JSX.Element {
           }
         />
         <NavMenuChildItem
-          href=""
+          href="https://defichain.com/"
           imagePath="/menu/defichain-com.svg"
           altLabel="DeFiChain.com"
           label={
@@ -220,21 +219,25 @@ const MenuChildItems = {
       imagePath: "/menu/documentation.svg",
       altLabel: "Documentation",
       label: "Documentation",
+      href: "",
     },
     {
       imagePath: "/menu/releases.svg",
       altLabel: "Releases",
       label: "Releases",
+      href: "https://github.com/DeFiCh/metachain/releases",
     },
     {
       imagePath: "/menu/github.svg",
       altLabel: "Github",
       label: "Github",
+      href: "https://github.com/DeFiCh/metachain",
     },
     {
       imagePath: "/menu/forum.svg",
       altLabel: "Technical Forum",
       label: "Technical Forum",
+      href: "",
     },
   ],
   ecosystem: [
@@ -242,21 +245,25 @@ const MenuChildItems = {
       imagePath: "/menu/dmc-explorer.svg",
       altLabel: "DMC Explorer",
       label: "DMC Explorer",
+      href: "",
     },
     {
       imagePath: "/menu/defichain-com.svg",
       altLabel: "DeFiChain.com",
       label: "DeFiChain.com",
+      href: "https://defichain.com",
     },
     {
       imagePath: "/menu/whitepaper.svg",
       altLabel: "Whitepaper",
       label: "Whitepaper",
+      href: "",
     },
     {
       imagePath: "/menu/wallets.svg",
       altLabel: "Wallets",
       label: "Wallets",
+      href: "",
     },
   ],
   community: [
@@ -264,26 +271,31 @@ const MenuChildItems = {
       imagePath: "/menu/discord.svg",
       altLabel: "Discord",
       label: "Discord",
+      href: "",
     },
     {
       imagePath: "/menu/twitter.svg",
       altLabel: "Twitter",
       label: "Twitter",
+      href: "",
     },
     {
       imagePath: "/menu/github_bw.svg",
       altLabel: "Github",
       label: "Github",
+      href: "",
     },
     {
       imagePath: "/menu/youtube.svg",
       altLabel: "YouTube",
       label: "YouTube",
+      href: "",
     },
     {
       imagePath: "/menu/telegram.svg",
       altLabel: "Telegram",
       label: "Telegram",
+      href: "",
     },
   ],
 };
@@ -330,7 +342,7 @@ function NavMenuMobile({
         )}
       >
         <div className="flex items-center justify-between p-8">
-          <Link className="flex items-center" href="/src/pages">
+          <Link className="flex items-center" href="/">
             <div className="relative w-[149px] h-[43px]">
               <Image
                 data-testid="dmc_navmenu_logo"
@@ -423,6 +435,7 @@ interface ChildItem {
   imagePath: string;
   altLabel: string;
   label: string;
+  href: string;
 }
 
 function NavMenuMobileChildItem({
@@ -433,7 +446,7 @@ function NavMenuMobileChildItem({
   return (
     <>
       {items.map((item) => (
-        <Link href="/">
+        <a href={item.href} target="_blank" rel="noreferrer" key={item.label}>
           <div className="pl-12 pr-8 py-5 flex items-center justify-between">
             <div className="flex">
               <div className="w-5 h-5 relative">
@@ -445,7 +458,7 @@ function NavMenuMobileChildItem({
               <use href="/feather-sprite.svg#arrow-up-right" />
             </svg>
           </div>
-        </Link>
+        </a>
       ))}
     </>
   );
@@ -485,19 +498,21 @@ function NavMenuChildItem({
   altLabel,
   label,
 }: {
-  href: string | UrlObject;
+  href: string;
   imagePath: string;
   altLabel?: string;
   label?: React.ReactNode | string;
 }): JSX.Element {
   return (
     <Link href={href}>
-      <div className="py-3 px-5 flex items-center">
-        <div className="w-5 h-5 relative">
-          <Image layout="fill" src={imagePath} alt={altLabel} />
+      <a href={href} rel="noreferrer" target="_blank">
+        <div className="py-3 px-5 flex items-center">
+          <div className="w-5 h-5 relative">
+            <Image layout="fill" src={imagePath} alt={altLabel} />
+          </div>
+          {label}
         </div>
-        {label}
-      </div>
+      </a>
     </Link>
   );
 }
