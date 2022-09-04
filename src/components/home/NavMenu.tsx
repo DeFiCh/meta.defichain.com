@@ -446,19 +446,25 @@ function NavMenuMobileChildItem({
   return (
     <>
       {items.map((item) => (
-        <a href={item.href} target="_blank" rel="noreferrer" key={item.label}>
-          <div className="pl-12 pr-8 py-5 flex items-center justify-between">
-            <div className="flex">
-              <div className="w-5 h-5 relative">
-                <Image layout="fill" src={item.imagePath} alt={item.altLabel} />
+        <Link href={item.href}>
+          <a href={item.href} target="_blank" rel="noreferrer" key={item.label}>
+            <div className="pl-12 pr-8 py-5 flex items-center justify-between">
+              <div className="flex">
+                <div className="w-5 h-5 relative">
+                  <Image
+                    layout="fill"
+                    src={item.imagePath}
+                    alt={item.altLabel}
+                  />
+                </div>
+                <span className="text-gray-50 pl-6">{item.label}</span>
               </div>
-              <span className="text-gray-50 pl-6">{item.label}</span>
+              <svg className="feather w-6 h-6 stroke-gray-50">
+                <use href="/feather-sprite.svg#arrow-up-right" />
+              </svg>
             </div>
-            <svg className="feather w-6 h-6 stroke-gray-50">
-              <use href="/feather-sprite.svg#arrow-up-right" />
-            </svg>
-          </div>
-        </a>
+          </a>
+        </Link>
       ))}
     </>
   );
