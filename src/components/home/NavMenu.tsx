@@ -25,8 +25,8 @@ const MenuChildItems = {
     },
     {
       imagePath: "/menu/forum.svg",
-      altLabel: "Technical Forum",
-      label: "Technical Forum",
+      altLabel: "Developer's Chatroom",
+      label: "Developer's Chatroom",
       href: "https://discord.gg/g5U4pvNtbS",
     },
   ],
@@ -70,12 +70,6 @@ const MenuChildItems = {
       href: "https://twitter.com/defichain",
     },
     {
-      imagePath: "/menu/github_2.svg",
-      altLabel: "GitHub",
-      label: "GitHub",
-      href: "https://github.com/DeFiCh/metachain",
-    },
-    {
       imagePath: "/menu/youtube.svg",
       altLabel: "YouTube",
       label: "YouTube",
@@ -91,209 +85,44 @@ const MenuChildItems = {
 };
 
 export default function NavMenu(): JSX.Element {
-  const navItemStyle =
-    "text-transparent font-medium before:bg-black-900 relative before:button-text before:font-medium before:opacity-100 group-hover:before:opacity-0 before:leading-[20.8px] after:leading-[20.8px] after:button-text after:font-medium after:brand-gradient-1 after:opacity-0 group-hover:after:opacity-100";
-  const navChildItemStyle =
-    "pl-6 text-transparent before:pl-6 before:bg-black-900 relative before:button-text before:opacity-100 [.group-scoped:hover_&]:before:opacity-0 before:left-6 after:left-6 after:button-text after:pl-6 after:brand-gradient-1 after:opacity-0 [.group-scoped:hover_&]:after:opacity-100";
-
   return (
     <div className="flex bg-white-50 rounded-[30px] lg:flex hidden">
-      <NavMenuItem
-        label={
-          <span
-            className={`${navItemStyle} before:content-['Developers'] after:content-['Developers']`}
-          >
-            Developers
-          </span>
-        }
-        childContainerStyle={{ left: -58 }}
-      >
-        <NavMenuChildItem
-          href={MenuChildItems.developers[0].href}
-          imagePath={MenuChildItems.developers[0].imagePath}
-          altLabel={MenuChildItems.developers[0].altLabel}
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['Documentation'] after:content-['Documentation']`}
-            >
-              Documentation
-            </span>
-          }
-        />
-        <NavMenuChildItem
-          href={MenuChildItems.developers[1].href}
-          imagePath={MenuChildItems.developers[1].imagePath}
-          altLabel={MenuChildItems.developers[1].altLabel}
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['Releases'] after:content-['Releases']`}
-            >
-              Releases
-            </span>
-          }
-        />
-        <NavMenuChildItem
-          href={MenuChildItems.developers[2].href}
-          imagePath={MenuChildItems.developers[2].imagePath}
-          altLabel={MenuChildItems.developers[2].altLabel}
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['GitHub'] after:content-['GitHub']`}
-            >
-              GitHub
-            </span>
-          }
-        />
-        <NavMenuChildItem
-          href={MenuChildItems.developers[3].href}
-          imagePath={MenuChildItems.developers[3].imagePath}
-          altLabel={MenuChildItems.developers[3].altLabel}
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['Technical_Forum'] after:content-['Technical_Forum']`}
-            >
-              Technical Forum
-            </span>
-          }
-        />
+      <NavMenuItem label="Developers" childContainerStyle={{ left: -58 }}>
+        {MenuChildItems.developers.map((item) => (
+          <NavMenuChildItem
+            href={item.href}
+            imagePath={item.imagePath}
+            altLabel={item.altLabel}
+            label={item.altLabel}
+            key={item.label}
+          />
+        ))}
       </NavMenuItem>
-      <NavMenuItem
-        label={
-          <span
-            className={`${navItemStyle} before:content-['Ecosystem'] after:content-['Ecosystem']`}
-          >
-            Ecosystem
-          </span>
-        }
-        childContainerStyle={{ left: -54 }}
-      >
-        <NavMenuChildItem
-          href={MenuChildItems.ecosystem[0].href}
-          imagePath={MenuChildItems.ecosystem[0].imagePath}
-          altLabel={MenuChildItems.ecosystem[0].altLabel}
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['DMC_Explorer'] after:content-['DMC_Explorer']`}
-            >
-              DMC Explorer
-            </span>
-          }
-        />
-        <NavMenuChildItem
-          href={MenuChildItems.ecosystem[1].href}
-          imagePath={MenuChildItems.ecosystem[1].imagePath}
-          altLabel={MenuChildItems.ecosystem[1].altLabel}
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['DeFiChain.com'] after:content-['DeFiChain.com']`}
-            >
-              DeFiChain.com
-            </span>
-          }
-        />
-        <NavMenuChildItem
-          href={MenuChildItems.ecosystem[2].href}
-          imagePath={MenuChildItems.ecosystem[2].imagePath}
-          altLabel={MenuChildItems.ecosystem[2].altLabel}
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['Whitepaper'] after:content-['Whitepaper']`}
-            >
-              Whitepaper
-            </span>
-          }
-        />
-        <NavMenuChildItem
-          href={MenuChildItems.ecosystem[3].href}
-          imagePath={MenuChildItems.ecosystem[3].imagePath}
-          altLabel={MenuChildItems.ecosystem[3].altLabel}
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['Wallets'] after:content-['Wallets']`}
-            >
-              Wallets
-            </span>
-          }
-        />
+      <NavMenuItem label="Ecosystem" childContainerStyle={{ left: -54 }}>
+        {MenuChildItems.ecosystem.map((item) => (
+          <NavMenuChildItem
+            href={item.href}
+            imagePath={item.imagePath}
+            altLabel={item.altLabel}
+            label={item.altLabel}
+            key={item.label}
+          />
+        ))}
       </NavMenuItem>
-      <NavMenuItem
-        label={
-          <span
-            className={`${navItemStyle} before:content-['Community'] after:content-['Community']`}
-          >
-            Community
-          </span>
-        }
-        childContainerStyle={{ left: -51 }}
-      >
-        <NavMenuChildItem
-          href={MenuChildItems.community[0].href}
-          imagePath={MenuChildItems.community[0].imagePath}
-          altLabel={MenuChildItems.community[0].altLabel}
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['Discord'] after:content-['Discord']`}
-            >
-              Discord
-            </span>
-          }
-        />
-        <NavMenuChildItem
-          href={MenuChildItems.community[1].href}
-          imagePath={MenuChildItems.community[1].imagePath}
-          altLabel={MenuChildItems.community[1].altLabel}
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['Twitter'] after:content-['Twitter']`}
-            >
-              Twitter
-            </span>
-          }
-        />
-        <NavMenuChildItem
-          href={MenuChildItems.community[2].href}
-          imagePath={MenuChildItems.community[2].imagePath}
-          altLabel={MenuChildItems.community[2].altLabel}
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['GitHub'] after:content-['GitHub']`}
-            >
-              GitHub
-            </span>
-          }
-        />
-        <NavMenuChildItem
-          href={MenuChildItems.community[3].href}
-          imagePath={MenuChildItems.community[3].imagePath}
-          altLabel={MenuChildItems.community[3].altLabel}
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['YouTube'] after:content-['YouTube']`}
-            >
-              YouTube
-            </span>
-          }
-        />
-        <NavMenuChildItem
-          href={MenuChildItems.community[4].href}
-          imagePath={MenuChildItems.community[4].imagePath}
-          altLabel={MenuChildItems.community[4].altLabel}
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['Telegram'] after:content-['Telegram']`}
-            >
-              Telegram
-            </span>
-          }
-        />
+      <NavMenuItem label="Community" childContainerStyle={{ left: -51 }}>
+        {MenuChildItems.community.map((item) => (
+          <NavMenuChildItem
+            href={item.href}
+            imagePath={item.imagePath}
+            altLabel={item.altLabel}
+            label={item.altLabel}
+            key={item.label}
+          />
+        ))}
       </NavMenuItem>
       <div className="px-8 py-4 group cursor-pointer relative before:cta-border before:bg-white-50 before:opacity-100 hover:before:opacity-0 after:cta-border after:brand-gradient-1 after:opacity-0 hover:after:opacity-100">
         <Link href="/">
-          <span
-            className={`${navItemStyle} before:content-['Blog'] after:content-['Blog']`}
-          >
-            Blog
-          </span>
+          <MenuItemLabel label="Blog" />
         </Link>
       </div>
     </div>
@@ -446,10 +275,10 @@ function NavMenuMobileChildItem({
   return (
     <>
       {items.map((item) => (
-        <Link href={item.href}>
-          <a href={item.href} target="_blank" rel="noreferrer" key={item.label}>
+        <Link href={item.href} key={item.label}>
+          <a href={item.href} target="_blank" rel="noreferrer">
             <div className="pl-12 pr-8 py-5 flex items-center justify-between">
-              <div className="flex">
+              <div className="flex items-center">
                 <div className="w-5 h-5 relative">
                   <Image
                     layout="fill"
@@ -475,7 +304,7 @@ function NavMenuItem({
   childContainerStyle,
   children,
 }: {
-  label: React.ReactNode;
+  label: string;
   childContainerStyle: CSSProperties;
   children: React.ReactNode;
 }): JSX.Element {
@@ -486,7 +315,7 @@ function NavMenuItem({
           "py-4 before:cta-border before:bg-white-50 before:opacity-100 group-hover:before:opacity-0 after:cta-border after:brand-gradient-1 after:opacity-0 group-hover:after:opacity-100"
         )}
       >
-        {label}
+        <MenuItemLabel label={label} />
       </li>
       <li
         style={childContainerStyle}
@@ -498,6 +327,22 @@ function NavMenuItem({
   );
 }
 
+const MenuItemLabel = React.forwardRef(
+  ({ label }: { label: string }, ref: React.Ref<HTMLElement>): JSX.Element => {
+    const navItemStyle =
+      "text-transparent font-medium before:bg-black-900 relative before:button-text before:font-medium before:opacity-100 group-hover:before:opacity-0 before:leading-[20.8px] after:leading-[20.8px] after:button-text after:font-medium after:brand-gradient-1 after:opacity-0 group-hover:after:opacity-100";
+    return (
+      <span
+        ref={ref}
+        data-label={label}
+        className={`${navItemStyle} before:content-[attr(data-label)] after:content-[attr(data-label)]`}
+      >
+        {label}
+      </span>
+    );
+  }
+);
+
 function NavMenuChildItem({
   href,
   imagePath,
@@ -506,9 +351,11 @@ function NavMenuChildItem({
 }: {
   href: string;
   imagePath: string;
-  altLabel?: string;
-  label?: React.ReactNode | string;
+  altLabel: string;
+  label: string;
 }): JSX.Element {
+  const navChildItemStyle =
+    "pl-6 text-transparent before:pl-6 before:bg-black-900 relative before:button-text before:opacity-100 [.group-scoped:hover_&]:before:opacity-0 before:left-6 after:left-6 after:button-text after:pl-6 after:brand-gradient-1 after:opacity-0 [.group-scoped:hover_&]:after:opacity-100";
   return (
     <Link href={href}>
       <a href={href} rel="noreferrer" target="_blank">
@@ -516,7 +363,12 @@ function NavMenuChildItem({
           <div className="w-5 h-5 relative">
             <Image layout="fill" src={imagePath} alt={altLabel} />
           </div>
-          {label}
+          <span
+            data-label={label}
+            className={`${navChildItemStyle} before:content-[attr(data-label)] after:content-[attr(data-label)]`}
+          >
+            {label}
+          </span>
         </div>
       </a>
     </Link>
