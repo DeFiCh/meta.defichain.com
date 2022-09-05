@@ -70,12 +70,6 @@ const MenuChildItems = {
       href: "https://twitter.com/defichain",
     },
     {
-      imagePath: "/menu/github_2.svg",
-      altLabel: "GitHub",
-      label: "GitHub",
-      href: "https://github.com/DeFiCh/metachain",
-    },
-    {
       imagePath: "/menu/youtube.svg",
       altLabel: "YouTube",
       label: "YouTube",
