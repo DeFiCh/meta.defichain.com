@@ -32,7 +32,7 @@ body {
     border-radius: 30px;
     z-index: -1;
     transition-property: opacity;
-    transition-duration: 1000ms;
+    transition-duration: 300ms;
   }
 
   .button-text {
@@ -42,7 +42,7 @@ body {
     width: 100%;
     height: 100%;
     transition-property: opacity;
-    transition-duration: 1000ms;
+    transition-duration: 300ms;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -64,6 +64,26 @@ body {
       #082fd4 105.23%
     );
   }
+
+  .hover-menu-gap {
+    content: "";
+    display: block;
+    height: 20px;
+    position: absolute;
+    top: -20px;
+    width: 100%;
+  }
+
+  .cta-border {
+    content: "";
+    position: absolute;
+    width: calc(100% - 64px);
+    left: 32px;
+    bottom: 0px;
+    height: 2px;
+    transition-property: opacity;
+    transition-duration: 300ms;
+  }
 }
 
 video {
@@ -82,4 +102,19 @@ video {
 ::-webkit-scrollbar-track {
   box-shadow: rgb(55 47 71) 0px 0px 5px inset;
   border-radius: 10px;
+}
+
+.brand-gradient-1 {
+  background-image: linear-gradient(103.45deg, #FF12AF 22.86%, #0821BB 74.53%, #42F9C2 105.23%);
+}
+
+.brand-gradient-2 {
+  background-image: linear-gradient(103.45deg, #42F9C2 3.99%, #082FD4 105.23%);
+}
+
+.feather {
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
 }
