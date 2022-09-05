@@ -27,7 +27,11 @@ export default function Header(): JSX.Element {
           <div className="flex items-center">
             <Button
               label={
-                <a href="https://defichain.com/dfi" target="_blank" rel="noreferrer">
+                <a
+                  href="https://defichain.com/dfi"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <div className="flex items-center ">
                     <span className="pr-1.5 relative before:button-text before:content-['Get_DFI'] before:bg-white-50 before:opacity-100 group-hover:before:opacity-0 after:button-text after:content-['Get_DFI'] after:brand-gradient-1 after:opacity-0 group-hover:after:opacity-100">
                       Get DFI
