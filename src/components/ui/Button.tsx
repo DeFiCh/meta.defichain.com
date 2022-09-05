@@ -4,7 +4,7 @@ export default function Button({
   customStyle,
 }: {
   label: string | React.ReactElement;
-  onClick: () => void;
+  onClick?: () => void;
   customStyle?: string;
 }): JSX.Element {
   return (

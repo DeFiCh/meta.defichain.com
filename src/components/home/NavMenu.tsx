@@ -3,216 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { CSSProperties, useState } from "react";
 
-export default function NavMenu(): JSX.Element {
-  const navItemStyle =
-    "text-transparent font-medium before:bg-black-900 relative before:button-text before:font-medium before:opacity-100 group-hover:before:opacity-0 before:leading-[20.8px] after:leading-[20.8px] after:button-text after:font-medium after:brand-gradient-1 after:opacity-0 group-hover:after:opacity-100";
-  const navChildItemStyle =
-    "pl-6 text-transparent before:pl-6 before:bg-black-900 relative before:button-text before:opacity-100 hover:before:opacity-0 before:left-6 after:left-6 after:button-text after:pl-6 after:brand-gradient-1 after:opacity-0 hover:after:opacity-100";
-
-  return (
-    <div className="flex bg-white-50 rounded-[30px] lg:flex hidden">
-      <NavMenuItem
-        label={
-          <span
-            className={`${navItemStyle} before:content-['Developers'] after:content-['Developers']`}
-          >
-            Developers
-          </span>
-        }
-        childContainerStyle={{ left: -58 }}
-      >
-        <NavMenuChildItem
-          href=""
-          imagePath="/menu/documentation.svg"
-          altLabel="Documentation"
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['Documentation'] after:content-['Documentation']`}
-            >
-              Documentation
-            </span>
-          }
-        />
-        <NavMenuChildItem
-          href="https://github.com/DeFiCh/metachain/releases"
-          imagePath="/menu/releases.svg"
-          altLabel="Releases"
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['Releases'] after:content-['Releases']`}
-            >
-              Releases
-            </span>
-          }
-        />
-        <NavMenuChildItem
-          href="https://github.com/DeFiCh/metachain"
-          imagePath="/menu/github.svg"
-          altLabel="Github"
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['Github'] after:content-['Github']`}
-            >
-              Github
-            </span>
-          }
-        />
-        <NavMenuChildItem
-          href=""
-          imagePath="/menu/forum.svg"
-          altLabel="Technical Forum"
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['Technical_Forum'] after:content-['Technical_Forum']`}
-            >
-              Technical Forum
-            </span>
-          }
-        />
-      </NavMenuItem>
-      <NavMenuItem
-        label={
-          <span
-            className={`${navItemStyle} before:content-['Ecosystem'] after:content-['Ecosystem']`}
-          >
-            Ecosystem
-          </span>
-        }
-        childContainerStyle={{ left: -54 }}
-      >
-        <NavMenuChildItem
-          href=""
-          imagePath="/menu/dmc-explorer.svg"
-          altLabel="DMC Explorer"
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['DMC_Explorer'] after:content-['DMC_Explorer']`}
-            >
-              DMC Explorer
-            </span>
-          }
-        />
-        <NavMenuChildItem
-          href="https://defichain.com/"
-          imagePath="/menu/defichain-com.svg"
-          altLabel="DeFiChain.com"
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['DeFiChain.com'] after:content-['DeFiChain.com']`}
-            >
-              DeFiChain.com
-            </span>
-          }
-        />
-        <NavMenuChildItem
-          href=""
-          imagePath="/menu/whitepaper.svg"
-          altLabel="Whitepaper"
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['Whitepaper'] after:content-['Whitepaper']`}
-            >
-              Whitepaper
-            </span>
-          }
-        />
-        <NavMenuChildItem
-          href=""
-          imagePath="/menu/wallets.svg"
-          altLabel="Wallets"
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['Wallets'] after:content-['Wallets']`}
-            >
-              Wallets
-            </span>
-          }
-        />
-      </NavMenuItem>
-      <NavMenuItem
-        label={
-          <span
-            className={`${navItemStyle} before:content-['Community'] after:content-['Community']`}
-          >
-            Community
-          </span>
-        }
-        childContainerStyle={{ left: -51 }}
-      >
-        <NavMenuChildItem
-          href=""
-          imagePath="/menu/discord.svg"
-          altLabel="Discord"
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['Discord'] after:content-['Discord']`}
-            >
-              Discord
-            </span>
-          }
-        />
-        <NavMenuChildItem
-          href=""
-          imagePath="/menu/twitter.svg"
-          altLabel="Twitter"
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['Twitter'] after:content-['Twitter']`}
-            >
-              Twitter
-            </span>
-          }
-        />
-        <NavMenuChildItem
-          href=""
-          imagePath="/menu/github_bw.svg"
-          altLabel="Github"
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['Github'] after:content-['Github']`}
-            >
-              Github
-            </span>
-          }
-        />
-        <NavMenuChildItem
-          href=""
-          imagePath="/menu/youtube.svg"
-          altLabel="YouTube"
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['YouTube'] after:content-['YouTube']`}
-            >
-              YouTube
-            </span>
-          }
-        />
-        <NavMenuChildItem
-          href=""
-          imagePath="/menu/telegram.svg"
-          altLabel="Telegram"
-          label={
-            <span
-              className={`${navChildItemStyle} before:content-['Telegram'] after:content-['Telegram']`}
-            >
-              Telegram
-            </span>
-          }
-        />
-      </NavMenuItem>
-      <div className="px-8 py-4 group cursor-pointer relative before:cta-border before:bg-white-50 before:opacity-100 hover:before:opacity-0 after:cta-border after:brand-gradient-1 after:opacity-0 hover:after:opacity-100">
-        <Link href="/">
-          <span
-            className={`${navItemStyle} before:content-['Blog'] after:content-['Blog']`}
-          >
-            Blog
-          </span>
-        </Link>
-      </div>
-    </div>
-  );
-}
-
 const MenuChildItems = {
   developers: [
     {
@@ -229,15 +19,15 @@ const MenuChildItems = {
     },
     {
       imagePath: "/menu/github.svg",
-      altLabel: "Github",
-      label: "Github",
+      altLabel: "GitHub",
+      label: "GitHub",
       href: "https://github.com/DeFiCh/metachain",
     },
     {
       imagePath: "/menu/forum.svg",
       altLabel: "Technical Forum",
       label: "Technical Forum",
-      href: "",
+      href: "https://discord.gg/g5U4pvNtbS",
     },
   ],
   ecosystem: [
@@ -271,34 +61,244 @@ const MenuChildItems = {
       imagePath: "/menu/discord.svg",
       altLabel: "Discord",
       label: "Discord",
-      href: "",
+      href: "https://discord.gg/U268gQUqQt",
     },
     {
       imagePath: "/menu/twitter.svg",
       altLabel: "Twitter",
       label: "Twitter",
-      href: "",
+      href: "https://twitter.com/defichain",
     },
     {
-      imagePath: "/menu/github_bw.svg",
-      altLabel: "Github",
-      label: "Github",
-      href: "",
+      imagePath: "/menu/github_2.svg",
+      altLabel: "GitHub",
+      label: "GitHub",
+      href: "https://github.com/DeFiCh/metachain",
     },
     {
       imagePath: "/menu/youtube.svg",
       altLabel: "YouTube",
       label: "YouTube",
-      href: "",
+      href: "https://www.youtube.com/c/DeFiChain",
     },
     {
       imagePath: "/menu/telegram.svg",
       altLabel: "Telegram",
       label: "Telegram",
-      href: "",
+      href: "https://t.me/defiblockchain",
     },
   ],
 };
+
+export default function NavMenu(): JSX.Element {
+  const navItemStyle =
+    "text-transparent font-medium before:bg-black-900 relative before:button-text before:font-medium before:opacity-100 group-hover:before:opacity-0 before:leading-[20.8px] after:leading-[20.8px] after:button-text after:font-medium after:brand-gradient-1 after:opacity-0 group-hover:after:opacity-100";
+  const navChildItemStyle =
+    "pl-6 text-transparent before:pl-6 before:bg-black-900 relative before:button-text before:opacity-100 [.group-scoped:hover_&]:before:opacity-0 before:left-6 after:left-6 after:button-text after:pl-6 after:brand-gradient-1 after:opacity-0 [.group-scoped:hover_&]:after:opacity-100";
+
+  return (
+    <div className="flex bg-white-50 rounded-[30px] lg:flex hidden">
+      <NavMenuItem
+        label={
+          <span
+            className={`${navItemStyle} before:content-['Developers'] after:content-['Developers']`}
+          >
+            Developers
+          </span>
+        }
+        childContainerStyle={{ left: -58 }}
+      >
+        <NavMenuChildItem
+          href={MenuChildItems.developers[0].href}
+          imagePath={MenuChildItems.developers[0].imagePath}
+          altLabel={MenuChildItems.developers[0].altLabel}
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['Documentation'] after:content-['Documentation']`}
+            >
+              Documentation
+            </span>
+          }
+        />
+        <NavMenuChildItem
+          href={MenuChildItems.developers[1].href}
+          imagePath={MenuChildItems.developers[1].imagePath}
+          altLabel={MenuChildItems.developers[1].altLabel}
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['Releases'] after:content-['Releases']`}
+            >
+              Releases
+            </span>
+          }
+        />
+        <NavMenuChildItem
+          href={MenuChildItems.developers[2].href}
+          imagePath={MenuChildItems.developers[2].imagePath}
+          altLabel={MenuChildItems.developers[2].altLabel}
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['GitHub'] after:content-['GitHub']`}
+            >
+              GitHub
+            </span>
+          }
+        />
+        <NavMenuChildItem
+          href={MenuChildItems.developers[3].href}
+          imagePath={MenuChildItems.developers[3].imagePath}
+          altLabel={MenuChildItems.developers[3].altLabel}
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['Technical_Forum'] after:content-['Technical_Forum']`}
+            >
+              Technical Forum
+            </span>
+          }
+        />
+      </NavMenuItem>
+      <NavMenuItem
+        label={
+          <span
+            className={`${navItemStyle} before:content-['Ecosystem'] after:content-['Ecosystem']`}
+          >
+            Ecosystem
+          </span>
+        }
+        childContainerStyle={{ left: -54 }}
+      >
+        <NavMenuChildItem
+          href={MenuChildItems.ecosystem[0].href}
+          imagePath={MenuChildItems.ecosystem[0].imagePath}
+          altLabel={MenuChildItems.ecosystem[0].altLabel}
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['DMC_Explorer'] after:content-['DMC_Explorer']`}
+            >
+              DMC Explorer
+            </span>
+          }
+        />
+        <NavMenuChildItem
+          href={MenuChildItems.ecosystem[1].href}
+          imagePath={MenuChildItems.ecosystem[1].imagePath}
+          altLabel={MenuChildItems.ecosystem[1].altLabel}
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['DeFiChain.com'] after:content-['DeFiChain.com']`}
+            >
+              DeFiChain.com
+            </span>
+          }
+        />
+        <NavMenuChildItem
+          href={MenuChildItems.ecosystem[2].href}
+          imagePath={MenuChildItems.ecosystem[2].imagePath}
+          altLabel={MenuChildItems.ecosystem[2].altLabel}
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['Whitepaper'] after:content-['Whitepaper']`}
+            >
+              Whitepaper
+            </span>
+          }
+        />
+        <NavMenuChildItem
+          href={MenuChildItems.ecosystem[3].href}
+          imagePath={MenuChildItems.ecosystem[3].imagePath}
+          altLabel={MenuChildItems.ecosystem[3].altLabel}
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['Wallets'] after:content-['Wallets']`}
+            >
+              Wallets
+            </span>
+          }
+        />
+      </NavMenuItem>
+      <NavMenuItem
+        label={
+          <span
+            className={`${navItemStyle} before:content-['Community'] after:content-['Community']`}
+          >
+            Community
+          </span>
+        }
+        childContainerStyle={{ left: -51 }}
+      >
+        <NavMenuChildItem
+          href={MenuChildItems.community[0].href}
+          imagePath={MenuChildItems.community[0].imagePath}
+          altLabel={MenuChildItems.community[0].altLabel}
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['Discord'] after:content-['Discord']`}
+            >
+              Discord
+            </span>
+          }
+        />
+        <NavMenuChildItem
+          href={MenuChildItems.community[1].href}
+          imagePath={MenuChildItems.community[1].imagePath}
+          altLabel={MenuChildItems.community[1].altLabel}
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['Twitter'] after:content-['Twitter']`}
+            >
+              Twitter
+            </span>
+          }
+        />
+        <NavMenuChildItem
+          href={MenuChildItems.community[2].href}
+          imagePath={MenuChildItems.community[2].imagePath}
+          altLabel={MenuChildItems.community[2].altLabel}
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['GitHub'] after:content-['GitHub']`}
+            >
+              GitHub
+            </span>
+          }
+        />
+        <NavMenuChildItem
+          href={MenuChildItems.community[3].href}
+          imagePath={MenuChildItems.community[3].imagePath}
+          altLabel={MenuChildItems.community[3].altLabel}
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['YouTube'] after:content-['YouTube']`}
+            >
+              YouTube
+            </span>
+          }
+        />
+        <NavMenuChildItem
+          href={MenuChildItems.community[4].href}
+          imagePath={MenuChildItems.community[4].imagePath}
+          altLabel={MenuChildItems.community[4].altLabel}
+          label={
+            <span
+              className={`${navChildItemStyle} before:content-['Telegram'] after:content-['Telegram']`}
+            >
+              Telegram
+            </span>
+          }
+        />
+      </NavMenuItem>
+      <div className="px-8 py-4 group cursor-pointer relative before:cta-border before:bg-white-50 before:opacity-100 hover:before:opacity-0 after:cta-border after:brand-gradient-1 after:opacity-0 hover:after:opacity-100">
+        <Link href="/">
+          <span
+            className={`${navItemStyle} before:content-['Blog'] after:content-['Blog']`}
+          >
+            Blog
+          </span>
+        </Link>
+      </div>
+    </div>
+  );
+}
 
 enum NavItem {
   Developers,
@@ -512,7 +512,7 @@ function NavMenuChildItem({
   return (
     <Link href={href}>
       <a href={href} rel="noreferrer" target="_blank">
-        <div className="py-3 px-5 flex items-center">
+        <div className="py-3 px-5 flex items-center group-scoped">
           <div className="w-5 h-5 relative">
             <Image layout="fill" src={imagePath} alt={altLabel} />
           </div>
