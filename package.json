@@ -16,7 +16,7 @@
     "@babel/types": "^7.18.13",
     "@react-three/drei": "^9.25.0",
     "@react-three/fiber": "^8.6.0",
-    "@tailwindcss/line-clamp": "^0.4.0",
+    "@tailwindcss/line-clamp": "^0.4.2",
     "@types/react-type-animation": "^1.1.1",
     "clsx": "^1.2.1",
     "feather-icons": "^4.29.0",
