@@ -13,7 +13,7 @@
     "cypress:run": "TZ=UTC cypress run --headless --browser chrome"
   },
   "dependencies": {
-    "@babel/types": "^7.18.13",
+    "@babel/types": "^7.19.0",
     "@react-three/drei": "^9.25.0",
     "@react-three/fiber": "^8.6.0",
     "@tailwindcss/line-clamp": "^0.4.0",
@@ -37,7 +37,7 @@
     "@types/react": "18.0.18",
     "@types/react-dom": "18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
-    "@typescript-eslint/parser": "^5.35.1",
+    "@typescript-eslint/parser": "^5.36.2",
     "autoprefixer": "^10.4.8",
     "babel-plugin-istanbul": "^6.1.1",
     "babel-plugin-jsx-remove-data-test-id": "^3.0.0",
