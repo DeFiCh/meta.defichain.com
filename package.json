@@ -27,7 +27,7 @@
     "react-dom": "18.2.0",
     "react-number-format": "^4.9.3",
     "react-type-animation": "^2.0.8",
-    "three": "^0.143.0"
+    "three": "^0.144.0"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.10.0",
