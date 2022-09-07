@@ -13,7 +13,13 @@ export default function Jellyfish({
   const meshRef = useRef<Mesh<BufferGeometry>>(null);
 
   useFrame(({ clock }) => {
-    if (meshRef == undefined || meshRef.current == undefined) return;
+    if (
+      meshRef === undefined ||
+      meshRef === null ||
+      meshRef.current === undefined ||
+      meshRef.current === null
+    )
+      return;
     const elapsedSeconds = clock.getElapsedTime();
     meshRef.current.position.x = 10 * Math.sin(elapsedSeconds) + position[0];
     meshRef.current.position.y = 10 * Math.cos(elapsedSeconds) + position[1];
