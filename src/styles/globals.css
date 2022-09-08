@@ -89,6 +89,7 @@ body {
     transition-duration: 300ms;
   }
 
+  /* To style :before and :after to have gradient color transition on hover for cube models */
   .gradient-cube {
     content: "";
     position: absolute;
