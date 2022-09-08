@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -110,6 +110,10 @@ video {
 
 .brand-gradient-2 {
   background-image: linear-gradient(103.45deg, #42F9C2 3.99%, #082FD4 105.23%);
+}
+
+.black-gradient-1 {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), linear-gradient(152.58deg, rgba(51, 51, 51, 0.4) -3.08%, rgba(128, 128, 128, 0.1) 77.78%);
 }
 
 .feather {
