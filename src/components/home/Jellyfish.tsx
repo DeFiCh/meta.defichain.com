@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { BufferGeometry, Mesh } from "three";
-import { Euler, useFrame, Vector3 } from "@react-three/fiber";
+import { Canvas, Euler, useFrame, Vector3 } from "@react-three/fiber";
 
 export default function Jellyfish({
   position,
@@ -75,3 +75,55 @@ export function Model(props) {
 }
 
 useGLTF.preload("/jellyfish.gltf");
+
+interface ViewProps {
+  position: Vector3;
+  rotation: Euler;
+  containerStyle?: string;
+}
+interface JellyfishBackgroundProps {
+  desktop: ViewProps;
+  tablet: ViewProps;
+  mobile: ViewProps;
+}
+
+export function JellyfishBackground({
+  desktop,
+  tablet,
+  mobile,
+}: JellyfishBackgroundProps): JSX.Element {
+  return (
+    <>
+      <div
+        className={`hidden lg:block absolute z-[-2] top-0 w-[250px] h-screen ${
+          desktop.containerStyle ?? ""
+        }`}
+      >
+        <Canvas>
+          <Jellyfish position={desktop.position} rotation={desktop.rotation} />
+          <ambientLight intensity={1} />
+        </Canvas>
+      </div>
+      <div
+        className={`hidden md:block lg:hidden absolute z-[-2] top-0 w-screen h-screen ${
+          tablet.containerStyle ?? ""
+        }`}
+      >
+        <Canvas>
+          <Jellyfish position={tablet.position} rotation={tablet.rotation} />
+          <ambientLight intensity={1} />
+        </Canvas>
+      </div>
+      <div
+        className={`block md:hidden absolute z-[-2] top-0 w-screen h-screen ${
+          mobile.containerStyle ?? ""
+        }`}
+      >
+        <Canvas>
+          <Jellyfish position={mobile.position} rotation={mobile.rotation} />
+          <ambientLight intensity={1} />
+        </Canvas>
+      </div>
+    </>
+  );
+}
