@@ -1,5 +1,6 @@
 import Header from "@components/home/Header";
 import Jellyfish, { JellyfishBackground } from "@components/home/Jellyfish";
+import SectionFive from "@components/home/SectionFive";
 import SectionFour from "@components/home/SectionFour";
 import SectionOne from "@components/home/SectionOne";
 import SectionThree from "@components/home/SectionThree";
@@ -107,11 +108,7 @@ function Home() {
             <ambientLight intensity={1} />
           </Canvas>
         </div>
-        <div className="relative top-[50vh]">
-          <h1 className="text-white-50 text-6xl font-bold text-center">
-            Hello world
-          </h1>
-        </div>
+        <SectionFive />
       </section>
     </>
   );
