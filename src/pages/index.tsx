@@ -1,5 +1,6 @@
 import Header from "@components/home/Header";
 import Jellyfish, { JellyfishBackground } from "@components/home/Jellyfish";
+import SectionFour from "@components/home/SectionFour";
 import SectionOne from "@components/home/SectionOne";
 import SectionThree from "@components/home/SectionThree";
 import SectionTwo from "@components/home/SectionTwo";
@@ -73,21 +74,29 @@ function Home() {
         />
         <SectionThree />
       </section>
-      <section className="w-full h-screen relative px-4 md:px-[40px] lg:px-[120px]">
-        <div className="w-full h-screen absolute top-[0vh] z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-contain bg-right lg:bg-[url('/background/gradient-4.png')] md:bg-[url('/background/tablet-gradient-4.png')] bg-[url('/background/mobile-gradient-4.png')]" />
-        <div className="absolute z-[-2] top-0 right-0 w-[180px] h-screen">
-          <Canvas>
-            <Jellyfish position={[0, 250, -750]} rotation={[0.2, -0.4, 0.55]} />
-            <ambientLight intensity={1} />
-          </Canvas>
-        </div>
-        <div className="">
-          <h1 className="text-white-50 text-6xl font-bold text-center">
-            Hello world
-          </h1>
-        </div>
+      <section className="w-full min-h-screen relative px-4 md:px-[40px] lg:px-[120px]">
+        <div className="w-full h-full h-full absolute lg:top-[-20vh] md:top-[-50vh] top-[-63vh] z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat md:bg-contain bg-cover bg-right lg:bg-[url('/background/gradient-4.png')] md:bg-[url('/background/tablet-gradient-4.png')] bg-[url('/background/mobile-gradient-4.png')]" />
+        <div className="w-full h-full hidden md:block lg:hidden absolute top-[50vh] z-[-1] mix-blend-screen top-0 right-0 bg-no-repeat bg-contain bg-[url('/background/tablet-gradient-5.png')]" />
+        <JellyfishBackground
+          desktop={{
+            position: [10, 400, -750],
+            rotation: [0.2, -0.4, 0.35],
+            containerStyle: "right-0",
+          }}
+          tablet={{
+            position: [250, 550, -900],
+            rotation: [0.6, -0.6, 0.55],
+            containerStyle: "right-0",
+          }}
+          mobile={{
+            position: [-20, 300, -750],
+            rotation: [0.4, -0.4, 0.45],
+            containerStyle: "right-0",
+          }}
+        />
+        <SectionFour />
       </section>
-      <section className="w-full h-screen relative top-[-50vh] px-4 pt-6 md:px-[40px] md:pt-6 lg:px-[120px] lg:pt-[52px]">
+      <section className="w-full h-screen relative px-4 pt-6 md:px-[40px] md:pt-6 lg:px-[120px] lg:pt-[52px]">
         <div className="w-full h-screen absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-contain bg-[url('/background/gradient-5.png')]" />
         <div className="absolute z-[-2] top-0 left-0 w-[180px] h-screen">
           <Canvas>

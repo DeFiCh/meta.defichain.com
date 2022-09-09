@@ -23,7 +23,7 @@ export default function SectionOne(): JSX.Element {
           customStyle="font-medium mb-8"
         />
       </div>
-      <div className="md:hidden lg:flex flex-col lg:flex-row relative lg:-bottom-5 p-5 lg:mt-0 mt-[46px] items-center rounded-[15px] border-[0.5px] black-gradient-1 shadow-[0px_3px_6px_rgba(0,0,0,0.2),_0px_5px_20px_-1px_rgba(0,0,0,0.2)]">
+      <div className="md:hidden lg:flex w-full md:w-auto flex-col lg:flex-row relative lg:-bottom-5 p-5 lg:mt-0 mt-[46px] items-center rounded-[15px] border-[0.5px] black-gradient-1 brand-shadow">
         <StatsItem stats="$1.12" label="DFI PRICE" />
         <StatsItem stats="125+" label="APPS & SERVICES" />
         <StatsItem stats="$0.0002" label="LOW FEES" />
@@ -64,15 +64,21 @@ function StatsItem({
 }): JSX.Element {
   return (
     <div
-      className={clsx("flex items-center justify-center border-white-600", {
-        "md:border-r md:mr-5 md:pr-5 md:mb-0 mb-4": hasSeparator === true,
-      })}
+      className={clsx(
+        "flex items-center md:justify-center justify-between border-white-600",
+        {
+          "md:border-r md:mr-5 md:pr-5 md:mb-0 mb-4": hasSeparator === true,
+        }
+      )}
     >
-      <span className="text-white-50 font-light md:text-2xl text-xl md:mr-5 mr-3">
+      <span className="hidden md:block text-white-50 font-light md:text-2xl text-xl md:mr-5 mr-3">
         {stats}
       </span>
       <span className="text-xs font-medium text-transparent bg-clip-text brand-gradient-2">
         {label}
+      </span>
+      <span className="block md:hidden text-white-50 font-light md:text-2xl text-xl md:mr-5 mr-3">
+        {stats}
       </span>
     </div>
   );
