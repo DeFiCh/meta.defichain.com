@@ -64,9 +64,12 @@ function StatsItem({
 }): JSX.Element {
   return (
     <div
-      className={clsx("flex items-center md:justify-center justify-between border-white-600", {
-        "md:border-r md:mr-5 md:pr-5 md:mb-0 mb-4": hasSeparator === true,
-      })}
+      className={clsx(
+        "flex items-center md:justify-center justify-between border-white-600",
+        {
+          "md:border-r md:mr-5 md:pr-5 md:mb-0 mb-4": hasSeparator === true,
+        }
+      )}
     >
       <span className="hidden md:block text-white-50 font-light md:text-2xl text-xl md:mr-5 mr-3">
         {stats}
