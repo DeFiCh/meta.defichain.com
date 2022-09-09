@@ -9,7 +9,7 @@ export default function SectionOne(): JSX.Element {
         <SectionHeader
           header="Build next gen dApps with tools of the future"
           hint="UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN"
-          containerStyle="lg:w-3/4"
+          containerStyle="lg:w-3/4 items-center"
         />
         <span className="mb-8 lg:w-3/5 md:text-xl text-white-50">
           DeFi Meta Chain (DMC) is a powerful EVM-compatible blockchain parallel

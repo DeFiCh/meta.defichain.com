@@ -75,7 +75,7 @@ function Home() {
         <SectionThree />
       </section>
       <section className="w-full min-h-screen relative px-4 md:px-[40px] lg:px-[120px]">
-        <div className="w-full h-full h-full absolute lg:top-[-20vh] md:top-[-50vh] top-[-63vh] z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat md:bg-contain bg-cover bg-right lg:bg-[url('/background/gradient-4.png')] md:bg-[url('/background/tablet-gradient-4.png')] bg-[url('/background/mobile-gradient-4.png')]" />
+        <div className="w-full h-full absolute lg:top-[-20vh] md:top-[-50vh] top-[-70vh] z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat md:bg-contain bg-cover bg-right lg:bg-[url('/background/gradient-4.png')] md:bg-[url('/background/tablet-gradient-4.png')] bg-[url('/background/mobile-gradient-4.png')]" />
         <div className="w-full h-full hidden md:block lg:hidden absolute top-[50vh] z-[-1] mix-blend-screen top-0 right-0 bg-no-repeat bg-contain bg-[url('/background/tablet-gradient-5.png')]" />
         <JellyfishBackground
           desktop={{
@@ -89,9 +89,9 @@ function Home() {
             containerStyle: "right-0",
           }}
           mobile={{
-            position: [-20, 300, -750],
-            rotation: [0.4, -0.4, 0.45],
-            containerStyle: "right-0",
+            position: [-20, 500, -850],
+            rotation: [0.6, -0.4, 0.3],
+            containerStyle: "right-0 h-full",
           }}
         />
         <SectionFour />
