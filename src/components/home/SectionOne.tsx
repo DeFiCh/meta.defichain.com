@@ -23,7 +23,7 @@ export default function SectionOne(): JSX.Element {
           customStyle="font-medium mb-8"
         />
       </div>
-      <div className="md:hidden lg:flex flex-col lg:flex-row relative lg:-bottom-5 p-5 lg:mt-0 mt-[46px] items-center rounded-[15px] border-[0.5px] black-gradient-1 shadow-[0px_3px_6px_rgba(0,0,0,0.2),_0px_5px_20px_-1px_rgba(0,0,0,0.2)]">
+      <div className="md:hidden lg:flex flex-col lg:flex-row relative lg:-bottom-5 p-5 lg:mt-0 mt-[46px] items-center rounded-[15px] border-[0.5px] black-gradient-1 brand-shadow">
         <StatsItem stats="$1.12" label="DFI PRICE" />
         <StatsItem stats="125+" label="APPS & SERVICES" />
         <StatsItem stats="$0.0002" label="LOW FEES" />
