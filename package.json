@@ -14,13 +14,13 @@
   },
   "dependencies": {
     "@babel/types": "^7.19.0",
-    "@react-three/drei": "^9.28.3",
+    "@react-three/drei": "^9.29.1",
     "@react-three/fiber": "^8.7.2",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@types/react-type-animation": "^1.1.1",
     "clsx": "^1.2.1",
     "feather-icons": "^4.29.0",
-    "next": "12.2.5",
+    "next": "12.3.0",
     "next-sitemap": "^3.1.21",
     "nextjs-progressbar": "^0.0.14",
     "react": "18.2.0",
@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.10.0",
-    "@netlify/plugin-nextjs": "^4.21.2",
+    "@netlify/plugin-nextjs": "^4.22.0",
     "@testing-library/cypress": "^8.0.3",
     "@types/node": "18.7.16",
     "@types/react": "18.0.18",
@@ -46,7 +46,7 @@
     "eslint": "^8.23.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-config-next": "12.2.5",
+    "eslint-config-next": "12.3.0",
     "eslint-config-node": "^4.1.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-cypress": "^2.12.1",
@@ -61,6 +61,6 @@
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
     "tailwindcss": "^3.1.8",
-    "typescript": "4.8.2"
+    "typescript": "4.8.3"
   }
 }
