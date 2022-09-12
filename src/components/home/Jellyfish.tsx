@@ -83,8 +83,8 @@ interface ViewProps {
 }
 interface JellyfishBackgroundProps {
   desktop: ViewProps;
-  tablet: ViewProps;
-  mobile: ViewProps;
+  tablet?: ViewProps;
+  mobile?: ViewProps;
 }
 
 export function JellyfishBackground({
@@ -104,26 +104,30 @@ export function JellyfishBackground({
           <ambientLight intensity={1} />
         </Canvas>
       </div>
-      <div
-        className={`hidden md:block lg:hidden absolute z-[-2] top-0 w-screen h-screen ${
-          tablet.containerStyle ?? ""
-        }`}
-      >
-        <Canvas>
-          <Jellyfish position={tablet.position} rotation={tablet.rotation} />
-          <ambientLight intensity={1} />
-        </Canvas>
-      </div>
-      <div
-        className={`block md:hidden absolute z-[-2] top-0 w-screen h-screen ${
-          mobile.containerStyle ?? ""
-        }`}
-      >
-        <Canvas>
-          <Jellyfish position={mobile.position} rotation={mobile.rotation} />
-          <ambientLight intensity={1} />
-        </Canvas>
-      </div>
+      {tablet !== undefined && (
+        <div
+          className={`hidden md:block lg:hidden absolute z-[-2] top-0 w-screen h-screen ${
+            tablet.containerStyle ?? ""
+          }`}
+        >
+          <Canvas>
+            <Jellyfish position={tablet.position} rotation={tablet.rotation} />
+            <ambientLight intensity={1} />
+          </Canvas>
+        </div>
+      )}
+      {mobile !== undefined && (
+        <div
+          className={`block md:hidden absolute z-[-2] top-0 w-screen h-screen ${
+            mobile.containerStyle ?? ""
+          }`}
+        >
+          <Canvas>
+            <Jellyfish position={mobile.position} rotation={mobile.rotation} />
+            <ambientLight intensity={1} />
+          </Canvas>
+        </div>
+      )}
     </>
   );
 }

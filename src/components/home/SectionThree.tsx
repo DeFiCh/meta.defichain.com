@@ -8,7 +8,7 @@ export default function SectionThree(): JSX.Element {
       index: 1,
       title: "EVM-Compatible Blockchain",
       content:
-        "Smoothly migrate applications deployed in the Ethereum or other EVM ecosystem to DMC without the extra time and effort of redevelopment.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  dolore magna aliqua.",
+        "DeFi Meta Chain provides an EVM-compatible environment that allows developers familiar with the Ethereum ecosystem to seamlessly and effortlessly build next generation DeFi applications on the Native DeFiChain.<br/><br/>Utilize familiar tools, features and infrastructure while exploring infinite possibilities to build upon new ones:<ul class='list-disc list-inside'><li>Smart contracts written in Solidity</li><li>ERC-20 tokens</li><li>Support</li></ul>",
     },
     {
       index: 2,
@@ -24,7 +24,7 @@ export default function SectionThree(): JSX.Element {
     },
   ];
   return (
-    <div className="flex flex-col md:flex-row justify-center lg:px-[150px] pt-[200px] lg:pt-0">
+    <div className="container mx-auto flex flex-col md:flex-row justify-center lg:px-[150px] pt-[200px] lg:pt-0">
       <div className="w-full md:w-2/4">
         <SectionHeader
           header="DeFi Meta Chain"
@@ -43,7 +43,7 @@ export default function SectionThree(): JSX.Element {
           generation DeFi applications on DeFi Meta Chain.{" "}
         </span>
         <Button label="Read Documentation" href="#" customStyle="font-medium" />
-        <div className="hidden md:block mt-16">
+        <div className="hidden md:block mt-60">
           <SectionThreeItem
             index={BuildOnDMCContent[1].index}
             title={BuildOnDMCContent[1].title}
@@ -61,7 +61,7 @@ export default function SectionThree(): JSX.Element {
           cubeNumber="singlet"
           cubeContainerStyle="relative bottom-[-258px]"
         />
-        <div className="hidden md:block">
+        <div className="hidden md:block mt-8">
           <SectionThreeItem
             index={BuildOnDMCContent[2].index}
             title={BuildOnDMCContent[2].title}

@@ -3,7 +3,7 @@ import SectionHeader from "./SectionHeader";
 
 export default function SectionTwo(): JSX.Element {
   return (
-    <div className="flex flex-col justify-center mt-[200px] md:mt-0 ">
+    <div className="container mx-auto flex flex-col justify-center mt-[200px] md:mt-0 ">
       <SectionHeader
         header="Stay updated"
         hint="WHAT'S NEW"

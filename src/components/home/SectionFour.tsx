@@ -25,7 +25,7 @@ export default function SectionFour(): JSX.Element {
     },
   ];
   return (
-    <div className="lg:px-[150px] pt-[344px] md:pt-[240px]">
+    <div className="container mx-auto lg:px-[150px] pt-[344px] md:pt-[240px]">
       <SectionHeader
         header="Join the DMC Ecosystem"
         hint="DMC ECOSYSTEM"
