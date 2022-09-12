@@ -4,7 +4,7 @@ import SectionHeader from "./SectionHeader";
 
 export default function SectionOne(): JSX.Element {
   return (
-    <div className="flex flex-col grow items-center lg:justify-between md:mt-[15%] mt-[350px]">
+    <div className="container mx-auto flex flex-col grow items-center lg:justify-between md:mt-[15%] mt-[350px]">
       <div className="flex flex-col text-center items-center">
         <SectionHeader
           header="Build next gen dApps with tools of the future"

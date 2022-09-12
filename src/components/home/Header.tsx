@@ -8,7 +8,7 @@ export default function Header(): JSX.Element {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
     <header>
-      <nav className="flex justify-between w-full items-center">
+      <nav className="container mx-auto flex justify-between w-full items-center">
         <Link className="flex items-center" href="/src/pages">
           <div className="relative w-[149px] h-[43px]">
             <Image

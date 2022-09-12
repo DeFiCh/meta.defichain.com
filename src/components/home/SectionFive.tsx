@@ -33,7 +33,7 @@ export default function SectionFive(): JSX.Element {
     },
   ];
   return (
-    <div className="lg:px-[150px]">
+    <div className="container mx-auto lg:px-[150px] flex flex-col">
       <div className="flex flex-col md:flex-row">
         <div className="block md:hidden mb-14">
           <SectionHeader
@@ -49,7 +49,7 @@ export default function SectionFive(): JSX.Element {
             decentralized network.
           </span>
         </div>
-        <div className="md:mr-[72px]">
+        <div className="lg:mr-[72px] md:mr-[110px] lg:w-2/5 md:w-[246px]">
           <SectionFiveItem
             title={SectionFiveContent[0].title}
             content={SectionFiveContent[0].content}
@@ -193,7 +193,7 @@ function SubscribeSection(): JSX.Element {
         </div>
         <div
           className={clsx(
-            "flex items-center w-full md:w-[423px] lg:w-[489px] rounded-[15px] black-gradient-1 lg:px-5 px-[18px] py-6 md:mr-5 border-[0.5px]",
+            "flex items-center w-full md:w-[423px] lg:w-4/6 rounded-[15px] black-gradient-1 lg:px-5 px-[18px] py-6 md:mr-5 border-[0.5px]",
             {
               "border-[#C43636]": emailErrorMessage !== undefined,
               "border-white-50": emailErrorMessage === undefined,
