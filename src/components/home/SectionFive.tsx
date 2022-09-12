@@ -121,7 +121,7 @@ export default function SectionFive(): JSX.Element {
           </span>
         </div>
       </div>
-      <SubscribeSection />
+      {/* <SubscribeSection /> */}
     </div>
   );
 }
@@ -166,6 +166,8 @@ function CommunityIcon({
   );
 }
 
+// Temporarily disable the following rules until we have api for email service
+/* eslint-disable @typescript-eslint/no-unused-vars */
 function SubscribeSection(): JSX.Element {
   const [inputEmail, setInputEmail] = useState<string | undefined>();
   const [emailErrorMessage, setEmailErrorMessage] = useState<
