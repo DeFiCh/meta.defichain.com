@@ -1,11 +1,10 @@
 import Header from "@components/home/Header";
-import Jellyfish, { JellyfishBackground } from "@components/home/Jellyfish";
+import { JellyfishBackground } from "@components/home/Jellyfish";
 import SectionFive from "@components/home/SectionFive";
 import SectionFour from "@components/home/SectionFour";
 import SectionOne from "@components/home/SectionOne";
 import SectionThree from "@components/home/SectionThree";
 import SectionTwo from "@components/home/SectionTwo";
-import { Canvas } from "@react-three/fiber";
 
 function Home() {
   return (
