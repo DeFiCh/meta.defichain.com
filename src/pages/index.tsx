@@ -96,7 +96,7 @@ function Home() {
         />
         <SectionFour />
       </section>
-      <section className="w-full h-full relative px-4 pt-6 md:px-[40px] md:pt-[204px] lg:px-[120px] lg:pt-[248px] pt-[104px]">
+      <section className="w-full h-full 2xl:h-screen relative px-4 pt-6 md:px-[40px] md:pt-[204px] lg:px-[120px] lg:pt-[248px] pt-[104px]">
         <div className="w-full h-full absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-cover lg:bg-[url('/background/gradient-5.png')]" />
         <JellyfishBackground
           desktop={{
