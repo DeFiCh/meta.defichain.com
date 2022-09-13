@@ -1,3 +1,9 @@
-# https://www.robotstxt.org/robotstxt.html
+# *
 User-agent: *
-Disallow:
+Allow: /
+
+# Host
+Host: http://defimetachain.org/
+
+# Sitemaps
+Sitemap: http://defimetachain.org/sitemap-0.xml
