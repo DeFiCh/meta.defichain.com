@@ -52,7 +52,7 @@ function FooterColumn({
     <div className="flex flex-col gap-4 w-full">
       <div className="font-medium text-white-50">{category}</div>
       {childLinks.map((link) => (
-        <FooterLinkItem href={link.href} label={link.label} />
+        <FooterLinkItem href={link.href} label={link.label} key={link.label} />
       ))}
     </div>
   );
