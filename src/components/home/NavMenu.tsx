@@ -3,92 +3,109 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { CSSProperties, useState } from "react";
 
-const MenuChildItems = {
-  developers: [
-    {
-      imagePath: "/menu/documentation.svg",
-      altLabel: "Documentation",
-      label: "Documentation",
-      href: "",
-    },
-    {
-      imagePath: "/menu/releases.svg",
-      altLabel: "Releases",
-      label: "Releases",
-      href: "https://github.com/DeFiCh/metachain/releases",
-    },
-    {
-      imagePath: "/menu/github.svg",
-      altLabel: "GitHub",
-      label: "GitHub",
-      href: "https://github.com/DeFiCh/metachain",
-    },
-    {
-      imagePath: "/menu/forum.svg",
-      altLabel: "Developer's Chatroom",
-      label: "Developer's Chatroom",
-      href: "https://discord.gg/g5U4pvNtbS",
-    },
-  ],
-  ecosystem: [
-    {
-      imagePath: "/menu/dmc-explorer.svg",
-      altLabel: "DMC Explorer",
-      label: "DMC Explorer",
-      href: "",
-    },
-    {
-      imagePath: "/menu/defichain-com.svg",
-      altLabel: "DeFiChain.com",
-      label: "DeFiChain.com",
-      href: "https://defichain.com",
-    },
-    {
-      imagePath: "/menu/whitepaper.svg",
-      altLabel: "Whitepaper",
-      label: "Whitepaper",
-      href: "",
-    },
-    {
-      imagePath: "/menu/wallets.svg",
-      altLabel: "Wallets",
-      label: "Wallets",
-      href: "",
-    },
-  ],
-  community: [
-    {
-      imagePath: "/menu/discord.svg",
-      altLabel: "Discord",
-      label: "Discord",
-      href: "https://discord.gg/U268gQUqQt",
-    },
-    {
-      imagePath: "/menu/twitter.svg",
-      altLabel: "Twitter",
-      label: "Twitter",
-      href: "https://twitter.com/defichain",
-    },
-    {
-      imagePath: "/menu/youtube.svg",
-      altLabel: "YouTube",
-      label: "YouTube",
-      href: "https://www.youtube.com/c/DeFiChain",
-    },
-    {
-      imagePath: "/menu/telegram.svg",
-      altLabel: "Telegram",
-      label: "Telegram",
-      href: "https://t.me/defiblockchain",
-    },
-  ],
-};
+export const MenuItems = [
+  {
+    category: "Developers",
+    childLink: [
+      {
+        imagePath: "/menu/documentation.svg",
+        altLabel: "Documentation",
+        label: "Documentation",
+        href: "",
+      },
+      {
+        imagePath: "/menu/releases.svg",
+        altLabel: "Releases",
+        label: "Releases",
+        href: "https://github.com/DeFiCh/metachain/releases",
+      },
+      {
+        imagePath: "/menu/github.svg",
+        altLabel: "GitHub",
+        label: "GitHub",
+        href: "https://github.com/DeFiCh/metachain",
+      },
+      {
+        imagePath: "/menu/forum.svg",
+        altLabel: "Developer's Chatroom",
+        label: "Developer's Chatroom",
+        href: "https://discord.gg/g5U4pvNtbS",
+      },
+    ],
+  },
+  {
+    category: "Ecosystem",
+    childLink: [
+      {
+        imagePath: "/menu/dmc-explorer.svg",
+        altLabel: "DMC Explorer",
+        label: "DMC Explorer",
+        href: "",
+      },
+      {
+        imagePath: "/menu/defichain-com.svg",
+        altLabel: "DeFiChain.com",
+        label: "DeFiChain.com",
+        href: "https://defichain.com",
+      },
+      {
+        imagePath: "/menu/whitepaper.svg",
+        altLabel: "Whitepaper",
+        label: "Whitepaper",
+        href: "",
+      },
+      {
+        imagePath: "/menu/wallets.svg",
+        altLabel: "Wallets",
+        label: "Wallets",
+        href: "",
+      },
+    ],
+  },
+  {
+    category: "Community",
+    childLink: [
+      {
+        imagePath: "/menu/discord.svg",
+        altLabel: "Discord",
+        label: "Discord",
+        href: "https://discord.gg/U268gQUqQt",
+      },
+      {
+        imagePath: "/menu/twitter.svg",
+        altLabel: "Twitter",
+        label: "Twitter",
+        href: "https://twitter.com/defichain",
+      },
+      {
+        imagePath: "/menu/youtube.svg",
+        altLabel: "YouTube",
+        label: "YouTube",
+        href: "https://www.youtube.com/c/DeFiChain",
+      },
+      {
+        imagePath: "/menu/telegram.svg",
+        altLabel: "Telegram",
+        label: "Telegram",
+        href: "https://t.me/defiblockchain",
+      },
+    ],
+  },
+  {
+    category: "Blog",
+    href: "",
+    childLink: [],
+  },
+];
 
 export default function NavMenu(): JSX.Element {
   return (
     <div className="flex bg-white-50 rounded-[30px] lg:flex hidden">
-      <NavMenuItem label="Developers" childContainerStyle={{ left: -58 }}>
-        {MenuChildItems.developers.map((item) => (
+      <NavMenuItem
+        label={MenuItems[0].category}
+        childContainerStyle={{ left: -58 }}
+      >
+        {MenuItems[0].childLink.map((item) => (
           <NavMenuChildItem
             href={item.href}
             imagePath={item.imagePath}
@@ -98,8 +115,11 @@ export default function NavMenu(): JSX.Element {
           />
         ))}
       </NavMenuItem>
-      <NavMenuItem label="Ecosystem" childContainerStyle={{ left: -54 }}>
-        {MenuChildItems.ecosystem.map((item) => (
+      <NavMenuItem
+        label={MenuItems[1].category}
+        childContainerStyle={{ left: -54 }}
+      >
+        {MenuItems[1].childLink.map((item) => (
           <NavMenuChildItem
             href={item.href}
             imagePath={item.imagePath}
@@ -109,8 +129,11 @@ export default function NavMenu(): JSX.Element {
           />
         ))}
       </NavMenuItem>
-      <NavMenuItem label="Community" childContainerStyle={{ left: -51 }}>
-        {MenuChildItems.community.map((item) => (
+      <NavMenuItem
+        label={MenuItems[2].category}
+        childContainerStyle={{ left: -51 }}
+      >
+        {MenuItems[2].childLink.map((item) => (
           <NavMenuChildItem
             href={item.href}
             imagePath={item.imagePath}
@@ -122,7 +145,7 @@ export default function NavMenu(): JSX.Element {
       </NavMenuItem>
       <div className="px-8 py-4 group cursor-pointer relative before:cta-border before:bg-white-50 before:opacity-100 hover:before:opacity-0 after:cta-border after:brand-gradient-1 after:opacity-0 hover:after:opacity-100">
         <Link href="/">
-          <MenuItemLabel label="Blog" />
+          <MenuItemLabel label={MenuItems[3].category} />
         </Link>
       </div>
     </div>
@@ -190,26 +213,28 @@ function NavMenuMobile({
           </svg>
         </div>
         <NavMenuMobileItem
-          label="Developers"
+          label={MenuItems[0].category}
           isActive={activeMenu === NavItem.Developers}
           onClick={() => onClickMenu(NavItem.Developers)}
-          childItems={MenuChildItems.developers}
+          childItems={MenuItems[0].childLink}
         />
         <NavMenuMobileItem
-          label="Ecosystem"
+          label={MenuItems[1].category}
           isActive={activeMenu === NavItem.Ecosystem}
           onClick={() => onClickMenu(NavItem.Ecosystem)}
-          childItems={MenuChildItems.ecosystem}
+          childItems={MenuItems[1].childLink}
         />
         <NavMenuMobileItem
-          label="Community"
+          label={MenuItems[2].category}
           isActive={activeMenu === NavItem.Community}
           onClick={() => onClickMenu(NavItem.Community)}
-          childItems={MenuChildItems.community}
+          childItems={MenuItems[2].childLink}
         />
         <Link href="/">
           <div className="px-8 py-5 flex items-center justify-between">
-            <span className="font-medium text-gray-50">Blog</span>
+            <span className="font-medium text-gray-50">
+              {MenuItems[3].category}
+            </span>
             <svg className="feather w-6 h-6 stroke-gray-50">
               <use href="/feather-sprite.svg#arrow-up-right" />
             </svg>
