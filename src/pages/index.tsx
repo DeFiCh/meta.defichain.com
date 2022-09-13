@@ -1,3 +1,4 @@
+import Footer from "@components/home/Footer";
 import Header from "@components/home/Header";
 import { JellyfishBackground } from "@components/home/Jellyfish";
 import SectionFive from "@components/home/SectionFive";
@@ -96,8 +97,9 @@ function Home() {
         />
         <SectionFour />
       </section>
-      <section className="w-full h-full 2xl:h-screen relative px-4 pt-6 md:px-[40px] md:pt-[204px] lg:px-[120px] lg:pt-[248px] pt-[104px]">
+      <section className="w-full h-full relative px-4 pt-6 md:px-[40px] md:pt-[204px] lg:px-[120px] lg:pt-[248px] pt-[104px]">
         <div className="w-full h-full absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-cover lg:bg-[url('/background/gradient-5.png')]" />
+        <div className="w-full h-full absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat md:bg-cover bg-contain bg-bottom 2xl:bg-[url('/background/footer-xl.png')] lg:bg-[url('/background/footer.png')] md:bg-[url('/background/footer-tablet.png')] bg-[url('/background/mobile-footer.png')]" />
         <JellyfishBackground
           desktop={{
             position: [-120, -200, -1000],
@@ -106,6 +108,7 @@ function Home() {
           }}
         />
         <SectionFive />
+        <Footer />
       </section>
     </>
   );
