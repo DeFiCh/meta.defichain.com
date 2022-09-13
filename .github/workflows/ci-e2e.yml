@@ -46,6 +46,6 @@ jobs:
           tag: ${{ github.event_name }}
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          GITHUB_TOKEN: ${{ secrets.BIRTHDAYRESEARCH_BOT_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.DEFICHAIN_BOT_GITHUB_TOKEN }}
 
       - uses: codecov/codecov-action@81cd2dc8148241f03f5839d295e000b8f761e378
