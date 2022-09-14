@@ -39,7 +39,7 @@
     "@types/react": "18.0.20",
     "@types/react-dom": "18.0.6",
     "@types/three": "^0.144.0",
-    "autoprefixer": "^10.4.9",
+    "autoprefixer": "^10.4.10",
     "babel-plugin-istanbul": "^6.1.1",
     "babel-plugin-jsx-remove-data-test-id": "^3.0.0",
     "cypress": "^10.7.0",
