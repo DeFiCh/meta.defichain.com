@@ -1,46 +1,36 @@
 import Button from "@components/ui/Button";
 import clsx from "clsx";
+import { Parallax } from "react-scroll-parallax";
 import SectionHeader from "./SectionHeader";
 
 export default function SectionOne(): JSX.Element {
   return (
     <div className="container mx-auto flex flex-col grow items-center lg:justify-between md:mt-[15%] mt-[350px]">
-      <div className="flex flex-col text-center items-center">
-        <SectionHeader
-          header="Build next gen dApps with tools of the future"
-          hint="UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN"
-          containerStyle="lg:w-3/4 items-center"
-        />
-        <span className="mb-8 lg:w-3/5 md:text-xl text-white-50">
-          DeFi Meta Chain (DMC) is a powerful EVM-compatible blockchain parallel
-          to DeFiChain, a leader in DeFi. Built to future proof trends, DMC
-          achieves ecosystem scalability by providing developers with familiar
-          tools to build the future of DeFi today.
-        </span>
-        <Button
-          label="Develop with DeFiMetaChain"
-          href="#"
-          customStyle="font-medium mb-8"
-        />
-      </div>
-      <div className="md:hidden lg:flex w-full md:w-auto flex-col lg:flex-row relative lg:-bottom-5 p-5 lg:mt-0 mt-[46px] items-center rounded-[15px] border-[0.5px] black-gradient-1 brand-shadow">
-        <StatsItem stats="$1.12" label="DFI PRICE" />
-        <StatsItem stats="125+" label="APPS & SERVICES" />
-        <StatsItem stats="$0.0002" label="LOW FEES" />
-        <StatsItem stats="23,312,231" label="TOTAL TRANSACTION" />
-        <StatsItem
-          stats="558,197,231"
-          label="CIRCULATING DFI"
-          hasSeparator={false}
-        />
-      </div>
-      <div className="md:flex flex-col hidden lg:hidden mt-[108px] items-center">
-        <div className="flex items-center p-5 mb-2 rounded-[15px] border-[0.5px] black-gradient-1 shadow-[0px_3px_6px_rgba(0,0,0,0.2),_0px_5px_20px_-1px_rgba(0,0,0,0.2)]">
+      <Parallax translateY={[30, -30]}>
+        <div className="flex flex-col text-center items-center">
+          <SectionHeader
+            header="Build next gen dApps with tools of the future"
+            hint="UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN"
+            containerStyle="lg:w-3/4 items-center"
+          />
+          <span className="mb-8 lg:w-3/5 md:text-xl text-white-50">
+            DeFi Meta Chain (DMC) is a powerful EVM-compatible blockchain
+            parallel to DeFiChain, a leader in DeFi. Built to future proof
+            trends, DMC achieves ecosystem scalability by providing developers
+            with familiar tools to build the future of DeFi today.
+          </span>
+          <Button
+            label="Develop with DeFiMetaChain"
+            href="#"
+            customStyle="font-medium mb-8"
+          />
+        </div>
+      </Parallax>
+      <Parallax translateY={[30, -30]}>
+        <div className="md:hidden lg:flex w-full md:w-auto flex-col lg:flex-row relative lg:-bottom-5 p-5 lg:mt-0 mt-[46px] items-center rounded-[15px] border-[0.5px] black-gradient-1 brand-shadow">
           <StatsItem stats="$1.12" label="DFI PRICE" />
           <StatsItem stats="125+" label="APPS & SERVICES" />
-          <StatsItem stats="$0.0002" label="LOW FEES" hasSeparator={false} />
-        </div>
-        <div className="flex items-center p-5 rounded-[15px] border-[0.5px] black-gradient-1 shadow-[0px_3px_6px_rgba(0,0,0,0.2),_0px_5px_20px_-1px_rgba(0,0,0,0.2)]">
+          <StatsItem stats="$0.0002" label="LOW FEES" />
           <StatsItem stats="23,312,231" label="TOTAL TRANSACTION" />
           <StatsItem
             stats="558,197,231"
@@ -48,7 +38,22 @@ export default function SectionOne(): JSX.Element {
             hasSeparator={false}
           />
         </div>
-      </div>
+        <div className="md:flex flex-col hidden lg:hidden mt-[108px] items-center">
+          <div className="flex items-center p-5 mb-2 rounded-[15px] border-[0.5px] black-gradient-1 shadow-[0px_3px_6px_rgba(0,0,0,0.2),_0px_5px_20px_-1px_rgba(0,0,0,0.2)]">
+            <StatsItem stats="$1.12" label="DFI PRICE" />
+            <StatsItem stats="125+" label="APPS & SERVICES" />
+            <StatsItem stats="$0.0002" label="LOW FEES" hasSeparator={false} />
+          </div>
+          <div className="flex items-center p-5 rounded-[15px] border-[0.5px] black-gradient-1 shadow-[0px_3px_6px_rgba(0,0,0,0.2),_0px_5px_20px_-1px_rgba(0,0,0,0.2)]">
+            <StatsItem stats="23,312,231" label="TOTAL TRANSACTION" />
+            <StatsItem
+              stats="558,197,231"
+              label="CIRCULATING DFI"
+              hasSeparator={false}
+            />
+          </div>
+        </div>
+      </Parallax>
     </div>
   );
 }

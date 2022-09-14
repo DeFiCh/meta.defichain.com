@@ -10,6 +10,7 @@ import {
 } from "@components/siteInfo";
 import clsx from "clsx";
 import { JSX } from "@babel/types";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 function Base({ children }: PropsWithChildren<any>): JSX.Element | null {
   const [mounted, setMounted] = useState(false);
@@ -72,7 +73,11 @@ function Base({ children }: PropsWithChildren<any>): JSX.Element | null {
           href="/favicon-32x32.png"
         />
       </Head>
-      <main className={clsx("flex-grow")}>{mounted && children}</main>
+      {mounted && (
+        <ParallaxProvider>
+          <main className={clsx("flex-grow")}>{children}</main>
+        </ParallaxProvider>
+      )}
     </div>
   );
 }
