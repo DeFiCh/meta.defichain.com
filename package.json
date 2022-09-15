@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@babel/types": "^7.19.0",
-    "@react-three/drei": "^9.29.1",
+    "@react-three/drei": "^9.30.2",
     "@react-three/fiber": "^8.7.3",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@types/react-type-animation": "^1.1.1",
@@ -40,7 +40,7 @@
     "@types/react": "18.0.20",
     "@types/react-dom": "18.0.6",
     "@types/three": "^0.144.0",
-    "autoprefixer": "^10.4.10",
+    "autoprefixer": "^10.4.11",
     "babel-plugin-istanbul": "^6.1.1",
     "babel-plugin-jsx-remove-data-test-id": "^3.0.0",
     "cypress": "^10.8.0",
