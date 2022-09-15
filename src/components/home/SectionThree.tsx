@@ -43,7 +43,7 @@ export default function SectionThree(): JSX.Element {
           generation DeFi applications on DeFi Meta Chain.{" "}
         </span>
         <Button label="Read Documentation" href="#" customStyle="font-medium" />
-        <div className="hidden md:block mt-60">
+        <div className="hidden md:block mt-32">
           <SectionThreeItem
             index={BuildOnDMCContent[1].index}
             title={BuildOnDMCContent[1].title}
