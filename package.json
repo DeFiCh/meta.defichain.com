@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@babel/types": "^7.19.0",
-    "@react-three/drei": "^9.31.0",
+    "@react-three/drei": "^9.31.1",
     "@react-three/fiber": "^8.7.4",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@types/react-type-animation": "^1.1.1",
