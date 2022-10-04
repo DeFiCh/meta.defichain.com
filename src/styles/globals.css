@@ -40,8 +40,8 @@ body {
     transition-duration: 300ms;
   }
 
-  /* To style :before and :after of button label to have color transition on hover */
-  .button-text {
+  /* To style :before and :after of text to have color transition on hover */
+  .gradient-text {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -69,6 +69,10 @@ body {
       #42f9c2 3.99%,
       #082fd4 105.23%
     );
+  }
+
+  .white-gradient-1 {
+    background-image: linear-gradient(129.11deg, rgba(255, 255, 255, 0.4) 6.34%, rgba(255, 255, 255, 0) 45.98%);
   }
 
   /* To style pseudo element to keep child menu open when hovering across a gap between parent and child menu */
@@ -163,4 +167,8 @@ video {
 
 .brand-shadow {
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2), 0px 5px 20px -1px rgba(0, 0, 0, 0.2);
+}
+
+.border-white-gradient-1 {
+  border-image: linear-gradient(129.11deg, rgba(255, 255, 255, 0.4) 6.34%, rgba(255, 255, 255, 0) 45.98%) 1;
 }
