@@ -20,14 +20,14 @@ export default function SectionOne(): JSX.Element {
             with familiar tools to build the future of DeFi today.
           </span>
           <Button
-            label="Develop with DeFiMetaChain"
+            label="Develop with DeFiMetaChain (coming soon)"
             href="#"
             customStyle="font-medium mb-8"
           />
         </div>
       </Parallax>
-      <Parallax translateY={[30, -30]}>
-        <div className="md:hidden lg:flex w-full md:w-auto flex-col lg:flex-row relative lg:-bottom-5 p-5 lg:mt-0 mt-[46px] items-center rounded-[15px] border-[0.5px] black-gradient-1 brand-shadow">
+      {/* <Parallax translateY={[30, -30]}>
+        <div className="md:hidden lg:flex w-full md:w-auto flex-col lg:flex-row relative lg:-bottom-5 p-5 lg:mt-0 mt-[46px] items-center rounded-[15px] bg-black-900 brand-shadow before:button-border before:white-gradient-1">
           <StatsItem stats="$1.12" label="DFI PRICE" />
           <StatsItem stats="125+" label="APPS & SERVICES" />
           <StatsItem stats="$0.0002" label="LOW FEES" />
@@ -53,11 +53,13 @@ export default function SectionOne(): JSX.Element {
             />
           </div>
         </div>
-      </Parallax>
+      </Parallax> */}
     </div>
   );
 }
 
+// Temporarily disable until actual statistic data is available
+/* eslint-disable @typescript-eslint/no-unused-vars */
 function StatsItem({
   stats,
   label,

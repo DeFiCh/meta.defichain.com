@@ -12,12 +12,12 @@ export default function SectionTwo(): JSX.Element {
       <div className="flex md:flex-row flex-col md:items-start justify-center">
         <StayUpdatedCard
           imagePath="/home/mainnet-launch.png"
-          label="Launch of DMC MainNet"
+          label="Launch of DMC MainNet (coming soon)"
           containerStyle="lg:mr-6 md:mr-4"
         />
         <StayUpdatedCard
           imagePath="/home/testnet-launch.png"
-          label="Launch of DMC TestNet"
+          label="Launch of DMC TestNet (coming soon)"
           containerStyle="lg:mr-6 md:mr-4"
         />
         <StayUpdatedCard

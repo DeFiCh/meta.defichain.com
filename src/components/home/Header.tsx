@@ -23,8 +23,10 @@ export default function Header(): JSX.Element {
         <NavMenu />
         <div className="flex items-center">
           <Button
-            label="Get DFI"
-            href="https://defichain.com/dfi"
+            // label="Get DFI"
+            // href="https://defichain.com/dfi"
+            label="Coming Soon"
+            href="#"
             customStyle="hidden md:block"
           />
           <svg

@@ -92,7 +92,7 @@ export const MenuItems = [
     ],
   },
   {
-    category: "Blog",
+    category: "Blog (coming soon)",
     href: "",
     childLink: [],
   },
