@@ -1,3 +1,5 @@
+import GradientText from "./GradientText";
+
 export default function Button({
   label,
   href,
@@ -19,12 +21,7 @@ export default function Button({
     >
       <a href={href} target="_blank" rel="noreferrer">
         <div className="flex items-center ">
-          <span
-            data-label={label}
-            className="relative before:button-text before:content-[attr(data-label)] before:bg-white-50 before:opacity-100 group-hover:before:opacity-0 after:button-text after:content-[attr(data-label)] after:brand-gradient-1 after:opacity-0 group-hover:after:opacity-100"
-          >
-            {label}
-          </span>
+          <GradientText label={label} />
         </div>
       </a>
     </button>

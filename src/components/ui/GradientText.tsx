@@ -13,7 +13,7 @@ export default function GradientText({
     <span
       data-label={label}
       data-gradient={gradient}
-      className={`relative before:button-text before:content-[attr(data-label)] before:${initialTextColor} before:opacity-100 group-hover:before:opacity-0 after:button-text after:content-[attr(data-label)] ${gradient} after:opacity-0 group-hover:after:opacity-100 ${
+      className={`relative before:gradient-text before:content-[attr(data-label)] before:${initialTextColor} before:opacity-100 group-hover:before:opacity-0 after:gradient-text after:content-[attr(data-label)] ${gradient} after:opacity-0 group-hover:after:opacity-100 ${
         customStyle ?? ""
       }`}
     >

@@ -1,3 +1,4 @@
+import GradientText from "@components/ui/GradientText";
 import clsx from "clsx";
 import Image from "next/image";
 import { ReactNode, useState } from "react";
@@ -140,7 +141,11 @@ function SectionFiveItem({
   return (
     <a href={link} target="_blank" rel="noreferrer">
       <div className="rounded-[15px] border-[0.5px] p-5 mb-5 relative group black-gradient-1">
-        <div className="text-xl font-bold text-white-50 mb-2">{title}</div>
+        <GradientText
+          label={title}
+          gradient="after:brand-gradient-2"
+          customStyle="text-xl font-bold"
+        />
         <div className="text-white-600">{content}</div>
         {children}
       </div>

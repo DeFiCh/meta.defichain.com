@@ -92,7 +92,7 @@ export const MenuItems = [
     ],
   },
   {
-    category: "Blog",
+    category: "Blog (coming soon)",
     href: "",
     childLink: [],
   },
@@ -355,7 +355,7 @@ function NavMenuItem({
 const MenuItemLabel = React.forwardRef(
   ({ label }: { label: string }, ref: React.Ref<HTMLElement>): JSX.Element => {
     const navItemStyle =
-      "text-transparent font-medium before:bg-black-900 relative before:button-text before:font-medium before:opacity-100 group-hover:before:opacity-0 before:leading-[20.8px] after:leading-[20.8px] after:button-text after:font-medium after:brand-gradient-1 after:opacity-0 group-hover:after:opacity-100";
+      "text-transparent font-medium before:bg-black-900 relative before:gradient-text before:font-medium before:opacity-100 group-hover:before:opacity-0 before:leading-[20.8px] after:leading-[20.8px] after:gradient-text after:font-medium after:brand-gradient-1 after:opacity-0 group-hover:after:opacity-100";
     return (
       <span
         ref={ref}
@@ -380,7 +380,7 @@ function NavMenuChildItem({
   label: string;
 }): JSX.Element {
   const navChildItemStyle =
-    "pl-6 text-transparent before:pl-6 before:bg-black-900 relative before:button-text before:opacity-100 [.group-scoped:hover_&]:before:opacity-0 before:left-6 after:left-6 after:button-text after:pl-6 after:brand-gradient-1 after:opacity-0 [.group-scoped:hover_&]:after:opacity-100";
+    "pl-6 text-transparent before:pl-6 before:bg-black-900 relative before:gradient-text before:opacity-100 [.group-scoped:hover_&]:before:opacity-0 before:left-6 after:left-6 after:gradient-text after:pl-6 after:brand-gradient-1 after:opacity-0 [.group-scoped:hover_&]:after:opacity-100";
   return (
     <Link href={href}>
       <a href={href} rel="noreferrer" target="_blank">
