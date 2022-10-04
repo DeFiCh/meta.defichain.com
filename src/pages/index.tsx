@@ -194,7 +194,7 @@ function Home() {
           <SectionThree />
         </Parallax>
       </section>
-      <section
+      {/* <section
         ref={sectionFourRef}
         id={HomeSections.Four}
         className="w-full min-h-screen relative px-4 md:px-[40px] lg:px-[120px]"
@@ -221,7 +221,7 @@ function Home() {
         <Parallax translateY={[30, -30]}>
           <SectionFour />
         </Parallax>
-      </section>
+      </section> */}
       <section
         ref={sectionFiveRef}
         id={HomeSections.Five}
