@@ -1,6 +1,8 @@
 import GradientText from "@components/ui/GradientText";
 import Image from "next/image";
 import { ReactNode } from "react";
+import ClayDFI from "@public/home/clay-dfi.png";
+import ClayBlock from "@public/home/clay-block.png";
 import SectionHeader from "./SectionHeader";
 
 export default function SectionFour(): JSX.Element {
@@ -85,7 +87,7 @@ export default function SectionFour(): JSX.Element {
                 <Image
                   data-testid="clay_dfi"
                   layout="fill"
-                  src="/home/clay-dfi.png"
+                  src={ClayDFI}
                   alt="DFI"
                   objectFit="contain"
                 />
@@ -102,7 +104,7 @@ export default function SectionFour(): JSX.Element {
                 <Image
                   data-testid="clay_block"
                   layout="fill"
-                  src="/home/clay-block.png"
+                  src={ClayBlock}
                   alt="dApp"
                   objectFit="contain"
                 />

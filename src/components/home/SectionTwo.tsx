@@ -1,4 +1,7 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+import MainnetLaunch from "@public/home/mainnet-launch.png";
+import TestnetLaunch from "@public/home/testnet-launch.png";
+import DMCHackathon from "@public/home/dmc-hackathon.png";
 import SectionHeader from "./SectionHeader";
 
 export default function SectionTwo(): JSX.Element {
@@ -11,17 +14,17 @@ export default function SectionTwo(): JSX.Element {
       />
       <div className="flex md:flex-row flex-col md:items-start justify-center">
         <StayUpdatedCard
-          imagePath="/home/mainnet-launch.png"
+          image={MainnetLaunch}
           label="Launch of DMC MainNet (coming soon)"
           containerStyle="lg:mr-6 md:mr-4"
         />
         <StayUpdatedCard
-          imagePath="/home/testnet-launch.png"
+          image={TestnetLaunch}
           label="Launch of DMC TestNet (coming soon)"
           containerStyle="lg:mr-6 md:mr-4"
         />
         <StayUpdatedCard
-          imagePath="/home/dmc-hackathon.png"
+          image={DMCHackathon}
           label="DMC Hackathon (coming soon)"
         />
       </div>
@@ -30,11 +33,11 @@ export default function SectionTwo(): JSX.Element {
 }
 
 function StayUpdatedCard({
-  imagePath,
+  image,
   label,
   containerStyle,
 }: {
-  imagePath: string;
+  image: StaticImageData;
   label: string;
   containerStyle?: string;
 }): JSX.Element {
@@ -45,7 +48,7 @@ function StayUpdatedCard({
       }`}
     >
       <div className="relative mb-5 lg:w-[284px] md:w-[218px] w-[328px] h-[140px] border overflow-hidden rounded-[30px] border-transparent">
-        <Image layout="fill" src={imagePath} alt={label} objectFit="cover" />
+        <Image layout="fill" src={image} alt={label} objectFit="cover" />
       </div>
       <span className="text-white-50 text-center md:w-[218px]">{label}</span>
     </div>
