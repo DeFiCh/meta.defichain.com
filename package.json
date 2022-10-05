@@ -14,7 +14,7 @@
     "cypress:run": "TZ=UTC cypress run --headless --browser chrome"
   },
   "dependencies": {
-    "@babel/types": "^7.19.0",
+    "@babel/types": "^7.19.3",
     "@react-three/drei": "^9.32.0",
     "@react-three/fiber": "^8.8.8",
     "@tailwindcss/line-clamp": "^0.4.2",
