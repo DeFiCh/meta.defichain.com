@@ -34,7 +34,7 @@
   "devDependencies": {
     "@cypress/code-coverage": "^3.10.0",
     "@netlify/plugin-lighthouse": "^3.7.1",
-    "@netlify/plugin-nextjs": "^4.27.3",
+    "@netlify/plugin-nextjs": "^4.28.1",
     "@testing-library/cypress": "^8.0.3",
     "@types/node": "18.7.18",
     "@types/react": "18.0.21",
