@@ -20,9 +20,8 @@ export default function SectionHeader({
       </span>
       <span
         className={`mb-8 font-bold lg:text-[80px] lg:leading-[80px] md:text-[56px] md:leading-[56px] text-[32px] leading-[32px] text-white-50 ${headerStyle}`}
-      >
-        {header}
-      </span>
+        dangerouslySetInnerHTML={{ __html: header }}
+      />
     </div>
   );
 }

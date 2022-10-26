@@ -27,13 +27,13 @@ export default function SectionFour(): JSX.Element {
   return (
     <div className="container mx-auto lg:px-[150px] pt-[344px] md:pt-[240px]">
       <SectionHeader
-        header="Join the DMC Ecosystem"
+        header="Join the<br/>DMC Ecosystem"
         hint="DMC ECOSYSTEM"
         hintStyle="brand-gradient-1 text-start"
-        headerStyle="text-start mb-6 md:mb-8 lg:w-[592px] md:w-[511px]"
+        headerStyle="text-start mb-6 md:mb-8 lg:w-[620px] md:w-[511px]"
         containerStyle="items-start"
       />
-      <span className="text-white-50 text-xl inline-block lg:w-[592px] md:w-[511px]">
+      <span className="text-white-50 text-xl inline-block lg:w-[620px] md:w-[511px]">
         Start exploring and unlock the limitless potential of DMC by following
         these 3 simple steps:
       </span>
@@ -42,6 +42,7 @@ export default function SectionFour(): JSX.Element {
           <div className="hidden md:absolute md:block flex items-end lg:relative lg:top-[-65px] lg:left-[-49px] md:right-[0px] md:top-[-82px]">
             <div className="hidden md:block absolute w-[179px] h-[179px] z-[3] group-hover:rotate-[19.53deg] transition duration-300">
               <Image
+                unoptimized
                 data-testid="clay_wallet"
                 layout="fill"
                 src="/home/clay-wallet.svg"
@@ -51,6 +52,7 @@ export default function SectionFour(): JSX.Element {
             </div>
             <div className="hidden md:block relative left-[67px] top-[81px] z-[1] w-[86px] h-[86px] group-hover:rotate-[53.78deg] group-hover:translate-x-[44px] transition duration-300">
               <Image
+                unoptimized
                 data-testid="clay_dollar_medium"
                 layout="fill"
                 src="/home/clay-dollar.svg"
@@ -60,6 +62,7 @@ export default function SectionFour(): JSX.Element {
             </div>
             <div className="hidden md:block relative left-[89px] top-[16px] z-[2] w-[63px] h-[63px] group-hover:rotate-[-5.14deg] group-hover:translate-x-[75px] transition duration-300">
               <Image
+                unoptimized
                 data-testid="clay_dollar_small"
                 layout="fill"
                 src="/home/clay-dollar.svg"
@@ -83,6 +86,7 @@ export default function SectionFour(): JSX.Element {
             >
               <div className="hidden md:block absolute right-[-35px] top-[-37px] z-[1] w-[175.8px] h-[114.1px] group-hover:rotate-[150.78deg] transition duration-300">
                 <Image
+                  unoptimized
                   data-testid="clay_dfi"
                   layout="fill"
                   src="/home/clay-dfi.png"
@@ -100,6 +104,7 @@ export default function SectionFour(): JSX.Element {
             >
               <div className="hidden md:block absolute right-[-35px] top-[-37px] z-[1] w-[125px] h-[125px] group-hover:rotate-[100.78deg] transition duration-300">
                 <Image
+                  unoptimized
                   data-testid="clay_block"
                   layout="fill"
                   src="/home/clay-block.png"
