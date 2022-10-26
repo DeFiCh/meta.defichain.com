@@ -118,7 +118,7 @@ function Home() {
         id={HomeSections.One}
         className="w-full min-h-screen flex flex-col justify-between relative px-4 pt-6 md:px-[40px] md:pt-6 lg:px-[120px] lg:pt-[52px]"
       >
-        <div className="w-full h-screen absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-contain lg:bg-[url('/background/portal-gradient-1.png')] md:bg-[url('/background/tablet-portal-gradient-1.png')] bg-[url('/background/mobile-portal-gradient-1.png')]" />
+        <div className="w-full h-screen absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat lg:bg-cover bg-contain lg:bg-[url('/background/portal-gradient-1.png')] md:bg-[url('/background/tablet-portal-gradient-1.png')] bg-[url('/background/mobile-portal-gradient-1.png')]" />
         <Header />
         <JellyfishBackground
           desktop={{
@@ -145,23 +145,6 @@ function Home() {
         className="w-full lg:h-screen relative flex flex-col justify-center px-4 md:px-[40px] lg:px-[120px]"
       >
         <div className="w-full h-screen absolute top-[-50vh] z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-contain bg-right lg:bg-[url('/background/gradient-2.png')] md:bg-[url('/background/tablet-gradient-2.png')] bg-[url('/background/mobile-gradient-2.png')]" />
-        <JellyfishBackground
-          desktop={{
-            position: [0, 300, -500],
-            rotation: [0.4, -0.4, 0.27],
-            containerStyle: "right-0",
-          }}
-          tablet={{
-            position: [150, 100, -600],
-            rotation: [0.3, -0.4, 0.27],
-            containerStyle: "right-0",
-          }}
-          mobile={{
-            position: [-20, 500, -600],
-            rotation: [0.8, -0.4, 0.27],
-            containerStyle: "right-0",
-          }}
-        />
         <Parallax translateY={[30, -30]}>
           <SectionTwo />
         </Parallax>

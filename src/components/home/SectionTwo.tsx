@@ -48,7 +48,13 @@ function StayUpdatedCard({
       }`}
     >
       <div className="relative mb-5 lg:w-[284px] md:w-[218px] w-[328px] h-[140px] border overflow-hidden rounded-[30px] border-transparent">
-        <Image layout="fill" src={image} alt={label} objectFit="cover" />
+        <Image
+          unoptimized
+          layout="fill"
+          src={image}
+          alt={label}
+          objectFit="cover"
+        />
       </div>
       <span className="text-white-50 text-center md:w-[218px]">{label}</span>
     </div>

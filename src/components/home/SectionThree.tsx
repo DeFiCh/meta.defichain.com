@@ -8,7 +8,7 @@ export default function SectionThree(): JSX.Element {
       index: 1,
       title: "EVM-Compatible Blockchain",
       content:
-        "DeFi Meta Chain provides an EVM-compatible environment that allows developers familiar with the Ethereum ecosystem to seamlessly and effortlessly build next generation DeFi applications on the Native DeFiChain.<br/><br/>Utilize familiar tools, features and infrastructure while exploring infinite possibilities to build upon new ones:<ul class='list-disc list-inside'><li>Smart contracts written in Solidity</li><li>ERC-20 tokens</li><li>Support</li></ul>",
+        "DeFi Meta Chain provides an EVM-compatible environment that allows developers familiar with the Ethereum ecosystem to seamlessly and effortlessly build next generation DeFi applications on the Native DeFiChain.<br/><br/>Utilize familiar tools, features and infrastructure while exploring infinite possibilities to build upon new ones:<br/><br/><ul class='list-disc list-inside'><li>Smart contracts written in Solidity</li><li>ERC-20 tokens</li><li>Support</li></ul>",
     },
     {
       index: 2,
@@ -27,7 +27,7 @@ export default function SectionThree(): JSX.Element {
     <div className="container mx-auto flex flex-col md:flex-row justify-center lg:px-[150px] pt-[200px] lg:pt-0">
       <div className="w-full md:w-2/4">
         <SectionHeader
-          header="DeFi Meta Chain"
+          header="DeFi<br/>Meta Chain"
           hint="Build on DMC"
           hintStyle="brand-gradient-1 text-start"
           headerStyle="text-start"
