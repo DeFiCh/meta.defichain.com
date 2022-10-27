@@ -172,3 +172,7 @@ video {
 .border-white-gradient-1 {
   border-image: linear-gradient(129.11deg, rgba(255, 255, 255, 0.4) 6.34%, rgba(255, 255, 255, 0) 45.98%) 1;
 }
+
+.skew-side-stat {
+  transform: matrix(1, 0.58, 0, 0.89, 0, 0);
+}

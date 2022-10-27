@@ -19,6 +19,7 @@
     "@react-three/fiber": "^8.8.10",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@types/react-type-animation": "^1.1.1",
+    "bignumber.js": "^9.1.0",
     "clsx": "^1.2.1",
     "feather-icons": "^4.29.0",
     "next": "12.3.1",

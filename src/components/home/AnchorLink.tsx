@@ -18,7 +18,7 @@ export default function AnchorLink({
       <AnchorItem section={HomeSections.One} activeSection={activeSection} />
       <AnchorItem section={HomeSections.Two} activeSection={activeSection} />
       <AnchorItem section={HomeSections.Three} activeSection={activeSection} />
-      <AnchorItem section={HomeSections.Four} activeSection={activeSection} />
+      {/* <AnchorItem section={HomeSections.Four} activeSection={activeSection} /> */}
       <AnchorItem section={HomeSections.Five} activeSection={activeSection} />
     </div>
   );
