@@ -7,7 +7,7 @@ import SectionFive from "@components/home/SectionFive";
 import SectionOne from "@components/home/SectionOne";
 import SectionThree from "@components/home/SectionThree";
 import SectionTwo from "@components/home/SectionTwo";
-import SkewedStats from "@components/home/SkewedStats";
+// import SkewedStats from "@components/home/SkewedStats";
 import debounce from "helpers/Debounce";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Parallax } from "react-scroll-parallax";
@@ -169,10 +169,10 @@ export default function Home() {
         id={HomeSections.Two}
         className="w-full lg:h-screen relative flex flex-col justify-center px-4 md:px-[40px] lg:px-[120px]"
       >
-        <SkewedStats
+        {/* <SkewedStats
           stat={stats.masternodes.stat}
           label={stats.masternodes.label}
-        />
+        /> */}
         <div className="w-full h-screen absolute top-[-50vh] z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-contain bg-right lg:bg-[url('/background/gradient-2.png')] md:bg-[url('/background/tablet-gradient-2.png')] bg-[url('/background/mobile-gradient-2.png')]" />
         <Parallax translateY={[30, -30]}>
           <SectionTwo />
@@ -183,7 +183,7 @@ export default function Home() {
         id={HomeSections.Three}
         className="w-full min-h-screen relative px-4 md:px-[40px] lg:px-[120px]"
       >
-        <SkewedStats
+        {/* <SkewedStats
           stat={stats.blocks.stat}
           label={stats.blocks.label}
           customStyle="top-[600px]"
@@ -192,7 +192,7 @@ export default function Home() {
           stat={stats.tokens.stat}
           label={stats.tokens.label}
           customStyle="top-[1200px]"
-        />
+        /> */}
         <div className="w-full h-full absolute top-[-50vh] z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-contain lg:bg-[url('/background/gradient-3.png')] md:bg-[url('/background/tablet-gradient-3.png')] bg-[url('/background/mobile-gradient-3.png')]" />
         <div className="w-full h-full block md:hidden absolute top-[50vh] z-[-1] mix-blend-screen top-0 right-0 bg-no-repeat bg-contain bg-[url('/background/mobile-gradient-2.png')]" />
         <JellyfishBackground
@@ -249,11 +249,11 @@ export default function Home() {
         id={HomeSections.Five}
         className="w-full h-full relative px-4 pt-6 md:px-[40px] md:pt-[0px] lg:px-[120px] lg:pt-[248px] pt-[104px]"
       >
-        <SkewedStats
+        {/* <SkewedStats
           stat={stats.valueLocked.stat}
           label={stats.valueLocked.label}
           customStyle="top-[250px]"
-        />
+        /> */}
         <div className="w-full h-full absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-cover lg:bg-[url('/background/gradient-5.png')]" />
         <div className="w-full h-full absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat md:bg-cover bg-contain bg-bottom 2xl:bg-[url('/background/footer-xl.png')] lg:bg-[url('/background/footer.png')] md:bg-[url('/background/footer-tablet.png')] bg-[url('/background/mobile-footer.png')]" />
         <JellyfishBackground
