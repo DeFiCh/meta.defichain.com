@@ -13,28 +13,28 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { Parallax } from "react-scroll-parallax";
 
 export default function Home() {
-  const stats = {
-    masternodes: {
-      stat: 11179,
-      label: "MASTERNODES",
-    },
-    blocks: {
-      stat: 2098111,
-      label: "BLOCKS",
-    },
-    tokens: {
-      stat: 179,
-      label: "TOKENS",
-    },
-    priceFeed: {
-      stat: 119,
-      label: "PRICE FEEDS",
-    },
-    valueLocked: {
-      stat: 732313231,
-      label: "VALUE LOCKED",
-    },
-  };
+  // const stats = {
+  //   masternodes: {
+  //     stat: 11179,
+  //     label: "MASTERNODES",
+  //   },
+  //   blocks: {
+  //     stat: 2098111,
+  //     label: "BLOCKS",
+  //   },
+  //   tokens: {
+  //     stat: 179,
+  //     label: "TOKENS",
+  //   },
+  //   priceFeed: {
+  //     stat: 119,
+  //     label: "PRICE FEEDS",
+  //   },
+  //   valueLocked: {
+  //     stat: 732313231,
+  //     label: "VALUE LOCKED",
+  //   },
+  // };
   const sectionOneRef = useRef<HTMLElement>(null); // ref to access DOM element height
   const sectionTwoRef = useRef<HTMLElement>(null);
   const sectionThreeRef = useRef<HTMLElement>(null);
