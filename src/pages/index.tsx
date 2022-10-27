@@ -7,15 +7,38 @@ import SectionFive from "@components/home/SectionFive";
 import SectionOne from "@components/home/SectionOne";
 import SectionThree from "@components/home/SectionThree";
 import SectionTwo from "@components/home/SectionTwo";
+import SkewedStats from "@components/home/SkewedStats";
 import debounce from "helpers/Debounce";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Parallax } from "react-scroll-parallax";
 
-function Home() {
-  const sectionOneRef = useRef<HTMLElement>(null); // create ref to access DOM element height
+export default function Home() {
+  const stats = {
+    masternodes: {
+      stat: 11179,
+      label: 'MASTERNODES'
+    },
+    blocks: {
+      stat: 2098111,
+      label: 'BLOCKS'
+    },
+    tokens: {
+      stat: 179,
+      label: 'TOKENS'
+    },
+    priceFeed: {
+      stat: 119,
+      label: 'PRICE FEEDS'
+    },
+    valueLocked: {
+      stat: 732313231,
+      label: 'VALUE LOCKED'
+    },
+  }
+  const sectionOneRef = useRef<HTMLElement>(null); // ref to access DOM element height
   const sectionTwoRef = useRef<HTMLElement>(null);
   const sectionThreeRef = useRef<HTMLElement>(null);
-  const sectionFourRef = useRef<HTMLElement>(null);
+  // const sectionFourRef = useRef<HTMLElement>(null); // TODO: uncomment when section four is ready for PROD
   const sectionFiveRef = useRef<HTMLElement>(null);
   const [activeSection, setActiveSection] = useState(HomeSections.One);
   const [sectionOneHeight, setSectionOneHeight] = useState<
@@ -27,14 +50,15 @@ function Home() {
   const [sectionThreeHeight, setSectionThreeHeight] = useState<
     number | undefined
   >();
+  /* eslint-disable @typescript-eslint/no-unused-vars */
   const [sectionFourHeight, setSectionFourHeight] = useState<
     number | undefined
-  >();
+  >(0); // TODO: remove initial value of 0 when section four is ready for PROD
   const [sectionFiveHeight, setSectionFiveHeight] = useState<
     number | undefined
   >();
 
-  const [scrollPosition, setScrollPosition] = useState(0); // scrollPosition is a vertical offset number from the top
+  const [scrollPosition, setScrollPosition] = useState(0); // scrollPosition is a number that measures vertical offset from the top
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
@@ -77,7 +101,8 @@ function Home() {
       scrollPosition > sectionTwoUpperBound &&
       scrollPosition <= sectionThreeUpperBound
     ) {
-      debounce(setActiveSection(HomeSections.Four));
+      // debounce(setActiveSection(HomeSections.Four)); // TODO: uncomment when section four is ready for PROD
+      debounce(setActiveSection(HomeSections.Five)); // TODO: remove when section four is ready for PROD
     } else {
       debounce(setActiveSection(HomeSections.Five));
     }
@@ -93,7 +118,7 @@ function Home() {
     setSectionOneHeight(sectionOneRef.current?.clientHeight);
     setSectionTwoHeight(sectionTwoRef.current?.clientHeight);
     setSectionThreeHeight(sectionThreeRef.current?.clientHeight);
-    setSectionFourHeight(sectionFourRef.current?.clientHeight);
+    // setSectionFourHeight(sectionFourRef.current?.clientHeight); // TODO: uncomment when section four is ready for PROD
     setSectionFiveHeight(sectionFiveRef.current?.clientHeight);
   }, []);
 
@@ -144,6 +169,7 @@ function Home() {
         id={HomeSections.Two}
         className="w-full lg:h-screen relative flex flex-col justify-center px-4 md:px-[40px] lg:px-[120px]"
       >
+        <SkewedStats stat={stats.masternodes.stat} label={stats.masternodes.label} />
         <div className="w-full h-screen absolute top-[-50vh] z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-contain bg-right lg:bg-[url('/background/gradient-2.png')] md:bg-[url('/background/tablet-gradient-2.png')] bg-[url('/background/mobile-gradient-2.png')]" />
         <Parallax translateY={[30, -30]}>
           <SectionTwo />
@@ -208,7 +234,7 @@ function Home() {
       <section
         ref={sectionFiveRef}
         id={HomeSections.Five}
-        className="w-full h-full relative px-4 pt-6 md:px-[40px] md:pt-[204px] lg:px-[120px] lg:pt-[248px] pt-[104px]"
+        className="w-full h-full relative px-4 pt-6 md:px-[40px] md:pt-[0px] lg:px-[120px] lg:pt-[248px] pt-[104px]"
       >
         <div className="w-full h-full absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-cover lg:bg-[url('/background/gradient-5.png')]" />
         <div className="w-full h-full absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat md:bg-cover bg-contain bg-bottom 2xl:bg-[url('/background/footer-xl.png')] lg:bg-[url('/background/footer.png')] md:bg-[url('/background/footer-tablet.png')] bg-[url('/background/mobile-footer.png')]" />
@@ -227,5 +253,3 @@ function Home() {
     </>
   );
 }
-
-export default Home;
