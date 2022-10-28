@@ -13,6 +13,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { Parallax } from "react-scroll-parallax";
 
 export default function Home() {
+  // Mock data to display stats at leftmost section in homepage
   // const stats = {
   //   masternodes: {
   //     stat: 11179,
@@ -147,8 +148,8 @@ export default function Home() {
         <Header />
         <JellyfishBackground
           desktop={{
-            position: [0, 300, -600],
-            rotation: [0.3, -0.4, -0.27],
+            position: [40, 150, -400],
+            rotation: [0.3, -0, -0.27],
             containerStyle: "left-0",
           }}
           tablet={{
@@ -174,6 +175,23 @@ export default function Home() {
           label={stats.masternodes.label}
         /> */}
         <div className="w-full h-screen absolute top-[-50vh] z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-contain bg-right lg:bg-[url('/background/gradient-2.png')] md:bg-[url('/background/tablet-gradient-2.png')] bg-[url('/background/mobile-gradient-2.png')]" />
+        <JellyfishBackground
+          desktop={{
+            position: [-50, -40, -650],
+            rotation: [0, 0.5, 0.4],
+            containerStyle: "right-0 top-[650px]",
+          }}
+          tablet={{
+            position: [-150, -60, -650],
+            rotation: [-0.5, -0.4, -0.4],
+            containerStyle: "right-0",
+          }}
+          mobile={{
+            position: [100, 350, -350],
+            rotation: [0.5, -0.4, -0.27],
+            containerStyle: "left-0",
+          }}
+        />
         <Parallax translateY={[30, -30]}>
           <SectionTwo />
         </Parallax>
@@ -193,13 +211,14 @@ export default function Home() {
           label={stats.tokens.label}
           customStyle="top-[1200px]"
         /> */}
-        <div className="w-full h-full absolute top-[-50vh] z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-contain lg:bg-[url('/background/gradient-3.png')] md:bg-[url('/background/tablet-gradient-3.png')] bg-[url('/background/mobile-gradient-3.png')]" />
+        <div className="w-full h-full absolute top-[25vh] z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-contain lg:bg-[url('/background/gradient-3.png')] md:bg-[url('/background/tablet-gradient-3.png')] bg-[url('/background/mobile-gradient-3.png')]" />
         <div className="w-full h-full block md:hidden absolute top-[50vh] z-[-1] mix-blend-screen top-0 right-0 bg-no-repeat bg-contain bg-[url('/background/mobile-gradient-2.png')]" />
+        <div className="w-full h-full absolute lg:top-[-20vh] md:top-[-50vh] top-[-70vh] z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat md:bg-contain bg-cover bg-right lg:bg-[url('/background/gradient-4.png')] md:bg-[url('/background/tablet-gradient-4.png')] bg-[url('/background/mobile-gradient-4.png')]" />
         <JellyfishBackground
           desktop={{
-            position: [0, 280, -300],
-            rotation: [0.4, -0.5, -0.4],
-            containerStyle: "left-0",
+            position: [0, 0, -350],
+            rotation: [0, 0.5, -0.4],
+            containerStyle: "left-0 top-[250px]",
           }}
           tablet={{
             position: [-150, -60, -500],
@@ -254,15 +273,15 @@ export default function Home() {
           label={stats.valueLocked.label}
           customStyle="top-[250px]"
         /> */}
-        <div className="w-full h-full absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-cover lg:bg-[url('/background/gradient-5.png')]" />
+        {/* <div className="w-full h-full absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-cover lg:bg-[url('/background/gradient-5.png')]" /> */}
         <div className="w-full h-full absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat md:bg-cover bg-contain bg-bottom 2xl:bg-[url('/background/footer-xl.png')] lg:bg-[url('/background/footer.png')] md:bg-[url('/background/footer-tablet.png')] bg-[url('/background/mobile-footer.png')]" />
-        <JellyfishBackground
+        {/* <JellyfishBackground
           desktop={{
             position: [-120, -200, -1000],
             rotation: [0.2, -0.4, 0.35],
             containerStyle: "left-0",
           }}
-        />
+        /> */}
         <Parallax translateY={[30, -30]}>
           <SectionFive />
         </Parallax>
