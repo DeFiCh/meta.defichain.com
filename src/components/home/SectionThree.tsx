@@ -52,7 +52,7 @@ export default function SectionThree(): JSX.Element {
             index={BuildOnDMCContent[1].index}
             title={BuildOnDMCContent[1].title}
             content={BuildOnDMCContent[1].content}
-            cubeNumber="triplet"
+            cubeVariant="triplet"
             cubeContainerStyle="relative bottom-[-258px]"
           />
         </div>
@@ -62,7 +62,7 @@ export default function SectionThree(): JSX.Element {
           index={BuildOnDMCContent[0].index}
           title={BuildOnDMCContent[0].title}
           content={BuildOnDMCContent[0].content}
-          cubeNumber="singlet"
+          cubeVariant="singlet"
           cubeContainerStyle="relative bottom-[-258px]"
         />
         <div className="hidden md:block mt-8">
@@ -70,7 +70,7 @@ export default function SectionThree(): JSX.Element {
             index={BuildOnDMCContent[2].index}
             title={BuildOnDMCContent[2].title}
             content={BuildOnDMCContent[2].content}
-            cubeNumber="triplet"
+            cubeVariant="triplet-stairs"
             cubeContainerStyle="relative bottom-[-258px]"
           />
         </div>
@@ -80,14 +80,14 @@ export default function SectionThree(): JSX.Element {
           index={BuildOnDMCContent[1].index}
           title={BuildOnDMCContent[1].title}
           content={BuildOnDMCContent[1].content}
-          cubeNumber="triplet"
+          cubeVariant="triplet"
           cubeContainerStyle="relative bottom-[-258px]"
         />
         <SectionThreeItem
           index={BuildOnDMCContent[2].index}
           title={BuildOnDMCContent[2].title}
           content={BuildOnDMCContent[2].content}
-          cubeNumber="triplet"
+          cubeVariant="triplet-stairs"
           cubeContainerStyle="relative bottom-[-258px]"
         />
       </div>
@@ -113,18 +113,18 @@ function SectionThreeItem({
   index,
   title,
   content,
-  cubeNumber,
+  cubeVariant,
   cubeContainerStyle,
 }: {
   index: number;
   title: string;
   content: string;
-  cubeNumber: "singlet" | "triplet";
+  cubeVariant: "singlet" | "triplet" | "triplet-stairs";
   cubeContainerStyle?: string;
 }): JSX.Element {
   return (
     <div>
-      {cubeNumber === "singlet" ? (
+      {cubeVariant === "singlet" && (
         <div className="mb-5">
           <div className="hidden md:block">
             <CubeModel />
@@ -139,7 +139,8 @@ function SectionThreeItem({
             />
           </div>
         </div>
-      ) : (
+      )}
+      {cubeVariant === "triplet" && (
         <>
           <div
             className={`hidden md:block origin-top-left scale-50 ${
@@ -156,6 +157,28 @@ function SectionThreeItem({
               layout="fill"
               src="/home/triple-cube.svg"
               alt="Triple Cube"
+              objectFit="contain"
+            />
+          </div>
+        </>
+      )}
+      {cubeVariant === "triplet-stairs" && (
+        <>
+          <div
+            className={`hidden md:block origin-top-left scale-50 ${
+              cubeContainerStyle ?? ""
+            }`}
+          >
+            <CubeModel />
+            <CubeModel containerStyle="top-[-295px] left-[114px]" />
+            <CubeModel containerStyle="top-[-316px] left-[57px]" />
+          </div>
+          <div className="block md:hidden relative w-[94px] h-[135px] mt-14 mb-5 ">
+            <Image
+              data-testid="triple_stairs"
+              layout="fill"
+              src="/home/triple-stairs.svg"
+              alt="Triple Stairs"
               objectFit="contain"
             />
           </div>
