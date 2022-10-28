@@ -24,7 +24,7 @@ export default function SectionThree(): JSX.Element {
     },
   ];
   return (
-    <div className="container mx-auto flex flex-col md:flex-row justify-center lg:px-[150px] pt-[200px] lg:pt-0">
+    <div className="container mx-auto flex flex-col gap-x-5 md:flex-row justify-center lg:px-[150px]">
       <div className="w-full md:w-2/4">
         <SectionHeader
           header="DeFi<br/>Meta Chain"
