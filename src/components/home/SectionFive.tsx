@@ -140,7 +140,7 @@ function SectionFiveItem({
 }): JSX.Element {
   return (
     <a href={link} target="_blank" rel="noreferrer">
-      <div className="rounded-[15px] border-[0.5px] p-5 mb-5 relative group black-gradient-1">
+      <div className="rounded-[15px] border-[0.5px] border-white-700/50 p-5 mb-5 relative group black-gradient-1">
         <GradientText
           label={title}
           gradient="after:brand-gradient-2"
