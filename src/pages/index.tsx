@@ -7,6 +7,7 @@ import SectionFive from "@components/home/SectionFive";
 import SectionOne from "@components/home/SectionOne";
 import SectionThree from "@components/home/SectionThree";
 import SectionTwo from "@components/home/SectionTwo";
+import { UnderwaterDroneBackground } from "@components/home/UnderwaterDrone";
 // import SkewedStats from "@components/home/SkewedStats";
 import debounce from "helpers/Debounce";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -214,6 +215,13 @@ export default function Home() {
         <div className="w-full h-full absolute top-[25vh] z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-contain lg:bg-[url('/background/gradient-3.png')] md:bg-[url('/background/tablet-gradient-3.png')] bg-[url('/background/mobile-gradient-3.png')]" />
         <div className="w-full h-full block md:hidden absolute top-[50vh] z-[-1] mix-blend-screen top-0 right-0 bg-no-repeat bg-contain bg-[url('/background/mobile-gradient-2.png')]" />
         <div className="w-full h-full absolute lg:top-[-20vh] md:top-[-50vh] top-[-70vh] z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat md:bg-contain bg-cover bg-right lg:bg-[url('/background/gradient-4.png')] md:bg-[url('/background/tablet-gradient-4.png')] bg-[url('/background/mobile-gradient-4.png')]" />
+        <UnderwaterDroneBackground
+          desktop={{
+            position: [-1.5, 0, -3],
+            rotation: [0.2, 0.8, -0.1],
+            containerStyle: "left-0",
+          }}
+        />
         <JellyfishBackground
           desktop={{
             position: [0, 0, -350],
