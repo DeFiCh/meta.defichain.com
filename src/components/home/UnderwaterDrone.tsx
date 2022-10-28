@@ -39,9 +39,7 @@ export default function UnderwaterDrone({
 export function Model(props) {
   const group = useRef();
   // @ts-expect-error
-  const { nodes, materials, animations } = useGLTF(
-    "/models/UnderwaterDrone.gltf"
-  );
+  const { nodes, materials } = useGLTF("/models/UnderwaterDrone.gltf");
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
@@ -69,7 +67,10 @@ export function Model(props) {
                   scale={100}
                 >
                   <group name="Object_6">
-                    <primitive object={nodes._rootJoint} />
+                    <primitive
+                      // eslint-disable-next-line react/no-unknown-property, no-underscore-dangle
+                      object={nodes._rootJoint}
+                    />
                     <group
                       name="Object_8"
                       rotation={[-Math.PI / 2, 0, 0]}
@@ -79,12 +80,14 @@ export function Model(props) {
                       name="Object_9"
                       geometry={nodes.Object_9.geometry}
                       material={materials["Submarine-EV1-beatenup"]}
+                      // eslint-disable-next-line react/no-unknown-property
                       skeleton={nodes.Object_9.skeleton}
                     />
                     <skinnedMesh
                       name="Object_10"
                       geometry={nodes.Object_10.geometry}
                       material={materials.Interior}
+                      /* eslint-disable-next-line react/no-unknown-property */
                       skeleton={nodes.Object_10.skeleton}
                     />
                   </group>
