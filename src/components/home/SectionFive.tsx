@@ -164,7 +164,7 @@ function CommunityIcon({
 }): JSX.Element {
   return (
     <div
-      className={`absolute md:-right-2 right-0 -top-2 z-[1] w-[45px] ${iconHeight} group-hover:scale-[1.22] transition duration-300`}
+      className={`absolute md:-right-1 right-0 -top-1 z-[1] w-[45px] ${iconHeight} group-hover:scale-[1.22] transition duration-300`}
     >
       <Image layout="fill" src={path} alt={altLabel} objectFit="contain" />
     </div>
