@@ -74,7 +74,7 @@ export function Model(props) {
   );
 }
 
-useGLTF.preload("/jellyfish.gltf");
+useGLTF.preload("/models/jellyfish.gltf");
 
 interface ViewProps {
   position: Vector3;
