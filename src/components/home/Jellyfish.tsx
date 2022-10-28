@@ -39,7 +39,7 @@ export default function Jellyfish({
 
 export function Model(props) {
   // @ts-expect-error
-  const { nodes, materials } = useGLTF("/jellyfish.gltf");
+  const { nodes, materials } = useGLTF("/models/jellyfish.gltf");
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
