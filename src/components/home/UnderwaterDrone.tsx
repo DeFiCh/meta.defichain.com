@@ -37,23 +37,56 @@ export default function UnderwaterDrone({
 }
 
 export function Model(props) {
-  const group = useRef()
+  const group = useRef();
   // @ts-expect-error
-  const { nodes, materials, animations } = useGLTF('/models/UnderwaterDrone.gltf')
+  const { nodes, materials, animations } = useGLTF(
+    "/models/UnderwaterDrone.gltf"
+  );
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
-        <group name="Sketchfab_model" position={[0.05, 0, 0.32]} rotation={[-Math.PI / 2, 0, -3.13]} scale={0.25}>
-          <group name="c2cc55a696424343b60db99c931338c2fbx" rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
+        <group
+          name="Sketchfab_model"
+          position={[0.05, 0, 0.32]}
+          rotation={[-Math.PI / 2, 0, -3.13]}
+          scale={0.25}
+        >
+          <group
+            name="c2cc55a696424343b60db99c931338c2fbx"
+            rotation={[Math.PI / 2, 0, 0]}
+            scale={0.01}
+          >
             <group name="Object_2">
               <group name="RootNode">
-                <group name="submarine" rotation={[-Math.PI / 2, 0, 0]} scale={100} />
-                <group name="Submarine" rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+                <group
+                  name="submarine"
+                  rotation={[-Math.PI / 2, 0, 0]}
+                  scale={100}
+                />
+                <group
+                  name="Submarine"
+                  rotation={[-Math.PI / 2, 0, 0]}
+                  scale={100}
+                >
                   <group name="Object_6">
                     <primitive object={nodes._rootJoint} />
-                    <group name="Object_8" rotation={[-Math.PI / 2, 0, 0]} scale={100} />
-                    <skinnedMesh name="Object_9" geometry={nodes.Object_9.geometry} material={materials['Submarine-EV1-beatenup']} skeleton={nodes.Object_9.skeleton} />
-                    <skinnedMesh name="Object_10" geometry={nodes.Object_10.geometry} material={materials.Interior} skeleton={nodes.Object_10.skeleton} />
+                    <group
+                      name="Object_8"
+                      rotation={[-Math.PI / 2, 0, 0]}
+                      scale={100}
+                    />
+                    <skinnedMesh
+                      name="Object_9"
+                      geometry={nodes.Object_9.geometry}
+                      material={materials["Submarine-EV1-beatenup"]}
+                      skeleton={nodes.Object_9.skeleton}
+                    />
+                    <skinnedMesh
+                      name="Object_10"
+                      geometry={nodes.Object_10.geometry}
+                      material={materials.Interior}
+                      skeleton={nodes.Object_10.skeleton}
+                    />
                   </group>
                 </group>
               </group>
@@ -62,10 +95,10 @@ export function Model(props) {
         </group>
       </group>
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/models/UnderwaterDrone.gltf')
+useGLTF.preload("/models/UnderwaterDrone.gltf");
 
 interface ViewProps {
   position: Vector3;
@@ -91,7 +124,10 @@ export function UnderwaterDroneBackground({
         }`}
       >
         <Canvas>
-          <UnderwaterDrone position={desktop.position} rotation={desktop.rotation} />
+          <UnderwaterDrone
+            position={desktop.position}
+            rotation={desktop.rotation}
+          />
           <ambientLight intensity={1} />
         </Canvas>
       </div>
@@ -102,7 +138,10 @@ export function UnderwaterDroneBackground({
           }`}
         >
           <Canvas>
-            <UnderwaterDrone position={tablet.position} rotation={tablet.rotation} />
+            <UnderwaterDrone
+              position={tablet.position}
+              rotation={tablet.rotation}
+            />
             <ambientLight intensity={1} />
           </Canvas>
         </div>
@@ -114,7 +153,10 @@ export function UnderwaterDroneBackground({
           }`}
         >
           <Canvas>
-            <UnderwaterDrone position={mobile.position} rotation={mobile.rotation} />
+            <UnderwaterDrone
+              position={mobile.position}
+              rotation={mobile.rotation}
+            />
             <ambientLight intensity={1} />
           </Canvas>
         </div>
