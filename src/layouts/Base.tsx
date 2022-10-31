@@ -11,8 +11,16 @@ import {
 import clsx from "clsx";
 import { JSX } from "@babel/types";
 import { ParallaxProvider } from "react-scroll-parallax";
+import { NetworkProvider } from "@contexts/NetworkContext";
+import { WhaleProvider } from "@contexts/WhaleContext";
+import { StatsProvider } from "@store/stats";
+import { StoreProvider } from "@contexts/StoreProvider";
+import { DeFiMetaChainAppProps } from "pages/_app";
 
-function Base({ children }: PropsWithChildren<any>): JSX.Element | null {
+function Base({
+  children,
+  initialReduxState,
+}: PropsWithChildren<DeFiMetaChainAppProps>): JSX.Element | null {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -74,9 +82,17 @@ function Base({ children }: PropsWithChildren<any>): JSX.Element | null {
         />
       </Head>
       {mounted && (
-        <ParallaxProvider>
-          <main className={clsx("flex-grow")}>{children}</main>
-        </ParallaxProvider>
+        <NetworkProvider>
+          <WhaleProvider>
+            <StoreProvider state={initialReduxState}>
+              <StatsProvider>
+                <ParallaxProvider>
+                  <main className={clsx("flex-grow")}>{children}</main>
+                </ParallaxProvider>
+              </StatsProvider>
+            </StoreProvider>
+          </WhaleProvider>
+        </NetworkProvider>
       )}
     </div>
   );

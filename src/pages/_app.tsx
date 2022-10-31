@@ -2,6 +2,8 @@ import "../styles/globals.css";
 import { JSX } from "@babel/types";
 import NextNProgress from "nextjs-progressbar";
 import Base from "../layouts/Base";
+import { GetServerSidePropsResult } from "next";
+import { initializeStore, RootState } from "@store/index";
 
 export default function DeFiMetaChainApp({
   Component,
@@ -20,4 +22,17 @@ export default function DeFiMetaChainApp({
       <Component {...pageProps} />
     </Base>
   );
+}
+
+export interface DeFiMetaChainAppProps {
+  initialReduxState: RootState;
+}
+
+export function getServerSideProps(): GetServerSidePropsResult<DeFiMetaChainAppProps> {
+  const store = initializeStore();
+  return {
+    props: {
+      initialReduxState: store.getState(),
+    },
+  };
 }
