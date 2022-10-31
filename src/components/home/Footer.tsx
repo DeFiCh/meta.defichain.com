@@ -81,7 +81,7 @@ function BrandingRow(): JSX.Element {
   return (
     <div className="flex py-10 lg:px-[102px] md:px-10 w-full flex-col md:flex-row items-center justify-between">
       <Link className="flex items-center" href="/src/pages">
-        <div className="hidden md:block relative w-[149px] h-[43px] mb-[25px] md:mb-0">
+        <div className="hidden md:block relative w-[203px] h-[36px] mb-[25px] md:mb-0">
           <Image
             data-testid="footer_dmc_logo"
             layout="fill"

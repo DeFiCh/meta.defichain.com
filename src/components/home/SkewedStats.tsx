@@ -5,7 +5,7 @@ export default function SkewedStats({
   label,
   customStyle,
 }: {
-  stat: number;
+  stat?: number;
   label: string;
   customStyle?: string;
 }): JSX.Element {
@@ -15,7 +15,7 @@ export default function SkewedStats({
         <div className="border-b border-white-50 w-9 mr-1 mb-1.5" />
         <div className="">
           <div className="text-white-50 font-bold">
-            {new BigNumber(stat).toFormat()}
+            {stat === undefined ? "..." : new BigNumber(stat).toFormat(0)}
           </div>
           <div className="text-white-50 font-bold">{label}</div>
         </div>
