@@ -77,8 +77,8 @@ function Base({
         <link
           rel="icon"
           type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
+          sizes="36x36"
+          href="/favicon-36x36.png"
         />
       </Head>
       {mounted && (
