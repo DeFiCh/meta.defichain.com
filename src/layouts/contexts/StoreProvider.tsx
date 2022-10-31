@@ -11,10 +11,11 @@ interface StoreProviderProps {
 /**
  * StoreProvider prevent Store from reloading by hydrating
  */
-export function StoreProvider(
-  props: PropsWithChildren<StoreProviderProps>
-): JSX.Element {
-  store = store ?? initializeStore(props.state);
+export default function StoreProvider({
+  state,
+  children,
+}: PropsWithChildren<StoreProviderProps>): JSX.Element {
+  store = store ?? initializeStore(state);
 
-  return <Provider store={store}>{props.children}</Provider>;
+  return <Provider store={store}>{children}</Provider>;
 }

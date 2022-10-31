@@ -15,7 +15,11 @@ import { NetworkProvider } from "@contexts/NetworkContext";
 import { WhaleProvider } from "@contexts/WhaleContext";
 import { StatsProvider } from "@store/stats";
 import { StoreProvider } from "@contexts/StoreProvider";
-import { DeFiMetaChainAppProps } from "pages/_app";
+import { RootState } from "@store/index";
+
+export interface DeFiMetaChainAppProps {
+  initialReduxState: RootState;
+}
 
 function Base({
   children,

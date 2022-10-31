@@ -1,4 +1,9 @@
-import { NetworkConnection } from "@contexts/NetworkContext";
+export enum NetworkConnection {
+  LocalPlayground = "Local",
+  RemotePlayground = "Playground",
+  MainNet = "MainNet",
+  TestNet = "TestNet",
+}
 
 /**
  * Environment specific static resolution utility.

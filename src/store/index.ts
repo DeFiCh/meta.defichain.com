@@ -15,7 +15,7 @@ export function initializeStore(preloadedState?: any) {
     reducer: {
       stats: stats.reducer,
     },
-    preloadedState: preloadedState,
+    preloadedState,
   });
 }
 

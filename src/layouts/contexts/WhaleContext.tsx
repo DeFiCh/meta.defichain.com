@@ -37,24 +37,24 @@ export function useWhaleApiClient(): WhaleApiClient {
   return useContext(WhaleApiClientContext);
 }
 
-export function WhaleProvider(
-  props: PropsWithChildren<any>
-): JSX.Element | null {
-  const connection = useNetwork().connection;
+export function WhaleProvider({
+  children,
+}: PropsWithChildren<any>): JSX.Element | null {
+  const { connection } = useNetwork();
 
   const memo = useMemo(() => {
     const api = newWhaleClient(connection);
     const rpc = newRpcClient(connection);
     return {
-      api: api,
-      rpc: rpc,
+      api,
+      rpc,
     };
   }, [connection]);
 
   return (
     <WhaleApiClientContext.Provider value={memo.api}>
       <WhaleRpcClientContext.Provider value={memo.rpc}>
-        {props.children}
+        {children}
       </WhaleRpcClientContext.Provider>
     </WhaleApiClientContext.Provider>
   );

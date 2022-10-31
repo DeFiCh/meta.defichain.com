@@ -119,7 +119,9 @@ export const stats = createSlice({
   },
 });
 
-export function StatsProvider(props: PropsWithChildren<{}>): JSX.Element {
+export function StatsProvider({
+  children,
+}: PropsWithChildren<{}>): JSX.Element {
   const interval = 30000; // TODO: update to dynamic interval when we have more networks
   const api = useWhaleApiClient();
   const dispatch = useDispatch();
@@ -127,7 +129,7 @@ export function StatsProvider(props: PropsWithChildren<{}>): JSX.Element {
   useEffect(() => {
     function fetch(): void {
       // if blockchain is connected successfully, update both lastSync & lastSuccessfulSync to current date
-      void api.stats
+      api.stats
         .get()
         .then((data) => {
           dispatch(
@@ -155,6 +157,6 @@ export function StatsProvider(props: PropsWithChildren<{}>): JSX.Element {
     const intervalId = setInterval(fetch, interval);
     return () => clearInterval(intervalId);
   }, [api, dispatch]);
-
-  return <>{props.children}</>;
+  /* eslint-disable react/jsx-no-useless-fragment */
+  return <>{children}</>;
 }
