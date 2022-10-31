@@ -11,7 +11,8 @@ interface StoreProviderProps {
 /**
  * StoreProvider prevent Store from reloading by hydrating
  */
-export default function StoreProvider({
+/* eslint-disable import/prefer-default-export */
+export function StoreProvider({
   state,
   children,
 }: PropsWithChildren<StoreProviderProps>): JSX.Element {

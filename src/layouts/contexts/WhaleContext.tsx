@@ -1,8 +1,8 @@
 import { WhaleApiClient, WhaleRpcClient } from "@defichain/whale-api-client";
 import { GetServerSidePropsContext } from "next";
 import { createContext, PropsWithChildren, useContext, useMemo } from "react";
-import { getEnvironment } from "./Environment";
-import { NetworkConnection, useNetwork } from "./NetworkContext";
+import { getEnvironment, NetworkConnection } from "./Environment";
+import { useNetwork } from "./NetworkContext";
 
 const WhaleApiClientContext = createContext<WhaleApiClient>(undefined as any);
 const WhaleRpcClientContext = createContext<WhaleRpcClient>(undefined as any);
