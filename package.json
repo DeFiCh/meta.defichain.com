@@ -11,7 +11,8 @@
     "lint": "next lint",
     "cypress:open": "cypress open",
     "cypress:build": "CYPRESS=true next build",
-    "cypress:run": "TZ=UTC cypress run --headless --browser chrome"
+    "cypress:run": "TZ=UTC cypress run --headless --browser chrome",
+    "prettier": "prettier --check 'src/**/*.{js,jsx,ts,tsx}'"
   },
   "dependencies": {
     "@babel/types": "^7.19.4",
