@@ -184,11 +184,6 @@ export default function Home() {
             rotation: [0, 0.5, 0.4],
             containerStyle: "right-0 top-[650px]",
           }}
-          tablet={{
-            position: [0, 0, -850],
-            rotation: [-0.5, -0.4, 0.4],
-            containerStyle: "right-[-140px] top-[200px]",
-          }}
           mobile={{
             position: [10, 350, -450],
             rotation: [0.5, 0.4, 0.2],
@@ -229,6 +224,11 @@ export default function Home() {
             position: [0, 0, -350],
             rotation: [0, 0.5, -0.4],
             containerStyle: "left-0 top-[250px]",
+          }}
+          tablet={{
+            position: [200, 170, -850],
+            rotation: [0, 0.5, 0.4],
+            containerStyle: "right-0 top-[-150px]",
           }}
           mobile={{
             position: [100, 350, -350],

@@ -14,7 +14,7 @@ export default function AnchorLink({
   activeSection: HomeSections;
 }): JSX.Element {
   return (
-    <div className="z-[2] hidden md:block fixed lg:right-4 right-40 w-3 h-32 top-[calc(50vh-62px)]">
+    <div className="z-[2] hidden md:block fixed right-4 w-3 h-32 top-[calc(50vh-62px)]">
       <AnchorItem section={HomeSections.One} activeSection={activeSection} />
       <AnchorItem section={HomeSections.Two} activeSection={activeSection} />
       <AnchorItem section={HomeSections.Three} activeSection={activeSection} />
