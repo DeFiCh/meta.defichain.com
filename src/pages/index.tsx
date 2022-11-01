@@ -87,7 +87,7 @@ export default function Home() {
       sectionOneHeight +
       sectionTwoHeight +
       sectionThreeHeight +
-      sectionFourHeight / 2;
+      sectionFiveHeight / 2; // TODO: replace with sectionFourHeight when section four is ready for PROD
 
     if (scrollPosition <= sectionOneHeight / 2) {
       debounce(setActiveSection(HomeSections.One));
