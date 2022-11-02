@@ -7,7 +7,8 @@ export default function SectionOne(): JSX.Element {
   return (
     <div className="container mx-auto flex flex-col grow items-center lg:justify-between justify-center md:mt-[15%] mt-[350px] translate-y-[-4.9%]">
       <Parallax translateY={[30, -30]}>
-        <div className="flex flex-col text-center items-center">
+        <div className="flex flex-col text-center items-center"
+             data-testid="unlock_text">
           <SectionHeader
             header="Build next gen dApps with tools of the future"
             hint="UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN"
