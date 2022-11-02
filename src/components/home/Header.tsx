@@ -1,5 +1,5 @@
 import Button from "@components/ui/Button";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import { useState } from "react";
 import NavMenu from "./NavMenu";

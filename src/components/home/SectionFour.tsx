@@ -1,5 +1,5 @@
 import GradientText from "@components/ui/GradientText";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { ReactNode } from "react";
 import ClayDFI from "@public/home/clay-dfi.png";
 import ClayBlock from "@public/home/clay-block.png";
