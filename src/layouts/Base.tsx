@@ -91,7 +91,7 @@ function Base({
             <StoreProvider state={initialReduxState}>
               <StatsProvider>
                 <ParallaxProvider>
-                  <main className={clsx("flex-grow")}>{children}</main>
+                  <main>{children}</main>
                 </ParallaxProvider>
               </StatsProvider>
             </StoreProvider>
