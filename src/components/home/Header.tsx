@@ -9,7 +9,7 @@ export default function Header(): JSX.Element {
   return (
     <header>
       <nav className="container mx-auto flex justify-between w-full items-center">
-        <Link className="flex items-center" href="/src/pages">
+        <Link className="flex items-center" href="/">
           <div className="relative w-[203px] h-[36px]">
             <Image
               data-testid="dmc_logo"
