@@ -8,3 +8,5 @@ context("/ on iphone-x", () => {
     cy.findByTestId("dmc_logo").should('exist')
   });
 });
+
+
