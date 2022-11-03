@@ -55,8 +55,12 @@ describe("Homepage test",()=>{
     });
     it('should verify homepage', function () {
       cy.findByTestId("unlock_text").contains("UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN");
-      cy.get('div.flex > div.flex > span.mb-8.font-bold').first().contains(dmc_descr);
+      cy.get('div.flex > div.flex > span.mb-8.font-bold').should("be.visible");
       //cy.findByTestId("dmc_desc").contains(dmc_descr);
+    });
+
+    it('should verify footer', function () {
+      cy.findByTestId("dmc_footer1").should("be.visible");
     });
   })
 
