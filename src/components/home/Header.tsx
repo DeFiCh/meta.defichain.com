@@ -21,7 +21,9 @@ export default function Header(): JSX.Element {
           </div>
         </Link>
         <NavMenu />
-        <div className="flex items-center">
+        <div className="flex items-center"
+             data-testid="get_dfi"
+        >
           <Button
             // label="Get DFI"
             // href="https://defichain.com/dfi"
