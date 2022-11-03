@@ -15,7 +15,7 @@
     "prettier": "prettier --check 'src/**/*.{js,jsx,ts,tsx}'"
   },
   "dependencies": {
-    "@babel/types": "^7.19.4",
+    "@babel/types": "^7.20.0",
     "@defichain/jellyfish-network": "^2.67.2",
     "@defichain/whale-api-client": "^2.67.2",
     "@react-three/drei": "^9.32.0",
