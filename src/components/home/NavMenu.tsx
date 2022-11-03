@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import React, { CSSProperties, useState } from "react";
 
@@ -301,24 +301,23 @@ function NavMenuMobileChildItem({
   return (
     <>
       {items.map((item) => (
-        <Link href={item.href} key={item.label}>
-          <a href={item.href} target="_blank" rel="noreferrer">
-            <div className="pl-12 pr-8 py-5 flex items-center justify-between">
-              <div className="flex items-center">
-                <div className="w-5 h-5 relative">
-                  <Image
-                    layout="fill"
-                    src={item.imagePath}
-                    alt={item.altLabel}
-                  />
-                </div>
-                <span className="text-gray-50 pl-6">{item.label}</span>
+        <Link
+          href={item.href}
+          key={item.label}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="pl-12 pr-8 py-5 flex items-center justify-between">
+            <div className="flex items-center">
+              <div className="w-5 h-5 relative">
+                <Image layout="fill" src={item.imagePath} alt={item.altLabel} />
               </div>
-              <svg className="feather w-6 h-6 stroke-gray-50">
-                <use href="/feather-sprite.svg#arrow-up-right" />
-              </svg>
+              <span className="text-gray-50 pl-6">{item.label}</span>
             </div>
-          </a>
+            <svg className="feather w-6 h-6 stroke-gray-50">
+              <use href="/feather-sprite.svg#arrow-up-right" />
+            </svg>
+          </div>
         </Link>
       ))}
     </>
@@ -383,20 +382,18 @@ function NavMenuChildItem({
   const navChildItemStyle =
     "pl-6 text-transparent before:pl-6 before:bg-black-900 relative before:gradient-text before:opacity-100 [.group-scoped:hover_&]:before:opacity-0 before:left-6 after:left-6 after:gradient-text after:pl-6 after:brand-gradient-1 after:opacity-0 [.group-scoped:hover_&]:after:opacity-100";
   return (
-    <Link href={href}>
-      <a href={href} rel="noreferrer" target="_blank">
-        <div className="py-3 px-5 flex items-center group-scoped">
-          <div className="w-5 h-5 relative">
-            <Image layout="fill" src={imagePath} alt={altLabel} />
-          </div>
-          <span
-            data-label={label}
-            className={`${navChildItemStyle} before:content-[attr(data-label)] after:content-[attr(data-label)]`}
-          >
-            {label}
-          </span>
+    <Link href={href} rel="noreferrer" target="_blank">
+      <div className="py-3 px-5 flex items-center group-scoped">
+        <div className="w-5 h-5 relative">
+          <Image layout="fill" src={imagePath} alt={altLabel} />
         </div>
-      </a>
+        <span
+          data-label={label}
+          className={`${navChildItemStyle} before:content-[attr(data-label)] after:content-[attr(data-label)]`}
+        >
+          {label}
+        </span>
+      </div>
     </Link>
   );
 }

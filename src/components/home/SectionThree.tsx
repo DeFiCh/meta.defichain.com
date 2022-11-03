@@ -1,5 +1,5 @@
 import Button from "@components/ui/Button";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import SectionHeader from "./SectionHeader";
 
 export default function SectionThree(): JSX.Element {

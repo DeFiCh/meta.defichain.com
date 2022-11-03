@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/legacy/image";
 import MainnetLaunch from "@public/home/mainnet-launch.png";
 import TestnetLaunch from "@public/home/testnet-launch.png";
 import DMCHackathon from "@public/home/dmc-hackathon.png";
