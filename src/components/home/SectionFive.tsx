@@ -1,6 +1,6 @@
 import GradientText from "@components/ui/GradientText";
 import clsx from "clsx";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { ReactNode, useState } from "react";
 import SectionHeader from "./SectionHeader";
 

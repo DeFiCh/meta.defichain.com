@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import { MenuItems } from "./NavMenu";
 
@@ -80,7 +80,7 @@ function FooterLinkItem({
 function BrandingRow(): JSX.Element {
   return (
     <div className="flex py-10 lg:px-[102px] md:px-10 w-full flex-col md:flex-row items-center justify-between">
-      <Link className="flex items-center" href="/src/pages">
+      <Link className="flex items-center" href="/">
         <div className="hidden md:block relative w-[203px] h-[36px] mb-[25px] md:mb-0">
           <Image
             data-testid="footer_dmc_logo"
@@ -95,7 +95,7 @@ function BrandingRow(): JSX.Element {
         EXPLORE DEFIMETACHAIN.COM
       </span>
       <div className="block md:hidden">
-        <Link className="flex items-center" href="/src/pages">
+        <Link className="flex items-center" href="/">
           <div className="relative w-[149px] h-[43px] mb-[25px] md:mb-0">
             <Image
               data-testid="footer_dmc_logo"
