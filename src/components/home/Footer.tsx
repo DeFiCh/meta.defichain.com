@@ -73,7 +73,7 @@ function FooterLinkItem({
       target="_blank"
       rel="noreferrer"
       className="text-white-50/60"
-      data-testid={label}
+      data-testid={`id_${label}`}
     >
       {label}
     </a>
