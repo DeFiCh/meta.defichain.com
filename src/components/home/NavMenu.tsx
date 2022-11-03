@@ -359,6 +359,7 @@ const MenuItemLabel = React.forwardRef(
     return (
       <span
         ref={ref}
+        data-testid={label}
         data-label={label}
         className={`${navItemStyle} before:content-[attr(data-label)] after:content-[attr(data-label)]`}
       >
