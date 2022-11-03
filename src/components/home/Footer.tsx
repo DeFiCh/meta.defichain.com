@@ -51,7 +51,8 @@ function FooterColumn({
 }): JSX.Element {
   return (
     <div className="flex flex-col gap-4 w-full">
-      <div className="font-medium text-white-50">{category}</div>
+      <div className="font-medium text-white-50"
+           data-testid={category}>{category}</div>
       {childLinks.map((link) => (
         <FooterLinkItem href={link.href} label={link.label} key={link.label} />
       ))}
@@ -72,6 +73,7 @@ function FooterLinkItem({
       target="_blank"
       rel="noreferrer"
       className="text-white-50/60"
+      data-testid={label}
     >
       {label}
     </a>
