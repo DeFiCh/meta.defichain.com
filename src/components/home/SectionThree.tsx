@@ -32,6 +32,7 @@ export default function SectionThree(): JSX.Element {
           hintStyle="brand-gradient-1 text-start"
           headerStyle="text-start"
           containerStyle="items-start"
+          testId="section_three"
         />
         <span className="text-white-50 text-xl mb-8 block">
           DeFi Meta Chain is an EVM-compatible blockchain that uses Proof of
