@@ -4,7 +4,7 @@ export default function SectionHeader({
   hintStyle = "brand-gradient-1 text-center",
   headerStyle = "text-center",
   containerStyle = "items-center",
-  testId
+  testId,
 }: {
   header: string;
   hint: string;
