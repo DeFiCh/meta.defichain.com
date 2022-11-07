@@ -19,7 +19,7 @@
     "@defichain/jellyfish-network": "^2.67.2",
     "@defichain/whale-api-client": "^2.67.2",
     "@react-three/drei": "^9.32.0",
-    "@react-three/fiber": "^8.8.10",
+    "@react-three/fiber": "^8.9.1",
     "@reduxjs/toolkit": "^1.9.0",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@types/react-type-animation": "^1.1.1",
