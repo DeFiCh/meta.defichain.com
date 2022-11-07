@@ -34,6 +34,7 @@ export default function SectionFour(): JSX.Element {
         hintStyle="brand-gradient-1 text-start"
         headerStyle="text-start mb-6 md:mb-8 lg:w-[620px] md:w-[511px]"
         containerStyle="items-start"
+        testId="section_four"
       />
       <span className="text-white-50 text-xl inline-block lg:w-[620px] md:w-[511px]">
         Start exploring and unlock the limitless potential of DMC by following
