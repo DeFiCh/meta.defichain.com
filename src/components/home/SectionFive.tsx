@@ -43,6 +43,7 @@ export default function SectionFive(): JSX.Element {
             hintStyle="brand-gradient-1 text-start"
             headerStyle="text-start mb-8"
             containerStyle="items-start"
+            testId="section_five"
           />
           <span className="text-white-50 text-xl inline-block ">
             Join our global fast-growing community of developers, validators,
@@ -114,6 +115,7 @@ export default function SectionFive(): JSX.Element {
             hintStyle="brand-gradient-1 text-start"
             headerStyle="text-start mb-8"
             containerStyle="items-start"
+            testId="section_five"
           />
           <span className="text-white-50 text-xl inline-block ">
             Join our global fast-growing community of developers, validators,

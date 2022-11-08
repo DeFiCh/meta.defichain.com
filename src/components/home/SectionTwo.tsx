@@ -11,6 +11,7 @@ export default function SectionTwo(): JSX.Element {
         header="Stay updated"
         hint="WHAT'S NEW"
         hintStyle="brand-gradient-2 text-center"
+        testId="section_two"
       />
       <div className="flex md:flex-row flex-col md:items-start justify-center">
         <StayUpdatedCard
