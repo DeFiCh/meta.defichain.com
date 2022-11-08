@@ -38,7 +38,6 @@ export default function Jellyfish({
 }
 
 export function Model(props) {
-  // @ts-expect-error
   const { nodes, materials } = useGLTF("/models/jellyfish.gltf");
   return (
     <group {...props} dispose={null}>
@@ -47,22 +46,27 @@ export function Model(props) {
           <group position={[1.72, -0.36, 0.6]} rotation={[-Math.PI / 2, 0, 0]}>
             <group position={[-9.66, 1.68, -610.69]}>
               <mesh
+                // @ts-ignore
                 geometry={nodes.Object_5.geometry}
                 material={materials.Jelly}
               />
               <mesh
+                // @ts-ignore
                 geometry={nodes.Object_6.geometry}
                 material={materials.Jelly}
               />
               <mesh
+                // @ts-ignore
                 geometry={nodes.Object_7.geometry}
                 material={materials.Jelly}
               />
               <mesh
+                // @ts-ignore
                 geometry={nodes.Object_8.geometry}
                 material={materials.Jelly}
               />
               <mesh
+                // @ts-ignore
                 geometry={nodes.Object_9.geometry}
                 material={materials.Jelly}
               />
