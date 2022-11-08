@@ -339,12 +339,14 @@ function NavMenuItem({
         className={clsx(
           "py-4 before:cta-border before:bg-white-50 before:opacity-100 group-hover:before:opacity-0 after:cta-border after:brand-gradient-1 after:opacity-0 group-hover:after:opacity-100"
         )}
+        data-testid={`hid_${label}`}
       >
         <MenuItemLabel label={label} />
       </li>
       <li
         style={childContainerStyle}
         className="z-[1] hidden before:hover-menu-gap group-hover:animate-fade-in group-hover:block hover:block group-hover:opacity-100 absolute top-[64px] bg-white-50 rounded-[10px] w-[255px]"
+        data-testid={`parent_href_${label}`}
       >
         {children}
       </li>
@@ -359,7 +361,6 @@ const MenuItemLabel = React.forwardRef(
     return (
       <span
         ref={ref}
-        data-testid={label}
         data-label={label}
         className={`${navItemStyle} before:content-[attr(data-label)] after:content-[attr(data-label)]`}
       >
@@ -389,7 +390,7 @@ function NavMenuChildItem({
           <Image layout="fill" src={imagePath} alt={altLabel} />
         </div>
         <span
-          data-testid={label}
+          data-testid={`hid_${label}`}
           data-label={label}
           className={`${navChildItemStyle} before:content-[attr(data-label)] after:content-[attr(data-label)]`}
         >
