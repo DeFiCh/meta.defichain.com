@@ -384,13 +384,12 @@ function NavMenuChildItem({
   const navChildItemStyle =
     "pl-6 text-transparent before:pl-6 before:bg-black-900 relative before:gradient-text before:opacity-100 [.group-scoped:hover_&]:before:opacity-0 before:left-6 after:left-6 after:gradient-text after:pl-6 after:brand-gradient-1 after:opacity-0 [.group-scoped:hover_&]:after:opacity-100";
   return (
-    <Link href={href} rel="noreferrer" target="_blank">
+    <Link href={href} rel="noreferrer" target="_blank" data-testid={`hid_${label}`}>
       <div className="py-3 px-5 flex items-center group-scoped" >
         <div className="w-5 h-5 relative" >
           <Image layout="fill" src={imagePath} alt={altLabel} />
         </div>
         <span
-          data-testid={`hid_${label}`}
           data-label={label}
           className={`${navChildItemStyle} before:content-[attr(data-label)] after:content-[attr(data-label)]`}
         >
