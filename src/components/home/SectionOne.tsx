@@ -15,7 +15,9 @@ export default function SectionOne(): JSX.Element {
             containerStyle="lg:w-4/5 items-center"
             testId="section_one"
           />
-          <span className="mb-8 lg:w-3/5 md:text-xl text-white-50">
+          <span className="mb-8 lg:w-3/5 md:text-xl text-white-50"
+                data-testid="dmc_desc"
+          >
             DeFi Meta Chain (DMC) is a powerful EVM-compatible blockchain
             parallel to DeFiChain, a leader in DeFi. Built to future proof
             trends, DMC achieves ecosystem scalability by providing developers

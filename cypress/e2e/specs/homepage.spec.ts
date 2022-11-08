@@ -12,13 +12,20 @@ describe("Homepage test",()=>{
     });
 
     it('should verify header', function () {
-      cy.findByTestId("nav_menu").should("be.visible");
     });
 
     it('should verify homepage', function () {
       cy.findByTestId("unlock_text").contains("UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN");
-      //cy.findByTestId("dmc_desc").contains(dmc_descr);
+      cy.get('div.flex > div.flex > span.mb-8.font-bold').should("be.visible");
+      cy.findByTestId('section_one_hint').should("be.visible").contains(`UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN`);
+      cy.findByTestId(`section_one_header`).should("be.visible").contains(`Build next gen dApps with tools of the future`);
+      cy.findByTestId(`dmc_desc`).should("be.visible").contains(dmc_descr);
     });
+
+    it('should verify footer', function () {
+      cy.findByTestId("dmc_footer1").should("be.visible");
+    });
+
   })
 
   context("/ on ipad",()=>{
@@ -31,14 +38,19 @@ describe("Homepage test",()=>{
     });
 
     it('should verify header', function () {
-      cy.findByTestId("nav_menu").should("be.visible");
     });
 
     it('should verify homepage', function () {
       cy.findByTestId("unlock_text").contains("UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN");
-      //cy.findByTestId("dmc_desc").contains(dmc_descr);
+      cy.get('div.flex > div.flex > span.mb-8.font-bold').should("be.visible");
+      cy.findByTestId('section_one_hint').should("be.visible").contains(`UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN`);
+      cy.findByTestId(`section_one_header`).should("be.visible").contains(`Build next gen dApps with tools of the future`);
+      cy.findByTestId(`dmc_desc`).should("be.visible").contains(dmc_descr);
     });
 
+    it('should verify footer', function () {
+      cy.findByTestId("dmc_footer1").should("be.visible");
+    });
   })
 
   context("/ on macbook-13",()=>{
@@ -56,7 +68,9 @@ describe("Homepage test",()=>{
     it('should verify homepage', function () {
       cy.findByTestId("unlock_text").contains("UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN");
       cy.get('div.flex > div.flex > span.mb-8.font-bold').should("be.visible");
-      //cy.findByTestId("dmc_desc").contains(dmc_descr);
+      cy.findByTestId('section_one_hint').should("be.visible").contains(`UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN`);
+      cy.findByTestId(`section_one_header`).should("be.visible").contains(`Build next gen dApps with tools of the future`);
+      cy.findByTestId(`dmc_desc`).should("be.visible").contains(dmc_descr);
     });
 
     it('should verify footer', function () {
