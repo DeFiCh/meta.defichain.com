@@ -53,7 +53,6 @@ describe("Header test", () => {
 
     it('should verify Developers section in nav menu', function () {
       cy.findByTestId("hid_Developers").trigger("mouseover");
-      cy.get('.hidden').invoke('show');
       cy.findByTestId('hid_Documentation').should("have.attr","href").and("equal","/");
       cy.findByTestId('hid_Releases').should("have.attr","href").and("equal","https://github.com/DeFiCh/metachain/releases");
       cy.findByTestId('hid_GitHub').should("have.attr","href").and("equal","https://github.com/DeFiCh/metachain");
@@ -62,7 +61,6 @@ describe("Header test", () => {
 
     it('should verify Ecosystem section in nav menu', function () {
       cy.findByTestId("hid_Ecosystem").click();//trigger("mouseover");
-      cy.get('.hidden').invoke('show');
       cy.findByTestId("hid_DMC Explorer").should("have.attr","href").and("equal","/");
       cy.findByTestId("hid_DeFiChain.com").should("have.attr","href").and("equal","https://defichain.com");
       cy.findByTestId("hid_Whitepaper").should("have.attr","href").and("equal","/");
@@ -71,7 +69,6 @@ describe("Header test", () => {
 
     it('should verify Community section in nav menu', function () {
       cy.findByTestId("hid_Community").trigger("mouseover");
-      cy.get('.hidden').invoke('show');
       cy.findByTestId("hid_Discord").should("have.attr","href").and("equal","https://discord.gg/U268gQUqQt");
       cy.findByTestId("hid_Twitter").should("have.attr","href").and("equal","https://twitter.com/defichain");
       cy.findByTestId("hid_YouTube").should("have.attr","href").and("equal","https://www.youtube.com/c/DeFiChain");

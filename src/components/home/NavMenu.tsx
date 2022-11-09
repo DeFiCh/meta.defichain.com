@@ -345,9 +345,7 @@ function NavMenuItem({
       </li>
       <li
         style={childContainerStyle}
-        className="z-[1] hidden before:hover-menu-gap group-hover:animate-fade-in group-hover:block hover:block group-hover:opacity-100 absolute top-[64px] bg-white-50 rounded-[10px] w-[255px]"
-        data-testid={`parent_href_${label}`}
-      >
+        className="z-[1] hidden before:hover-menu-gap group-hover:animate-fade-in group-hover:block hover:block group-hover:opacity-100 absolute top-[64px] bg-white-50 rounded-[10px] w-[255px]">
         {children}
       </li>
     </ul>
