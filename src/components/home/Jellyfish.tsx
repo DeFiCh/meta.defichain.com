@@ -1,4 +1,4 @@
-import React, { Suspense, useRef } from "react";
+import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { BufferGeometry, Mesh } from "three";
 import { Canvas, Euler, useFrame, Vector3 } from "@react-three/fiber";
@@ -97,7 +97,7 @@ export function JellyfishBackground({
   mobile,
 }: JellyfishBackgroundProps): JSX.Element {
   return (
-    <Suspense fallback={<span className="absolute top-0 left-0 h-screen w-screen bg-primary-300 text-2xl text-black-300">Loading...</span>}>
+    <>
       <div
         className={`hidden lg:block absolute z-[-2] top-0 w-[250px] h-screen ${
           desktop.containerStyle ?? ""
@@ -132,6 +132,6 @@ export function JellyfishBackground({
           </Canvas>
         </div>
       )}
-    </Suspense>
+    </>
   );
 }
