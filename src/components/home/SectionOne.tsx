@@ -5,7 +5,7 @@ import SectionHeader from "./SectionHeader";
 
 export default function SectionOne(): JSX.Element {
   return (
-    <div className="container mx-auto flex flex-col grow items-center lg:justify-between justify-center md:mt-[15%] mt-[350px] translate-y-[-4.9%]">
+    <div className="container mx-auto flex flex-col grow items-center lg:justify-between justify-center md:mt-[12%] mt-[350px] translate-y-[-4.9%]">
       <Parallax translateY={[30, -30]}>
         <div className="flex flex-col text-center items-center">
           <SectionHeader

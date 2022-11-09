@@ -140,14 +140,14 @@ export default function Home() {
   }, [scrollPosition]);
 
   return (
-    <>
+    <div className="relative">
       <AnchorLink activeSection={activeSection} />
+      <div className="w-full h-full absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-contain lg:bg-[url('/background/portal-gradient-1.png')] md:bg-[url('/background/tablet-portal-gradient-1.png')] bg-[url('/background/mobile-portal-gradient-1.png')]" />
       <section
         ref={sectionOneRef}
         id={HomeSections.One}
         className="w-full min-h-screen flex flex-col justify-between relative px-4 pt-6 md:px-[40px] md:pt-6 lg:px-[120px] lg:pt-[52px]"
       >
-        <div className="w-full h-screen absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat lg:bg-cover bg-contain lg:bg-[url('/background/portal-gradient-1.png')] md:bg-[url('/background/tablet-portal-gradient-1.png')] bg-[url('/background/mobile-portal-gradient-1.png')]" />
         <Header />
         <JellyfishBackground
           desktop={{
@@ -292,6 +292,6 @@ export default function Home() {
         </Parallax>
         <Footer />
       </section>
-    </>
+    </div>
   );
 }
