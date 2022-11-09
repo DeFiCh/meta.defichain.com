@@ -39,7 +39,7 @@ describe("Header test", () => {
       cy.viewport("macbook-13");
     });
 
-    it('should verify dmc logo', function () {
+    it("should verify dmc logo", function () {
       cy.findByTestId("dmc_logo").should("be.visible");
     });
 
@@ -60,5 +60,22 @@ describe("Header test", () => {
       cy.findByTestId('hid_Developer\'s Chatroom').should("have.attr","href").and("equal","https://discord.gg/g5U4pvNtbS");
     });
 
+    it('should verify Ecosystem section in nav menu', function () {
+      cy.findByTestId("hid_Ecosystem").click();//trigger("mouseover");
+      cy.get('.hidden').invoke('show');
+      cy.findByTestId("hid_DMC Explorer").should("have.attr","href").and("equal","/");
+      cy.findByTestId("hid_DeFiChain.com").should("have.attr","href").and("equal","https://defichain.com");
+      cy.findByTestId("hid_Whitepaper").should("have.attr","href").and("equal","/");
+      cy.findByTestId("hid_Wallets").should("have.attr","href").and("equal","/");
+    });
+
+    it('should verify Community section in nav menu', function () {
+      cy.findByTestId("hid_Community").trigger("mouseover");
+      cy.get('.hidden').invoke('show');
+      cy.findByTestId("hid_Discord").should("have.attr","href").and("equal","https://discord.gg/U268gQUqQt");
+      cy.findByTestId("hid_Twitter").should("have.attr","href").and("equal","https://twitter.com/defichain");
+      cy.findByTestId("hid_YouTube").should("have.attr","href").and("equal","https://www.youtube.com/c/DeFiChain");
+      cy.findByTestId("hid_Telegram").should("have.attr","href").and("equal","https://t.me/defiblockchain");
+    });
   })
 })
