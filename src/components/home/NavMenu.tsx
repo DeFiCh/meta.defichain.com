@@ -334,13 +334,11 @@ function NavMenuItem({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <ul className="px-8 group cursor-pointer relative">
+    <ul className="px-8 group cursor-pointer relative" data-testid={`hid_${label}`}>
       <li
         className={clsx(
           "py-4 before:cta-border before:bg-white-50 before:opacity-100 group-hover:before:opacity-0 after:cta-border after:brand-gradient-1 after:opacity-0 group-hover:after:opacity-100"
-        )}
-        data-testid={`hid_${label}`}
-      >
+        )}>
         <MenuItemLabel label={label} />
       </li>
       <li
