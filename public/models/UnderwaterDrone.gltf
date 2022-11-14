@@ -1794,13 +1794,13 @@
       "uri": "textures/Submarine-EV1-beatenup_baseColor.jpeg"
     },
     {
-      "uri": "textures/Submarine-EV1-beatenup_metallicRoughness.png"
+      "uri": "textures/Submarine-EV1-beatenup_metallicRoughness.jpeg"
     },
     {
       "uri": "textures/Submarine-EV1-beatenup_emissive.jpeg"
     },
     {
-      "uri": "textures/Submarine-EV1-beatenup_normal.png"
+      "uri": "textures/Submarine-EV1-beatenup_normal.jpeg"
     }
   ],
   "materials": [
