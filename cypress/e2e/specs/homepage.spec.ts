@@ -65,6 +65,7 @@ describe("Homepage test", () => {
     });
 
     it("should verify header", function () {
+      cy.findByTestId("nav_menu").invoke("show");
       cy.findByTestId("nav_menu").should("be.visible");
     });
     it("should verify homepage", function () {
