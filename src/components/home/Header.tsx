@@ -8,7 +8,10 @@ export default function Header(): JSX.Element {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
     <header>
-      <nav className="container mx-auto flex justify-between w-full items-center" data-testid="mob_header">
+      <nav
+        className="container mx-auto flex justify-between w-full items-center"
+        data-testid="mob_header"
+      >
         <Link className="flex items-center" href="/">
           <div className="relative w-[203px] h-[36px]">
             <Image
@@ -21,9 +24,7 @@ export default function Header(): JSX.Element {
           </div>
         </Link>
         <NavMenu />
-        <div className="flex items-center"
-             data-testid="get_dfi"
-        >
+        <div className="flex items-center" data-testid="get_dfi">
           <Button
             // label="Get DFI"
             // href="https://defichain.com/dfi"

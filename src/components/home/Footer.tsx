@@ -6,8 +6,10 @@ export default function Footer(): JSX.Element {
   return (
     <footer className="w-full relative lg:pt-[242px] pt-[176px] pt-[138px]">
       <div className="container mx-auto">
-        <div className="backdrop-blur-[6px] flex flex-col md:flex-row py-10 px-5 md:px-10 lg:px-[102px] rounded-[30px] black-gradient-1 gap-y-10 md:gap-0"
-             data-testid="dmc_footer1">
+        <div
+          className="backdrop-blur-[6px] flex flex-col md:flex-row py-10 px-5 md:px-10 lg:px-[102px] rounded-[30px] black-gradient-1 gap-y-10 md:gap-0"
+          data-testid="dmc_footer1"
+        >
           <div className="flex flex-row w-full gap-10 md:gap-0">
             <FooterColumn
               category={MenuItems[0].category}
@@ -51,8 +53,9 @@ function FooterColumn({
 }): JSX.Element {
   return (
     <div className="flex flex-col gap-4 w-full">
-      <div className="font-medium text-white-50"
-           data-testid={`id_${category}`}>{category}</div>
+      <div className="font-medium text-white-50" data-testid={`id_${category}`}>
+        {category}
+      </div>
       {childLinks.map((link) => (
         <FooterLinkItem href={link.href} label={link.label} key={link.label} />
       ))}

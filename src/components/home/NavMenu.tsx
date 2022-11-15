@@ -100,10 +100,10 @@ export const MenuItems = [
 
 export default function NavMenu(): JSX.Element {
   return (
-
-    <div className="flex bg-white-50 rounded-[30px] min-[1361px]:flex hidden mx-10"
-         data-testid="nav_menu">
-
+    <div
+      className="flex bg-white-50 rounded-[30px] min-[1361px]:flex hidden mx-10"
+      data-testid="nav_menu"
+    >
       <NavMenuItem
         label={MenuItems[0].category}
         childContainerStyle={{ left: -58 }}
@@ -260,7 +260,10 @@ function NavMenuMobileItem({
   childItems: ChildItem[];
 }): JSX.Element {
   return (
-    <div className="shadow-[inset_0_-1px_0_rgba(255,255,255,0.15)]" data-testid={`mob_${label}`}>
+    <div
+      className="shadow-[inset_0_-1px_0_rgba(255,255,255,0.15)]"
+      data-testid={`mob_${label}`}
+    >
       <button
         className="px-8 py-5 flex w-full items-center justify-between transition"
         onClick={onClick}
@@ -338,16 +341,21 @@ function NavMenuItem({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <ul className="px-8 group cursor-pointer relative" data-testid={`hid_${label}`}>
+    <ul
+      className="px-8 group cursor-pointer relative"
+      data-testid={`hid_${label}`}
+    >
       <li
         className={clsx(
           "py-4 before:cta-border before:bg-white-50 before:opacity-100 group-hover:before:opacity-0 after:cta-border after:brand-gradient-1 after:opacity-0 group-hover:after:opacity-100"
-        )}>
+        )}
+      >
         <MenuItemLabel label={label} />
       </li>
       <li
         style={childContainerStyle}
-        className="z-[1] hidden before:hover-menu-gap group-hover:animate-fade-in group-hover:block hover:block group-hover:opacity-100 absolute top-[64px] bg-white-50 rounded-[10px] w-[255px]">
+        className="z-[1] hidden before:hover-menu-gap group-hover:animate-fade-in group-hover:block hover:block group-hover:opacity-100 absolute top-[64px] bg-white-50 rounded-[10px] w-[255px]"
+      >
         {children}
       </li>
     </ul>
@@ -384,9 +392,14 @@ function NavMenuChildItem({
   const navChildItemStyle =
     "pl-6 text-transparent before:pl-6 before:bg-black-900 relative before:gradient-text before:opacity-100 [.group-scoped:hover_&]:before:opacity-0 before:left-6 after:left-6 after:gradient-text after:pl-6 after:brand-gradient-1 after:opacity-0 [.group-scoped:hover_&]:after:opacity-100";
   return (
-    <Link href={href} rel="noreferrer" target="_blank" data-testid={`hid_${label}`}>
-      <div className="py-3 px-5 flex items-center group-scoped" >
-        <div className="w-5 h-5 relative" >
+    <Link
+      href={href}
+      rel="noreferrer"
+      target="_blank"
+      data-testid={`hid_${label}`}
+    >
+      <div className="py-3 px-5 flex items-center group-scoped">
+        <div className="w-5 h-5 relative">
           <Image layout="fill" src={imagePath} alt={altLabel} />
         </div>
         <span
