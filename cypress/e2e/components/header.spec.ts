@@ -193,6 +193,7 @@ describe("Header test", () => {
     });
 
     it("should verify navigation menu", function () {
+      cy.findByTestId("nav_menu").invoke("show");
       cy.findByTestId("nav_menu").should("be.visible");
     });
 
