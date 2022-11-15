@@ -100,8 +100,10 @@ export const MenuItems = [
 
 export default function NavMenu(): JSX.Element {
   return (
-    <div className="flex bg-white-50 rounded-[30px] lg:flex hidden"
+
+    <div className="flex bg-white-50 rounded-[30px] min-[1361px]:flex hidden mx-10"
          data-testid="nav_menu">
+
       <NavMenuItem
         label={MenuItems[0].category}
         childContainerStyle={{ left: -58 }}

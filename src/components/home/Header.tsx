@@ -32,9 +32,9 @@ export default function Header(): JSX.Element {
             customStyle="hidden md:block"
           />
           <svg
-            className="feather w-6 h-6 stroke-white-50 block lg:hidden md:ml-6"
-            data-testid={"hamburger_icon"}
+            className="feather w-6 h-6 stroke-white-50 block min-[1361px]:hidden md:ml-6"
             onClick={() => setIsMobileMenuOpen(true)}
+            data-testid={"hamburger_icon"}
           >
             <use href="/feather-sprite.svg#menu" />
           </svg>
