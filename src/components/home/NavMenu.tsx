@@ -258,7 +258,7 @@ function NavMenuMobileItem({
   childItems: ChildItem[];
 }): JSX.Element {
   return (
-    <div className="shadow-[inset_0_-1px_0_rgba(255,255,255,0.15)]">
+    <div className="shadow-[inset_0_-1px_0_rgba(255,255,255,0.15)]" data-testid={`mob_${label}`}>
       <button
         className="px-8 py-5 flex w-full items-center justify-between transition"
         onClick={onClick}
@@ -279,6 +279,7 @@ function NavMenuMobileItem({
           "transition-[max-height] duration-300 overflow-hidden",
           { "max-h-0": !isActive, "max-h-screen": isActive }
         )}
+        data-testid={`${label}_list`}
       >
         <NavMenuMobileChildItem items={childItems} />
       </div>
@@ -306,6 +307,7 @@ function NavMenuMobileChildItem({
           key={item.label}
           target="_blank"
           rel="noreferrer"
+          data-testid={`${item.label}_link`}
         >
           <div className="pl-12 pr-8 py-5 flex items-center justify-between">
             <div className="flex items-center">

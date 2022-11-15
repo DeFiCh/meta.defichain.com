@@ -8,7 +8,7 @@ export default function Header(): JSX.Element {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
     <header>
-      <nav className="container mx-auto flex justify-between w-full items-center">
+      <nav className="container mx-auto flex justify-between w-full items-center" data-testid={"mob_header"}>
         <Link className="flex items-center" href="/">
           <div className="relative w-[203px] h-[36px]">
             <Image
@@ -33,6 +33,7 @@ export default function Header(): JSX.Element {
           />
           <svg
             className="feather w-6 h-6 stroke-white-50 block lg:hidden md:ml-6"
+            data-testid={"hamburger_icon"}
             onClick={() => setIsMobileMenuOpen(true)}
           >
             <use href="/feather-sprite.svg#menu" />
