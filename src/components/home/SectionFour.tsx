@@ -90,7 +90,7 @@ export default function SectionFour(): JSX.Element {
               <div className="hidden md:block absolute right-[-35px] top-[-37px] z-[1] w-[175.8px] h-[114.1px] group-hover:rotate-[150.78deg] transition duration-300">
                 <Image
                   unoptimized
-                  data-testid="clay_dfi"
+                  data-testid="clay-dfi"
                   layout="fill"
                   src={ClayDFI}
                   alt="DFI"
@@ -108,7 +108,7 @@ export default function SectionFour(): JSX.Element {
               <div className="hidden md:block absolute right-[-35px] top-[-37px] z-[1] w-[125px] h-[125px] group-hover:rotate-[100.78deg] transition duration-300">
                 <Image
                   unoptimized
-                  data-testid="clay_block"
+                  data-testid="clay-block"
                   layout="fill"
                   src={ClayBlock}
                   alt="dApp"

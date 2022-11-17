@@ -1,61 +1,61 @@
 const footerLinks = [
   {
-    locator: "id_Documentation",
+    locator: "id-Documentation",
     content: "Documentation",
     link: "",
   },
   {
-    locator: "id_Releases",
+    locator: "id-Releases",
     content: "Releases",
     link: "https://github.com/DeFiCh/metachain/releases",
   },
   {
-    locator: "id_GitHub",
+    locator: "id-GitHub",
     content: "GitHub",
     link: "https://github.com/DeFiCh/metachain",
   },
   {
-    locator: "id_Developer's Chatroom",
+    locator: "id-Developer's Chatroom",
     content: "Developer's Chatroom",
     link: "https://discord.gg/g5U4pvNtbS",
   },
   {
-    locator: "id_DMC Explorer",
+    locator: "id-DMC Explorer",
     content: "DMC Explorer",
     link: "",
   },
   {
-    locator: "id_DeFiChain.com",
+    locator: "id-DeFiChain.com",
     content: "DeFiChain.com",
     link: "https://defichain.com",
   },
   {
-    locator: "id_Whitepaper",
+    locator: "id-Whitepaper",
     content: "Whitepaper",
     link: "",
   },
   {
-    locator: "id_Wallets",
+    locator: "id-Wallets",
     content: "Wallets",
     link: "",
   },
   {
-    locator: "id_Discord",
+    locator: "id-Discord",
     content: "Discord",
     link: "https://discord.gg/U268gQUqQt",
   },
   {
-    locator: "id_Twitter",
+    locator: "id-Twitter",
     content: "Twitter",
     link: "https://twitter.com/defichain",
   },
   {
-    locator: "id_YouTube",
+    locator: "id-YouTube",
     content: "YouTube",
     link: "https://www.youtube.com/c/DeFiChain",
   },
   {
-    locator: "id_Telegram",
+    locator: "id-Telegram",
     content: "Telegram",
     link: "https://t.me/defiblockchain",
   },
@@ -73,13 +73,13 @@ describe("Footer section", () => {
     it("should verify footer elements", function () {
       cy.scrollTo("bottom");
       cy.get(".hidden").invoke("show");
-      cy.findByTestId("id_Developers")
+      cy.findByTestId("id-Developers")
         .should("be.visible")
         .contains("Developers");
-      cy.findByTestId("id_Ecosystem")
+      cy.findByTestId("id-Ecosystem")
         .should("be.visible")
         .contains("Ecosystem");
-      cy.findByTestId("id_Community")
+      cy.findByTestId("id-Community")
         .should("be.visible")
         .contains("Community");
       footerLinks.forEach((f) => {
@@ -104,13 +104,13 @@ describe("Footer section", () => {
     it("should verify footer elements", function () {
       cy.scrollTo("bottom");
       cy.get(".hidden").invoke("show");
-      cy.findByTestId("id_Developers")
+      cy.findByTestId("id-Developers")
         .should("be.visible")
         .contains("Developers");
-      cy.findByTestId("id_Ecosystem")
+      cy.findByTestId("id-Ecosystem")
         .should("be.visible")
         .contains("Ecosystem");
-      cy.findByTestId("id_Community")
+      cy.findByTestId("id-Community")
         .should("be.visible")
         .contains("Community");
       footerLinks.forEach((f) => {
@@ -135,13 +135,13 @@ describe("Footer section", () => {
     it("should verify footer elements", function () {
       cy.scrollTo("bottom");
       cy.get(".hidden").invoke("show");
-      cy.findByTestId("id_Developers")
+      cy.findByTestId("id-Developers")
         .should("be.visible")
         .contains("Developers");
-      cy.findByTestId("id_Ecosystem")
+      cy.findByTestId("id-Ecosystem")
         .should("be.visible")
         .contains("Ecosystem");
-      cy.findByTestId("id_Community")
+      cy.findByTestId("id-Community")
         .should("be.visible")
         .contains("Community");
       footerLinks.forEach((f) => {

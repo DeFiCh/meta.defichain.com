@@ -9,17 +9,17 @@ export default function SectionOne(): JSX.Element {
       <Parallax translateY={[30, -30]}>
         <div
           className="flex flex-col text-center items-center"
-          data-testid="unlock_text"
+          data-testid="unlock-text"
         >
           <SectionHeader
             header="Build next gen dApps with tools of the future"
             hint="UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN"
             containerStyle="lg:w-4/5 items-center"
-            testId="section_one"
+            testId="section-one"
           />
           <span
             className="mb-8 lg:w-3/5 md:text-xl text-white-50"
-            data-testid="dmc_desc"
+            data-testid="dmc-desc"
           >
             DeFi Meta Chain (DMC) is a powerful EVM-compatible blockchain
             parallel to DeFiChain, a leader in DeFi. Built to future proof

@@ -12,25 +12,25 @@ describe("Homepage test", () => {
     });
 
     it("should verify header", function () {
-      cy.findByTestId("mob_header").should("be.visible");
+      cy.findByTestId("mob-header").should("be.visible");
     });
 
     it("should verify homepage:", function () {
-      cy.findByTestId("unlock_text").contains(
+      cy.findByTestId("unlock-text").contains(
         "UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN"
       );
       cy.get("div.flex > div.flex > span.mb-8.font-bold").should("be.visible");
-      cy.findByTestId("section_one_hint")
+      cy.findByTestId("section-one-hint")
         .should("be.visible")
         .contains("UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN");
-      cy.findByTestId("section_one_header")
+      cy.findByTestId("section-one-header")
         .should("be.visible")
         .contains("Build next gen dApps with tools of the future");
-      cy.findByTestId("dmc_desc").should("be.visible").contains(dmc_descr);
+      cy.findByTestId("dmc-desc").should("be.visible").contains(dmc_descr);
     });
 
     it("should verify footer", function () {
-      cy.findByTestId("dmc_footer1").should("be.visible");
+      cy.findByTestId("dmc-footer1").should("be.visible");
     });
   });
 
@@ -44,25 +44,25 @@ describe("Homepage test", () => {
     });
 
     it("should verify header", function () {
-      cy.findByTestId("mob_header").should("be.visible");
+      cy.findByTestId("mob-header").should("be.visible");
     });
 
     it("should verify homepage", function () {
-      cy.findByTestId("unlock_text").contains(
+      cy.findByTestId("unlock-text").contains(
         "UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN"
       );
       cy.get("div.flex > div.flex > span.mb-8.font-bold").should("be.visible");
-      cy.findByTestId("section_one_hint")
+      cy.findByTestId("section-one-hint")
         .should("be.visible")
         .contains("UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN");
-      cy.findByTestId("section_one_header")
+      cy.findByTestId("section-one-header")
         .should("be.visible")
         .contains("Build next gen dApps with tools of the future");
-      cy.findByTestId("dmc_desc").should("be.visible").contains(dmc_descr);
+      cy.findByTestId("dmc-desc").should("be.visible").contains(dmc_descr);
     });
 
     it("should verify footer", function () {
-      cy.findByTestId("dmc_footer1").should("be.visible");
+      cy.findByTestId("dmc-footer1").should("be.visible");
     });
   });
 
@@ -76,25 +76,25 @@ describe("Homepage test", () => {
     });
 
     it("should verify header", function () {
-      cy.findByTestId("nav_menu").invoke("show");
-      cy.findByTestId("nav_menu").should("be.visible");
+      cy.findByTestId("nav-menu").invoke("show");
+      cy.findByTestId("nav-menu").should("be.visible");
     });
     it("should verify homepage", function () {
-      cy.findByTestId("unlock_text").contains(
+      cy.findByTestId("unlock-text").contains(
         "UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN"
       );
       cy.get("div.flex > div.flex > span.mb-8.font-bold").should("be.visible");
-      cy.findByTestId("section_one_hint")
+      cy.findByTestId("section-one-hint")
         .should("be.visible")
         .contains("UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN");
-      cy.findByTestId("section_one_header")
+      cy.findByTestId("section-one-header")
         .should("be.visible")
         .contains("Build next gen dApps with tools of the future");
-      cy.findByTestId("dmc_desc").should("be.visible").contains(dmc_descr);
+      cy.findByTestId("dmc-desc").should("be.visible").contains(dmc_descr);
     });
 
     it("should verify footer", function () {
-      cy.findByTestId("dmc_footer1").should("be.visible");
+      cy.findByTestId("dmc-footer1").should("be.visible");
     });
   });
 });

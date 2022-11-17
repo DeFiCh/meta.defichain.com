@@ -179,7 +179,7 @@ function SectionThreeItem({
           </div>
           <div className="block md:hidden relative w-[94px] h-[135px] mt-14 mb-5 ">
             <Image
-              data-testid="triple_stairs"
+              data-testid="triple-stairs"
               layout="fill"
               src="/home/triple-stairs.svg"
               alt="Triple Stairs"

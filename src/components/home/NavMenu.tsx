@@ -102,7 +102,7 @@ export default function NavMenu(): JSX.Element {
   return (
     <div
       className="flex bg-white-50 rounded-[30px] min-[1361px]:flex hidden mx-10"
-      data-testid="nav_menu"
+      data-testid="nav-menu"
     >
       <NavMenuItem
         label={MenuItems[0].category}
@@ -200,7 +200,7 @@ function NavMenuMobile({
           <Link className="flex items-center" href="/">
             <div className="relative w-[149px] h-[43px]">
               <Image
-                data-testid="dmc_navmenu_logo"
+                data-testid="dmc-navmenu-logo"
                 layout="fill"
                 src="/logo.svg"
                 alt="DeFi Meta Chain Logo"
@@ -262,7 +262,7 @@ function NavMenuMobileItem({
   return (
     <div
       className="shadow-[inset_0_-1px_0_rgba(255,255,255,0.15)]"
-      data-testid={`mob_${label}`}
+      data-testid={`mob-${label}`}
     >
       <button
         className="px-8 py-5 flex w-full items-center justify-between transition"
@@ -284,7 +284,7 @@ function NavMenuMobileItem({
           "transition-[max-height] duration-300 overflow-hidden",
           { "max-h-0": !isActive, "max-h-screen": isActive }
         )}
-        data-testid={`${label}_list`}
+        data-testid={`${label}-list`}
       >
         <NavMenuMobileChildItem items={childItems} />
       </div>
@@ -312,7 +312,7 @@ function NavMenuMobileChildItem({
           key={item.label}
           target="_blank"
           rel="noreferrer"
-          data-testid={`${item.label}_link`}
+          data-testid={`${item.label}-link`}
         >
           <div className="pl-12 pr-8 py-5 flex items-center justify-between">
             <div className="flex items-center">
@@ -343,7 +343,7 @@ function NavMenuItem({
   return (
     <ul
       className="px-8 group cursor-pointer relative"
-      data-testid={`hid_${label}`}
+      data-testid={`hid-${label}`}
     >
       <li
         className={clsx(
@@ -396,7 +396,7 @@ function NavMenuChildItem({
       href={href}
       rel="noreferrer"
       target="_blank"
-      data-testid={`hid_${label}`}
+      data-testid={`hid-${label}`}
     >
       <div className="py-3 px-5 flex items-center group-scoped">
         <div className="w-5 h-5 relative">
