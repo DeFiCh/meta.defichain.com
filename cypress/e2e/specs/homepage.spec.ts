@@ -75,7 +75,7 @@ describe("Homepage test", () => {
       cy.viewport("macbook-13");
     });
 
-    it("should verify header", function () {
+    it("should verify header nav menu", function () {
       cy.findByTestId("nav-menu").invoke("show");
       cy.findByTestId("nav-menu").should("be.visible");
     });
@@ -93,7 +93,7 @@ describe("Homepage test", () => {
       cy.findByTestId("dmc-desc").should("be.visible").contains(dmcDescription);
     });
 
-    it("should verify footer", function () {
+    it("should verify footer backdrop", function () {
       cy.findByTestId("dmc-footer").should("be.visible");
     });
   });
