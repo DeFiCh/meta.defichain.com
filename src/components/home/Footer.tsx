@@ -53,7 +53,10 @@ function FooterColumn({
 }): JSX.Element {
   return (
     <div className="flex flex-col gap-4 w-full">
-      <div className="font-medium text-white-50" data-testid={`footerlink-${category}`}>
+      <div
+        className="font-medium text-white-50"
+        data-testid={`footerlink-${category}`}
+      >
         {category}
       </div>
       {childLinks.map((link) => (

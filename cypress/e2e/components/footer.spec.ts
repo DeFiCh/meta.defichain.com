@@ -1,4 +1,4 @@
-import {footerElements, footerLinks} from "../../fixtures/footer";
+import { footerElements, footerLinks } from "../../fixtures/footer";
 
 describe("Footer section", () => {
   context("Verifying header on iphone-x", () => {
@@ -9,12 +9,12 @@ describe("Footer section", () => {
 
     it("should verify footer elements", function () {
       cy.scrollTo("bottom");
-      footerElements.forEach((el)=>{
-        cy.verifyFooterElements(el.locator,el.label);
-      })
+      footerElements.forEach((el) => {
+        cy.verifyFooterElements(el.locator, el.label);
+      });
 
       footerLinks.forEach((f) => {
-        cy.verifyFooterLinks(f.locator,f.content,f.link);
+        cy.verifyFooterLinks(f.locator, f.content, f.link);
       });
     });
   });
@@ -27,12 +27,12 @@ describe("Footer section", () => {
 
     it("should verify footer elements", function () {
       cy.scrollTo("bottom");
-      footerElements.forEach((el)=>{
-        cy.verifyFooterElements(el.locator,el.label);
-      })
+      footerElements.forEach((el) => {
+        cy.verifyFooterElements(el.locator, el.label);
+      });
 
       footerLinks.forEach((f) => {
-        cy.verifyFooterLinks(f.locator,f.content,f.link);
+        cy.verifyFooterLinks(f.locator, f.content, f.link);
       });
     });
   });
@@ -45,12 +45,12 @@ describe("Footer section", () => {
 
     it("should verify footer elements", function () {
       cy.scrollTo("bottom");
-      footerElements.forEach((el)=>{
-        cy.verifyFooterElements(el.locator,el.label);
-      })
+      footerElements.forEach((el) => {
+        cy.verifyFooterElements(el.locator, el.label);
+      });
 
       footerLinks.forEach((f) => {
-        cy.verifyFooterLinks(f.locator,f.content,f.link);
+        cy.verifyFooterLinks(f.locator, f.content, f.link);
       });
     });
   });

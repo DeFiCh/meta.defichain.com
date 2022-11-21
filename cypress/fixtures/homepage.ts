@@ -1,4 +1,4 @@
-export const locatorHeaderFooterList=[
-  { locator: "dmc-header"},
-  { locator: "dmc-footer"}
-]
+export const locatorHeaderFooterList = [
+  { locator: "dmc-header" },
+  { locator: "dmc-footer" },
+];

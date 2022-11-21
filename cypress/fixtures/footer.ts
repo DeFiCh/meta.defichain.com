@@ -61,14 +61,8 @@ export const footerLinks = [
   },
 ];
 
-export const footerElements=[
-  {locator:"footerlink-Developers",
-   label:"Developers"
-  },
-  {locator:"footerlink-Community",
-    label:"Community"
-  },
-  {locator:"footerlink-Ecosystem",
-    label:"Ecosystem"
-  }
-]
+export const footerElements = [
+  { locator: "footerlink-Developers", label: "Developers" },
+  { locator: "footerlink-Community", label: "Community" },
+  { locator: "footerlink-Ecosystem", label: "Ecosystem" },
+];

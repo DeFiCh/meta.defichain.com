@@ -1,4 +1,4 @@
-import {locatorHeaderFooterList} from "../../fixtures/homepage";
+import { locatorHeaderFooterList } from "../../fixtures/homepage";
 
 const dmcDescription =
   "DeFi Meta Chain (DMC) is a powerful EVM-compatible blockchain parallel to DeFiChain, a leader in DeFi. Built to future proof trends, DMC achieves ecosystem scalability by providing developers with familiar tools to build the future of DeFi today.";
@@ -31,7 +31,6 @@ describe("Homepage test", () => {
         .contains("Build next gen dApps with tools of the future");
       cy.findByTestId("dmc-desc").should("be.visible").contains(dmcDescription);
     });
-
   });
 
   context("/ on ipad", () => {
@@ -45,7 +44,7 @@ describe("Homepage test", () => {
 
     it("should verify header and footer", function () {
       locatorHeaderFooterList.forEach((l) => {
-       cy.verifyHeaderFooter(l.locator);
+        cy.verifyHeaderFooter(l.locator);
       });
     });
 
@@ -61,7 +60,6 @@ describe("Homepage test", () => {
         .contains("Build next gen dApps with tools of the future");
       cy.findByTestId("dmc-desc").should("be.visible").contains(dmcDescription);
     });
-
   });
 
   context("/ on macbook-13", () => {
