@@ -29,6 +29,7 @@ describe("Header test", () => {
     });
 
     it("should verify Developers section in nav menu", function () {
+      cy.findByTestId("hamburger-icon").invoke("show");
       cy.findByTestId("hamburger-icon").click();
       cy.findByTestId("mob-Developers")
         .should("be.visible")
