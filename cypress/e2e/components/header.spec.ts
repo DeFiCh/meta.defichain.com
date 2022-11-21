@@ -25,12 +25,10 @@ describe("Header test", () => {
     });
 
     it("should verify hamburger icon", function () {
-      cy.findByTestId("hamburger-icon").should("be.visible");
+      cy.findByTestId("hamburger-icon").should("be.visible").click();
     });
 
     it("should verify Developers section in nav menu", function () {
-      cy.findByTestId("hamburger-icon").invoke("show");
-      cy.findByTestId("hamburger-icon").click();
       cy.findByTestId("mob-Developers")
         .should("be.visible")
         .contains("Developers")
@@ -102,11 +100,10 @@ describe("Header test", () => {
     });
 
     it("should verify hamburger icon", function () {
-      cy.findByTestId("hamburger-icon").should("be.visible");
+      cy.findByTestId("hamburger-icon").should("be.visible").click();
     });
 
     it("should verify Developers section in nav menu", function () {
-      cy.findByTestId("hamburger-icon").click();
       cy.findByTestId("mob-Developers")
         .should("be.visible")
         .contains("Developers")
