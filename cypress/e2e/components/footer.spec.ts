@@ -10,11 +10,11 @@ describe("Footer section", () => {
     it("should verify footer elements", function () {
       cy.scrollTo("bottom");
       footerElements.forEach((el) => {
-        cy.verifyFooterElements(el.locator, el.label);
+        cy.verifyElementContains(el.locator, el.label);
       });
 
       footerLinks.forEach((f) => {
-        cy.verifyFooterLinks(f.locator, f.content, f.link);
+        cy.verifyLinks(f.locator, f.content, f.link);
       });
     });
   });
@@ -28,11 +28,11 @@ describe("Footer section", () => {
     it("should verify footer elements", function () {
       cy.scrollTo("bottom");
       footerElements.forEach((el) => {
-        cy.verifyFooterElements(el.locator, el.label);
+        cy.verifyElementContains(el.locator, el.label);
       });
 
       footerLinks.forEach((f) => {
-        cy.verifyFooterLinks(f.locator, f.content, f.link);
+        cy.verifyLinks(f.locator, f.content, f.link);
       });
     });
   });
@@ -46,11 +46,11 @@ describe("Footer section", () => {
     it("should verify footer elements", function () {
       cy.scrollTo("bottom");
       footerElements.forEach((el) => {
-        cy.verifyFooterElements(el.locator, el.label);
+        cy.verifyElementContains(el.locator, el.label);
       });
 
       footerLinks.forEach((f) => {
-        cy.verifyFooterLinks(f.locator, f.content, f.link);
+        cy.verifyLinks(f.locator, f.content, f.link);
       });
     });
   });

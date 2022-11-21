@@ -1,7 +1,7 @@
 declare namespace Cypress {
   interface Chainable {
     verifyHeaderFooter(locator: string): void;
-    verifyFooterElements(locator: string, label: string): void;
-    verifyFooterLinks(locator: string, content: string, link: string): void;
+    verifyElementContains(locator: string, label: string): void;
+    verifyLinks(locator: string, content: string, link: string): void;
   }
 }

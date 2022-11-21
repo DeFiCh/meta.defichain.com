@@ -13,10 +13,8 @@ describe("Homepage test", () => {
       cy.viewport("iphone-x");
     });
 
-    it("should verify header and footer", function () {
-      locatorHeaderFooterList.forEach((l) => {
-        cy.verifyHeaderFooter(l.locator);
-      });
+    it("should verify header", function () {
+      cy.findByTestId("dmc-header").should("be.visible");
     });
 
     it("should verify homepage:", function () {
@@ -31,6 +29,10 @@ describe("Homepage test", () => {
         .contains("Build next gen dApps with tools of the future");
       cy.findByTestId("dmc-desc").should("be.visible").contains(dmcDescription);
     });
+
+    it("should verify footer", function () {
+      cy.findByTestId("dmc-footer").should("be.visible");
+    });
   });
 
   context("/ on ipad", () => {
@@ -42,10 +44,8 @@ describe("Homepage test", () => {
       cy.viewport("ipad-2");
     });
 
-    it("should verify header and footer", function () {
-      locatorHeaderFooterList.forEach((l) => {
-        cy.verifyHeaderFooter(l.locator);
-      });
+    it("should verify header", function () {
+      cy.findByTestId("dmc-header").should("be.visible");
     });
 
     it("should verify homepage", function () {
@@ -59,6 +59,10 @@ describe("Homepage test", () => {
         .should("be.visible")
         .contains("Build next gen dApps with tools of the future");
       cy.findByTestId("dmc-desc").should("be.visible").contains(dmcDescription);
+    });
+
+    it("should verify footer", function () {
+      cy.findByTestId("dmc-footer").should("be.visible");
     });
   });
 
