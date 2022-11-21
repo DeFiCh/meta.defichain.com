@@ -10,7 +10,7 @@ export default function Header(): JSX.Element {
     <header>
       <nav
         className="container mx-auto flex justify-between w-full items-center"
-        data-testid="mob-header"
+        data-testid="dmc-header"
       >
         <Link className="flex items-center" href="/">
           <div className="relative w-[203px] h-[36px]">

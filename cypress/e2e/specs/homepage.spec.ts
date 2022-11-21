@@ -1,4 +1,6 @@
-const dmc_descr =
+import {locatorHeaderFooterList} from "../../fixtures/homepage";
+
+const dmcDescription =
   "DeFi Meta Chain (DMC) is a powerful EVM-compatible blockchain parallel to DeFiChain, a leader in DeFi. Built to future proof trends, DMC achieves ecosystem scalability by providing developers with familiar tools to build the future of DeFi today.";
 
 describe("Homepage test", () => {
@@ -11,27 +13,25 @@ describe("Homepage test", () => {
       cy.viewport("iphone-x");
     });
 
-    it("should verify header", function () {
-      cy.findByTestId("mob-header").should("be.visible");
+    it("should verify header and footer", function () {
+      locatorHeaderFooterList.forEach((l) => {
+        cy.verifyHeaderFooter(l.locator);
+      });
     });
 
     it("should verify homepage:", function () {
       cy.findByTestId("unlock-text").contains(
         "UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN"
       );
-      cy.get("div.flex > div.flex > span.mb-8.font-bold").should("be.visible");
       cy.findByTestId("section-one-hint")
         .should("be.visible")
         .contains("UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN");
       cy.findByTestId("section-one-header")
         .should("be.visible")
         .contains("Build next gen dApps with tools of the future");
-      cy.findByTestId("dmc-desc").should("be.visible").contains(dmc_descr);
+      cy.findByTestId("dmc-desc").should("be.visible").contains(dmcDescription);
     });
 
-    it("should verify footer", function () {
-      cy.findByTestId("dmc-footer1").should("be.visible");
-    });
   });
 
   context("/ on ipad", () => {
@@ -43,27 +43,25 @@ describe("Homepage test", () => {
       cy.viewport("ipad-2");
     });
 
-    it("should verify header", function () {
-      cy.findByTestId("mob-header").should("be.visible");
+    it("should verify header and footer", function () {
+      locatorHeaderFooterList.forEach((l) => {
+       cy.verifyHeaderFooter(l.locator);
+      });
     });
 
     it("should verify homepage", function () {
       cy.findByTestId("unlock-text").contains(
         "UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN"
       );
-      cy.get("div.flex > div.flex > span.mb-8.font-bold").should("be.visible");
       cy.findByTestId("section-one-hint")
         .should("be.visible")
         .contains("UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN");
       cy.findByTestId("section-one-header")
         .should("be.visible")
         .contains("Build next gen dApps with tools of the future");
-      cy.findByTestId("dmc-desc").should("be.visible").contains(dmc_descr);
+      cy.findByTestId("dmc-desc").should("be.visible").contains(dmcDescription);
     });
 
-    it("should verify footer", function () {
-      cy.findByTestId("dmc-footer1").should("be.visible");
-    });
   });
 
   context("/ on macbook-13", () => {
@@ -79,22 +77,22 @@ describe("Homepage test", () => {
       cy.findByTestId("nav-menu").invoke("show");
       cy.findByTestId("nav-menu").should("be.visible");
     });
+
     it("should verify homepage", function () {
       cy.findByTestId("unlock-text").contains(
         "UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN"
       );
-      cy.get("div.flex > div.flex > span.mb-8.font-bold").should("be.visible");
       cy.findByTestId("section-one-hint")
         .should("be.visible")
         .contains("UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN");
       cy.findByTestId("section-one-header")
         .should("be.visible")
         .contains("Build next gen dApps with tools of the future");
-      cy.findByTestId("dmc-desc").should("be.visible").contains(dmc_descr);
+      cy.findByTestId("dmc-desc").should("be.visible").contains(dmcDescription);
     });
 
     it("should verify footer", function () {
-      cy.findByTestId("dmc-footer1").should("be.visible");
+      cy.findByTestId("dmc-footer").should("be.visible");
     });
   });
 });

@@ -1,24 +1,24 @@
-export const ulDeveloperList = [
+export const developerList = [
   { locator: "Developers-list", list_element: "Documentation" },
   { locator: "Developers-list", list_element: "Releases" },
   { locator: "Developers-list", list_element: "GitHub" },
   { locator: "Developers-list", list_element: "Developer's Chatroom" },
 ];
 
-export const ulEcosystemList = [
+export const ecosystemList = [
   { locator: "Ecosystem-list", list_element: "DMC Explorer" },
   { locator: "Ecosystem-list", list_element: "DeFiChain.com" },
   { locator: "Ecosystem-list", list_element: "Whitepaper" },
   { locator: "Ecosystem-list", list_element: "Wallets" },
 ];
 
-export const ulCommunityList = [
+export const communityList = [
   { locator: "Community-list", list_element: "Discord" },
   { locator: "Community-list", list_element: "Twitter" },
   { locator: "Community-list", list_element: "YouTube" },
   { locator: "Community-list", list_element: "Telegram" },
 ];
-export const navDeveloperDropdownLinks = [
+export const developerDropdownLinks = [
   { locator: "Documentation-link", link: "/" },
   {
     locator: "Releases-link",
@@ -31,14 +31,14 @@ export const navDeveloperDropdownLinks = [
   },
 ];
 
-export const navEcosystemDropdownLinks = [
+export const ecosystemDropdownLinks = [
   { locator: "DMC Explorer-link", link: "/" },
   { locator: "DeFiChain.com-link", link: "https://defichain.com" },
   { locator: "Whitepaper-link", link: "/" },
   { locator: "Wallets-link", link: "/" },
 ];
 
-export const navCommunityDropdownLinks = [
+export const communityDropdownLinks = [
   { locator: "Discord-link", link: "https://discord.gg/U268gQUqQt" },
   { locator: "Twitter-link", link: "https://twitter.com/defichain" },
   { locator: "YouTube-link", link: "https://www.youtube.com/c/DeFiChain" },

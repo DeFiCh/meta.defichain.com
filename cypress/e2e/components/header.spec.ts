@@ -1,14 +1,14 @@
 import {
-  navCommunityDropdownLinks,
-  navDeveloperDropdownLinks,
-  navEcosystemDropdownLinks,
-  ulCommunityList,
-  ulDeveloperList,
-  ulEcosystemList,
+  communityDropdownLinks,
+  developerDropdownLinks,
+  ecosystemDropdownLinks,
+  communityList,
+  developerList,
+  ecosystemList,
   webCommunityDropdownLinks,
   webDeveloperDropdownLinks,
   webEcosystemDropdownLinks,
-} from "../../fixtures/headerdata";
+} from "../../fixtures/header";
 
 describe("Header test", () => {
   context("Verifying header on iphone-x", () => {
@@ -35,13 +35,13 @@ describe("Header test", () => {
         .contains("Developers")
         .click();
 
-      ulDeveloperList.forEach((ul) => {
+      developerList.forEach((ul) => {
         cy.findByTestId(ul.locator)
           .should("be.visible")
           .contains(ul.list_element);
       });
 
-      navDeveloperDropdownLinks.forEach((nav_links) => {
+      developerDropdownLinks.forEach((nav_links) => {
         cy.findByTestId(nav_links.locator)
           .should("have.attr", "href")
           .and("equal", nav_links.link);
@@ -54,13 +54,13 @@ describe("Header test", () => {
         .contains("Ecosystem")
         .click();
 
-      ulEcosystemList.forEach((ul) => {
+      ecosystemList.forEach((ul) => {
         cy.findByTestId(ul.locator)
           .should("be.visible")
           .contains(ul.list_element);
       });
 
-      navEcosystemDropdownLinks.forEach((ul) => {
+      ecosystemDropdownLinks.forEach((ul) => {
         cy.findByTestId(ul.locator)
           .should("have.attr", "href")
           .and("equal", ul.link);
@@ -73,13 +73,13 @@ describe("Header test", () => {
         .contains("Community")
         .click();
 
-      ulCommunityList.forEach((ul) => {
+      communityList.forEach((ul) => {
         cy.findByTestId(ul.locator)
           .should("be.visible")
           .contains(ul.list_element);
       });
 
-      navCommunityDropdownLinks.forEach((ul) => {
+      communityDropdownLinks.forEach((ul) => {
         cy.findByTestId(ul.locator)
           .should("have.attr", "href")
           .and("equal", ul.link);
@@ -111,13 +111,13 @@ describe("Header test", () => {
         .contains("Developers")
         .click();
 
-      ulDeveloperList.forEach((ul) => {
+      developerList.forEach((ul) => {
         cy.findByTestId(ul.locator)
           .should("be.visible")
           .contains(ul.list_element);
       });
 
-      navDeveloperDropdownLinks.forEach((nav_links) => {
+      developerDropdownLinks.forEach((nav_links) => {
         cy.findByTestId(nav_links.locator)
           .should("have.attr", "href")
           .and("equal", nav_links.link);
@@ -130,13 +130,13 @@ describe("Header test", () => {
         .contains("Ecosystem")
         .click();
 
-      ulEcosystemList.forEach((ul) => {
+      ecosystemList.forEach((ul) => {
         cy.findByTestId(ul.locator)
           .should("be.visible")
           .contains(ul.list_element);
       });
 
-      navEcosystemDropdownLinks.forEach((ul) => {
+      ecosystemDropdownLinks.forEach((ul) => {
         cy.findByTestId(ul.locator)
           .should("have.attr", "href")
           .and("equal", ul.link);
@@ -149,13 +149,13 @@ describe("Header test", () => {
         .contains("Community")
         .click();
 
-      ulCommunityList.forEach((ul) => {
+      communityList.forEach((ul) => {
         cy.findByTestId(ul.locator)
           .should("be.visible")
           .contains(ul.list_element);
       });
 
-      navCommunityDropdownLinks.forEach((ul) => {
+      communityDropdownLinks.forEach((ul) => {
         cy.findByTestId(ul.locator)
           .should("have.attr", "href")
           .and("equal", ul.link);
@@ -188,7 +188,7 @@ describe("Header test", () => {
     it("should verify Developers section in nav menu", function () {
       cy.findByTestId("hid-Developers").trigger("mouseover");
 
-      ulDeveloperList.forEach((ul) => {
+      developerList.forEach((ul) => {
         cy.contains("ul", ul.list_element);
       });
 
@@ -202,7 +202,7 @@ describe("Header test", () => {
     it("should verify Ecosystem section in nav menu", function () {
       cy.findByTestId("hid-Ecosystem").trigger("mouseover");
 
-      ulEcosystemList.forEach((ul) => {
+      ecosystemList.forEach((ul) => {
         cy.contains("ul", ul.list_element);
       });
 
@@ -216,7 +216,7 @@ describe("Header test", () => {
     it("should verify Community section in nav menu", function () {
       cy.findByTestId("hid-Community").trigger("mouseover");
 
-      ulCommunityList.forEach((ul) => {
+      communityList.forEach((ul) => {
         cy.contains("ul", ul.list_element);
       });
 
