@@ -1,6 +1,11 @@
-# [DeFi Meta Chain](https://defimetachain.org/)
+[![CI](https://github.com/DeFiCh/defimetachain.org/actions/workflows/ci.yml/badge.svg)](https://github.com/DeFiCh/defimetachain.org/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/DeFiCh/defimetachain.org/branch/main/graph/badge.svg?token=poiFhXBtg8)](https://codecov.io/gh/DeFiCh/defimetachain.org)
 
-> https://defimetachain.org/
+# [DeFi Meta Chain](https://meta.defichain.com/)
+
+> https://meta.defichain.com/
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/adc0020b-b6c1-4b7a-a067-00f4a9d7c886/deploy-status)](https://app.netlify.com/sites/defimetachain/deploys)
 
 `DeFiCh/metachain` is a codename research & development
 for [DFIP 2111-B: VOC: Ethereum Virtual Machine (EVM) Support](https://github.com/DeFiCh/dfips/issues/96)

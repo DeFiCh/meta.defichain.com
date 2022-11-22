@@ -1,13 +1,16 @@
 import Button from "@components/ui/Button";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
+import { useState } from "react";
+import NavMenu from "./NavMenu";
 
 export default function Header(): JSX.Element {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
     <header>
-      <nav className="flex justify-between w-full ">
-        <Link className="flex items-center" href="/src/pages">
-          <div className="relative w-[149px]">
+      <nav className="container mx-auto flex justify-between w-full items-center">
+        <Link className="flex items-center" href="/">
+          <div className="relative w-[203px] h-[36px]">
             <Image
               data-testid="dmc_logo"
               layout="fill"
@@ -17,17 +20,25 @@ export default function Header(): JSX.Element {
             />
           </div>
         </Link>
-        <Button
-          label={
-            <div className="flex items-center ">
-              <span className="pr-1.5 relative before:button-text before:content-['Get_DFI'] before:bg-white-50 before:opacity-100 group-hover:before:opacity-0 after:button-text after:content-['Get_DFI'] after:brand-gradient-1 after:opacity-0 group-hover:after:opacity-100">
-                Get DFI
-              </span>
-            </div>
-          }
-          onClick={() => {
-            /* TODO: add handler */
-          }}
+        <NavMenu />
+        <div className="flex items-center">
+          <Button
+            // label="Get DFI"
+            // href="https://defichain.com/dfi"
+            label="Coming Soon"
+            href="#"
+            customStyle="hidden md:block"
+          />
+          <svg
+            className="feather w-6 h-6 stroke-white-50 block min-[1361px]:hidden md:ml-6"
+            onClick={() => setIsMobileMenuOpen(true)}
+          >
+            <use href="/feather-sprite.svg#menu" />
+          </svg>
+        </div>
+        <NavMenu.Mobile
+          isOpen={isMobileMenuOpen}
+          onClose={() => setIsMobileMenuOpen(false)}
         />
       </nav>
     </header>

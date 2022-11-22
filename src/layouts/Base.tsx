@@ -10,8 +10,21 @@ import {
 } from "@components/siteInfo";
 import clsx from "clsx";
 import { JSX } from "@babel/types";
+import { ParallaxProvider } from "react-scroll-parallax";
+import { NetworkProvider } from "@contexts/NetworkContext";
+import { WhaleProvider } from "@contexts/WhaleContext";
+import { StatsProvider } from "@store/stats";
+import { StoreProvider } from "@contexts/StoreProvider";
+import { RootState } from "@store/index";
 
-function Base({ children }: PropsWithChildren<any>): JSX.Element | null {
+export interface DeFiMetaChainAppProps {
+  initialReduxState: RootState;
+}
+
+function Base({
+  children,
+  initialReduxState,
+}: PropsWithChildren<DeFiMetaChainAppProps>): JSX.Element | null {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -68,11 +81,23 @@ function Base({ children }: PropsWithChildren<any>): JSX.Element | null {
         <link
           rel="icon"
           type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
+          sizes="36x36"
+          href="/favicon-36x36.png"
         />
       </Head>
-      <main className={clsx("flex-grow")}>{mounted && children}</main>
+      {mounted && (
+        <NetworkProvider>
+          <WhaleProvider>
+            <StoreProvider state={initialReduxState}>
+              <StatsProvider>
+                <ParallaxProvider>
+                  <main>{children}</main>
+                </ParallaxProvider>
+              </StatsProvider>
+            </StoreProvider>
+          </WhaleProvider>
+        </NetworkProvider>
+      )}
     </div>
   );
 }
