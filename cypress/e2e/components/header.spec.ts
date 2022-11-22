@@ -184,7 +184,7 @@ describe("Header test", () => {
     });
 
     it("should verify Developers section in nav menu", function () {
-      cy.findByTestId("hid-Developers").trigger("mouseover");
+      cy.findByTestId("header-Developers").trigger("mouseover");
 
       developerList.forEach((ul) => {
         cy.contains("ul", ul.list_element);
@@ -198,7 +198,7 @@ describe("Header test", () => {
     });
 
     it("should verify Ecosystem section in nav menu", function () {
-      cy.findByTestId("hid-Ecosystem").trigger("mouseover");
+      cy.findByTestId("header-Ecosystem").trigger("mouseover");
 
       ecosystemList.forEach((ul) => {
         cy.contains("ul", ul.list_element);
@@ -212,7 +212,7 @@ describe("Header test", () => {
     });
 
     it("should verify Community section in nav menu", function () {
-      cy.findByTestId("hid-Community").trigger("mouseover");
+      cy.findByTestId("header-Community").trigger("mouseover");
 
       communityList.forEach((ul) => {
         cy.contains("ul", ul.list_element);

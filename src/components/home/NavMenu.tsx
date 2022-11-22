@@ -343,7 +343,7 @@ function NavMenuItem({
   return (
     <ul
       className="px-8 group cursor-pointer relative"
-      data-testid={`hid-${label}`}
+      data-testid={`header-${label}`}
     >
       <li
         className={clsx(
@@ -396,7 +396,7 @@ function NavMenuChildItem({
       href={href}
       rel="noreferrer"
       target="_blank"
-      data-testid={`hid-${label}`}
+      data-testid={`header-${label}`}
     >
       <div className="py-3 px-5 flex items-center group-scoped">
         <div className="w-5 h-5 relative">

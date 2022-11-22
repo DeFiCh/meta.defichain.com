@@ -46,26 +46,26 @@ export const communityDropdownLinks = [
 ];
 
 export const webDeveloperDropdownLinks = [
-  { locator: "hid-Documentation", links: "/" },
+  { locator: "header-Documentation", links: "/" },
   {
-    locator: "hid-Releases",
+    locator: "header-Releases",
     links: "https://github.com/DeFiCh/metachain/releases",
   },
-  { locator: "hid-GitHub", links: "https://github.com/DeFiCh/metachain" },
+  { locator: "header-GitHub", links: "https://github.com/DeFiCh/metachain" },
   {
-    locator: "hid-Developer's Chatroom",
+    locator: "header-Developer's Chatroom",
     links: "https://discord.gg/g5U4pvNtbS",
   },
 ];
 export const webEcosystemDropdownLinks = [
-  { locator: "hid-DMC Explorer", links: "/" },
-  { locator: "hid-DeFiChain.com", links: "https://defichain.com" },
-  { locator: "hid-Whitepaper", links: "/" },
-  { locator: "hid-Wallets", links: "/" },
+  { locator: "header-DMC Explorer", links: "/" },
+  { locator: "header-DeFiChain.com", links: "https://defichain.com" },
+  { locator: "header-Whitepaper", links: "/" },
+  { locator: "header-Wallets", links: "/" },
 ];
 export const webCommunityDropdownLinks = [
-  { locator: "hid-Discord", links: "https://discord.gg/U268gQUqQt" },
-  { locator: "hid-Twitter", links: "https://twitter.com/defichain" },
-  { locator: "hid-YouTube", links: "https://www.youtube.com/c/DeFiChain" },
-  { locator: "hid-Telegram", links: "https://t.me/defiblockchain" },
+  { locator: "header-Discord", links: "https://discord.gg/U268gQUqQt" },
+  { locator: "header-Twitter", links: "https://twitter.com/defichain" },
+  { locator: "header-YouTube", links: "https://www.youtube.com/c/DeFiChain" },
+  { locator: "header-Telegram", links: "https://t.me/defiblockchain" },
 ];
