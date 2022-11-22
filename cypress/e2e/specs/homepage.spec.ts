@@ -1,5 +1,3 @@
-import { locatorHeaderFooterList } from "../../fixtures/homepage";
-
 const dmcDescription =
   "DeFi Meta Chain (DMC) is a powerful EVM-compatible blockchain parallel to DeFiChain, a leader in DeFi. Built to future proof trends, DMC achieves ecosystem scalability by providing developers with familiar tools to build the future of DeFi today.";
 
@@ -13,11 +11,11 @@ describe("Homepage test", () => {
       cy.viewport("iphone-x");
     });
 
-    it("should verify header", function () {
+    it("should verify header is visible", function () {
       cy.findByTestId("dmc-header").should("be.visible");
     });
 
-    it("should verify homepage:", function () {
+    it("should verify 'Unlock' section contains the text", function () {
       cy.findByTestId("unlock-text").contains(
         "UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN"
       );
@@ -30,7 +28,7 @@ describe("Homepage test", () => {
       cy.findByTestId("dmc-desc").should("be.visible").contains(dmcDescription);
     });
 
-    it("should verify footer", function () {
+    it("should verify footer is visible", function () {
       cy.findByTestId("dmc-footer").should("be.visible");
     });
   });
@@ -44,11 +42,11 @@ describe("Homepage test", () => {
       cy.viewport("ipad-2");
     });
 
-    it("should verify header", function () {
+    it("should verify header is visible", function () {
       cy.findByTestId("dmc-header").should("be.visible");
     });
 
-    it("should verify homepage", function () {
+    it("should verify 'Unlock' section contains the text", function () {
       cy.findByTestId("unlock-text").contains(
         "UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN"
       );
@@ -61,7 +59,7 @@ describe("Homepage test", () => {
       cy.findByTestId("dmc-desc").should("be.visible").contains(dmcDescription);
     });
 
-    it("should verify footer", function () {
+    it("should verify footer is visible", function () {
       cy.findByTestId("dmc-footer").should("be.visible");
     });
   });
@@ -75,12 +73,11 @@ describe("Homepage test", () => {
       cy.viewport("macbook-13");
     });
 
-    it("should verify header nav menu", function () {
-      cy.findByTestId("nav-menu").invoke("show");
-      cy.findByTestId("nav-menu").should("be.visible");
+    it("should verify header is visible", function () {
+      cy.findByTestId("dmc-header").should("be.visible");
     });
 
-    it("should verify homepage", function () {
+    it("should verify 'Unlock' section contains the text", function () {
       cy.findByTestId("unlock-text").contains(
         "UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN"
       );
@@ -93,7 +90,7 @@ describe("Homepage test", () => {
       cy.findByTestId("dmc-desc").should("be.visible").contains(dmcDescription);
     });
 
-    it("should verify footer backdrop", function () {
+    it("should verify footer is visible", function () {
       cy.findByTestId("dmc-footer").should("be.visible");
     });
   });
