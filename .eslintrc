@@ -45,5 +45,8 @@
     ],
     "react/no-unknown-property": ["error", { "ignore": ["intensity", "position", "rotation", "dispose", "rotation", "geometry", "material"] }],
     "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["state"] }]
+  },
+  "globals": {
+    "JSX": "readonly"
   }
 }

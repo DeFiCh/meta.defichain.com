@@ -1,7 +1,6 @@
 import Button from "@components/ui/Button";
-import Image from "next/legacy/image";
-import Link from "next/link";
 import { useState } from "react";
+import Logo from "./Logo";
 import NavMenu from "./NavMenu";
 
 export default function Header(): JSX.Element {
@@ -9,17 +8,7 @@ export default function Header(): JSX.Element {
   return (
     <header>
       <nav className="container mx-auto flex justify-between w-full items-center">
-        <Link className="flex items-center" href="/">
-          <div className="relative w-[203px] h-[36px]">
-            <Image
-              data-testid="dmc_logo"
-              layout="fill"
-              src="/logo.svg"
-              alt="DeFi Meta Chain Logo"
-              objectFit="contain"
-            />
-          </div>
-        </Link>
+        <Logo />
         <NavMenu />
         <div className="flex items-center">
           <Button
