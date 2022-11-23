@@ -18,11 +18,10 @@ import { differenceInSeconds, format } from "date-fns";
 import CountdownTimer from "@components/home/CountdownTimer";
 import Logo from "@components/home/Logo";
 
-const RELEASE_DATE = new Date(2022, 10, 30, 17); // 2022-11-30 17:00 GMT + 8
+const RELEASE_DATE = new Date("2022-11-30T17:00:00.000+08:00"); // 2022-11-30 17:00 GMT + 8
 
 export default function Home({ data }) {
   const [countdownTime, setCountdownTime] = useState(data.secondsUntilRelease);
-  console.log(data.dateNowInServer);
   const { count, tvl } = useSelector((state: RootState) => state.stats);
   const stats = {
     masternodes: {
@@ -361,7 +360,6 @@ export async function getServerSideProps() {
   const secondsUntilRelease = differenceInSeconds(RELEASE_DATE, timeNow);
   const data = {
     secondsUntilRelease,
-    dateNowInServer: timeNow.toString(), // TODO: remove when server time check is done
   };
 
   // Pass data to the page via props
