@@ -5,3 +5,4 @@ export const siteTitle = `DeFi Meta Chain | Stretch the definition of Native DeF
 export const website = "https://defimetachain.org/";
 export const logo = "/ico/android-chrome-512x512.png";
 export const brWebsite = "https://birthday.dev/";
+export const shareImage = "/dmc_share.png";

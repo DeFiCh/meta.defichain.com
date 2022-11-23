@@ -14,8 +14,14 @@ import debounce from "helpers/Debounce";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { Parallax } from "react-scroll-parallax";
+import { differenceInSeconds, format } from "date-fns";
+import CountdownTimer from "@components/home/CountdownTimer";
+import Logo from "@components/home/Logo";
 
-export default function Home() {
+const RELEASE_DATE = new Date("2022-11-30T17:00:00.000+08:00"); // 2022-11-30 17:00 GMT + 8
+
+export default function Home({ data }) {
+  const [countdownTime, setCountdownTime] = useState(data.secondsUntilRelease);
   const { count, tvl } = useSelector((state: RootState) => state.stats);
   const stats = {
     masternodes: {
@@ -118,6 +124,17 @@ export default function Home() {
   ); // to avoid max depth update warning
 
   useEffect(() => {
+    const interval = setInterval(() => {
+      if (countdownTime <= 0) {
+        return;
+      }
+      setCountdownTime(countdownTime - 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [countdownTime]);
+
+  useEffect(() => {
     // store the DOM element height on load
     setSectionOneHeight(sectionOneRef.current?.clientHeight);
     setSectionTwoHeight(sectionTwoRef.current?.clientHeight);
@@ -140,107 +157,148 @@ export default function Home() {
   }, [scrollPosition]);
 
   return (
-    <div className="relative">
-      <AnchorLink activeSection={activeSection} />
-      <div className="w-full h-full absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-contain lg:bg-[url('/background/portal-gradient-1.png')] md:bg-[url('/background/tablet-portal-gradient-1.png')] bg-[url('/background/mobile-portal-gradient-1.png')]" />
-      <section
-        ref={sectionOneRef}
-        id={HomeSections.One}
-        className="w-full min-h-screen flex flex-col justify-between relative px-4 pt-6 md:px-[40px] md:pt-6 lg:px-[120px] lg:pt-[52px]"
-      >
-        <Header />
-        <JellyfishBackground
-          desktop={{
-            position: [40, 150, -400],
-            rotation: [0.3, -0, -0.27],
-            containerStyle: "left-0",
-          }}
-          tablet={{
-            position: [-220, 100, -600],
-            rotation: [0.1, -0.4, -0.27],
-            containerStyle: "left-0",
-          }}
-          mobile={{
-            position: [30, 400, -600],
-            rotation: [0.3, -0.4, -0.27],
-            containerStyle: "left-0",
-          }}
-        />
-        <SectionOne />
-      </section>
-      <section
-        ref={sectionTwoRef}
-        id={HomeSections.Two}
-        className="w-full lg:h-screen relative flex flex-col justify-center px-4 md:px-[40px] lg:px-[120px]"
-      >
-        <SkewedStats
-          stat={stats.masternodes.stat}
-          label={stats.masternodes.label}
-        />
-        <div className="w-full h-screen absolute top-[-50vh] z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-contain bg-right lg:bg-[url('/background/gradient-2.png')] md:bg-[url('/background/tablet-gradient-2.png')] bg-[url('/background/mobile-gradient-2.png')]" />
-        <JellyfishBackground
-          desktop={{
-            position: [-50, -40, -650],
-            rotation: [0, 0.5, 0.4],
-            containerStyle: "right-0 top-[650px]",
-          }}
-          mobile={{
-            position: [10, 350, -450],
-            rotation: [0.5, 0.4, 0.2],
-            containerStyle: "right-[30px]",
-          }}
-        />
-        <Parallax translateY={[30, -30]}>
-          <SectionTwo />
-        </Parallax>
-      </section>
-      <section
-        ref={sectionThreeRef}
-        id={HomeSections.Three}
-        className="w-full min-h-screen relative px-4 md:px-[40px] lg:px-[120px]"
-      >
-        <SkewedStats
-          stat={stats.blocks.stat}
-          label={stats.blocks.label}
-          customStyle="top-[600px]"
-        />
-        <SkewedStats
-          stat={stats.tokens.stat}
-          label={stats.tokens.label}
-          customStyle="top-[1200px]"
-        />
-        <div className="w-full h-full absolute lg:top-[25vh] top-[-30vh] z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-contain lg:bg-[url('/background/gradient-3.png')] md:bg-[url('/background/tablet-gradient-3.png')] bg-[url('/background/mobile-gradient-3.png')]" />
-        <div className="w-full h-full block md:hidden absolute top-[50vh] z-[-1] mix-blend-screen top-0 right-0 bg-no-repeat bg-contain bg-[url('/background/mobile-gradient-2.png')]" />
-        <div className="w-full h-full absolute lg:top-[-20vh] md:top-[-50vh] top-[-70vh] z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat md:bg-contain bg-cover bg-right lg:bg-[url('/background/gradient-4.png')] md:bg-[url('/background/tablet-gradient-4.png')]" />
-        <UnderwaterDroneBackground
-          desktop={{
-            position: [-1.5, 0, -3],
-            rotation: [0.2, 0.8, -0.1],
-            containerStyle: "left-0",
-          }}
-        />
-        <JellyfishBackground
-          desktop={{
-            position: [0, 0, -350],
-            rotation: [0, 0.5, -0.4],
-            containerStyle: "left-0 top-[250px]",
-          }}
-          tablet={{
-            position: [200, 170, -850],
-            rotation: [0, 0.5, 0.4],
-            containerStyle: "right-0 top-[-150px]",
-          }}
-          mobile={{
-            position: [100, 350, -350],
-            rotation: [0.5, -0.4, -0.27],
-            containerStyle: "left-0",
-          }}
-        />
-        <Parallax translateY={[30, -30]}>
-          <SectionThree />
-        </Parallax>
-      </section>
-      {/* <section
+    <div className="relative overflow-hidden">
+      {countdownTime > 0 && (
+        <>
+          <div className="absolute top-[60px] left-[calc((100vw-203px)/2)]">
+            <Logo />
+          </div>
+          <div className="w-full h-full absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-cover lg:bg-[url('/background/portal-gradient-1.png')] md:bg-[url('/background/tablet-portal-gradient-1.png')] bg-[url('/background/mobile-portal-gradient-1.png')]" />
+          <div className="w-full h-full absolute z-[-1] mix-blend-screen top-[40vh] bottom-0 right-0 bg-no-repeat bg-cover bg-left-top lg:bg-[url('/background/gradient-2.png')] md:bg-[url('/background/tablet-gradient-2.png')] bg-[url('/background/mobile-gradient-2.png')]" />
+          <section className="container mx-auto min-h-screen flex flex-col justify-center items-center px-4 pt-[348px] md:pt-0">
+            <JellyfishBackground
+              desktop={{
+                position: [40, 150, -400],
+                rotation: [0.3, -0, -0.27],
+                containerStyle: "left-0",
+              }}
+              tablet={{
+                position: [-220, 100, -600],
+                rotation: [0.1, -0.4, -0.27],
+                containerStyle: "left-0",
+              }}
+              mobile={{
+                position: [30, 400, -600],
+                rotation: [0.3, -0.4, -0.27],
+                containerStyle: "left-0",
+              }}
+            />
+            <span
+              className="mb-8 font-bold text-center lg:w-4/5 md:w-11/12 w-4/5 lg:text-[80px] lg:leading-[80px] md:text-[56px] md:leading-[56px] text-[32px] leading-[32px] text-white-50"
+              data-testid="countdown-header"
+            >
+              Build next gen dApps with tools of the future
+            </span>
+            <CountdownTimer secondsUntilRelease={countdownTime} />
+            <span className="text-center text-white-50 md:text-xl mt-8">
+              {`Coming soon ${format(RELEASE_DATE, "dd MMMM yyyy")}`}
+            </span>
+          </section>
+        </>
+      )}
+
+      {countdownTime <= 0 && (
+        <>
+          <AnchorLink activeSection={activeSection} />
+          <div className="w-full h-full absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-contain lg:bg-[url('/background/portal-gradient-1.png')] md:bg-[url('/background/tablet-portal-gradient-1.png')] bg-[url('/background/mobile-portal-gradient-1.png')]" />
+          <section
+            ref={sectionOneRef}
+            id={HomeSections.One}
+            className="w-full min-h-screen flex flex-col justify-between relative px-4 pt-6 md:px-[40px] md:pt-6 lg:px-[120px] lg:pt-[52px]"
+          >
+            <Header />
+            <JellyfishBackground
+              desktop={{
+                position: [40, 150, -400],
+                rotation: [0.3, -0, -0.27],
+                containerStyle: "left-0",
+              }}
+              tablet={{
+                position: [-220, 100, -600],
+                rotation: [0.1, -0.4, -0.27],
+                containerStyle: "left-0",
+              }}
+              mobile={{
+                position: [30, 400, -600],
+                rotation: [0.3, -0.4, -0.27],
+                containerStyle: "left-0",
+              }}
+            />
+            <SectionOne />
+          </section>
+          <section
+            ref={sectionTwoRef}
+            id={HomeSections.Two}
+            className="w-full lg:h-screen relative flex flex-col justify-center px-4 md:px-[40px] lg:px-[120px]"
+          >
+            <SkewedStats
+              stat={stats.masternodes.stat}
+              label={stats.masternodes.label}
+            />
+            <div className="w-full h-screen absolute top-[-50vh] z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-contain bg-right lg:bg-[url('/background/gradient-2.png')] md:bg-[url('/background/tablet-gradient-2.png')] bg-[url('/background/mobile-gradient-2.png')]" />
+            <JellyfishBackground
+              desktop={{
+                position: [-50, -40, -650],
+                rotation: [0, 0.5, 0.4],
+                containerStyle: "right-0 top-[650px]",
+              }}
+              mobile={{
+                position: [10, 350, -450],
+                rotation: [0.5, 0.4, 0.2],
+                containerStyle: "right-[30px]",
+              }}
+            />
+            <Parallax translateY={[30, -30]}>
+              <SectionTwo />
+            </Parallax>
+          </section>
+          <section
+            ref={sectionThreeRef}
+            id={HomeSections.Three}
+            className="w-full min-h-screen relative px-4 md:px-[40px] lg:px-[120px]"
+          >
+            <SkewedStats
+              stat={stats.blocks.stat}
+              label={stats.blocks.label}
+              customStyle="top-[600px]"
+            />
+            <SkewedStats
+              stat={stats.tokens.stat}
+              label={stats.tokens.label}
+              customStyle="top-[1200px]"
+            />
+            <div className="w-full h-full absolute lg:top-[25vh] top-[-30vh] z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-contain lg:bg-[url('/background/gradient-3.png')] md:bg-[url('/background/tablet-gradient-3.png')] bg-[url('/background/mobile-gradient-3.png')]" />
+            <div className="w-full h-full block md:hidden absolute top-[50vh] z-[-1] mix-blend-screen top-0 right-0 bg-no-repeat bg-contain bg-[url('/background/mobile-gradient-2.png')]" />
+            <div className="w-full h-full absolute lg:top-[-20vh] md:top-[-50vh] top-[-70vh] z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat md:bg-contain bg-cover bg-right lg:bg-[url('/background/gradient-4.png')] md:bg-[url('/background/tablet-gradient-4.png')]" />
+            <UnderwaterDroneBackground
+              desktop={{
+                position: [-1.5, 0, -3],
+                rotation: [0.2, 0.8, -0.1],
+                containerStyle: "left-0",
+              }}
+            />
+            <JellyfishBackground
+              desktop={{
+                position: [0, 0, -350],
+                rotation: [0, 0.5, -0.4],
+                containerStyle: "left-0 top-[250px]",
+              }}
+              tablet={{
+                position: [200, 170, -850],
+                rotation: [0, 0.5, 0.4],
+                containerStyle: "right-0 top-[-150px]",
+              }}
+              mobile={{
+                position: [100, 350, -350],
+                rotation: [0.5, -0.4, -0.27],
+                containerStyle: "left-0",
+              }}
+            />
+            <Parallax translateY={[30, -30]}>
+              <SectionThree />
+            </Parallax>
+          </section>
+          {/* <section
         ref={sectionFourRef}
         id={HomeSections.Four}
         className="w-full min-h-screen relative px-4 md:px-[40px] lg:px-[120px]"
@@ -268,30 +326,43 @@ export default function Home() {
           <SectionFour />
         </Parallax>
       </section> */}
-      <section
-        ref={sectionFiveRef}
-        id={HomeSections.Five}
-        className="w-full h-full relative px-4 pt-6 md:px-[40px] md:pt-[0px] lg:px-[120px] lg:pt-[248px] pt-[104px]"
-      >
-        <SkewedStats
-          stat={stats.valueLocked.stat}
-          label={stats.valueLocked.label}
-          customStyle="top-[250px]"
-        />
-        {/* <div className="w-full h-full absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-cover lg:bg-[url('/background/gradient-5.png')]" /> */}
-        <div className="w-full h-full absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat md:bg-cover bg-contain bg-bottom 2xl:bg-[url('/background/footer-xl.png')] lg:bg-[url('/background/footer.png')] md:bg-[url('/background/footer-tablet.png')] bg-[url('/background/mobile-footer.png')]" />
-        {/* <JellyfishBackground
+          <section
+            ref={sectionFiveRef}
+            id={HomeSections.Five}
+            className="w-full h-full relative px-4 pt-6 md:px-[40px] md:pt-[0px] lg:px-[120px] lg:pt-[248px] pt-[104px]"
+          >
+            <SkewedStats
+              stat={stats.valueLocked.stat}
+              label={stats.valueLocked.label}
+              customStyle="top-[250px]"
+            />
+            {/* <div className="w-full h-full absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-cover lg:bg-[url('/background/gradient-5.png')]" /> */}
+            <div className="w-full h-full absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat md:bg-cover bg-contain bg-bottom 2xl:bg-[url('/background/footer-xl.png')] lg:bg-[url('/background/footer.png')] md:bg-[url('/background/footer-tablet.png')] bg-[url('/background/mobile-footer.png')]" />
+            {/* <JellyfishBackground
           desktop={{
             position: [-120, -200, -1000],
             rotation: [0.2, -0.4, 0.35],
             containerStyle: "left-0",
           }}
         /> */}
-        <Parallax translateY={[30, -30]}>
-          <SectionFive />
-        </Parallax>
-        <Footer />
-      </section>
+            <Parallax translateY={[30, -30]}>
+              <SectionFive />
+            </Parallax>
+            <Footer />
+          </section>
+        </>
+      )}
     </div>
   );
+}
+
+export async function getServerSideProps() {
+  const timeNow = new Date();
+  const secondsUntilRelease = differenceInSeconds(RELEASE_DATE, timeNow);
+  const data = {
+    secondsUntilRelease,
+  };
+
+  // Pass data to the page via props
+  return { props: { data } };
 }
