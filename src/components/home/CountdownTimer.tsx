@@ -1,4 +1,4 @@
-import { secondsToTime } from "helpers/DurationHelper";
+import secondsToTime from "helpers/DurationHelper";
 
 interface CountdownProps {
   secondsUntilRelease: number;
