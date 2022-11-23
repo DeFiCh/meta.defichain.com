@@ -2,7 +2,6 @@ import Head from "next/head";
 import { PropsWithChildren, useEffect, useState } from "react";
 import {
   appName,
-  logo,
   longDescription,
   shareImage,
   shortDescription,
