@@ -356,7 +356,7 @@ export default function Home({ data }) {
 }
 
 export async function getServerSideProps() {
-  const timeNow = new Date().toISOString(); //to convert server timezone to UTC
+  const timeNow = new Date().toISOString(); // to convert server timezone to UTC
   const secondsUntilRelease = differenceInSeconds(RELEASE_DATE, new Date(timeNow));
   const data = {
     secondsUntilRelease,
