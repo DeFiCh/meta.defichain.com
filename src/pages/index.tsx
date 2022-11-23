@@ -184,7 +184,7 @@ export default function Home({ data }) {
               }}
             />
             <span
-              className="mb-8 font-bold text-center md:w-11/12 w-4/5 lg:text-[80px] lg:leading-[80px] md:text-[56px] md:leading-[56px] text-[32px] leading-[32px] text-white-50"
+              className="mb-8 font-bold text-center lg:w-4/5 md:w-11/12 w-4/5 lg:text-[80px] lg:leading-[80px] md:text-[56px] md:leading-[56px] text-[32px] leading-[32px] text-white-50"
               data-testid="countdown-header"
             >
               Build next gen dApps with tools of the future
