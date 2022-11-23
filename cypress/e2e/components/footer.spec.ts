@@ -2,7 +2,7 @@ import { footerElements, footerLinks } from "../../fixtures/footer";
 
 describe("Footer section", () => {
   context("Verifying footer on iphone-x", () => {
-    before(() => {
+    beforeEach(() => {
       cy.visit("/");
       cy.viewport("iphone-x");
     });
@@ -20,7 +20,7 @@ describe("Footer section", () => {
   });
 
   context("Verifying footer on ipad", () => {
-    before(() => {
+    beforeEach(() => {
       cy.visit("/");
       cy.viewport("ipad-2");
     });
@@ -38,7 +38,7 @@ describe("Footer section", () => {
   });
 
   context("Verifying footer on macbook-13", () => {
-    before(() => {
+    beforeEach(() => {
       cy.visit("/");
       cy.viewport("macbook-13");
     });

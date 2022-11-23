@@ -12,11 +12,8 @@ import {
 
 describe("Header test", () => {
   context("Verifying header on iphone-x", () => {
-    before(() => {
-      cy.visit("/");
-    });
-
     beforeEach(() => {
+      cy.visit("/");
       cy.viewport("iphone-x");
     });
 
@@ -29,6 +26,7 @@ describe("Header test", () => {
     });
 
     it("should verify Developers section in nav menu", function () {
+      cy.findByTestId("hamburger-icon").should("be.visible").click();
       cy.findByTestId("mob-Developers")
         .should("be.visible")
         .contains("Developers")
@@ -48,6 +46,7 @@ describe("Header test", () => {
     });
 
     it("should verify Ecosystem section in nav menu", function () {
+      cy.findByTestId("hamburger-icon").should("be.visible").click();
       cy.findByTestId("mob-Ecosystem")
         .should("be.visible")
         .contains("Ecosystem")
@@ -67,6 +66,7 @@ describe("Header test", () => {
     });
 
     it("should verify Community section in nav menu", function () {
+      cy.findByTestId("hamburger-icon").should("be.visible").click();
       cy.findByTestId("mob-Community")
         .should("be.visible")
         .contains("Community")
@@ -87,11 +87,8 @@ describe("Header test", () => {
   });
 
   context("Verifying header on ipad", () => {
-    before(() => {
-      cy.visit("/");
-    });
-
     beforeEach(() => {
+      cy.visit("/");
       cy.viewport("ipad-2");
     });
 
@@ -104,6 +101,7 @@ describe("Header test", () => {
     });
 
     it("should verify Developers section in nav menu", function () {
+      cy.findByTestId("hamburger-icon").should("be.visible").click();
       cy.findByTestId("mob-Developers")
         .should("be.visible")
         .contains("Developers")
@@ -123,6 +121,7 @@ describe("Header test", () => {
     });
 
     it("should verify Ecosystem section in nav menu", function () {
+      cy.findByTestId("hamburger-icon").should("be.visible").click();
       cy.findByTestId("mob-Ecosystem")
         .should("be.visible")
         .contains("Ecosystem")
@@ -142,6 +141,7 @@ describe("Header test", () => {
     });
 
     it("should verify Community section in nav menu", function () {
+      cy.findByTestId("hamburger-icon").should("be.visible").click();
       cy.findByTestId("mob-Community")
         .should("be.visible")
         .contains("Community")
@@ -162,11 +162,8 @@ describe("Header test", () => {
   });
 
   context("Verifying header on macbook-13", () => {
-    before(() => {
-      cy.visit("/");
-    });
-
     beforeEach(() => {
+      cy.visit("/");
       cy.viewport("macbook-13");
     });
 
@@ -184,6 +181,7 @@ describe("Header test", () => {
     });
 
     it("should verify Developers section in nav menu", function () {
+      cy.findByTestId("nav-menu").invoke("show");
       cy.findByTestId("header-Developers").trigger("mouseover");
 
       developerList.forEach((ul) => {
@@ -198,6 +196,7 @@ describe("Header test", () => {
     });
 
     it("should verify Ecosystem section in nav menu", function () {
+      cy.findByTestId("nav-menu").invoke("show");
       cy.findByTestId("header-Ecosystem").trigger("mouseover");
 
       ecosystemList.forEach((ul) => {
@@ -212,6 +211,7 @@ describe("Header test", () => {
     });
 
     it("should verify Community section in nav menu", function () {
+      cy.findByTestId("nav-menu").invoke("show");
       cy.findByTestId("header-Community").trigger("mouseover");
 
       communityList.forEach((ul) => {

@@ -3,11 +3,8 @@ const dmcDescription =
 
 describe("Homepage test", () => {
   context("/ on iphone-x", () => {
-    before(() => {
-      cy.visit("/");
-    });
-
     beforeEach(() => {
+      cy.visit("/");
       cy.viewport("iphone-x");
     });
 
@@ -34,11 +31,8 @@ describe("Homepage test", () => {
   });
 
   context("/ on ipad", () => {
-    before(() => {
-      cy.visit("/");
-    });
-
     beforeEach(() => {
+      cy.visit("/");
       cy.viewport("ipad-2");
     });
 
@@ -65,11 +59,8 @@ describe("Homepage test", () => {
   });
 
   context("/ on macbook-13", () => {
-    before(() => {
-      cy.visit("/");
-    });
-
     beforeEach(() => {
+      cy.visit("/");
       cy.viewport("macbook-13");
     });
 
