@@ -3,6 +3,8 @@ import clsx from "clsx";
 import { Parallax } from "react-scroll-parallax";
 import SectionHeader from "./SectionHeader";
 
+export const SectionOneHeaderText =
+  "Powered by the Security of Bitcoin & Flexibility of Ethereum";
 export default function SectionOne(): JSX.Element {
   return (
     <div className="container mx-auto flex flex-col grow items-center lg:justify-between justify-center md:mt-[12%] mt-[350px] translate-y-[-4.9%]">
@@ -12,7 +14,7 @@ export default function SectionOne(): JSX.Element {
           data-testid="unlock-text"
         >
           <SectionHeader
-            header="Build next gen dApps with tools of the future"
+            header={SectionOneHeaderText}
             hint="UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN"
             containerStyle="lg:w-4/5 items-center"
             testId="section-one"
@@ -21,10 +23,9 @@ export default function SectionOne(): JSX.Element {
             className="mb-8 lg:w-3/5 md:text-xl text-white-50"
             data-testid="dmc-desc"
           >
-            DeFi Meta Chain (DMC) is a powerful EVM-compatible blockchain
-            parallel to DeFiChain, a leader in DeFi. Built to future proof
-            trends, DMC achieves ecosystem scalability by providing developers
-            with familiar tools to build the future of DeFi today.
+            DeFi Meta Chain is a powerful EVM-compatible Layer 2 blockchain that
+            brings flexibility to DeFiChain, a leader in DeFi built on the
+            security of Bitcoin.
           </span>
           <Button
             label="Develop with DeFiMetaChain (coming soon)"

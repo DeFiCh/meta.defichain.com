@@ -10,32 +10,6 @@ import {
   webEcosystemDropdownLinks,
 } from "../../fixtures/header";
 
-describe.only("Header test", () => {
-  context("/ on iphone-x", () => {
-    it("should verify countdown", function () {
-      cy.visit("/");
-      cy.viewport("iphone-x");
-      cy.findByTestId("countdown");
-    });
-  });
-
-  context("/ on ipad", () => {
-    it("should verify countdown", function () {
-      cy.visit("/");
-      cy.viewport("ipad-2");
-      cy.findByTestId("countdown");
-    });
-  });
-
-  context("/ on macbook-13", () => {
-    it("should verify countdown", function () {
-      cy.visit("/");
-      cy.viewport("macbook-13");
-      cy.findByTestId("countdown");
-    });
-  });
-});
-
 describe.skip("Header test", () => {
   context("Verifying header on iphone-x", () => {
     beforeEach(() => {

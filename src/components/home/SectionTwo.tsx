@@ -15,13 +15,13 @@ export default function SectionTwo(): JSX.Element {
       />
       <div className="flex md:flex-row flex-col md:items-start justify-center">
         <StayUpdatedCard
-          image={MainnetLaunch}
-          label="Launch of DMC MainNet (coming soon)"
+          image={TestnetLaunch}
+          label="Launch of DMC TestNet (coming soon)"
           containerStyle="lg:mr-6 md:mr-4"
         />
         <StayUpdatedCard
-          image={TestnetLaunch}
-          label="Launch of DMC TestNet (coming soon)"
+          image={MainnetLaunch}
+          label="Launch of DMC MainNet (coming soon)"
           containerStyle="lg:mr-6 md:mr-4"
         />
         <StayUpdatedCard

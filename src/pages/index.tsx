@@ -4,7 +4,7 @@ import Header from "@components/home/Header";
 import { JellyfishBackground } from "@components/home/Jellyfish";
 import SectionFive from "@components/home/SectionFive";
 // import SectionFour from "@components/home/SectionFour";
-import SectionOne from "@components/home/SectionOne";
+import SectionOne, { SectionOneHeaderText } from "@components/home/SectionOne";
 import SectionThree from "@components/home/SectionThree";
 import SectionTwo from "@components/home/SectionTwo";
 import { UnderwaterDroneBackground } from "@components/home/UnderwaterDrone";
@@ -17,6 +17,7 @@ import { Parallax } from "react-scroll-parallax";
 import { differenceInSeconds, format } from "date-fns";
 import CountdownTimer from "@components/home/CountdownTimer";
 import Logo from "@components/home/Logo";
+import clsx from "clsx";
 
 const RELEASE_DATE = new Date("2022-11-30T17:00:00.000+08:00"); // 2022-11-30 17:00 GMT + 8
 
@@ -157,7 +158,7 @@ export default function Home({ data }) {
   }, [scrollPosition]);
 
   return (
-    <div className="relative overflow-hidden">
+    <div className={clsx("relative", { "overflow-hidden": countdownTime > 0 })}>
       {countdownTime > 0 && (
         <>
           <div className="absolute top-[60px] left-[calc((100vw-203px)/2)]">
@@ -187,10 +188,10 @@ export default function Home({ data }) {
               }}
             />
             <span
-              className="mb-8 font-bold text-center lg:w-4/5 md:w-11/12 w-4/5 lg:text-[80px] lg:leading-[80px] md:text-[56px] md:leading-[56px] text-[32px] leading-[32px] text-white-50"
+              className="mb-8 font-bold text-center lg:w-4/5 md:w-11/12 w-4/5 md:text-[56px] md:leading-[56px] text-[32px] leading-[32px] text-white-50"
               data-testid="countdown-header"
             >
-              Build next gen dApps with tools of the future
+              {SectionOneHeaderText}
             </span>
             <CountdownTimer secondsUntilRelease={countdownTime} />
             <span className="text-center text-white-50 md:text-xl mt-8">

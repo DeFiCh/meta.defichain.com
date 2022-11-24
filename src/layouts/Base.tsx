@@ -3,7 +3,6 @@ import { PropsWithChildren, useEffect, useState } from "react";
 import {
   appName,
   longDescription,
-  shareImage,
   shortDescription,
   siteTitle,
   website,
@@ -39,6 +38,10 @@ function Base({
         <meta charSet="UTF-8" />
         <title key="title">{siteTitle}</title>
         <meta key="description" name="description" content={longDescription} />
+        <meta
+          name="keywords"
+          content="DeFiChain, DeFi Meta Chain, Ethereum Virtual Machine, EVM-compatible, Layer 2 Blockchain, DeFi Blockchain, Decentralized Finance, Security of Bitcoin, Flexibility of Ethereum"
+        />
         <meta key="robots" name="robots" content="follow,index" />
         <meta name="googlebot" content="index,follow" />
         <meta name="google" content="notranslate" />
@@ -57,33 +60,28 @@ function Base({
 
         <meta key="og:locale" name="og:locale" content="en_SG" />
         <meta key="og:title" name="og:title" content={siteTitle} />
-        <meta key="og:image" name="og:image" content={shareImage} />
-        <meta key="og:image:alt" name="og:image" content={siteTitle} />
+        <meta key="og:image" name="og:image" content="/dmc_share.png" />
+        <meta key="og:image:alt" name="og:image:alt" content={siteTitle} />
         <meta key="og:site_name" name="og:site_name" content={appName} />
-        <meta key="og:url" name="og:site_name" content={website} />
+        <meta key="og:url" name="og:url" content={website} />
         <meta key="og:type" name="og:type" content="website" />
         <meta
           key="og:description"
           name="og:description"
-          content={shortDescription}
+          content={longDescription}
         />
 
         <meta name="twitter:card" content={shortDescription} />
         <meta name="twitter:site" content={website} />
         <meta name="twitter:creator" content="@birthdaydev" />
         <meta name="twitter:title" content={siteTitle} />
-        <meta name="twitter:description" content={shortDescription} />
-        <meta name="twitter:image" content={shareImage} />
+        <meta name="twitter:description" content={longDescription} />
+        <meta name="twitter:image" content="/dmc_share.png" />
         <meta name="twitter:image:alt" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
 
         <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="36x36"
-          href="/favicon-36x36.png"
-        />
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
       </Head>
       {mounted && (
         <NetworkProvider>
