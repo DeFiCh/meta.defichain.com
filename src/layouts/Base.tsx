@@ -39,6 +39,10 @@ function Base({
         <meta charSet="UTF-8" />
         <title key="title">{siteTitle}</title>
         <meta key="description" name="description" content={longDescription} />
+        <meta
+          name="keywords"
+          content="DeFiChain, DeFi Meta Chain, Ethereum Virtual Machine, EVM-compatible, Layer 2 Blockchain, DeFi Blockchain, Decentralized Finance, Security of Bitcoin, Scalability of Ethereum"
+        ></meta>
         <meta key="robots" name="robots" content="follow,index" />
         <meta name="googlebot" content="index,follow" />
         <meta name="google" content="notranslate" />
