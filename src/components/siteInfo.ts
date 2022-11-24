@@ -7,4 +7,3 @@ export const siteTitle = `DeFi Meta Chain | Unlock the Limitless Possibilities o
 export const website = "https://defimetachain.org/";
 export const logo = "/ico/android-chrome-512x512.png";
 export const brWebsite = "https://birthday.dev/";
-export const shareImage = "/dmc_share.png";
