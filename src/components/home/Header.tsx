@@ -13,7 +13,7 @@ export default function Header(): JSX.Element {
       >
         <Logo />
         <NavMenu />
-        <div className="flex items-center" data-testid="get-dfi" >
+        <div className="flex items-center" data-testid="get-dfi">
           <Button
             // label="Get DFI"
             // href="https://defichain.com/dfi"
