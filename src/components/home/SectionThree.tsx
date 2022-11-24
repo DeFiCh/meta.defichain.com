@@ -8,7 +8,7 @@ export default function SectionThree(): JSX.Element {
       index: 1,
       title: "EVM-Compatible Blockchain",
       content:
-        "DeFi Meta Chain provides an EVM-compatible environment that allows developers familiar with the Ethereum ecosystem to seamlessly and effortlessly build next generation DeFi applications on the Native DeFiChain.<br/><br/>Utilize familiar tools, features and infrastructure while exploring infinite possibilities to build upon new ones:<br/><br/><ul class='list-disc list-inside'><li>Smart contracts written in Solidity</li><li>ERC-20 tokens</li><li>Support</li></ul>",
+        "DeFi Meta Chain provides an EVM-compatible environment that allows developers familiar with the Ethereum ecosystem to seamlessly and effortlessly build next generation applications on the Native DeFiChain.<br/><br/>Utilize familiar tools, features and infrastructure while exploring infinite possibilities to build upon new ones.",
     },
     {
       index: 2,
@@ -35,13 +35,12 @@ export default function SectionThree(): JSX.Element {
           testId="section_three"
         />
         <span className="text-white-50 text-xl mb-8 block">
-          DeFi Meta Chain is an EVM-compatible blockchain that uses Proof of
-          Authority (POA) and runs in parallel with the Native DeFiChain
-          blockchain.
+          DeFi Meta Chain is an EVM-compatible blockchain, built on Proof of
+          Authority (POA), that brings scalability to DeFiChain.
           <br />
           <br />
           Read through the documentation to get started with deploying next
-          generation DeFi applications on DeFi Meta Chain.{" "}
+          generation applications on DeFi Meta Chain.{" "}
         </span>
         <Button
           label="Read Documentation (coming soon)"

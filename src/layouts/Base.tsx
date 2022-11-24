@@ -65,14 +65,14 @@ function Base({
         <meta
           key="og:description"
           name="og:description"
-          content={shortDescription}
+          content={longDescription}
         />
 
         <meta name="twitter:card" content={shortDescription} />
         <meta name="twitter:site" content={website} />
         <meta name="twitter:creator" content="@birthdaydev" />
         <meta name="twitter:title" content={siteTitle} />
-        <meta name="twitter:description" content={shortDescription} />
+        <meta name="twitter:description" content={longDescription} />
         <meta name="twitter:image" content={shareImage} />
         <meta name="twitter:image:alt" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
