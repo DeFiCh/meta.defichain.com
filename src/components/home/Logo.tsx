@@ -6,7 +6,7 @@ export default function Logo() {
     <Link className="flex items-center" href="/">
       <div className="relative w-[203px] h-[36px]">
         <Image
-          data-testid="dmc_logo"
+          data-testid="dmc-logo"
           layout="fill"
           src="/logo.svg"
           alt="DeFi Meta Chain Logo"

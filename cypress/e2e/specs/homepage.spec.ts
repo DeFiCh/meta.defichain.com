@@ -1,5 +1,4 @@
-const dmcDescription =
-  "DeFi Meta Chain (DMC) is a powerful EVM-compatible blockchain parallel to DeFiChain, a leader in DeFi. Built to future proof trends, DMC achieves ecosystem scalability by providing developers with familiar tools to build the future of DeFi today.";
+import { homePageText } from "../../fixtures/homepage";
 
 describe.only("Homepage test", () => {
   context("/ on iphone-x", () => {
@@ -38,17 +37,14 @@ describe.skip("Homepage test", () => {
       cy.findByTestId("dmc-header").should("be.visible");
     });
 
-    it("should verify 'Unlock' section contains the text", function () {
-      cy.findByTestId("unlock-text").contains(
-        "UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN"
-      );
+    it("should verify text in section one", function () {
       cy.findByTestId("section-one-hint")
         .should("be.visible")
-        .contains("UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN");
+        .contains(homePageText.section_one.hint);
       cy.findByTestId("section-one-header")
         .should("be.visible")
-        .contains("Build next gen dApps with tools of the future");
-      cy.findByTestId("dmc-desc").should("be.visible").contains(dmcDescription);
+        .contains(homePageText.section_one.header);
+      cy.findByTestId("dmc-desc").should("be.visible").contains(homePageText.section_one.description);
     });
 
     it("should verify footer is visible", function () {
@@ -66,17 +62,14 @@ describe.skip("Homepage test", () => {
       cy.findByTestId("dmc-header").should("be.visible");
     });
 
-    it("should verify 'Unlock' section contains the text", function () {
-      cy.findByTestId("unlock-text").contains(
-        "UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN"
-      );
+    it("should verify text in section one", function () {
       cy.findByTestId("section-one-hint")
         .should("be.visible")
-        .contains("UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN");
+        .contains(homePageText.section_one.hint);
       cy.findByTestId("section-one-header")
         .should("be.visible")
-        .contains("Build next gen dApps with tools of the future");
-      cy.findByTestId("dmc-desc").should("be.visible").contains(dmcDescription);
+        .contains(homePageText.section_one.header);
+      cy.findByTestId("dmc-desc").should("be.visible").contains(homePageText.section_one.description);
     });
 
     it("should verify footer is visible", function () {
@@ -94,17 +87,14 @@ describe.skip("Homepage test", () => {
       cy.findByTestId("dmc-header").should("be.visible");
     });
 
-    it("should verify 'Unlock' section contains the text", function () {
-      cy.findByTestId("unlock-text").contains(
-        "UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN"
-      );
+    it("should verify text in section one", function () {
       cy.findByTestId("section-one-hint")
         .should("be.visible")
-        .contains("UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN");
+        .contains(homePageText.section_one.hint);
       cy.findByTestId("section-one-header")
         .should("be.visible")
-        .contains("Build next gen dApps with tools of the future");
-      cy.findByTestId("dmc-desc").should("be.visible").contains(dmcDescription);
+        .contains(homePageText.section_one.header);
+      cy.findByTestId("dmc-desc").should("be.visible").contains(homePageText.section_one.description);
     });
 
     it("should verify footer is visible", function () {

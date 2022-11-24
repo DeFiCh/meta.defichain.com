@@ -4,7 +4,7 @@ import { Parallax } from "react-scroll-parallax";
 import SectionHeader from "./SectionHeader";
 
 export const SectionOneHeaderText =
-  "Powered by the Security of Bitcoin & Flexibility of Ethereum.";
+  "Powered by the Security of Bitcoin & Flexibility of Ethereum";
 export default function SectionOne(): JSX.Element {
   return (
     <div className="container mx-auto flex flex-col grow items-center lg:justify-between justify-center md:mt-[12%] mt-[350px] translate-y-[-4.9%]">

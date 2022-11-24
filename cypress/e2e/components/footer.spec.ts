@@ -1,31 +1,5 @@
 import { footerElements, footerLinks } from "../../fixtures/footer";
 
-describe.only("Footer section", () => {
-  context("/ on iphone-x", () => {
-    it("should verify countdown", function () {
-      cy.visit("/");
-      cy.viewport("iphone-x");
-      cy.findByTestId("countdown");
-    });
-  });
-
-  context("/ on ipad", () => {
-    it("should verify countdown", function () {
-      cy.visit("/");
-      cy.viewport("ipad-2");
-      cy.findByTestId("countdown");
-    });
-  });
-
-  context("/ on macbook-13", () => {
-    it("should verify countdown", function () {
-      cy.visit("/");
-      cy.viewport("macbook-13");
-      cy.findByTestId("countdown");
-    });
-  });
-});
-
 describe.skip("Footer section", () => {
   context("Verifying footer on iphone-x", () => {
     beforeEach(() => {
