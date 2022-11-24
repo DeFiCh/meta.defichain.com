@@ -18,3 +18,15 @@ Cypress.Commands.add("interceptServerSideWait", (exec: () => void) => {
   cy.wait("@nextData");
   cy.wait(500);
 });
+
+Cypress.Commands.add("verifyElementContains", (locator, label) => {
+  cy.findByTestId(locator).should("be.visible").contains(label);
+});
+
+Cypress.Commands.add("verifyLinks", (locator, content, link) => {
+  cy.findByTestId(locator)
+    .should("be.visible")
+    .contains(content)
+    .should("have.attr", "href")
+    .and("include", link);
+});

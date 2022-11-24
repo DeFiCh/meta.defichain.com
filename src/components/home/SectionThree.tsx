@@ -34,7 +34,10 @@ export default function SectionThree(): JSX.Element {
           containerStyle="items-start"
           testId="section_three"
         />
-        <span className="text-white-50 text-xl mb-8 block">
+        <span
+          className="text-white-50 text-xl mb-8 block"
+          data-testid="build_dmc_desc"
+        >
           DeFi Meta Chain is an EVM-compatible blockchain that uses Proof of
           Authority (POA) and runs in parallel with the Native DeFiChain
           blockchain.
@@ -176,7 +179,7 @@ function SectionThreeItem({
           </div>
           <div className="block md:hidden relative w-[94px] h-[135px] mt-14 mb-5 ">
             <Image
-              data-testid="triple_stairs"
+              data-testid="triple-stairs"
               layout="fill"
               src="/home/triple-stairs.svg"
               alt="Triple Stairs"
