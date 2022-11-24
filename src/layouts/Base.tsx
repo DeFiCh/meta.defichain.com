@@ -2,8 +2,8 @@ import Head from "next/head";
 import { PropsWithChildren, useEffect, useState } from "react";
 import {
   appName,
-  logo,
   longDescription,
+  shareImage,
   shortDescription,
   siteTitle,
   website,
@@ -57,7 +57,7 @@ function Base({
 
         <meta key="og:locale" name="og:locale" content="en_SG" />
         <meta key="og:title" name="og:title" content={siteTitle} />
-        <meta key="og:image" name="og:image" content={`${website}${logo}`} />
+        <meta key="og:image" name="og:image" content={shareImage} />
         <meta key="og:image:alt" name="og:image" content={siteTitle} />
         <meta key="og:site_name" name="og:site_name" content={appName} />
         <meta key="og:url" name="og:site_name" content={website} />
@@ -73,7 +73,7 @@ function Base({
         <meta name="twitter:creator" content="@birthdaydev" />
         <meta name="twitter:title" content={siteTitle} />
         <meta name="twitter:description" content={shortDescription} />
-        <meta name="twitter:image" content={`${website}${logo}`} />
+        <meta name="twitter:image" content={shareImage} />
         <meta name="twitter:image:alt" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
 

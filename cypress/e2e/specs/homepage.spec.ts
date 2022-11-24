@@ -1,7 +1,41 @@
 const dmcDescription =
   "DeFi Meta Chain (DMC) is a powerful EVM-compatible blockchain parallel to DeFiChain, a leader in DeFi. Built to future proof trends, DMC achieves ecosystem scalability by providing developers with familiar tools to build the future of DeFi today.";
 
-describe("Homepage test", () => {
+describe.only("Homepage test", () => {
+  context("/ on iphone-x", () => {
+    beforeEach(() => {
+      cy.visit("/");
+      cy.viewport("iphone-x");
+    });
+
+    it("should verify countdown", function () {
+      cy.findByTestId("countdown");
+    });
+  });
+
+  context("/ on ipad", () => {
+    beforeEach(() => {
+      cy.visit("/");
+      cy.viewport("ipad-2");
+    });
+
+    it("should verify countdown", function () {
+      cy.findByTestId("countdown");
+    });
+  });
+
+  context("/ on macbook-13", () => {
+    beforeEach(() => {
+      cy.visit("/");
+      cy.viewport("macbook-13");
+    });
+
+    it("should verify countdown", function () {
+      cy.findByTestId("countdown");
+    });
+  });
+});
+describe.skip("Homepage test", () => {
   context("/ on iphone-x", () => {
     beforeEach(() => {
       cy.visit("/");
