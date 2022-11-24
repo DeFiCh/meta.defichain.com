@@ -41,8 +41,8 @@ function Base({
         <meta key="description" name="description" content={longDescription} />
         <meta
           name="keywords"
-          content="DeFiChain, DeFi Meta Chain, Ethereum Virtual Machine, EVM-compatible, Layer 2 Blockchain, DeFi Blockchain, Decentralized Finance, Security of Bitcoin, Scalability of Ethereum"
-        ></meta>
+          content="DeFiChain, DeFi Meta Chain, Ethereum Virtual Machine, EVM-compatible, Layer 2 Blockchain, DeFi Blockchain, Decentralized Finance, Security of Bitcoin, Flexibility of Ethereum"
+        />
         <meta key="robots" name="robots" content="follow,index" />
         <meta name="googlebot" content="index,follow" />
         <meta name="google" content="notranslate" />

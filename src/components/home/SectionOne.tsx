@@ -4,7 +4,7 @@ import { Parallax } from "react-scroll-parallax";
 import SectionHeader from "./SectionHeader";
 
 export const SectionOneHeaderText =
-  "Build on the blockchain that combines the security of Bitcoin with Scalability of Ethereum";
+  "Build on the blockchain that combines the security of Bitcoin with Flexibility of Ethereum";
 export default function SectionOne(): JSX.Element {
   return (
     <div className="container mx-auto flex flex-col grow items-center lg:justify-between justify-center md:mt-[12%] mt-[350px] translate-y-[-4.9%]">
@@ -24,7 +24,7 @@ export default function SectionOne(): JSX.Element {
             data-testid="dmc-desc"
           >
             DeFi Meta Chain is a powerful EVM-compatible Layer 2 blockchain that
-            brings scalability to DeFiChain, a leader in DeFi built on the
+            brings flexibility to DeFiChain, a leader in DeFi built on the
             security of Bitcoin.
           </span>
           <Button

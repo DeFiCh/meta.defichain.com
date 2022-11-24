@@ -39,7 +39,7 @@ export default function SectionThree(): JSX.Element {
           data-testid="build_dmc_desc"
         >
           DeFi Meta Chain is an EVM-compatible blockchain, built on Proof of
-          Authority (POA), that brings scalability to DeFiChain.
+          Authority (POA), that brings flexibility to DeFiChain.
           <br />
           <br />
           Read through the documentation to get started with deploying next

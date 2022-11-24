@@ -1,5 +1,6 @@
 export const appName = "DeFi Meta Chain";
-export const shortDescription = "Unlock the Limitless Possibilities of DeFiChain";
+export const shortDescription =
+  "Unlock the Limitless Possibilities of DeFiChain";
 export const longDescription =
   "Build on DeFi Meta Chain, a powerful EVM-compatible Layer 2 blockchain that combines the Security of Bitcoin with the Scalability of Ethereum.";
 export const siteTitle = `DeFi Meta Chain | Unlock the Limitless Possibilities of DeFiChain`;
