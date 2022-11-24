@@ -158,7 +158,7 @@ export default function Home({ data }) {
   }, [scrollPosition]);
 
   return (
-    <div className={clsx("relative", {"overflow-hidden": countdownTime > 0})}>
+    <div className={clsx("relative", { "overflow-hidden": countdownTime > 0 })}>
       {countdownTime > 0 && (
         <>
           <div className="absolute top-[60px] left-[calc((100vw-203px)/2)]">

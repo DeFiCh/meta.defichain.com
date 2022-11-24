@@ -78,12 +78,7 @@ function Base({
         <meta name="twitter:card" content="summary_large_image" />
 
         <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="48x48"
-          href="/favicon.png"
-        />
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
       </Head>
       {mounted && (
         <NetworkProvider>
