@@ -63,7 +63,7 @@ function Base({
         <meta key="og:image" name="og:image" content="/dmc_share.png" />
         <meta key="og:image:alt" name="og:image" content={siteTitle} />
         <meta key="og:site_name" name="og:site_name" content={appName} />
-        <meta key="og:url" name="og:site_name" content={website} />
+        <meta key="og:url" name="og:url" content={website} />
         <meta key="og:type" name="og:type" content="website" />
         <meta
           key="og:description"
