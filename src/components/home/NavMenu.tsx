@@ -100,7 +100,10 @@ export const MenuItems = [
 
 export default function NavMenu(): JSX.Element {
   return (
-    <div className="flex bg-white-50 rounded-[30px] min-[1361px]:flex hidden mx-10">
+    <div
+      className="flex bg-white-50 rounded-[30px] min-[1361px]:flex hidden mx-10"
+      data-testid="nav-menu"
+    >
       <NavMenuItem
         label={MenuItems[0].category}
         childContainerStyle={{ left: -58 }}
@@ -197,7 +200,7 @@ function NavMenuMobile({
           <Link className="flex items-center" href="/">
             <div className="relative w-[149px] h-[43px]">
               <Image
-                data-testid="dmc_navmenu_logo"
+                data-testid="dmc-navmenu-logo"
                 layout="fill"
                 src="/logo.svg"
                 alt="DeFi Meta Chain Logo"
@@ -257,7 +260,10 @@ function NavMenuMobileItem({
   childItems: ChildItem[];
 }): JSX.Element {
   return (
-    <div className="shadow-[inset_0_-1px_0_rgba(255,255,255,0.15)]">
+    <div
+      className="shadow-[inset_0_-1px_0_rgba(255,255,255,0.15)]"
+      data-testid={`mob-${label}`}
+    >
       <button
         className="px-8 py-5 flex w-full items-center justify-between transition"
         onClick={onClick}
@@ -278,6 +284,7 @@ function NavMenuMobileItem({
           "transition-[max-height] duration-300 overflow-hidden",
           { "max-h-0": !isActive, "max-h-screen": isActive }
         )}
+        data-testid={`${label}-list`}
       >
         <NavMenuMobileChildItem items={childItems} />
       </div>
@@ -305,6 +312,7 @@ function NavMenuMobileChildItem({
           key={item.label}
           target="_blank"
           rel="noreferrer"
+          data-testid={`${item.label}-link`}
         >
           <div className="pl-12 pr-8 py-5 flex items-center justify-between">
             <div className="flex items-center">
@@ -333,7 +341,10 @@ function NavMenuItem({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <ul className="px-8 group cursor-pointer relative">
+    <ul
+      className="px-8 group cursor-pointer relative"
+      data-testid={`header-${label}`}
+    >
       <li
         className={clsx(
           "py-4 before:cta-border before:bg-white-50 before:opacity-100 group-hover:before:opacity-0 after:cta-border after:brand-gradient-1 after:opacity-0 group-hover:after:opacity-100"
@@ -381,7 +392,12 @@ function NavMenuChildItem({
   const navChildItemStyle =
     "pl-6 text-transparent before:pl-6 before:bg-black-900 relative before:gradient-text before:opacity-100 [.group-scoped:hover_&]:before:opacity-0 before:left-6 after:left-6 after:gradient-text after:pl-6 after:brand-gradient-1 after:opacity-0 [.group-scoped:hover_&]:after:opacity-100";
   return (
-    <Link href={href} rel="noreferrer" target="_blank">
+    <Link
+      href={href}
+      rel="noreferrer"
+      target="_blank"
+      data-testid={`header-${label}`}
+    >
       <div className="py-3 px-5 flex items-center group-scoped">
         <div className="w-5 h-5 relative">
           <Image layout="fill" src={imagePath} alt={altLabel} />

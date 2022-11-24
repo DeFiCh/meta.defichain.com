@@ -166,7 +166,10 @@ export default function Home({ data }) {
           </div>
           <div className="w-full h-full absolute z-[-1] mix-blend-screen top-0 left-0 bg-no-repeat bg-cover lg:bg-[url('/background/portal-gradient-1.png')] md:bg-[url('/background/tablet-portal-gradient-1.png')] bg-[url('/background/mobile-portal-gradient-1.png')]" />
           <div className="w-full h-full absolute z-[-1] mix-blend-screen top-[40vh] bottom-0 right-0 bg-no-repeat bg-cover bg-left-top lg:bg-[url('/background/gradient-2.png')] md:bg-[url('/background/tablet-gradient-2.png')] bg-[url('/background/mobile-gradient-2.png')]" />
-          <section className="container mx-auto min-h-screen flex flex-col justify-center items-center px-4 pt-[348px] md:pt-0">
+          <section
+            className="container mx-auto min-h-screen flex flex-col justify-center items-center px-4 pt-[348px] md:pt-0"
+            data-testid="countdown"
+          >
             <JellyfishBackground
               desktop={{
                 position: [40, 150, -400],

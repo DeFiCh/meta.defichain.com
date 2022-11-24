@@ -6,7 +6,10 @@ export default function Footer(): JSX.Element {
   return (
     <footer className="w-full relative lg:pt-[242px] pt-[176px] pt-[138px]">
       <div className="container mx-auto">
-        <div className="backdrop-blur-[6px] flex flex-col md:flex-row py-10 px-5 md:px-10 lg:px-[102px] rounded-[30px] black-gradient-1 gap-y-10 md:gap-0">
+        <div
+          className="backdrop-blur-[6px] flex flex-col md:flex-row py-10 px-5 md:px-10 lg:px-[102px] rounded-[30px] black-gradient-1 gap-y-10 md:gap-0"
+          data-testid="dmc-footer"
+        >
           <div className="flex flex-row w-full gap-10 md:gap-0">
             <FooterColumn
               category={MenuItems[0].category}
@@ -50,7 +53,12 @@ function FooterColumn({
 }): JSX.Element {
   return (
     <div className="flex flex-col gap-4 w-full">
-      <div className="font-medium text-white-50">{category}</div>
+      <div
+        className="font-medium text-white-50"
+        data-testid={`footerlink-${category}`}
+      >
+        {category}
+      </div>
       {childLinks.map((link) => (
         <FooterLinkItem href={link.href} label={link.label} key={link.label} />
       ))}
@@ -71,6 +79,7 @@ function FooterLinkItem({
       target="_blank"
       rel="noreferrer"
       className="text-white-50/60"
+      data-testid={`footerlink-${label}`}
     >
       {label}
     </a>
@@ -83,7 +92,7 @@ function BrandingRow(): JSX.Element {
       <Link className="flex items-center" href="/">
         <div className="hidden md:block relative w-[203px] h-[36px] mb-[25px] md:mb-0">
           <Image
-            data-testid="footer_dmc_logo"
+            data-testid="footer-dmc-logo"
             layout="fill"
             src="/logo.svg"
             alt="DeFi Meta Chain Logo"
@@ -98,7 +107,7 @@ function BrandingRow(): JSX.Element {
         <Link className="flex items-center" href="/">
           <div className="relative w-[149px] h-[43px] mb-[25px] md:mb-0">
             <Image
-              data-testid="footer_dmc_logo"
+              data-testid="footer-dmc-logo"
               layout="fill"
               src="/logo.svg"
               alt="DeFi Meta Chain Logo"

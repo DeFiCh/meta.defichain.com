@@ -7,16 +7,17 @@
 // You can read more here:
 // https://on.cypress.io/plugins-guide
 // ***********************************************************
-
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
-
 /**
  * @type {Cypress.PluginConfig}
  */
 // @ts-ignore
-module.exports = (on: Cypress.PluginEvents, config: Cypress.PluginConfigOptions): any => {
+module.exports = (
+  on: Cypress.PluginEvents,
+  config: Cypress.PluginConfigOptions
+): any => {
   // @ts-ignore
-  require('@cypress/code-coverage/task')(on, config)
-  return config
-}
+  require("@cypress/code-coverage/task")(on, config);
+  return config;
+};

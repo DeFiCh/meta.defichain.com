@@ -9,14 +9,20 @@ export default function SectionOne(): JSX.Element {
   return (
     <div className="container mx-auto flex flex-col grow items-center lg:justify-between justify-center md:mt-[12%] mt-[350px] translate-y-[-4.9%]">
       <Parallax translateY={[30, -30]}>
-        <div className="flex flex-col text-center items-center">
+        <div
+          className="flex flex-col text-center items-center"
+          data-testid="unlock-text"
+        >
           <SectionHeader
             header={SectionOneHeaderText}
             hint="UNLOCK THE LIMITLESS POSSIBILITIES OF DEFICHAIN"
             containerStyle="lg:w-4/5 items-center"
-            testId="section_one"
+            testId="section-one"
           />
-          <span className="mb-8 lg:w-3/5 md:text-xl text-white-50">
+          <span
+            className="mb-8 lg:w-3/5 md:text-xl text-white-50"
+            data-testid="dmc-desc"
+          >
             DeFi Meta Chain is a powerful EVM-compatible Layer 2 blockchain that
             brings scalability to DeFiChain, a leader in DeFi built on the
             security of Bitcoin.

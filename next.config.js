@@ -8,6 +8,6 @@ const nextConfig = {
   images: {
     deviceSizes: [360, 768, 1440, 1920, 2048, 3840],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
