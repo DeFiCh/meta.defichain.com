@@ -21,8 +21,8 @@ import clsx from "clsx";
 
 const RELEASE_DATE = new Date("2022-11-30T17:00:00.000+08:00"); // 2022-11-30 17:00 GMT + 8
 
-export default function Home({ data }) {
-  const [countdownTime, setCountdownTime] = useState(data.secondsUntilRelease);
+export default function Home({ secondsUntilRelease }) {
+  const [countdownTime, setCountdownTime] = useState(secondsUntilRelease);
   const { count, tvl } = useSelector((state: RootState) => state.stats);
   const stats = {
     masternodes: {
@@ -363,10 +363,5 @@ export default function Home({ data }) {
 export async function getServerSideProps() {
   const timeNow = new Date();
   const secondsUntilRelease = differenceInSeconds(RELEASE_DATE, timeNow);
-  const data = {
-    secondsUntilRelease,
-  };
-
-  // Pass data to the page via props
-  return { props: { data } };
+  return { props: { secondsUntilRelease } };
 }

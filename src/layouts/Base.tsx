@@ -60,7 +60,7 @@ function Base({
 
         <meta key="og:locale" name="og:locale" content="en_SG" />
         <meta key="og:title" name="og:title" content={siteTitle} />
-        <meta key="og:image" name="og:image" content="/dmc_share.png" />
+        <meta key="og:image" name="og:image" content="https://meta.defichain.com/dmc_share.png" />
         <meta key="og:image:alt" name="og:image:alt" content={siteTitle} />
         <meta key="og:site_name" name="og:site_name" content={appName} />
         <meta key="og:url" name="og:url" content={website} />
@@ -76,7 +76,7 @@ function Base({
         <meta name="twitter:creator" content="@birthdaydev" />
         <meta name="twitter:title" content={siteTitle} />
         <meta name="twitter:description" content={longDescription} />
-        <meta name="twitter:image" content="/dmc_share.png" />
+        <meta name="twitter:image" content="https://meta.defichain.com/dmc_share.png" />
         <meta name="twitter:image:alt" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
 
