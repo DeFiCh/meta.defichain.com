@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { BufferGeometry, Mesh } from "three";
 import { Canvas, Euler, useFrame, Vector3 } from "@react-three/fiber";
+import useWebGlEnabled from "hooks/useWebGlEnabled";
 
 export default function UnderwaterDrone({
   position,
@@ -122,6 +123,11 @@ export function UnderwaterDroneBackground({
   tablet,
   mobile,
 }: UnderwaterDroneBackgroundProps): JSX.Element {
+  const isWebGlEnabled = useWebGlEnabled();
+  if (!isWebGlEnabled) {
+    return <></>;
+  }
+
   return (
     <>
       <div
