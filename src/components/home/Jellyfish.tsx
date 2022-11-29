@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { BufferGeometry, Mesh } from "three";
 import { Canvas, Euler, useFrame, Vector3 } from "@react-three/fiber";
+import useWebGlEnabled from "hooks/useWebGlEnabled";
 
 export default function Jellyfish({
   position,
@@ -96,6 +97,12 @@ export function JellyfishBackground({
   tablet,
   mobile,
 }: JellyfishBackgroundProps): JSX.Element {
+  const isWebGlEnabled = useWebGlEnabled();
+  if (!isWebGlEnabled) {
+    /* eslint-disable react/jsx-no-useless-fragment */
+    return <></>;
+  }
+
   return (
     <>
       <div
