@@ -99,6 +99,7 @@ export function JellyfishBackground({
 }: JellyfishBackgroundProps): JSX.Element {
   const isWebGlEnabled = useWebGlEnabled();
   if (!isWebGlEnabled) {
+    /* eslint-disable react/jsx-no-useless-fragment */
     return <></>;
   }
 

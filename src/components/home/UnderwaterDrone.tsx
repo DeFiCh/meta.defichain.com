@@ -125,6 +125,7 @@ export function UnderwaterDroneBackground({
 }: UnderwaterDroneBackgroundProps): JSX.Element {
   const isWebGlEnabled = useWebGlEnabled();
   if (!isWebGlEnabled) {
+    /* eslint-disable react/jsx-no-useless-fragment */
     return <></>;
   }
 
