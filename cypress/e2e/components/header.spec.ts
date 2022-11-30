@@ -10,7 +10,7 @@ import {
   webEcosystemDropdownLinks,
 } from "../../fixtures/header";
 
-describe.skip("Header test", () => {
+describe("Header test", () => {
   context("Verifying header on iphone-x", () => {
     beforeEach(() => {
       cy.visit("/");
