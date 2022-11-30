@@ -1,6 +1,6 @@
 import { homePageText } from "../../fixtures/homepage";
 
-describe.only("Homepage test", () => {
+describe("Homepage test", () => {
   context("/ on iphone-x", () => {
     beforeEach(() => {
       cy.visit("/");
