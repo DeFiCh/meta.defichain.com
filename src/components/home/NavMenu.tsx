@@ -29,7 +29,7 @@ export const MenuItems = [
         imagePath: "/menu/forum.svg",
         altLabel: "Developer's Chatroom",
         label: "Developer's Chatroom",
-        href: "https://discord.gg/g5U4pvNtbS",
+        href: "https://discord.com/invite/py55egyaGy",
       },
     ],
   },
@@ -69,7 +69,7 @@ export const MenuItems = [
         imagePath: "/menu/discord.svg",
         altLabel: "Discord",
         label: "Discord",
-        href: "https://discord.gg/U268gQUqQt",
+        href: "https://discord.com/invite/py55egyaGy",
       },
       {
         imagePath: "/menu/twitter.svg",

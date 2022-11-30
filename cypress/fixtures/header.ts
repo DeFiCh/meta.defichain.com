@@ -27,7 +27,7 @@ export const developerDropdownLinks = [
   { locator: "GitHub-link", link: "https://github.com/DeFiCh/metachain" },
   {
     locator: "Developer's Chatroom-link",
-    link: "https://discord.gg/g5U4pvNtbS",
+    link: "https://discord.com/invite/py55egyaGy",
   },
 ];
 
@@ -39,7 +39,7 @@ export const ecosystemDropdownLinks = [
 ];
 
 export const communityDropdownLinks = [
-  { locator: "Discord-link", link: "https://discord.gg/U268gQUqQt" },
+  { locator: "Discord-link", link: "https://discord.com/invite/py55egyaGy" },
   { locator: "Twitter-link", link: "https://twitter.com/defichain" },
   { locator: "YouTube-link", link: "https://www.youtube.com/c/DeFiChain" },
   { locator: "Telegram-link", link: "https://t.me/defiblockchain" },
@@ -54,7 +54,7 @@ export const webDeveloperDropdownLinks = [
   { locator: "header-GitHub", links: "https://github.com/DeFiCh/metachain" },
   {
     locator: "header-Developer's Chatroom",
-    links: "https://discord.gg/g5U4pvNtbS",
+    links: "https://discord.com/invite/py55egyaGy",
   },
 ];
 export const webEcosystemDropdownLinks = [
@@ -64,7 +64,7 @@ export const webEcosystemDropdownLinks = [
   { locator: "header-Wallets", links: "/" },
 ];
 export const webCommunityDropdownLinks = [
-  { locator: "header-Discord", links: "https://discord.gg/U268gQUqQt" },
+  { locator: "header-Discord", links: "https://discord.com/invite/py55egyaGy" },
   { locator: "header-Twitter", links: "https://twitter.com/defichain" },
   { locator: "header-YouTube", links: "https://www.youtube.com/c/DeFiChain" },
   { locator: "header-Telegram", links: "https://t.me/defiblockchain" },

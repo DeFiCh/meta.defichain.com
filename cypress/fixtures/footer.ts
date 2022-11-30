@@ -17,7 +17,7 @@ export const footerLinks = [
   {
     locator: "footerlink-Developer's Chatroom",
     content: "Developer's Chatroom",
-    link: "https://discord.gg/g5U4pvNtbS",
+    link: "https://discord.com/invite/py55egyaGy",
   },
   {
     locator: "footerlink-DMC Explorer",
@@ -42,7 +42,7 @@ export const footerLinks = [
   {
     locator: "footerlink-Discord",
     content: "Discord",
-    link: "https://discord.gg/U268gQUqQt",
+    link: "https://discord.com/invite/py55egyaGy",
   },
   {
     locator: "footerlink-Twitter",
