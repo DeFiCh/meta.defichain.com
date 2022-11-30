@@ -9,7 +9,7 @@ export default function SectionFive(): JSX.Element {
     {
       title: "Discord",
       content: "Ask technical question on the Community Discord.",
-      link: "https://discord.gg/U268gQUqQt",
+      link: "https://discord.com/invite/py55egyaGy",
     },
     {
       title: "Twitter",
