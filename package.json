@@ -36,7 +36,7 @@
     "react-redux": "^8.0.5",
     "react-scroll-parallax": "^3.3.2",
     "react-type-animation": "^2.1.2",
-    "three": "^0.146.0"
+    "three": "^0.147.0"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.10.0",
