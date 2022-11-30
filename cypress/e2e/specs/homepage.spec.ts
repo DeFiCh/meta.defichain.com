@@ -1,32 +1,6 @@
 import { homePageText } from "../../fixtures/homepage";
 
-describe.only("Homepage test", () => {
-  context("/ on iphone-x", () => {
-    it("should verify countdown", function () {
-      cy.visit("/");
-      cy.viewport("iphone-x");
-      cy.findByTestId("countdown");
-    });
-  });
-
-  context("/ on ipad", () => {
-    it("should verify countdown", function () {
-      cy.visit("/");
-      cy.viewport("ipad-2");
-      cy.findByTestId("countdown");
-    });
-  });
-
-  context("/ on macbook-13", () => {
-    it("should verify countdown", function () {
-      cy.visit("/");
-      cy.viewport("macbook-13");
-      cy.findByTestId("countdown");
-    });
-  });
-});
-
-describe.skip("Homepage test", () => {
+describe("Homepage test", () => {
   context("/ on iphone-x", () => {
     beforeEach(() => {
       cy.visit("/");
@@ -44,7 +18,9 @@ describe.skip("Homepage test", () => {
       cy.findByTestId("section-one-header")
         .should("be.visible")
         .contains(homePageText.section_one.header);
-      cy.findByTestId("dmc-desc").should("be.visible").contains(homePageText.section_one.description);
+      cy.findByTestId("dmc-desc")
+        .should("be.visible")
+        .contains(homePageText.section_one.description);
     });
 
     it("should verify footer is visible", function () {
@@ -69,7 +45,9 @@ describe.skip("Homepage test", () => {
       cy.findByTestId("section-one-header")
         .should("be.visible")
         .contains(homePageText.section_one.header);
-      cy.findByTestId("dmc-desc").should("be.visible").contains(homePageText.section_one.description);
+      cy.findByTestId("dmc-desc")
+        .should("be.visible")
+        .contains(homePageText.section_one.description);
     });
 
     it("should verify footer is visible", function () {
@@ -94,7 +72,9 @@ describe.skip("Homepage test", () => {
       cy.findByTestId("section-one-header")
         .should("be.visible")
         .contains(homePageText.section_one.header);
-      cy.findByTestId("dmc-desc").should("be.visible").contains(homePageText.section_one.description);
+      cy.findByTestId("dmc-desc")
+        .should("be.visible")
+        .contains(homePageText.section_one.description);
     });
 
     it("should verify footer is visible", function () {

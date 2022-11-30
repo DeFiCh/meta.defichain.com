@@ -1,6 +1,6 @@
 import { footerElements, footerLinks } from "../../fixtures/footer";
 
-describe.skip("Footer section", () => {
+describe("Footer section", () => {
   context("Verifying footer on iphone-x", () => {
     beforeEach(() => {
       cy.visit("/");
