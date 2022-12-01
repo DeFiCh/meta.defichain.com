@@ -18,7 +18,7 @@
     "@babel/types": "^7.20.5",
     "@defichain/jellyfish-network": "^2.70.0",
     "@defichain/whale-api-client": "^2.70.0",
-    "@react-three/drei": "^9.45.0",
+    "@react-three/drei": "^9.46.0",
     "@react-three/fiber": "^8.9.1",
     "@reduxjs/toolkit": "^1.9.1",
     "@tailwindcss/line-clamp": "^0.4.2",
