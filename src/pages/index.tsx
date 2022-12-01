@@ -130,7 +130,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    if (isMobile && isTablet) {
+    if (isMobile || isTablet) {
       alert("skip handle scroll");
       return () => {}; // no anchor link on non-desktop
     }
