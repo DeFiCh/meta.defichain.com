@@ -1,22 +1,22 @@
 import { UAParser } from "ua-parser-js";
 
 interface GetDeviceTypeResult {
-  isMobile?: boolean
-  isTablet?: boolean
+  isMobile?: boolean;
+  isTablet?: boolean;
 }
 
 export default function getDeviceType(): GetDeviceTypeResult {
   const navigator = getNavigatorInstance();
   if (!navigator) {
-    return {}
+    return {};
   }
 
-  const parser = new UAParser(navigator.userAgent)
-  const deviceFromUserAgent = parser.getDevice()
+  const parser = new UAParser(navigator.userAgent);
+  const deviceFromUserAgent = parser.getDevice();
   return {
-    isMobile: deviceFromUserAgent.type === 'mobile',
-    isTablet: deviceFromUserAgent.type === 'tablet'
-  }
+    isMobile: deviceFromUserAgent.type === "mobile",
+    isTablet: deviceFromUserAgent.type === "tablet",
+  };
 }
 
 const getNavigatorInstance = () => {
