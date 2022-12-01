@@ -146,10 +146,8 @@ export default function Home() {
   }, [scrollPosition]);
 
   useEffect(() => {
-    const {
-      location: { hash },
-    } = window;
-    if (typeof hash !== "string") return;
+    const { location: { hash } = {} } = window;
+    if (typeof hash !== "string" || hash.length === 0) return;
 
     const hashElement = document.querySelector(hash);
     if (hashElement) {
