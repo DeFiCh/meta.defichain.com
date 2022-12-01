@@ -131,7 +131,6 @@ export default function Home() {
 
   useEffect(() => {
     if (isMobile || isTablet) {
-      alert("skip handle scroll");
       return () => {}; // no anchor link on non-desktop
     }
     // attach event listener to store the state of vertical scrolling position

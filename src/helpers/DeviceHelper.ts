@@ -25,6 +25,5 @@ const getNavigatorInstance = () => {
       return window.navigator || navigator;
     }
   }
-
   return false;
 };
