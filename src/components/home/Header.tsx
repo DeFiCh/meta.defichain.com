@@ -20,6 +20,7 @@ export default function Header(): JSX.Element {
             label="Coming Soon"
             href="#"
             customStyle="hidden md:block"
+            disabled
           />
           <svg
             className="feather w-6 h-6 stroke-white-50 block min-[1361px]:hidden md:ml-6"

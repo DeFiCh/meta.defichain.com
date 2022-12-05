@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import GradientText from "./GradientText";
 
 export default function Button({
@@ -5,11 +6,13 @@ export default function Button({
   href,
   onClick,
   customStyle,
+  disabled,
 }: {
   label: string;
   href: string;
   onClick?: () => void;
   customStyle?: string;
+  disabled?: boolean;
 }): JSX.Element {
   return (
     <button
@@ -18,8 +21,14 @@ export default function Button({
         customStyle ?? ""
       }`}
       onClick={onClick}
+      disabled={disabled}
     >
-      <a href={href} target="_blank" rel="noreferrer">
+      <a
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+        className={clsx({ "cursor-default pointer-events-none": disabled })}
+      >
         <div className="flex items-center ">
           <GradientText label={label} />
         </div>

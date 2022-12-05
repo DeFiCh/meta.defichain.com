@@ -49,6 +49,7 @@ export default function SectionThree(): JSX.Element {
           label="Read Documentation (coming soon)"
           href="#"
           customStyle="font-medium"
+          disabled
         />
         <div className="hidden md:block mt-32">
           <SectionThreeItem

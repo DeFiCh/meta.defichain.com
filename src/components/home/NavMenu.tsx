@@ -12,24 +12,28 @@ export const MenuItems = [
         altLabel: "Documentation",
         label: "Documentation",
         href: "",
+        disabled: true,
       },
       {
         imagePath: "/menu/releases.svg",
         altLabel: "Releases",
         label: "Releases",
         href: "https://github.com/DeFiCh/metachain/releases",
+        disabled: false,
       },
       {
         imagePath: "/menu/github.svg",
         altLabel: "GitHub",
         label: "GitHub",
         href: "https://github.com/DeFiCh/metachain",
+        disabled: false,
       },
       {
         imagePath: "/menu/forum.svg",
         altLabel: "Developer's Chatroom",
         label: "Developer's Chatroom",
         href: "https://discord.com/invite/py55egyaGy",
+        disabled: false,
       },
     ],
   },
@@ -41,24 +45,28 @@ export const MenuItems = [
         altLabel: "DMC Explorer",
         label: "DMC Explorer",
         href: "",
+        disabled: true,
       },
       {
         imagePath: "/menu/defichain-com.svg",
         altLabel: "DeFiChain.com",
         label: "DeFiChain.com",
         href: "https://defichain.com",
+        disabled: false,
       },
       {
         imagePath: "/menu/whitepaper.svg",
         altLabel: "Whitepaper",
         label: "Whitepaper",
         href: "",
+        disabled: true,
       },
       {
         imagePath: "/menu/wallets.svg",
         altLabel: "Wallets",
         label: "Wallets",
         href: "",
+        disabled: true,
       },
     ],
   },
@@ -70,24 +78,28 @@ export const MenuItems = [
         altLabel: "Discord",
         label: "Discord",
         href: "https://discord.com/invite/py55egyaGy",
+        disabled: false,
       },
       {
         imagePath: "/menu/twitter.svg",
         altLabel: "Twitter",
         label: "Twitter",
         href: "https://twitter.com/defichain",
+        disabled: false,
       },
       {
         imagePath: "/menu/youtube.svg",
         altLabel: "YouTube",
         label: "YouTube",
         href: "https://www.youtube.com/c/DeFiChain",
+        disabled: false,
       },
       {
         imagePath: "/menu/telegram.svg",
         altLabel: "Telegram",
         label: "Telegram",
         href: "https://t.me/defiblockchain",
+        disabled: false,
       },
     ],
   },
@@ -95,6 +107,7 @@ export const MenuItems = [
     category: "Blog (coming soon)",
     href: "",
     childLink: [],
+    disabled: true,
   },
 ];
 
@@ -107,6 +120,7 @@ export default function NavMenu(): JSX.Element {
       <NavMenuItem
         label={MenuItems[0].category}
         childContainerStyle={{ left: -58 }}
+        disabled
       >
         {MenuItems[0].childLink.map((item) => (
           <NavMenuChildItem
@@ -115,12 +129,14 @@ export default function NavMenu(): JSX.Element {
             altLabel={item.altLabel}
             label={item.altLabel}
             key={item.label}
+            disabled={item.disabled}
           />
         ))}
       </NavMenuItem>
       <NavMenuItem
         label={MenuItems[1].category}
         childContainerStyle={{ left: -54 }}
+        disabled
       >
         {MenuItems[1].childLink.map((item) => (
           <NavMenuChildItem
@@ -129,12 +145,14 @@ export default function NavMenu(): JSX.Element {
             altLabel={item.altLabel}
             label={item.altLabel}
             key={item.label}
+            disabled={item.disabled}
           />
         ))}
       </NavMenuItem>
       <NavMenuItem
         label={MenuItems[2].category}
         childContainerStyle={{ left: -51 }}
+        disabled
       >
         {MenuItems[2].childLink.map((item) => (
           <NavMenuChildItem
@@ -143,11 +161,22 @@ export default function NavMenu(): JSX.Element {
             altLabel={item.altLabel}
             label={item.altLabel}
             key={item.label}
+            disabled={item.disabled}
           />
         ))}
       </NavMenuItem>
-      <div className="px-8 py-4 group cursor-pointer relative before:cta-border before:bg-white-50 before:opacity-100 hover:before:opacity-0 after:cta-border after:brand-gradient-1 after:opacity-0 hover:after:opacity-100">
-        <Link href="/">
+      <div
+        className={clsx(
+          "px-8 py-4 group cursor-pointer relative before:cta-border before:bg-white-50 before:opacity-100 hover:before:opacity-0 after:cta-border after:brand-gradient-1 after:opacity-0 hover:after:opacity-100",
+          { "cursor-default": MenuItems[3].disabled }
+        )}
+      >
+        <Link
+          href="/"
+          className={clsx({
+            "cursor-default pointer-events-none": MenuItems[3].disabled,
+          })}
+        >
           <MenuItemLabel label={MenuItems[3].category} />
         </Link>
       </div>
@@ -335,14 +364,18 @@ function NavMenuItem({
   label,
   childContainerStyle,
   children,
+  disabled = false,
 }: {
   label: string;
   childContainerStyle: CSSProperties;
   children: React.ReactNode;
+  disabled?: boolean;
 }): JSX.Element {
   return (
     <ul
-      className="px-8 group cursor-pointer relative"
+      className={clsx("px-8 group cursor-pointer relative", {
+        "cursor-default pointer-event-none": disabled,
+      })}
       data-testid={`header-${label}`}
     >
       <li
@@ -383,11 +416,13 @@ function NavMenuChildItem({
   imagePath,
   altLabel,
   label,
+  disabled,
 }: {
   href: string;
   imagePath: string;
   altLabel: string;
   label: string;
+  disabled?: boolean;
 }): JSX.Element {
   const navChildItemStyle =
     "pl-6 text-transparent before:pl-6 before:bg-black-900 relative before:gradient-text before:opacity-100 [.group-scoped:hover_&]:before:opacity-0 before:left-6 after:left-6 after:gradient-text after:pl-6 after:brand-gradient-1 after:opacity-0 [.group-scoped:hover_&]:after:opacity-100";
@@ -397,6 +432,9 @@ function NavMenuChildItem({
       rel="noreferrer"
       target="_blank"
       data-testid={`header-${label}`}
+      className={clsx({
+        "cursor-default pointer-events-none": disabled,
+      })}
     >
       <div className="py-3 px-5 flex items-center group-scoped">
         <div className="w-5 h-5 relative">
