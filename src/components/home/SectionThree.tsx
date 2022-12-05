@@ -14,7 +14,7 @@ export default function SectionThree(): JSX.Element {
       index: 2,
       title: "Scalable Ecosystem",
       content:
-        "Built on the basis of a parallel-chain approach, DeFi Meta Chain allows for cross-compatibility with other blockchains - giving DFI users extensive and unrestrained access to Ethereum and other EMV-compatible chains.",
+        "Built on the basis of a parallel-chain approach, DeFi Meta Chain allows for cross-compatibility with other blockchains - giving DFI users extensive and unrestrained access to Ethereum and other EVM-compatible chains.",
     },
     {
       index: 3,
