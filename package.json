@@ -23,7 +23,7 @@
     "@reduxjs/toolkit": "^1.9.1",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@types/react-type-animation": "^1.1.1",
-    "bignumber.js": "^9.1.0",
+    "bignumber.js": "^9.1.1",
     "clsx": "^1.2.1",
     "date-fns": "^2.29.3",
     "feather-icons": "^4.29.0",
