@@ -120,7 +120,6 @@ export default function NavMenu(): JSX.Element {
       <NavMenuItem
         label={MenuItems[0].category}
         childContainerStyle={{ left: -58 }}
-        disabled
       >
         {MenuItems[0].childLink.map((item) => (
           <NavMenuChildItem
@@ -136,7 +135,6 @@ export default function NavMenu(): JSX.Element {
       <NavMenuItem
         label={MenuItems[1].category}
         childContainerStyle={{ left: -54 }}
-        disabled
       >
         {MenuItems[1].childLink.map((item) => (
           <NavMenuChildItem
@@ -152,7 +150,6 @@ export default function NavMenu(): JSX.Element {
       <NavMenuItem
         label={MenuItems[2].category}
         childContainerStyle={{ left: -51 }}
-        disabled
       >
         {MenuItems[2].childLink.map((item) => (
           <NavMenuChildItem
@@ -326,6 +323,7 @@ interface ChildItem {
   altLabel: string;
   label: string;
   href: string;
+  disabled?: boolean;
 }
 
 function NavMenuMobileChildItem({
@@ -342,6 +340,9 @@ function NavMenuMobileChildItem({
           target="_blank"
           rel="noreferrer"
           data-testid={`${item.label}-link`}
+          className={clsx({
+            "cursor-default pointer-events-none": item.disabled,
+          })}
         >
           <div className="pl-12 pr-8 py-5 flex items-center justify-between">
             <div className="flex items-center">
@@ -364,18 +365,14 @@ function NavMenuItem({
   label,
   childContainerStyle,
   children,
-  disabled = false,
 }: {
   label: string;
   childContainerStyle: CSSProperties;
   children: React.ReactNode;
-  disabled?: boolean;
 }): JSX.Element {
   return (
     <ul
-      className={clsx("px-8 group cursor-pointer relative", {
-        "cursor-default pointer-event-none": disabled,
-      })}
+      className={clsx("px-8 group cursor-pointer relative")}
       data-testid={`header-${label}`}
     >
       <li
