@@ -23,6 +23,7 @@
     "@reduxjs/toolkit": "^1.9.1",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@types/react-type-animation": "^1.1.1",
+    "@types/ua-parser-js": "^0.7.36",
     "bignumber.js": "^9.1.1",
     "clsx": "^1.2.1",
     "date-fns": "^2.29.3",
@@ -36,7 +37,8 @@
     "react-redux": "^8.0.5",
     "react-scroll-parallax": "^3.3.2",
     "react-type-animation": "^2.1.2",
-    "three": "^0.147.0"
+    "three": "^0.147.0",
+    "ua-parser-js": "^1.0.32"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.10.0",

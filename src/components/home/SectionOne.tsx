@@ -31,6 +31,7 @@ export default function SectionOne(): JSX.Element {
             label="Develop with DeFiMetaChain (coming soon)"
             href="#"
             customStyle="font-medium mb-8"
+            disabled
           />
         </div>
       </Parallax>

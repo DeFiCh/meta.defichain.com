@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Image from "next/legacy/image";
 import Link from "next/link";
 import { MenuItems } from "./NavMenu";
@@ -29,6 +30,7 @@ export default function Footer(): JSX.Element {
               <FooterLinkItem
                 href={MenuItems[3].href}
                 label={MenuItems[3].category}
+                disabled={MenuItems[3].disabled}
               />
             </div>
           </div>
@@ -42,6 +44,7 @@ export default function Footer(): JSX.Element {
 interface FooterLinkItemProps {
   label: string;
   href: string;
+  disabled?: boolean;
 }
 
 function FooterColumn({
@@ -60,7 +63,12 @@ function FooterColumn({
         {category}
       </div>
       {childLinks.map((link) => (
-        <FooterLinkItem href={link.href} label={link.label} key={link.label} />
+        <FooterLinkItem
+          href={link.href}
+          label={link.label}
+          key={link.label}
+          disabled={link.disabled}
+        />
       ))}
     </div>
   );
@@ -69,16 +77,20 @@ function FooterColumn({
 function FooterLinkItem({
   href,
   label,
+  disabled,
 }: {
   href?: string;
   label: string;
+  disabled?: boolean;
 }): JSX.Element {
   return (
     <a
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="text-white-50/60"
+      className={clsx("text-white-50/60", {
+        "cursor-default pointer-events-none": disabled,
+      })}
       data-testid={`footerlink-${label}`}
     >
       {label}
