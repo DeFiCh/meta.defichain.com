@@ -120,7 +120,6 @@ export default function NavMenu(): JSX.Element {
       <NavMenuItem
         label={MenuItems[0].category}
         childContainerStyle={{ left: -58 }}
-        disabled
       >
         {MenuItems[0].childLink.map((item) => (
           <NavMenuChildItem
@@ -136,7 +135,6 @@ export default function NavMenu(): JSX.Element {
       <NavMenuItem
         label={MenuItems[1].category}
         childContainerStyle={{ left: -54 }}
-        disabled
       >
         {MenuItems[1].childLink.map((item) => (
           <NavMenuChildItem
@@ -152,7 +150,6 @@ export default function NavMenu(): JSX.Element {
       <NavMenuItem
         label={MenuItems[2].category}
         childContainerStyle={{ left: -51 }}
-        disabled
       >
         {MenuItems[2].childLink.map((item) => (
           <NavMenuChildItem
