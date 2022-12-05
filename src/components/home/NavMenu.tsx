@@ -326,6 +326,7 @@ interface ChildItem {
   altLabel: string;
   label: string;
   href: string;
+  disabled?: boolean;
 }
 
 function NavMenuMobileChildItem({
@@ -342,6 +343,7 @@ function NavMenuMobileChildItem({
           target="_blank"
           rel="noreferrer"
           data-testid={`${item.label}-link`}
+          className={clsx({"cursor-default pointer-events-none": item.disabled})}
         >
           <div className="pl-12 pr-8 py-5 flex items-center justify-between">
             <div className="flex items-center">
@@ -373,9 +375,7 @@ function NavMenuItem({
 }): JSX.Element {
   return (
     <ul
-      className={clsx("px-8 group cursor-pointer relative", {
-        "cursor-default pointer-event-none": disabled,
-      })}
+      className={clsx("px-8 group cursor-pointer relative")}
       data-testid={`header-${label}`}
     >
       <li
