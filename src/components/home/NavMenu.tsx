@@ -343,7 +343,9 @@ function NavMenuMobileChildItem({
           target="_blank"
           rel="noreferrer"
           data-testid={`${item.label}-link`}
-          className={clsx({"cursor-default pointer-events-none": item.disabled})}
+          className={clsx({
+            "cursor-default pointer-events-none": item.disabled,
+          })}
         >
           <div className="pl-12 pr-8 py-5 flex items-center justify-between">
             <div className="flex items-center">
@@ -366,12 +368,10 @@ function NavMenuItem({
   label,
   childContainerStyle,
   children,
-  disabled = false,
 }: {
   label: string;
   childContainerStyle: CSSProperties;
   children: React.ReactNode;
-  disabled?: boolean;
 }): JSX.Element {
   return (
     <ul
