@@ -7,7 +7,7 @@ specifiers:
   '@defichain/whale-api-client': ^3.5.2
   '@netlify/plugin-lighthouse': ^3.7.1
   '@netlify/plugin-nextjs': ^4.29.2
-  '@react-three/drei': ^9.46.2
+  '@react-three/drei': ^9.46.4
   '@react-three/fiber': ^8.9.1
   '@reduxjs/toolkit': ^1.9.1
   '@tailwindcss/line-clamp': ^0.4.2
@@ -39,7 +39,7 @@ dependencies:
   '@babel/types': 7.20.5
   '@defichain/jellyfish-network': 3.5.2_defichain@3.5.2
   '@defichain/whale-api-client': 3.5.2_defichain@3.5.2
-  '@react-three/drei': 9.46.2_xa6xk36nauwxkzngvitxgjpnr4
+  '@react-three/drei': 9.46.4_xa6xk36nauwxkzngvitxgjpnr4
   '@react-three/fiber': 8.9.1_pvdsq7s4d5knbxbfttptgjiz3a
   '@reduxjs/toolkit': 1.9.1_k4ae6lp43ej6mezo3ztvx6pykq
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.4
@@ -1967,8 +1967,8 @@ packages:
     resolution: {integrity: sha512-7I/qY8H7Enwasxr4jU6WmtNK+RZ4Z/XvSlDvjXFVe7ii1x0MoSlkw6pD7xuac8qrHQRm9BTcbZNyeeKApYsvCg==}
     dev: false
 
-  /@react-three/drei/9.46.2_xa6xk36nauwxkzngvitxgjpnr4:
-    resolution: {integrity: sha512-UBYJTAiZvDuJe2PR2AwIG5+5eFfUcjd1OJ3Egx32kIrU6GofQOdLhXApvF9jvjVA33WmULO1nOvfystH31PnVg==}
+  /@react-three/drei/9.46.4_xa6xk36nauwxkzngvitxgjpnr4:
+    resolution: {integrity: sha512-jrX+gMHlLLcjOy4VvjGEJz6EauzKUXscLi2hmLUhTZ2PI4SwcaZJNKf4KP639XqA4CL1fpIkA/GTmBwVKTUn8A==}
     peerDependencies:
       '@react-three/fiber': '>=8.0'
       react: '>=18.0'
@@ -1982,12 +1982,12 @@ packages:
       '@react-spring/three': 9.5.5_7l5c7g5ph6e5ybhvldx3hsiylq
       '@react-three/fiber': 8.9.1_pvdsq7s4d5knbxbfttptgjiz3a
       '@use-gesture/react': 10.2.22_react@18.2.0
-      detect-gpu: 4.0.50
+      detect-gpu: 5.0.1
       glsl-noise: 0.0.0
       lodash.clamp: 4.0.3
       lodash.omit: 4.5.0
       lodash.pick: 4.4.0
-      meshline: 2.0.4_three@0.147.0
+      meshline: 3.0.4_three@0.147.0
       react: 18.2.0
       react-composer: 5.0.3_react@18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -1996,7 +1996,7 @@ packages:
       suspend-react: 0.0.8_react@18.2.0
       three: 0.147.0
       three-mesh-bvh: 0.5.19_three@0.147.0
-      three-stdlib: 2.20.3_three@0.147.0
+      three-stdlib: 2.20.4_three@0.147.0
       troika-three-text: 0.46.4_three@0.147.0
       utility-types: 3.10.0
       zustand: 3.7.2_react@18.2.0
@@ -3792,8 +3792,8 @@ packages:
     engines: {node: '>= 0.8', npm: 1.2.8000 || >= 1.4.16}
     dev: true
 
-  /detect-gpu/4.0.50:
-    resolution: {integrity: sha512-T67HE5+ONONN8rPXCBJPupyCg2QT8+l2NUUMuPxAppsMJBDPG/Jg0URLs6GyDzLm2niUE+oncIHSuy3VinoPeQ==}
+  /detect-gpu/5.0.1:
+    resolution: {integrity: sha512-veq1/ujh7awqtN+M5Eg1eSnNUfaC42WfsKZ6P1UlTqPvxmfUrgrRuoJFaEYZnPKl/2HFV+5xBGHGigjnDKPahQ==}
     dependencies:
       webgl-constants: 1.1.1
     dev: false
@@ -6102,8 +6102,8 @@ packages:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
 
-  /meshline/2.0.4_three@0.147.0:
-    resolution: {integrity: sha512-Jh6DJl/zLqA4xsKvGv5950jr2ukyXQE1wgxs8u94cImHrvL6soVIggqjP+2hVHZXGYaKnWszhtjuCbKNeQyYiw==}
+  /meshline/3.0.4_three@0.147.0:
+    resolution: {integrity: sha512-o4kwwnhgYLyNwcB6i+qHejuN9l129p7mdF0vsqzWEAHGw5SBwD9q0ut+tX3G3om8PUW7GOQQa5V4t3I7wMN41Q==}
     peerDependencies:
       three: '>=0.137'
     dependencies:
@@ -7967,8 +7967,8 @@ packages:
       three: 0.147.0
     dev: false
 
-  /three-stdlib/2.20.3_three@0.147.0:
-    resolution: {integrity: sha512-XYZaXesGBkTQCnBp4N5WySDMNi+5AJC25DRL/XWFtmsS1uCGPLHVMGTNdbGdJlOn3RgOrjzoLQYhW+UMorHXWg==}
+  /three-stdlib/2.20.4_three@0.147.0:
+    resolution: {integrity: sha512-Ksy7h//nnH5dhohbmE6mT/gM54dtmcAjaC9Srx7AJ7xpmCEX3IASkZyUkVqNXv3NZFqx79Swq3sSSVqL4pF79Q==}
     peerDependencies:
       three: '>=0.122.0'
     dependencies:
