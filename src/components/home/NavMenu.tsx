@@ -334,7 +334,7 @@ function NavMenuMobileChildItems({
   return (
     <>
       {items.map((item) => (
-        <>
+        <div>
           {item.disabled ? (
             <NavMenuMobileChildItem
               imagePath={item.imagePath}
@@ -356,7 +356,7 @@ function NavMenuMobileChildItems({
               />
             </Link>
           )}
-        </>
+        </div>
       ))}
     </>
   );
