@@ -33,15 +33,19 @@ describe("Header test", () => {
         .click();
 
       developerList.forEach((ul) => {
-        cy.findByTestId(ul.locator)
-          .should("be.visible")
-          .contains(ul.list_element);
+        if (ul.disabled !== true) {
+          cy.findByTestId(ul.locator)
+            .should("be.visible")
+            .contains(ul.list_element);
+        }
       });
 
       developerDropdownLinks.forEach((nav_links) => {
-        cy.findByTestId(nav_links.locator)
-          .should("have.attr", "href")
-          .and("equal", nav_links.link);
+        if (nav_links.disabled !== true) {
+          cy.findByTestId(nav_links.locator)
+            .should("have.attr", "href")
+            .and("equal", nav_links.link);
+        }
       });
     });
 
@@ -53,15 +57,19 @@ describe("Header test", () => {
         .click();
 
       ecosystemList.forEach((ul) => {
-        cy.findByTestId(ul.locator)
-          .should("be.visible")
-          .contains(ul.list_element);
+        if (ul.disabled !== true) {
+          cy.findByTestId(ul.locator)
+            .should("be.visible")
+            .contains(ul.list_element);
+        }
       });
 
       ecosystemDropdownLinks.forEach((ul) => {
-        cy.findByTestId(ul.locator)
-          .should("have.attr", "href")
-          .and("equal", ul.link);
+        if (ul.disabled !== true) {
+          cy.findByTestId(ul.locator)
+            .should("have.attr", "href")
+            .and("equal", ul.link);
+        }
       });
     });
 
