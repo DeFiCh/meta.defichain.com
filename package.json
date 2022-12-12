@@ -16,8 +16,8 @@
   },
   "dependencies": {
     "@babel/types": "^7.20.5",
-    "@defichain/jellyfish-network": "^3.7.0",
-    "@defichain/whale-api-client": "^3.7.0",
+    "@defichain/jellyfish-network": "^3.8.0",
+    "@defichain/whale-api-client": "^3.8.0",
     "@react-three/drei": "^9.46.4",
     "@react-three/fiber": "^8.9.1",
     "@reduxjs/toolkit": "^1.9.1",
