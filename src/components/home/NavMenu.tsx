@@ -312,7 +312,7 @@ function NavMenuMobileItem({
         )}
         data-testid={`${label}-list`}
       >
-        <NavMenuMobileChildItem items={childItems} />
+        <NavMenuMobileChildItems items={childItems} />
       </div>
     </div>
   );
@@ -326,7 +326,7 @@ interface ChildItem {
   disabled?: boolean;
 }
 
-function NavMenuMobileChildItem({
+function NavMenuMobileChildItems({
   items,
 }: {
   items: ChildItem[];
@@ -334,30 +334,55 @@ function NavMenuMobileChildItem({
   return (
     <>
       {items.map((item) => (
-        <Link
-          href={item.href}
-          key={item.label}
-          target="_blank"
-          rel="noreferrer"
-          data-testid={`${item.label}-link`}
-          className={clsx({
-            "cursor-default pointer-events-none": item.disabled,
-          })}
-        >
-          <div className="pl-12 pr-8 py-5 flex items-center justify-between">
-            <div className="flex items-center">
-              <div className="w-5 h-5 relative">
-                <Image layout="fill" src={item.imagePath} alt={item.altLabel} />
-              </div>
-              <span className="text-gray-50 pl-6">{item.label}</span>
-            </div>
-            <svg className="feather w-6 h-6 stroke-gray-50">
-              <use href="/feather-sprite.svg#arrow-up-right" />
-            </svg>
-          </div>
-        </Link>
+        <div>
+          {item.disabled ? (
+            <NavMenuMobileChildItem
+              imagePath={item.imagePath}
+              altLabel={item.altLabel}
+              label={item.label}
+            />
+          ) : (
+            <Link
+              href={item.href}
+              key={item.label}
+              target="_blank"
+              rel="noreferrer"
+              data-testid={`${item.label}-link`}
+            >
+              <NavMenuMobileChildItem
+                imagePath={item.imagePath}
+                altLabel={item.altLabel}
+                label={item.label}
+              />
+            </Link>
+          )}
+        </div>
       ))}
     </>
+  );
+}
+
+function NavMenuMobileChildItem({
+  imagePath,
+  altLabel,
+  label,
+}: {
+  imagePath: string;
+  altLabel?: string;
+  label: string;
+}) {
+  return (
+    <div className="pl-12 pr-8 py-5 flex items-center justify-between">
+      <div className="flex items-center">
+        <div className="w-5 h-5 relative">
+          <Image layout="fill" src={imagePath} alt={altLabel} />
+        </div>
+        <span className="text-gray-50 pl-6">{label}</span>
+      </div>
+      <svg className="feather w-6 h-6 stroke-gray-50">
+        <use href="/feather-sprite.svg#arrow-up-right" />
+      </svg>
+    </div>
   );
 }
 

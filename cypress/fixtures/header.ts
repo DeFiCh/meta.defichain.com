@@ -1,15 +1,15 @@
 export const developerList = [
-  { locator: "Developers-list", list_element: "Documentation" },
+  { locator: "Developers-list", list_element: "Documentation", disabled: true },
   { locator: "Developers-list", list_element: "Releases" },
   { locator: "Developers-list", list_element: "GitHub" },
   { locator: "Developers-list", list_element: "Developer's Chatroom" },
 ];
 
 export const ecosystemList = [
-  { locator: "Ecosystem-list", list_element: "DMC Explorer" },
+  { locator: "Ecosystem-list", list_element: "DMC Explorer", disabled: true },
   { locator: "Ecosystem-list", list_element: "DeFiChain.com" },
-  { locator: "Ecosystem-list", list_element: "Whitepaper" },
-  { locator: "Ecosystem-list", list_element: "Wallets" },
+  { locator: "Ecosystem-list", list_element: "Whitepaper", disabled: true },
+  { locator: "Ecosystem-list", list_element: "Wallets", disabled: true },
 ];
 
 export const communityList = [
@@ -19,7 +19,7 @@ export const communityList = [
   { locator: "Community-list", list_element: "Telegram" },
 ];
 export const developerDropdownLinks = [
-  { locator: "Documentation-link", link: "/" },
+  { locator: "Documentation-link", link: "/", disabled: true },
   {
     locator: "Releases-link",
     link: "https://github.com/DeFiCh/metachain/releases",
@@ -32,10 +32,10 @@ export const developerDropdownLinks = [
 ];
 
 export const ecosystemDropdownLinks = [
-  { locator: "DMC Explorer-link", link: "/" },
+  { locator: "DMC Explorer-link", link: "/", disabled: true },
   { locator: "DeFiChain.com-link", link: "https://defichain.com" },
-  { locator: "Whitepaper-link", link: "/" },
-  { locator: "Wallets-link", link: "/" },
+  { locator: "Whitepaper-link", link: "/", disabled: true },
+  { locator: "Wallets-link", link: "/", disabled: true },
 ];
 
 export const communityDropdownLinks = [
