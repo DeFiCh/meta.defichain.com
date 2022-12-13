@@ -3,8 +3,6 @@ lockfileVersion: 5.4
 specifiers:
   '@babel/types': ^7.20.5
   '@cypress/code-coverage': ^3.10.0
-  '@defichain/jellyfish-network': ^3.7.0
-  '@defichain/whale-api-client': ^3.7.0
   '@netlify/plugin-lighthouse': ^3.7.1
   '@netlify/plugin-nextjs': ^4.29.2
   '@react-three/drei': ^9.46.4
@@ -16,8 +14,9 @@ specifiers:
   '@types/react-type-animation': ^1.1.1
   '@types/three': ^0.146.0
   '@types/ua-parser-js': ^0.7.36
-  '@waveshq/standard-web': ^0.12.0
-  '@waveshq/standard-web-linter': ^0.12.0
+  '@waveshq/standard-defichain-jellyfishsdk': ^0.13.0
+  '@waveshq/standard-web': ^0.13.0
+  '@waveshq/standard-web-linter': ^0.13.0
   autoprefixer: ^10.4.13
   babel-plugin-istanbul: ^6.1.1
   babel-plugin-jsx-remove-data-test-id: ^3.0.0
@@ -37,15 +36,14 @@ specifiers:
 
 dependencies:
   '@babel/types': 7.20.5
-  '@defichain/jellyfish-network': 3.7.0_defichain@3.7.0
-  '@defichain/whale-api-client': 3.7.0_defichain@3.7.0
   '@react-three/drei': 9.46.4_xa6xk36nauwxkzngvitxgjpnr4
   '@react-three/fiber': 8.9.1_pvdsq7s4d5knbxbfttptgjiz3a
   '@reduxjs/toolkit': 1.9.1_k4ae6lp43ej6mezo3ztvx6pykq
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.4
   '@types/react-type-animation': 1.1.1
   '@types/ua-parser-js': 0.7.36
-  '@waveshq/standard-web': 0.12.0_nxrcxq3d2px3f3w2g4ulingn6i
+  '@waveshq/standard-defichain-jellyfishsdk': 0.13.0
+  '@waveshq/standard-web': 0.13.0_nxrcxq3d2px3f3w2g4ulingn6i
   bignumber.js: 9.1.1
   clsx: 1.2.1
   date-fns: 2.29.3
@@ -64,7 +62,7 @@ devDependencies:
   '@testing-library/cypress': 8.0.7_cypress@11.2.0
   '@types/node': 18.7.18
   '@types/three': 0.146.0
-  '@waveshq/standard-web-linter': 0.12.0_klpylqwss7j4mjsavnu5vopi6q
+  '@waveshq/standard-web-linter': 0.13.0_klpylqwss7j4mjsavnu5vopi6q
   autoprefixer: 10.4.13_postcss@8.4.20
   babel-plugin-istanbul: 6.1.1
   babel-plugin-jsx-remove-data-test-id: 3.0.0_@babel+core@7.20.5
@@ -1327,59 +1325,206 @@ packages:
       - supports-color
     dev: true
 
-  /@defichain/jellyfish-api-core/3.7.0_defichain@3.7.0:
-    resolution: {integrity: sha512-JUH4BKgSuidwLZRH9+hdB28QOU7XOHa7GOi5sioyDhlQ9gnN0UO9wfVlksDfND3K2JGNpU3aLpNo+ObLD6MGNw==}
+  /@defichain/jellyfish-address/3.8.0_defichain@3.8.0:
+    resolution: {integrity: sha512-6zuSGc9K4yKWSNIDQeI7Jdon4Jnq9FOidjqfUO+iPP0F2JWN8JshrZrTaq4kskwLBIu2wDVSi4FzGtSy44bYVA==}
     peerDependencies:
-      defichain: ^3.7.0
+      defichain: ^3.8.0
     dependencies:
-      '@defichain/jellyfish-json': 3.7.0_defichain@3.7.0
-      defichain: 3.7.0
+      '@defichain/jellyfish-crypto': 3.8.0_defichain@3.8.0
+      '@defichain/jellyfish-network': 3.8.0_defichain@3.8.0
+      '@defichain/jellyfish-transaction': 3.8.0_defichain@3.8.0
+      bech32: 2.0.0
+      bs58: 4.0.1
+      defichain: 3.8.0
     dev: false
 
-  /@defichain/jellyfish-api-jsonrpc/3.7.0_defichain@3.7.0:
-    resolution: {integrity: sha512-99FEmm9yAEoNkeWpnKe9FLNZLzyqNV2kXaMFMfLfJ8x0eG+2tF09CGRrWm/XBcRnRHSLhyON1Av8AXJXS91+YA==}
+  /@defichain/jellyfish-api-core/3.8.0_defichain@3.8.0:
+    resolution: {integrity: sha512-UUChe6ZY1zyTPBp4JA9xd0Fpx3l5XYU4qkjoiZSxPR+TfTBN4YKYcVhtqqsxvTG6uVHYUF1lwRCnD2qgkNq6VQ==}
     peerDependencies:
-      defichain: ^3.7.0
+      defichain: ^3.8.0
     dependencies:
-      '@defichain/jellyfish-api-core': 3.7.0_defichain@3.7.0
+      '@defichain/jellyfish-json': 3.8.0_defichain@3.8.0
+      defichain: 3.8.0
+    dev: false
+
+  /@defichain/jellyfish-api-jsonrpc/3.8.0_defichain@3.8.0:
+    resolution: {integrity: sha512-fx/Xxt2mRr7JO/Qi5fgZ7cXumQwU/m/770ivfGX/BvhzEEJemwMtdLJe7cAjIjob4TcQAVoxzV3T87G3g1afOg==}
+    peerDependencies:
+      defichain: ^3.8.0
+    dependencies:
+      '@defichain/jellyfish-api-core': 3.8.0_defichain@3.8.0
       abort-controller: 3.0.0
       cross-fetch: 3.1.5
-      defichain: 3.7.0
+      defichain: 3.8.0
     transitivePeerDependencies:
       - encoding
     dev: false
 
-  /@defichain/jellyfish-json/3.7.0_defichain@3.7.0:
-    resolution: {integrity: sha512-YnfrrA4/tH5p5aDYYrlw+XLGNjmRro4dq1Eon7EM/uTxobkICvZH2NnsSzPF90u8LrUCIwGL6Qev/0AxhQlC8g==}
+  /@defichain/jellyfish-buffer/3.8.0_defichain@3.8.0:
+    resolution: {integrity: sha512-2eHrpcdm1PfA5oe1Bc78ko258RBWWggjgz7T1ioEX9JWQE4Gmrs5wIIAACKx06p6g8ooiIXHPY7Z+HA9S4KbsA==}
     peerDependencies:
-      defichain: ^3.7.0
+      defichain: ^3.8.0
+    dependencies:
+      bignumber.js: 9.1.1
+      bn.js: 5.2.1
+      defichain: 3.8.0
+      smart-buffer: 4.2.0
+    dev: false
+
+  /@defichain/jellyfish-crypto/3.8.0_defichain@3.8.0:
+    resolution: {integrity: sha512-L+iOBsbEkTQGRYAn41G+JJCkdLByUBxYNfUUiCdb6O0rq4ldP8q6EQpeyewfQvaoruzQ1zSxk8RF4GTX8oK/Nw==}
+    peerDependencies:
+      defichain: ^3.8.0
+    dependencies:
+      bech32: 2.0.0
+      bip66: 1.1.5
+      browserify-aes: 1.2.0
+      bs58: 4.0.1
+      create-hash: 1.2.0
+      defichain: 3.8.0
+      randombytes: 2.1.0
+      tiny-secp256k1: 1.1.6
+      wif: 2.0.6
+    dev: false
+
+  /@defichain/jellyfish-json/3.8.0_defichain@3.8.0:
+    resolution: {integrity: sha512-UOJOcJFgosyXJQS9aBokpajv23lqc5j194gXAPw2IpjWSTWTlxEPEi7LNKvaLsFXDXuTRH87oJRR2qPt0QN+aQ==}
+    peerDependencies:
+      defichain: ^3.8.0
     dependencies:
       '@types/lossless-json': 1.0.1
       bignumber.js: 9.1.1
-      defichain: 3.7.0
+      defichain: 3.8.0
       lossless-json: 1.0.5
     dev: false
 
-  /@defichain/jellyfish-network/3.7.0_defichain@3.7.0:
-    resolution: {integrity: sha512-n/EpEezXBfm6e57KC8E1EfUBG2fHA/H5uwjvyzANS8cTGyRpuDJMaq/xsqbwssLyqmaoq9krtsoGrToyZ4f/5g==}
+  /@defichain/jellyfish-network/3.8.0_defichain@3.8.0:
+    resolution: {integrity: sha512-dWanOTi28KMyAGbOIkI4RoBfWLAzwmMHhWYVdgoHcvwJbuMaLPjTyCXl0UZM3kRL4fdFC7fv10Nzi98t7UfQYg==}
     peerDependencies:
-      defichain: ^3.7.0
+      defichain: ^3.8.0
     dependencies:
       bignumber.js: 9.1.1
-      defichain: 3.7.0
+      defichain: 3.8.0
     dev: false
 
-  /@defichain/whale-api-client/3.7.0_defichain@3.7.0:
-    resolution: {integrity: sha512-96tBpT0yc4CVkz+UovjPsYZAkRNR0IWwSBHif1099wJ81bKQQwUMjoXBVUyGhiyTk47jnZQIF/58FX7T5K+hvg==}
+  /@defichain/jellyfish-transaction-builder/3.8.0_defichain@3.8.0:
+    resolution: {integrity: sha512-6mBJ2nRCzZkSIMwVmgoDDg03VaelRAiqRW+/XsP4Bi+eXKRV6YFBXNlyrOWzxNpf7e94MLV9fh2uCJoK8e7sAg==}
     peerDependencies:
-      defichain: ^3.7.0
+      defichain: ^3.8.0
     dependencies:
-      '@defichain/jellyfish-api-core': 3.7.0_defichain@3.7.0
-      '@defichain/jellyfish-api-jsonrpc': 3.7.0_defichain@3.7.0
+      '@defichain/jellyfish-crypto': 3.8.0_defichain@3.8.0
+      '@defichain/jellyfish-transaction': 3.8.0_defichain@3.8.0
+      '@defichain/jellyfish-transaction-signature': 3.8.0_defichain@3.8.0
+      defichain: 3.8.0
+    dev: false
+
+  /@defichain/jellyfish-transaction-signature/3.8.0_defichain@3.8.0:
+    resolution: {integrity: sha512-6o63CHtJ5S3p7PInbfx6nLxxKnJyJUzM+lcEpiOupon+U32dpKu5B/oD9WUlnF98h0E5T0pfgkJMBxMQARAQlw==}
+    peerDependencies:
+      defichain: ^3.8.0
+    dependencies:
+      '@defichain/jellyfish-buffer': 3.8.0_defichain@3.8.0
+      '@defichain/jellyfish-crypto': 3.8.0_defichain@3.8.0
+      '@defichain/jellyfish-transaction': 3.8.0_defichain@3.8.0
+      defichain: 3.8.0
+    dev: false
+
+  /@defichain/jellyfish-transaction/3.8.0_defichain@3.8.0:
+    resolution: {integrity: sha512-ZgM8k5I/4UCfYWIuwz1dVIAmZm1kYJmXARHLLZ+uejLvYTqcrYEKKbFuJSGorGun9xOCfX7GXRdlp/3OOBDqww==}
+    peerDependencies:
+      defichain: ^3.8.0
+    dependencies:
+      '@defichain/jellyfish-buffer': 3.8.0_defichain@3.8.0
+      '@defichain/jellyfish-crypto': 3.8.0_defichain@3.8.0
+      defichain: 3.8.0
+    dev: false
+
+  /@defichain/jellyfish-wallet-encrypted/3.8.0_defichain@3.8.0:
+    resolution: {integrity: sha512-RZIs+pOOxYj/xeTCFwY1ZmwwR01VIPF8ObQliJE7FCfw2Xb+g3tYsxG29JfyxFWHz7bPkPCghU20L3m51CDpDw==}
+    peerDependencies:
+      defichain: ^3.8.0
+    dependencies:
+      '@defichain/jellyfish-wallet-mnemonic': 3.8.0_defichain@3.8.0
+      defichain: 3.8.0
+      scrypt-js: 3.0.1
+    dev: false
+
+  /@defichain/jellyfish-wallet-mnemonic/3.8.0_defichain@3.8.0:
+    resolution: {integrity: sha512-adDbN19B/25U5MGlwrjyhllF452PE9eHzb7KyRKsPUkpW9vzFzxqKy1UHLrsgGzwFDGepQWu5hM7xv8ux5zUCg==}
+    peerDependencies:
+      defichain: ^3.8.0
+    dependencies:
+      '@defichain/jellyfish-transaction': 3.8.0_defichain@3.8.0
+      '@defichain/jellyfish-wallet': 3.8.0_defichain@3.8.0
+      bip32: 2.0.6
+      bip39: 3.0.4
+      create-hmac: 1.1.7
+      defichain: 3.8.0
+    dev: false
+
+  /@defichain/jellyfish-wallet/3.8.0_defichain@3.8.0:
+    resolution: {integrity: sha512-csIR0EXbPADW0Hzt4VeB830DvkNeE/QrL8FOOFxF2wCL7aB3ZZYUMkarEDCYVKvHQvo/YNTFbKkd767IhCaRxw==}
+    peerDependencies:
+      defichain: ^3.8.0
+    dependencies:
+      '@defichain/jellyfish-address': 3.8.0_defichain@3.8.0
+      '@defichain/jellyfish-crypto': 3.8.0_defichain@3.8.0
+      '@defichain/jellyfish-network': 3.8.0_defichain@3.8.0
+      '@defichain/jellyfish-transaction': 3.8.0_defichain@3.8.0
+      '@defichain/jellyfish-transaction-builder': 3.8.0_defichain@3.8.0
+      '@defichain/jellyfish-transaction-signature': 3.8.0_defichain@3.8.0
+      defichain: 3.8.0
+    dev: false
+
+  /@defichain/ocean-api-client/3.8.0_defichain@3.8.0:
+    resolution: {integrity: sha512-zlw9rjw8noqlWZlpuuJla9rN3/ElSWHZJ96Z4goXw6Ss62sVDL1S1dMM21WSQ9VTTrZ9KEkN74BswaELVpg23Q==}
+    peerDependencies:
+      defichain: ^3.8.0
+    dependencies:
       abort-controller: 3.0.0
       cross-fetch: 3.1.5
-      defichain: 3.7.0
+      defichain: 3.8.0
       url-search-params-polyfill: 8.1.1
+    transitivePeerDependencies:
+      - encoding
+    dev: false
+
+  /@defichain/playground-api-client/3.8.0_defichain@3.8.0:
+    resolution: {integrity: sha512-v2PbT3QcL6V6qfgBLPRjXgst4c+D12KOtbynJR1yOdjkC5WCFJX/KF5L2Wia8G05liCH9H/ECQxauTYmj8svOg==}
+    peerDependencies:
+      defichain: ^3.8.0
+    dependencies:
+      '@defichain/jellyfish-api-core': 3.8.0_defichain@3.8.0
+      '@defichain/ocean-api-client': 3.8.0_defichain@3.8.0
+      defichain: 3.8.0
+    transitivePeerDependencies:
+      - encoding
+    dev: false
+
+  /@defichain/whale-api-client/3.8.0_defichain@3.8.0:
+    resolution: {integrity: sha512-3iBCs+0G+db3c8DW6a8wQ58c05lgZHvXyqmQRvPbn1fcO9tNL8fpsu+tpMKnT4OW1N0dqnffL+cJjoU//lTziA==}
+    peerDependencies:
+      defichain: ^3.8.0
+    dependencies:
+      '@defichain/jellyfish-api-core': 3.8.0_defichain@3.8.0
+      '@defichain/jellyfish-api-jsonrpc': 3.8.0_defichain@3.8.0
+      abort-controller: 3.0.0
+      cross-fetch: 3.1.5
+      defichain: 3.8.0
+      url-search-params-polyfill: 8.1.1
+    transitivePeerDependencies:
+      - encoding
+    dev: false
+
+  /@defichain/whale-api-wallet/3.8.0_defichain@3.8.0:
+    resolution: {integrity: sha512-/ehfuxa6cBLZJ4Btm0zLIBU+7i7+nAGbpLjAnM/iouFd7r64Ad0zPleFtDCu4JWC+YOnM9TlBpr0dpig0dNU0g==}
+    peerDependencies:
+      defichain: ^3.8.0
+    dependencies:
+      '@defichain/jellyfish-transaction-builder': 3.8.0_defichain@3.8.0
+      '@defichain/jellyfish-wallet': 3.8.0_defichain@3.8.0
+      '@defichain/whale-api-client': 3.8.0_defichain@3.8.0
+      defichain: 3.8.0
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -2194,6 +2339,14 @@ packages:
     resolution: {integrity: sha512-zPE8kmpeL5/6L5gtTQHSOkAW/OSYYNTDRt6/2oEgLO1Zd3Rj5WVDoMloTtLJxQJhZGLGbL4pktKSh3NbzdaWdw==}
     dev: false
 
+  /@types/node/10.12.18:
+    resolution: {integrity: sha512-fh+pAqt4xRzPfqA6eh3Z2y6fyZavRIumvjhaCL753+TVkGKGhpPeyrJG2JftD0T9q4GF00KjefsQ+PQNDdWQaQ==}
+    dev: false
+
+  /@types/node/11.11.6:
+    resolution: {integrity: sha512-Exw4yUWMBXM3X+8oqzJNRqZSwUAaS4+7NdvHqQuFi/d+synz++xmX3QIf+BFqneW8N31R8Ky+sikfZUXq07ggQ==}
+    dev: false
+
   /@types/node/14.18.34:
     resolution: {integrity: sha512-hcU9AIQVHmPnmjRK+XUUYlILlr9pQrsqSrwov/JK1pnf3GTQowVBhx54FbvM0AU/VXGH4i3+vgXS5EguR7fysA==}
     dev: true
@@ -2434,8 +2587,27 @@ packages:
     resolution: {integrity: sha512-haGBC8noyA5BfjCRXRH+VIkHCDVW5iD5UX24P2nOdilwUxI4qWsattS/co8QBGq64XsNLRAMdM5pQUE3zxkF9Q==}
     dev: true
 
-  /@waveshq/standard-web-linter/0.12.0_klpylqwss7j4mjsavnu5vopi6q:
-    resolution: {integrity: sha512-c87+X+7RRwy9Kp0TPBEYelWgbo3bdzNIUz5QVouficG9uAB30VcvocGtG2r55IOAj9W6aktnX/nplPdn58Iw7Q==}
+  /@waveshq/standard-defichain-jellyfishsdk/0.13.0:
+    resolution: {integrity: sha512-riyiNOGCg1zlWzuBmmTrYxU+9YSOaMfo9sR1iCsROvzlcWLypNlOoa2bCdFtGG7vgGMaNdpVJqcfWxupIcHvHA==}
+    dependencies:
+      '@defichain/jellyfish-address': 3.8.0_defichain@3.8.0
+      '@defichain/jellyfish-api-core': 3.8.0_defichain@3.8.0
+      '@defichain/jellyfish-network': 3.8.0_defichain@3.8.0
+      '@defichain/jellyfish-transaction': 3.8.0_defichain@3.8.0
+      '@defichain/jellyfish-transaction-builder': 3.8.0_defichain@3.8.0
+      '@defichain/jellyfish-wallet': 3.8.0_defichain@3.8.0
+      '@defichain/jellyfish-wallet-encrypted': 3.8.0_defichain@3.8.0
+      '@defichain/jellyfish-wallet-mnemonic': 3.8.0_defichain@3.8.0
+      '@defichain/playground-api-client': 3.8.0_defichain@3.8.0
+      '@defichain/whale-api-client': 3.8.0_defichain@3.8.0
+      '@defichain/whale-api-wallet': 3.8.0_defichain@3.8.0
+      defichain: 3.8.0
+    transitivePeerDependencies:
+      - encoding
+    dev: false
+
+  /@waveshq/standard-web-linter/0.13.0_klpylqwss7j4mjsavnu5vopi6q:
+    resolution: {integrity: sha512-zHqLUUaHIaOOOcLZtTkEFqIuWGpQwvNteGqqM9/VqHT8CUwS8/YIie1cAcwCByADENM191nqoD9SzrZ5sKyaOw==}
     dependencies:
       eslint: 8.29.0
       eslint-config-airbnb: 19.0.4_u6r7wmyqgznou2plc6ye67x2ku
@@ -2470,8 +2642,8 @@ packages:
       - supports-color
     dev: true
 
-  /@waveshq/standard-web/0.12.0_nxrcxq3d2px3f3w2g4ulingn6i:
-    resolution: {integrity: sha512-eQlo3cxZvFJwiCXR7OS5/R4/eqQSWK8/x7anPRcoKWrcbzR4bN/0O1S1MhvDfsMVl4dPEPPpMZzuRZqSS9iGzA==}
+  /@waveshq/standard-web/0.13.0_nxrcxq3d2px3f3w2g4ulingn6i:
+    resolution: {integrity: sha512-7jvAHlYeiCFUPvgaefviBsPJq5JgPhdet9/rMSS+bE0BXa2IHUQ6eaUpPC0q2myVRqMu9puor2K66KHvlrtI6A==}
     dependencies:
       '@netlify/ipx': 1.3.2
       '@types/react': 18.0.26
@@ -2999,6 +3171,12 @@ packages:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
     dev: true
 
+  /base-x/3.0.9:
+    resolution: {integrity: sha512-H7JU6iBHTal1gp56aKoaa//YUxEaAOUiydvrV/pILqIHXTtqxSkATOnDA2u+jZ/61sD+L/412+7kzXRtWukhpQ==}
+    dependencies:
+      safe-buffer: 5.2.1
+    dev: false
+
   /base64-js/1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
 
@@ -3007,6 +3185,10 @@ packages:
     dependencies:
       tweetnacl: 0.14.5
     dev: true
+
+  /bech32/2.0.0:
+    resolution: {integrity: sha512-LcknSilhIGatDAsY1ak2I8VtGaHNhgMSYVxFrGLXv+xLHytaKZKcaUJJUE7qmBr7h33o5YQwP55pMI0xmkpJwg==}
+    dev: false
 
   /bezier-easing/2.1.0:
     resolution: {integrity: sha512-gbIqZ/eslnUFC1tjEvtz0sgx+xTK20wDnYMIA27VA04R7w6xxXQPZDbibjA9DTWZRA2CXtwHykkVzlCaAJAZig==}
@@ -3030,6 +3212,40 @@ packages:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
     engines: {node: '>=8'}
 
+  /bindings/1.5.0:
+    resolution: {integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==}
+    dependencies:
+      file-uri-to-path: 1.0.0
+    dev: false
+
+  /bip32/2.0.6:
+    resolution: {integrity: sha512-HpV5OMLLGTjSVblmrtYRfFFKuQB+GArM0+XP8HGWfJ5vxYBqo+DesvJwOdC2WJ3bCkZShGf0QIfoIpeomVzVdA==}
+    engines: {node: '>=6.0.0'}
+    dependencies:
+      '@types/node': 10.12.18
+      bs58check: 2.1.2
+      create-hash: 1.2.0
+      create-hmac: 1.1.7
+      tiny-secp256k1: 1.1.6
+      typeforce: 1.18.0
+      wif: 2.0.6
+    dev: false
+
+  /bip39/3.0.4:
+    resolution: {integrity: sha512-YZKQlb752TrUWqHWj7XAwCSjYEgGAk+/Aas3V7NyjQeZYsztO8JnQUaCWhcnL4T+jL8nvB8typ2jRPzTlgugNw==}
+    dependencies:
+      '@types/node': 11.11.6
+      create-hash: 1.2.0
+      pbkdf2: 3.1.2
+      randombytes: 2.1.0
+    dev: false
+
+  /bip66/1.1.5:
+    resolution: {integrity: sha512-nemMHz95EmS38a26XbbdxIYj5csHd3RMP3H5bwQknX0WYHF01qhpufP42mLOwVICuH2JmhIhXiWs89MfUGL7Xw==}
+    dependencies:
+      safe-buffer: 5.2.1
+    dev: false
+
   /bl/4.1.0:
     resolution: {integrity: sha512-1W07cM9gS6DcLperZfFSj+bWLtaPGSOHWhPiGzXmvVJbRLdG82sH/Kn8EtW1VqWVA54AKf2h5k5BbnIbwF3h6w==}
     dependencies:
@@ -3048,6 +3264,14 @@ packages:
   /bluebird/3.7.2:
     resolution: {integrity: sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==}
     dev: true
+
+  /bn.js/4.12.0:
+    resolution: {integrity: sha512-c98Bf3tPniI+scsdk237ku1Dc3ujXQTSgyiPUDEOe7tRkhrqridvh8klBv0HCEso1OLOYcHuCv/cS6DNxKH+ZA==}
+    dev: false
+
+  /bn.js/5.2.1:
+    resolution: {integrity: sha512-eXRvHzWyYPBuB4NBy0cmYQjGitUrtqwbvlzP3G6VFnNRbsZQIxQ10PbKKHt8gZ/HW/D/747aDl+QkDqg3KQLMQ==}
+    dev: false
 
   /body-parser/1.20.1:
     resolution: {integrity: sha512-jWi7abTbYwajOytWCQc37VulmWiRae5RyTpaCyDcS5/lMdtwSz5lOpDE67srw/HYe35f1z3fDQw+3txg7gNtWw==}
@@ -3082,6 +3306,21 @@ packages:
     dependencies:
       fill-range: 7.0.1
 
+  /brorand/1.1.0:
+    resolution: {integrity: sha512-cKV8tMCEpQs4hK/ik71d6LrPOnpkpGBR0wzxqr68g2m/LB2GxVYQroAjMJZRVM1Y4BCjCKc3vAamxSzOY2RP+w==}
+    dev: false
+
+  /browserify-aes/1.2.0:
+    resolution: {integrity: sha512-+7CHXqGuspUn/Sl5aO7Ea0xWGAtETPXNSAjHo48JfLdPWcMng33Xe4znFvQweqc/uzk5zSOI3H52CYnjCfb5hA==}
+    dependencies:
+      buffer-xor: 1.0.3
+      cipher-base: 1.0.4
+      create-hash: 1.2.0
+      evp_bytestokey: 1.0.3
+      inherits: 2.0.4
+      safe-buffer: 5.2.1
+    dev: false
+
   /browserslist/4.21.4:
     resolution: {integrity: sha512-CBHJJdDmgjl3daYjN5Cp5kbTf1mUhZoS+beLklHIvkOWscs83YAhLlF3Wsh/lciQYAcbBJgTOD44VtG31ZM4Hw==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
@@ -3092,6 +3331,20 @@ packages:
       node-releases: 2.0.6
       update-browserslist-db: 1.0.10_browserslist@4.21.4
 
+  /bs58/4.0.1:
+    resolution: {integrity: sha512-Ok3Wdf5vOIlBrgCvTq96gBkJw+JUEzdBgyaza5HLtPm7yTHkjRy8+JzNyHF7BHa0bNWOQIp3m5YF0nnFcOIKLw==}
+    dependencies:
+      base-x: 3.0.9
+    dev: false
+
+  /bs58check/2.1.2:
+    resolution: {integrity: sha512-0TS1jicxdU09dwJMNZtVAfzPi6Q6QeN0pM1Fkzrjn+XYHvzMKPU3pHVpva+769iNVSfIYWf7LJ6WR+BuuMf8cA==}
+    dependencies:
+      bs58: 4.0.1
+      create-hash: 1.2.0
+      safe-buffer: 5.2.1
+    dev: false
+
   /buffer-crc32/0.2.13:
     resolution: {integrity: sha512-VO9Ht/+p3SN7SKWqcrgEzjGbRSJYTx+Q1pTQC0wrWqHx0vpJraQ6GtHx8tvcg1rlK1byhU5gccxgOgj7B0TDkQ==}
     dev: true
@@ -3099,6 +3352,10 @@ packages:
   /buffer-from/1.1.2:
     resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
     dev: true
+
+  /buffer-xor/1.0.3:
+    resolution: {integrity: sha512-571s0T7nZWK6vB67HI5dyUF7wXiNcfaPPPTl6zYCNApANjIvYJTg7hlud/+cJpdAhS7dVzqMLmfhfHR3rAcOjQ==}
+    dev: false
 
   /buffer/5.7.1:
     resolution: {integrity: sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==}
@@ -3247,6 +3504,13 @@ packages:
     resolution: {integrity: sha512-2CpRNYmImPx+RXKLq6jko/L07phmS9I02TyqkcNU20GCF/GgaWvc58hPtjxDX8lPpkdwc9sNh72V9k00S7ezog==}
     engines: {node: '>=8'}
     dev: true
+
+  /cipher-base/1.0.4:
+    resolution: {integrity: sha512-Kkht5ye6ZGmwv40uUDZztayT2ThLQGfnj/T71N/XzeZeo3nf8foyW7zGTsPYkEya3m5f3cAypH+qe7YOrM1U2Q==}
+    dependencies:
+      inherits: 2.0.4
+      safe-buffer: 5.2.1
+    dev: false
 
   /classnames/2.3.2:
     resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
@@ -3492,6 +3756,27 @@ packages:
     resolution: {integrity: sha512-3lqz5YjWTYnW6dlDa5TLaTCcShfar1e40rmcJVwCBJC6mWlFuj0eCHIElmG1g5kyuJ/GD+8Wn4FFCcz4gJPfaQ==}
     dev: true
 
+  /create-hash/1.2.0:
+    resolution: {integrity: sha512-z00bCGNHDG8mHAkP7CtT1qVu+bFQUPjYq/4Iv3C3kWjTFV10zIjfSoeqXo9Asws8gwSHDGj/hl2u4OGIjapeCg==}
+    dependencies:
+      cipher-base: 1.0.4
+      inherits: 2.0.4
+      md5.js: 1.3.5
+      ripemd160: 2.0.2
+      sha.js: 2.4.11
+    dev: false
+
+  /create-hmac/1.1.7:
+    resolution: {integrity: sha512-MJG9liiZ+ogc4TzUwuvbER1JRdgvUFSB5+VR/g5h82fGaIRWMWddtKBHi7/sVhfjQZ6SehlyhvQYrcYkaUIpLg==}
+    dependencies:
+      cipher-base: 1.0.4
+      create-hash: 1.2.0
+      inherits: 2.0.4
+      ripemd160: 2.0.2
+      safe-buffer: 5.2.1
+      sha.js: 2.4.11
+    dev: false
+
   /cross-fetch/3.1.5:
     resolution: {integrity: sha512-lvb1SBsI0Z7GDwmuid+mU3kWVBwTVUbe7S0H52yaaAdQOXq2YktTCZdlAcNKFzE6QtRz0snpw9bNiPeOIkkQvw==}
     dependencies:
@@ -3728,8 +4013,8 @@ packages:
       strip-bom: 4.0.0
     dev: true
 
-  /defichain/3.7.0:
-    resolution: {integrity: sha512-5cN+cxXwTZBs0EXxZs8raZNCYIXxFaRKtR/3vKI280xiGRwEIpFZULdOeGKFeTv2PVoagvSXCegmBaF/YTzv4g==}
+  /defichain/3.8.0:
+    resolution: {integrity: sha512-frdMqx6frk4E2Em0wS6zmfqzyYwYbyyc12Tt0GeaKPVg7HWmFo5lF8ZhrmkCPsw9+dNvaOtQJdRKisLMXy4xyg==}
     engines: {node: '>=v16.17.0'}
     dev: false
 
@@ -3865,6 +4150,18 @@ packages:
 
   /electron-to-chromium/1.4.284:
     resolution: {integrity: sha512-M8WEXFuKXMYMVr45fo8mq0wUrrJHheiKZf6BArTKk9ZBYCKJEOU5H8cdWgDT+qCVZf7Na4lVUaZsA+h6uA9+PA==}
+
+  /elliptic/6.5.4:
+    resolution: {integrity: sha512-iLhC6ULemrljPZb+QutR5TQGB+pdW6KGD5RSegS+8sorOZT+rdQFbsQFJgvN3eRqNALqJer4oQ16YvJHlU8hzQ==}
+    dependencies:
+      bn.js: 4.12.0
+      brorand: 1.1.0
+      hash.js: 1.1.7
+      hmac-drbg: 1.0.1
+      inherits: 2.0.4
+      minimalistic-assert: 1.0.1
+      minimalistic-crypto-utils: 1.0.1
+    dev: false
 
   /emoji-regex/8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -4486,6 +4783,13 @@ packages:
     engines: {node: '>=0.8.x'}
     dev: true
 
+  /evp_bytestokey/1.0.3:
+    resolution: {integrity: sha512-/f2Go4TognH/KvCISP7OUsHn85hT9nUkxxA9BEWxFn+Oj9o8ZNLm/40hdlgSLyuOimsrTKLUMEorQexp/aPQeA==}
+    dependencies:
+      md5.js: 1.3.5
+      safe-buffer: 5.2.1
+    dev: false
+
   /execa/4.1.0:
     resolution: {integrity: sha512-j5W0//W7f8UxAn8hXVnwG8tLwdiUy4FJLcSupCg6maBYZDpyBvTApK7KyuI4bKj8KOh1r2YH+6ucuYtJv1bTZA==}
     engines: {node: '>=10'}
@@ -4682,6 +4986,10 @@ packages:
     dependencies:
       flat-cache: 3.0.4
     dev: true
+
+  /file-uri-to-path/1.0.0:
+    resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
+    dev: false
 
   /fill-range/7.0.1:
     resolution: {integrity: sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==}
@@ -5073,6 +5381,22 @@ packages:
     dependencies:
       function-bind: 1.1.1
 
+  /hash-base/3.1.0:
+    resolution: {integrity: sha512-1nmYp/rhMDiE7AYkDw+lLwlAzz0AntGIe51F3RfFfEqyQ3feY2eI/NcwC6umIQVOASPMsWJLJScWKSSvzL9IVA==}
+    engines: {node: '>=4'}
+    dependencies:
+      inherits: 2.0.4
+      readable-stream: 3.6.0
+      safe-buffer: 5.2.1
+    dev: false
+
+  /hash.js/1.1.7:
+    resolution: {integrity: sha512-taOaskGt4z4SOANNseOviYDvjEJinIkRgmp7LbKP2YTTmVxWBl87s/uzK9r+44BclBSp2X7K1hqeNfz9JbBeXA==}
+    dependencies:
+      inherits: 2.0.4
+      minimalistic-assert: 1.0.1
+    dev: false
+
   /hasha/5.2.2:
     resolution: {integrity: sha512-Hrp5vIK/xr5SkeN2onO32H0MgNZ0f17HRNH39WfL0SYUNOTZ5Lz1TJ8Pajo/87dYGEFlLMm7mIc/k/s6Bvz9HQ==}
     engines: {node: '>=8'}
@@ -5085,6 +5409,14 @@ packages:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
     hasBin: true
     dev: true
+
+  /hmac-drbg/1.0.1:
+    resolution: {integrity: sha512-Tti3gMqLdZfhOQY1Mzf/AanLiqh1WTiJgEj26ZuYQ9fbkLomzGchCws4FyrSd4VkpBfiNhaE1On+lOz894jvXg==}
+    dependencies:
+      hash.js: 1.1.7
+      minimalistic-assert: 1.0.1
+      minimalistic-crypto-utils: 1.0.1
+    dev: false
 
   /hoist-non-react-statics/3.3.2:
     resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
@@ -6024,6 +6356,14 @@ packages:
       css-mediaquery: 0.1.2
     dev: false
 
+  /md5.js/1.3.5:
+    resolution: {integrity: sha512-xitP+WxNPcTTOgnTJcrhM0xvdPepipPSf3I8EIpGKeFLjt3PlJLIDG3u8EX53ZIubkb+5U2+3rELYpEhHhzdkg==}
+    dependencies:
+      hash-base: 3.1.0
+      inherits: 2.0.4
+      safe-buffer: 5.2.1
+    dev: false
+
   /md5/2.3.0:
     resolution: {integrity: sha512-T1GITYmFaKuO91vxyoQMFETst+O71VUPEU3ze5GNzDm0OWdP8v1ziTaAEPUr/3kLsY3Sftgz242A1SetQiDL7g==}
     dependencies:
@@ -6107,6 +6447,14 @@ packages:
     resolution: {integrity: sha512-z0yWI+4FDrrweS8Zmt4Ej5HdJmky15+L2e6Wgn3+iK5fWzb6T3fhNFq2+MeTRb064c6Wr4N/wv0DzQTjNzHNGQ==}
     engines: {node: '>=10'}
 
+  /minimalistic-assert/1.0.1:
+    resolution: {integrity: sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==}
+    dev: false
+
+  /minimalistic-crypto-utils/1.0.1:
+    resolution: {integrity: sha512-JIYlbt6g8i5jKfJ3xz7rF0LXmv2TkDxBLUkiBeZ7bAx4GnnNMr8xFpGnOxn6GhTEHx3SjRrZEoU+j04prX1ktg==}
+    dev: false
+
   /minimatch/3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
     dependencies:
@@ -6156,6 +6504,10 @@ packages:
 
   /murmurhash/2.0.1:
     resolution: {integrity: sha512-5vQEh3y+DG/lMPM0mCGPDnyV8chYg/g7rl6v3Gd8WMF9S429ox3Xk8qrk174kWhG767KQMqqxLD1WnGd77hiew==}
+
+  /nan/2.17.0:
+    resolution: {integrity: sha512-2ZTgtl0nJsO0KQCjEpxcIr5D+Yv90plTitZt9JBfQvVJDS5seMl3FOvsh3+9CoYWXf/1l5OaZzzF6nDm4cagaQ==}
+    dev: false
 
   /nanoid/3.3.4:
     resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
@@ -6631,6 +6983,17 @@ packages:
   /pathe/0.3.9:
     resolution: {integrity: sha512-6Y6s0vT112P3jD8dGfuS6r+lpa0qqNrLyHPOwvXMnyNTQaYiwgau2DP3aNDsR13xqtGj7rrPo+jFUATpU6/s+g==}
 
+  /pbkdf2/3.1.2:
+    resolution: {integrity: sha512-iuh7L6jA7JEGu2WxDwtQP1ddOpaJNC4KlDEFfdQajSGgGPNi4OyDc2R7QnbY2bR9QjBVGwgvTdNJZoE7RaxUMA==}
+    engines: {node: '>=0.12'}
+    dependencies:
+      create-hash: 1.2.0
+      create-hmac: 1.1.7
+      ripemd160: 2.0.2
+      safe-buffer: 5.2.1
+      sha.js: 2.4.11
+    dev: false
+
   /pend/1.2.0:
     resolution: {integrity: sha512-F3asv42UuXchdzt+xXqfW1OGlVBe+mxa2mqI0pg5yAHZPvFmY3Y6drSf/GQ1A86WgWEN9Kzh/WrgKa6iGcHXLg==}
     dev: true
@@ -6929,7 +7292,6 @@ packages:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
     dependencies:
       safe-buffer: 5.2.1
-    dev: true
 
   /range-parser/1.2.1:
     resolution: {integrity: sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==}
@@ -7299,6 +7661,13 @@ packages:
       glob: 7.2.3
     dev: true
 
+  /ripemd160/2.0.2:
+    resolution: {integrity: sha512-ii4iagi25WusVoiC4B4lq7pbXfAp3D9v5CwfkY33vffw2+pkDjY1D8GaN7spsxvCSx8dkPqOZCEZyfxcmJG2IA==}
+    dependencies:
+      hash-base: 3.1.0
+      inherits: 2.0.4
+    dev: false
+
   /robots-parser/3.0.0:
     resolution: {integrity: sha512-6xkze3WRdneibICBAzMKcXyTKQw5shA3GbwoEJy7RSvxpZNGF0GMuYKE1T0VMP4fwx/fQs0n0mtriOqRtk5L1w==}
     engines: {node: '>=0.10'}
@@ -7362,6 +7731,10 @@ packages:
       ajv: 6.12.6
       ajv-keywords: 3.5.2_ajv@6.12.6
     dev: true
+
+  /scrypt-js/3.0.1:
+    resolution: {integrity: sha512-cdwTTnqPu0Hyvf5in5asVdZocVDTNRmR7XEcJuIzMjJeSHybHl7vpB66AzwTaIg6CLSbtjcxc8fqcySfnTkccA==}
+    dev: false
 
   /selfsigned/2.1.1:
     resolution: {integrity: sha512-GSL3aowiF7wa/WtSFwnUrludWFoNhftq8bUkH9pkzjpN2XSPOAYEgg6e0sS9s0rZwgJzJiQRPU18A6clnoW5wQ==}
@@ -7431,6 +7804,14 @@ packages:
   /setprototypeof/1.2.0:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
     dev: true
+
+  /sha.js/2.4.11:
+    resolution: {integrity: sha512-QMEp5B7cftE7APOjk5Y6xgrbWu+WkLVQwk8JNjZ8nKRciZaByEW6MubieAiToS7+dwvrjGhH8jRXz3MVd0AYqQ==}
+    hasBin: true
+    dependencies:
+      inherits: 2.0.4
+      safe-buffer: 5.2.1
+    dev: false
 
   /shallow-equal/1.2.1:
     resolution: {integrity: sha512-S4vJDjHHMBaiZuT9NPb616CSmLf618jawtv3sufLl6ivK8WocjAo58cXwbRV1cgqxH0Qbv+iUt6m05eqEa2IRA==}
@@ -7521,6 +7902,11 @@ packages:
       ansi-styles: 6.2.1
       is-fullwidth-code-point: 4.0.0
     dev: true
+
+  /smart-buffer/4.2.0:
+    resolution: {integrity: sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==}
+    engines: {node: '>= 6.0.0', npm: '>= 3.0.0'}
+    dev: false
 
   /source-map-js/1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
@@ -7913,6 +8299,18 @@ packages:
     resolution: {integrity: sha512-pkY1fj1cKHb2seWDy0B16HeWyczlJA9/WW3u3c4z/NiWDsO3DOU5D7nhTLE9CF0yXv/QZFY7sEJmj24dK+Rrqw==}
     dev: false
 
+  /tiny-secp256k1/1.1.6:
+    resolution: {integrity: sha512-FmqJZGduTyvsr2cF3375fqGHUovSwDi/QytexX1Se4BPuPZpTE5Ftp5fg+EFSuEf3lhZqgCRjEG3ydUQ/aNiwA==}
+    engines: {node: '>=6.0.0'}
+    requiresBuild: true
+    dependencies:
+      bindings: 1.5.0
+      bn.js: 4.12.0
+      create-hmac: 1.1.7
+      elliptic: 6.5.4
+      nan: 2.17.0
+    dev: false
+
   /tmp/0.2.1:
     resolution: {integrity: sha512-76SUhtfqR2Ijn+xllcI5P1oyannHNHByD80W1q447gU3mp9G9PSpGdWmjUOHRDPiHYacIk66W7ubDTuPF3BEtQ==}
     engines: {node: '>=8.17.0'}
@@ -8040,6 +8438,10 @@ packages:
     dependencies:
       is-typedarray: 1.0.0
     dev: true
+
+  /typeforce/1.18.0:
+    resolution: {integrity: sha512-7uc1O8h1M1g0rArakJdf0uLRSSgFcYexrVoKo+bzJd32gd4gDy2L/Z+8/FjPnU9ydY3pEnVPtr9FyscYY60K1g==}
+    dev: false
 
   /typescript/4.9.4:
     resolution: {integrity: sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==}
@@ -8326,6 +8728,12 @@ packages:
     hasBin: true
     dependencies:
       isexe: 2.0.0
+
+  /wif/2.0.6:
+    resolution: {integrity: sha512-HIanZn1zmduSF+BQhkE+YXIbEiH0xPr1012QbFEGB0xsKqJii0/SqJjyn8dFv6y36kOznMgMB+LGcbZTJ1xACQ==}
+    dependencies:
+      bs58check: 2.1.2
+    dev: false
 
   /word-wrap/1.2.3:
     resolution: {integrity: sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==}
