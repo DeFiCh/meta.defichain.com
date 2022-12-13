@@ -1,5 +1,5 @@
 {
-  "name": "defimetachain.org",
+  "name": "meta.defichain.com",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -16,15 +16,14 @@
   },
   "dependencies": {
     "@babel/types": "^7.20.5",
-    "@defichain/jellyfish-network": "^3.7.0",
-    "@defichain/whale-api-client": "^3.7.0",
     "@react-three/drei": "^9.46.4",
     "@react-three/fiber": "^8.9.1",
     "@reduxjs/toolkit": "^1.9.1",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@types/react-type-animation": "^1.1.1",
     "@types/ua-parser-js": "^0.7.36",
-    "@waveshq/standard-web": "^0.12.0",
+    "@waveshq/standard-defichain-jellyfishsdk": "^0.13.0",
+    "@waveshq/standard-web": "^0.13.0",
     "bignumber.js": "^9.1.1",
     "clsx": "^1.2.1",
     "date-fns": "^2.29.3",
@@ -43,7 +42,7 @@
     "@testing-library/cypress": "^8.0.7",
     "@types/node": "18.7.18",
     "@types/three": "^0.146.0",
-    "@waveshq/standard-web-linter": "^0.12.0",
+    "@waveshq/standard-web-linter": "^0.13.0",
     "autoprefixer": "^10.4.13",
     "babel-plugin-istanbul": "^6.1.1",
     "babel-plugin-jsx-remove-data-test-id": "^3.0.0",
