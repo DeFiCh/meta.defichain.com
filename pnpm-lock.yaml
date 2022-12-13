@@ -5,7 +5,7 @@ specifiers:
   '@cypress/code-coverage': ^3.10.0
   '@netlify/plugin-lighthouse': ^3.7.1
   '@netlify/plugin-nextjs': ^4.29.2
-  '@react-three/drei': ^9.46.4
+  '@react-three/drei': ^9.46.5
   '@react-three/fiber': ^8.9.1
   '@reduxjs/toolkit': ^1.9.1
   '@tailwindcss/line-clamp': ^0.4.2
@@ -36,7 +36,7 @@ specifiers:
 
 dependencies:
   '@babel/types': 7.20.5
-  '@react-three/drei': 9.46.4_xa6xk36nauwxkzngvitxgjpnr4
+  '@react-three/drei': 9.46.5_xa6xk36nauwxkzngvitxgjpnr4
   '@react-three/fiber': 8.9.1_pvdsq7s4d5knbxbfttptgjiz3a
   '@reduxjs/toolkit': 1.9.1_k4ae6lp43ej6mezo3ztvx6pykq
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.4
@@ -2109,8 +2109,8 @@ packages:
     resolution: {integrity: sha512-7I/qY8H7Enwasxr4jU6WmtNK+RZ4Z/XvSlDvjXFVe7ii1x0MoSlkw6pD7xuac8qrHQRm9BTcbZNyeeKApYsvCg==}
     dev: false
 
-  /@react-three/drei/9.46.4_xa6xk36nauwxkzngvitxgjpnr4:
-    resolution: {integrity: sha512-jrX+gMHlLLcjOy4VvjGEJz6EauzKUXscLi2hmLUhTZ2PI4SwcaZJNKf4KP639XqA4CL1fpIkA/GTmBwVKTUn8A==}
+  /@react-three/drei/9.46.5_xa6xk36nauwxkzngvitxgjpnr4:
+    resolution: {integrity: sha512-iPCMHxOIQ9SXRTpIWFNLl6/fpyKr/xW5bdl3MuqiNS9F/h8eI99cejj0hMlDbtDpG/l5WUgujhEryE75Q0DxGg==}
     peerDependencies:
       '@react-three/fiber': '>=8.0'
       react: '>=18.0'
@@ -2129,7 +2129,7 @@ packages:
       lodash.clamp: 4.0.3
       lodash.omit: 4.5.0
       lodash.pick: 4.4.0
-      meshline: 3.0.4_three@0.147.0
+      meshline: 3.1.6_three@0.147.0
       react: 18.2.0
       react-composer: 5.0.3_react@18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -6397,8 +6397,8 @@ packages:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
 
-  /meshline/3.0.4_three@0.147.0:
-    resolution: {integrity: sha512-o4kwwnhgYLyNwcB6i+qHejuN9l129p7mdF0vsqzWEAHGw5SBwD9q0ut+tX3G3om8PUW7GOQQa5V4t3I7wMN41Q==}
+  /meshline/3.1.6_three@0.147.0:
+    resolution: {integrity: sha512-8JZJOdaL5oz3PI/upG8JvP/5FfzYUOhrkJ8np/WKvXzl0/PZ2V9pqTvCIjSKv+w9ccg2xb+yyBhXAwt6ier3ug==}
     peerDependencies:
       three: '>=0.137'
     dependencies:
