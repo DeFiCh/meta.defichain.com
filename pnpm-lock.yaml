@@ -5,7 +5,7 @@ specifiers:
   '@cypress/code-coverage': ^3.10.0
   '@netlify/plugin-lighthouse': ^3.7.1
   '@netlify/plugin-nextjs': ^4.29.4
-  '@react-three/drei': ^9.46.7
+  '@react-three/drei': ^9.48.1
   '@react-three/fiber': ^8.9.1
   '@reduxjs/toolkit': ^1.9.1
   '@tailwindcss/line-clamp': ^0.4.2
@@ -36,7 +36,7 @@ specifiers:
 
 dependencies:
   '@babel/types': 7.20.5
-  '@react-three/drei': 9.46.7_xa6xk36nauwxkzngvitxgjpnr4
+  '@react-three/drei': 9.48.1_xa6xk36nauwxkzngvitxgjpnr4
   '@react-three/fiber': 8.9.1_pvdsq7s4d5knbxbfttptgjiz3a
   '@reduxjs/toolkit': 1.9.1_k4ae6lp43ej6mezo3ztvx6pykq
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.4
@@ -2109,8 +2109,8 @@ packages:
     resolution: {integrity: sha512-7I/qY8H7Enwasxr4jU6WmtNK+RZ4Z/XvSlDvjXFVe7ii1x0MoSlkw6pD7xuac8qrHQRm9BTcbZNyeeKApYsvCg==}
     dev: false
 
-  /@react-three/drei/9.46.7_xa6xk36nauwxkzngvitxgjpnr4:
-    resolution: {integrity: sha512-OiKKfczuxEAeoA5moG6EG0/yHYS23g5cNl8X78M1ib+jzyRIPSFAW2ZTGka8jALT6KLcMJgVsv2iBVkMd8Hv8A==}
+  /@react-three/drei/9.48.1_xa6xk36nauwxkzngvitxgjpnr4:
+    resolution: {integrity: sha512-48g2FbQoioOtCf5SFtHPFMMBXT3cDBpZBKAz/2lPoWdCEmitRFllwCnsqmxAtRUVmqAl4tYmmkAXu3Jy3PZUFQ==}
     peerDependencies:
       '@react-three/fiber': '>=8.0'
       react: '>=18.0'
