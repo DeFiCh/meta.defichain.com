@@ -41,7 +41,7 @@
     "@netlify/plugin-nextjs": "^4.29.4",
     "@testing-library/cypress": "^8.0.7",
     "@types/node": "18.7.18",
-    "@types/three": "^0.146.0",
+    "@types/three": "^0.147.0",
     "@waveshq/standard-web-linter": "^0.25.0",
     "autoprefixer": "^10.4.13",
     "babel-plugin-istanbul": "^6.1.1",
