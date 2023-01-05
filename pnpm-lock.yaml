@@ -12,7 +12,7 @@ specifiers:
   '@testing-library/cypress': ^8.0.7
   '@types/node': 18.7.18
   '@types/react-type-animation': ^1.1.1
-  '@types/three': ^0.147.1
+  '@types/three': ^0.148.0
   '@types/ua-parser-js': ^0.7.36
   '@waveshq/standard-defichain-jellyfishsdk': ^0.25.0
   '@waveshq/standard-web': ^0.25.0
@@ -61,7 +61,7 @@ devDependencies:
   '@netlify/plugin-nextjs': 4.29.4
   '@testing-library/cypress': 8.0.7_cypress@11.2.0
   '@types/node': 18.7.18
-  '@types/three': 0.147.1
+  '@types/three': 0.148.0
   '@waveshq/standard-web-linter': 0.25.0_klpylqwss7j4mjsavnu5vopi6q
   autoprefixer: 10.4.13_postcss@8.4.20
   babel-plugin-istanbul: 6.1.1
@@ -2415,8 +2415,8 @@ packages:
     resolution: {integrity: sha512-JYM8x9EGF163bEyhdJBpR2QX1R5naCJHC8ucJylJ3w9/CVBaskdQ8WqBf8MmQrd1kRvp/a4TS8HJ+bxzR7ZJYQ==}
     dev: true
 
-  /@types/three/0.147.1:
-    resolution: {integrity: sha512-1dGYrF9E7frAXu3CRUYtTFj97PlA/Q0OedDQBROn3fKjtKXNhXc6/VNgkGod3axJMeNPNFDa6ur9eOcQ+aD0zw==}
+  /@types/three/0.148.0:
+    resolution: {integrity: sha512-1GiErjt1pJMadO8EhaxNrtULzdn+f3BbM3YTukiiXBVeRvvx4CXc2rpYdEuEBU/ouCX7Rc95j1HoVG9kFQXQJw==}
     dependencies:
       '@types/webxr': 0.5.0
     dev: true
