@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@babel/types': ^7.20.7
   '@cypress/code-coverage': ^3.10.0
-  '@netlify/plugin-lighthouse': ^3.7.1
+  '@netlify/plugin-lighthouse': ^4.0.5
   '@netlify/plugin-nextjs': ^4.30.0
   '@react-three/drei': ^9.53.3
   '@react-three/fiber': ^8.10.0
@@ -57,7 +57,7 @@ dependencies:
 
 devDependencies:
   '@cypress/code-coverage': 3.10.0_evefxzax64vtdycatomx3m6wya
-  '@netlify/plugin-lighthouse': 3.7.1
+  '@netlify/plugin-lighthouse': 4.0.5
   '@netlify/plugin-nextjs': 4.30.0
   '@testing-library/cypress': 8.0.7_cypress@11.2.0
   '@types/node': 18.7.18
@@ -1855,9 +1855,9 @@ packages:
       - supports-color
       - utf-8-validate
 
-  /@netlify/plugin-lighthouse/3.7.1:
-    resolution: {integrity: sha512-4QHI3YUYawv8DlF3eiXogn50uzUNjbWdhZYcgWRPCbMlzv0FHhiMTZ/20IPTYm1IntIyKyZGyatjK3U6OslZBQ==}
-    engines: {node: '>=14.15 <18'}
+  /@netlify/plugin-lighthouse/4.0.5:
+    resolution: {integrity: sha512-L73Z3oJW1YDjkkzqHPaj4GOD3dBQIeCcrKo21rb5yuzZIMfJvlnxcqyct/SlPf9+pO+e+ze7v45WHO9arkrmrg==}
+    engines: {node: '>=14.15 <19'}
     dependencies:
       chalk: 4.1.2
       chrome-launcher: 0.15.1
