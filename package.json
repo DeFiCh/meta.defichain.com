@@ -17,7 +17,7 @@
   "dependencies": {
     "@babel/types": "^7.20.7",
     "@react-three/drei": "^9.53.3",
-    "@react-three/fiber": "^8.10.0",
+    "@react-three/fiber": "^8.11.2",
     "@reduxjs/toolkit": "^1.9.1",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@types/react-type-animation": "^1.1.1",
