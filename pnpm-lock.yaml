@@ -30,7 +30,7 @@ specifiers:
   react-redux: ^8.0.5
   react-scroll-parallax: ^3.3.2
   react-type-animation: ^2.1.2
-  tailwindcss: ^3.2.4
+  tailwindcss: ^3.2.7
   three: ^0.148.0
   ua-parser-js: ^1.0.32
 
@@ -39,7 +39,7 @@ dependencies:
   '@react-three/drei': 9.53.3_ezjtz6asyqy72m4yirkq4533d4
   '@react-three/fiber': 8.11.2_4tzez3c2xpzuefjrvhpyy55bva
   '@reduxjs/toolkit': 1.9.1_k4ae6lp43ej6mezo3ztvx6pykq
-  '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.4
+  '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.7
   '@types/react-type-animation': 1.1.1
   '@types/ua-parser-js': 0.7.36
   '@waveshq/standard-defichain-jellyfishsdk': 0.34.0
@@ -68,7 +68,7 @@ devDependencies:
   babel-plugin-jsx-remove-data-test-id: 3.0.0_@babel+core@7.20.5
   cypress: 11.2.0
   postcss: 8.4.21
-  tailwindcss: 3.2.4_postcss@8.4.21
+  tailwindcss: 3.2.7_postcss@8.4.21
 
 packages:
 
@@ -2266,12 +2266,12 @@ packages:
     dependencies:
       tslib: 2.4.1
 
-  /@tailwindcss/line-clamp/0.4.2_tailwindcss@3.2.4:
+  /@tailwindcss/line-clamp/0.4.2_tailwindcss@3.2.7:
     resolution: {integrity: sha512-HFzAQuqYCjyy/SX9sLGB1lroPzmcnWv1FHkIpmypte10hptf4oPUfucryMKovZh2u0uiS9U5Ty3GghWfEJGwVw==}
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
     dependencies:
-      tailwindcss: 3.2.4_postcss@8.4.21
+      tailwindcss: 3.2.7_postcss@8.4.21
     dev: false
 
   /@testing-library/cypress/8.0.7_cypress@11.2.0:
@@ -8221,8 +8221,8 @@ packages:
       tslib: 2.4.1
     dev: true
 
-  /tailwindcss/3.2.4_postcss@8.4.21:
-    resolution: {integrity: sha512-AhwtHCKMtR71JgeYDaswmZXhPcW9iuI9Sp2LvZPo9upDZ7231ZJ7eA9RaURbhpXGVlrjX4cFNlB4ieTetEb7hQ==}
+  /tailwindcss/3.2.7_postcss@8.4.21:
+    resolution: {integrity: sha512-B6DLqJzc21x7wntlH/GsZwEXTBttVSl1FtCzC8WP4oBc/NKef7kaax5jeihkkCEWc831/5NDJ9gRNDK6NEioQQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
