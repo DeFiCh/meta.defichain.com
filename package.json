@@ -33,7 +33,7 @@
     "react-scroll-parallax": "^3.3.2",
     "react-type-animation": "^2.1.2",
     "three": "^0.149.0",
-    "ua-parser-js": "^1.0.32"
+    "ua-parser-js": "^1.0.33"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.10.0",
