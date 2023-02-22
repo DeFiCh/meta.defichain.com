@@ -4,7 +4,7 @@ specifiers:
   '@babel/types': ^7.20.7
   '@cypress/code-coverage': ^3.10.0
   '@netlify/plugin-lighthouse': ^4.0.5
-  '@netlify/plugin-nextjs': ^4.30.0
+  '@netlify/plugin-nextjs': ^4.30.4
   '@react-three/drei': ^9.53.3
   '@react-three/fiber': ^8.11.2
   '@reduxjs/toolkit': ^1.9.1
@@ -58,7 +58,7 @@ dependencies:
 devDependencies:
   '@cypress/code-coverage': 3.10.0_evefxzax64vtdycatomx3m6wya
   '@netlify/plugin-lighthouse': 4.0.5
-  '@netlify/plugin-nextjs': 4.30.0
+  '@netlify/plugin-nextjs': 4.30.4
   '@testing-library/cypress': 8.0.7_cypress@11.2.0
   '@types/node': 18.7.18
   '@types/three': 0.148.0
@@ -1874,8 +1874,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@netlify/plugin-nextjs/4.30.0:
-    resolution: {integrity: sha512-+MyfV6biKGVs/jQQUKGi2vN5aFFyRUTeEAItDiSvNhAUi0mOXEkEmu5JN7ZAQtL2oRIKKnxflsZDmtP3DdAahg==}
+  /@netlify/plugin-nextjs/4.30.4:
+    resolution: {integrity: sha512-Y72G0P2uKe4tJZuiKibBdIeBz69/0G00umzy8D96LHHs5jq4Yr/Wbp/u56YG3MA84E/qmOhBfyc20DGbPMe9tQ==}
     engines: {node: '>=12.0.0'}
     dependencies:
       '@netlify/esbuild': 0.14.39
