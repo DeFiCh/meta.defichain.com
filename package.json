@@ -18,7 +18,7 @@
     "@babel/types": "^7.20.7",
     "@react-three/drei": "^9.53.3",
     "@react-three/fiber": "^8.11.2",
-    "@reduxjs/toolkit": "^1.9.1",
+    "@reduxjs/toolkit": "^1.9.3",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@types/react-type-animation": "^1.1.1",
     "@types/ua-parser-js": "^0.7.36",
