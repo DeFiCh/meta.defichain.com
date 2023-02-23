@@ -40,7 +40,9 @@ export default function UnderwaterDrone({
 
 export function Model(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("/models/UnderwaterDrone.gltf") as GLTFResult;
+  const { nodes, materials } = useGLTF(
+    "/models/UnderwaterDrone.gltf"
+  ) as GLTFResult;
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
