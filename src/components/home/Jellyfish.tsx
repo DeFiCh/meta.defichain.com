@@ -3,6 +3,7 @@ import { useGLTF } from "@react-three/drei";
 import { BufferGeometry, Mesh } from "three";
 import { Canvas, Euler, useFrame, Vector3 } from "@react-three/fiber";
 import useWebGlEnabled from "hooks/useWebGlEnabled";
+import { GLTFResult } from "types/gltf";
 
 export default function Jellyfish({
   position,
@@ -39,7 +40,7 @@ export default function Jellyfish({
 }
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF("/models/jellyfish.gltf");
+  const { nodes, materials } = useGLTF("/models/jellyfish.gltf") as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>

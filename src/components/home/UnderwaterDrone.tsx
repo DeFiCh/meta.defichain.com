@@ -3,6 +3,7 @@ import { useGLTF } from "@react-three/drei";
 import { BufferGeometry, Mesh } from "three";
 import { Canvas, Euler, useFrame, Vector3 } from "@react-three/fiber";
 import useWebGlEnabled from "hooks/useWebGlEnabled";
+import { GLTFResult } from "types/gltf";
 
 export default function UnderwaterDrone({
   position,
@@ -39,7 +40,7 @@ export default function UnderwaterDrone({
 
 export function Model(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("/models/UnderwaterDrone.gltf");
+  const { nodes, materials } = useGLTF("/models/UnderwaterDrone.gltf") as GLTFResult;
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
