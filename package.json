@@ -49,5 +49,10 @@
     "cypress": "^11.2.0",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7"
-  }
+  },
+  "engines": {
+    "node": "^18.0.0 || ^16.16.0",
+    "pnpm": ">=7.27.0"
+  },
+  "packageManager": "pnpm@7.27.1"
 }
