@@ -32,7 +32,7 @@ specifiers:
   react-type-animation: ^2.1.2
   tailwindcss: ^3.2.7
   three: ^0.149.0
-  ua-parser-js: ^1.0.33
+  ua-parser-js: ^1.0.34
 
 dependencies:
   '@babel/types': 7.21.0
@@ -53,7 +53,7 @@ dependencies:
   react-scroll-parallax: 3.3.2_biqbaboplfbrettd7655fr4n2y
   react-type-animation: 2.1.2_v2m5e27vhdewzwhryxwfaorcca
   three: 0.149.0
-  ua-parser-js: 1.0.33
+  ua-parser-js: 1.0.34
 
 devDependencies:
   '@cypress/code-coverage': 3.10.0_evefxzax64vtdycatomx3m6wya
@@ -8897,8 +8897,8 @@ packages:
     engines: {node: '>=4.2.0'}
     hasBin: true
 
-  /ua-parser-js/1.0.33:
-    resolution: {integrity: sha512-RqshF7TPTE0XLYAqmjlu5cLLuGdKrNu9O1KLA/qp39QtbZwuzwv1dT46DZSopoUMsYgXpB3Cv8a03FI8b74oFQ==}
+  /ua-parser-js/1.0.34:
+    resolution: {integrity: sha512-K9mwJm/DaB6mRLZfw6q8IMXipcrmuT6yfhYmwhAkuh+81sChuYstYA+znlgaflUPaYUa3odxKPKGw6Vw/lANew==}
     dev: false
 
   /ufo/0.8.6:
