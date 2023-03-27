@@ -4,7 +4,7 @@ specifiers:
   '@babel/types': ^7.21.0
   '@cypress/code-coverage': ^3.10.0
   '@netlify/plugin-lighthouse': ^4.0.7
-  '@netlify/plugin-nextjs': ^4.30.4
+  '@netlify/plugin-nextjs': ^4.33.0
   '@react-three/drei': ^9.56.25
   '@react-three/fiber': ^8.11.2
   '@reduxjs/toolkit': ^1.9.3
@@ -58,7 +58,7 @@ dependencies:
 devDependencies:
   '@cypress/code-coverage': 3.10.0_evefxzax64vtdycatomx3m6wya
   '@netlify/plugin-lighthouse': 4.0.7
-  '@netlify/plugin-nextjs': 4.30.4
+  '@netlify/plugin-nextjs': 4.33.0
   '@testing-library/cypress': 8.0.7_cypress@11.2.0
   '@types/node': 18.7.18
   '@types/three': 0.149.0
@@ -1919,8 +1919,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@netlify/plugin-nextjs/4.30.4:
-    resolution: {integrity: sha512-Y72G0P2uKe4tJZuiKibBdIeBz69/0G00umzy8D96LHHs5jq4Yr/Wbp/u56YG3MA84E/qmOhBfyc20DGbPMe9tQ==}
+  /@netlify/plugin-nextjs/4.33.0:
+    resolution: {integrity: sha512-Q7fgbbYn6e7yc22DqnukVhq0ObxIuxzs4oAEtgZogH4NxPDjaGPrT9ET9lcbFAbZjDRW7qnPDhwE9bhMTMT2RQ==}
     engines: {node: '>=12.0.0'}
     dependencies:
       '@netlify/esbuild': 0.14.39
@@ -1928,6 +1928,7 @@ packages:
       '@netlify/ipx': 1.3.3
       '@vercel/node-bridge': 2.2.2
       chalk: 4.1.2
+      chokidar: 3.5.3
       destr: 1.2.2
       execa: 5.1.1
       follow-redirects: 1.15.2
@@ -1935,7 +1936,7 @@ packages:
       globby: 11.1.0
       merge-stream: 2.0.0
       moize: 6.1.3
-      node-fetch: 2.6.7
+      node-fetch: 2.6.9
       node-stream-zip: 1.15.0
       outdent: 0.8.0
       p-limit: 3.1.0
