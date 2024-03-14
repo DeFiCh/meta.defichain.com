@@ -1,19 +1,19 @@
 # Define individuals that are responsible for code in a repository.
 # More details are here: https://help.github.com/articles/about-codeowners/
 
-/.github/                                       @thedoublejay @kyleleow @pierregee
-/.husky/                                        @thedoublejay @kyleleow @pierregee
+/.github/                                       @pierregee
+/.husky/                                        @pierregee
 
-/src                                            @thedoublejay @kyleleow @pierregee
-/public                                         @thedoublejay @kyleleow @pierregee
+/src                                            @pierregee
+/public                                         @pierregee
 
-netlify.toml                                    @thedoublejay @kyleleow @pierregee
-tsconfig.json                                   @thedoublejay @kyleleow @pierregee
+netlify.toml                                    @pierregee
+tsconfig.json                                   @pierregee
 
-package.json                                    @thedoublejay @kyleleow @pierregee
-package-lock.json                               @thedoublejay @kyleleow @pierregee
-/docker-compose.yml                             @thedoublejay @kyleleow @pierregee
+package.json                                    @pierregee
+package-lock.json                               @pierregee
+/docker-compose.yml                             @pierregee
 
-CONTRIBUTING.md                                 @thedoublejay @kyleleow @pierregee
-README.md                                       @thedoublejay @kyleleow @pierregee
-LICENSE                                         @thedoublejay @kyleleow @pierregee
+CONTRIBUTING.md                                 @pierregee
+README.md                                       @pierregee
+LICENSE                                         @pierregee
