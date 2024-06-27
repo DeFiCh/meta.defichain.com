@@ -21,7 +21,7 @@
     "@reduxjs/toolkit": "^1.9.3",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@types/react-type-animation": "^1.1.1",
-    "@types/ua-parser-js": "^0.7.36",
+    "@types/ua-parser-js": "^0.7.39",
     "@waveshq/standard-defichain-jellyfishsdk": "^0.49.0",
     "@waveshq/standard-web": "^0.49.0",
     "bignumber.js": "^9.1.1",
