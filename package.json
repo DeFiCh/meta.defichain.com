@@ -24,7 +24,7 @@
     "@types/ua-parser-js": "^0.7.36",
     "@waveshq/standard-defichain-jellyfishsdk": "^0.49.0",
     "@waveshq/standard-web": "^0.49.0",
-    "bignumber.js": "^9.1.1",
+    "bignumber.js": "^9.1.2",
     "clsx": "^1.2.1",
     "date-fns": "^2.29.3",
     "feather-icons": "^4.29.0",
