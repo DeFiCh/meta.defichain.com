@@ -12,7 +12,7 @@ specifiers:
   '@testing-library/cypress': ^8.0.7
   '@types/node': 18.7.18
   '@types/react-type-animation': ^1.1.1
-  '@types/three': ^0.149.0
+  '@types/three': ^0.169.0
   '@types/ua-parser-js': ^0.7.36
   '@waveshq/standard-defichain-jellyfishsdk': ^0.49.0
   '@waveshq/standard-web': ^0.49.0
@@ -31,13 +31,13 @@ specifiers:
   react-scroll-parallax: ^3.3.2
   react-type-animation: ^2.1.2
   tailwindcss: ^3.2.7
-  three: ^0.149.0
+  three: ^0.169.0
   ua-parser-js: ^1.0.34
 
 dependencies:
   '@babel/types': 7.21.0
-  '@react-three/drei': 9.56.25_ceh54bdkswdljeyl3jd54pj65e
-  '@react-three/fiber': 8.11.2_xor7byvqlg4baqj6ymfbcmaax4
+  '@react-three/drei': 9.56.25_k2vcvpzbtyqb6qvh46iqv6mkvq
+  '@react-three/fiber': 8.11.2_gakqpsbfvtbrms2jsdpne74z5q
   '@reduxjs/toolkit': 1.9.3_k4ae6lp43ej6mezo3ztvx6pykq
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.7
   '@types/react-type-animation': 1.1.1
@@ -52,7 +52,7 @@ dependencies:
   react-redux: 8.0.5_e42enmjmqb4imi3q3iaq2rrebm
   react-scroll-parallax: 3.3.2_biqbaboplfbrettd7655fr4n2y
   react-type-animation: 2.1.2_v2m5e27vhdewzwhryxwfaorcca
-  three: 0.149.0
+  three: 0.169.0
   ua-parser-js: 1.0.34
 
 devDependencies:
@@ -61,7 +61,7 @@ devDependencies:
   '@netlify/plugin-nextjs': 4.33.0
   '@testing-library/cypress': 8.0.7_cypress@11.2.0
   '@types/node': 18.7.18
-  '@types/three': 0.149.0
+  '@types/three': 0.169.0
   '@waveshq/standard-web-linter': 0.49.0_klpylqwss7j4mjsavnu5vopi6q
   autoprefixer: 10.4.13_postcss@8.4.21
   babel-plugin-istanbul: 6.1.1
@@ -384,6 +384,7 @@ packages:
   /@babel/plugin-proposal-async-generator-functions/7.20.1_@babel+core@7.20.5:
     resolution: {integrity: sha512-Gh5rchzSwE4kC+o/6T8waD0WHEQIsDmjltY8WnWRXHUdH8axZhuH86Ov9M72YhJfDrZseQwuuWaaIT/TmePp3g==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-async-generator-functions instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -399,6 +400,7 @@ packages:
   /@babel/plugin-proposal-class-properties/7.18.6_@babel+core@7.20.5:
     resolution: {integrity: sha512-cumfXOF0+nzZrrN8Rf0t7M+tF6sZc7vhQwYQck9q1/5w2OExlD+b4v4RpMJFaV1Z7WcDRgO6FqvxqxGlwo+RHQ==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -412,6 +414,7 @@ packages:
   /@babel/plugin-proposal-class-static-block/7.18.6_@babel+core@7.20.5:
     resolution: {integrity: sha512-+I3oIiNxrCpup3Gi8n5IGMwj0gOCAjcJUSQEcotNnCCPMEnixawOQ+KeJPlgfjzx+FKQ1QSyZOWe7wmoJp7vhw==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-static-block instead.
     peerDependencies:
       '@babel/core': ^7.12.0
     dependencies:
@@ -426,6 +429,7 @@ packages:
   /@babel/plugin-proposal-dynamic-import/7.18.6_@babel+core@7.20.5:
     resolution: {integrity: sha512-1auuwmK+Rz13SJj36R+jqFPMJWyKEDd7lLSdOj4oJK0UTgGueSAtkrCvz9ewmgyU/P941Rv2fQwZJN8s6QruXw==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-dynamic-import instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -437,6 +441,7 @@ packages:
   /@babel/plugin-proposal-export-namespace-from/7.18.9_@babel+core@7.20.5:
     resolution: {integrity: sha512-k1NtHyOMvlDDFeb9G5PhUXuGj8m/wiwojgQVEhJ/fsVsMCpLyOP4h0uGEjYJKrRI+EVPlb5Jk+Gt9P97lOGwtA==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-export-namespace-from instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -448,6 +453,7 @@ packages:
   /@babel/plugin-proposal-json-strings/7.18.6_@babel+core@7.20.5:
     resolution: {integrity: sha512-lr1peyn9kOdbYc0xr0OdHTZ5FMqS6Di+H0Fz2I/JwMzGmzJETNeOFq2pBySw6X/KFL5EWDjlJuMsUGRFb8fQgQ==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-json-strings instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -459,6 +465,7 @@ packages:
   /@babel/plugin-proposal-logical-assignment-operators/7.18.9_@babel+core@7.20.5:
     resolution: {integrity: sha512-128YbMpjCrP35IOExw2Fq+x55LMP42DzhOhX2aNNIdI9avSWl2PI0yuBWarr3RYpZBSPtabfadkH2yeRiMD61Q==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-logical-assignment-operators instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -470,6 +477,7 @@ packages:
   /@babel/plugin-proposal-nullish-coalescing-operator/7.18.6_@babel+core@7.20.5:
     resolution: {integrity: sha512-wQxQzxYeJqHcfppzBDnm1yAY0jSRkUXR2z8RePZYrKwMKgMlE8+Z6LUno+bd6LvbGh8Gltvy74+9pIYkr+XkKA==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -481,6 +489,7 @@ packages:
   /@babel/plugin-proposal-numeric-separator/7.18.6_@babel+core@7.20.5:
     resolution: {integrity: sha512-ozlZFogPqoLm8WBr5Z8UckIoE4YQ5KESVcNudyXOR8uqIkliTEgJ3RoketfG6pmzLdeZF0H/wjE9/cCEitBl7Q==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-numeric-separator instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -492,6 +501,7 @@ packages:
   /@babel/plugin-proposal-object-rest-spread/7.20.2_@babel+core@7.20.5:
     resolution: {integrity: sha512-Ks6uej9WFK+fvIMesSqbAto5dD8Dz4VuuFvGJFKgIGSkJuRGcrwGECPA1fDgQK3/DbExBJpEkTeYeB8geIFCSQ==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-object-rest-spread instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -506,6 +516,7 @@ packages:
   /@babel/plugin-proposal-optional-catch-binding/7.18.6_@babel+core@7.20.5:
     resolution: {integrity: sha512-Q40HEhs9DJQyaZfUjjn6vE8Cv4GmMHCYuMGIWUnlxH6400VGxOuwWsPt4FxXxJkC/5eOzgn0z21M9gMT4MOhbw==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-catch-binding instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -517,6 +528,7 @@ packages:
   /@babel/plugin-proposal-optional-chaining/7.18.9_@babel+core@7.20.5:
     resolution: {integrity: sha512-v5nwt4IqBXihxGsW2QmCWMDS3B3bzGIk/EQVZz2ei7f3NJl8NzAJVvUmpDW5q1CRNY+Beb/k58UAH1Km1N411w==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -529,6 +541,7 @@ packages:
   /@babel/plugin-proposal-private-methods/7.18.6_@babel+core@7.20.5:
     resolution: {integrity: sha512-nutsvktDItsNn4rpGItSNV2sz1XwS+nfU0Rg8aCx3W3NOKVzdMjJRu0O5OkgDp3ZGICSTbgRpxZoWsxoKRvbeA==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-methods instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -542,6 +555,7 @@ packages:
   /@babel/plugin-proposal-private-property-in-object/7.20.5_@babel+core@7.20.5:
     resolution: {integrity: sha512-Vq7b9dUA12ByzB4EjQTPo25sFhY+08pQDBSZRtUAkj7lb7jahaHR5igera16QZ+3my1nYR4dKsNdYj5IjPHilQ==}
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -557,6 +571,7 @@ packages:
   /@babel/plugin-proposal-unicode-property-regex/7.18.6_@babel+core@7.20.5:
     resolution: {integrity: sha512-2BShG/d5yoZyXZfVePH91urL5wTG6ASZU9M4o03lKK8u8UW1y08OMttBSOADTcJrnPMpvDXRG3G8fyLh4ovs8w==}
     engines: {node: '>=4'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-unicode-property-regex instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -2137,7 +2152,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@react-spring/three/9.5.5_mwnnnbckvcqi26tj6me4jgcpge:
+  /@react-spring/three/9.5.5_kpvylg23byrlphtnw6e7gunk4a:
     resolution: {integrity: sha512-9kTIaSceqFIl5EIrdwM7Z53o5I+9BGNVzbp4oZZYMao+GMAWOosnlQdDG5GeqNsIqfW9fZCEquGqagfKAxftcA==}
     peerDependencies:
       '@react-three/fiber': '>=6.0'
@@ -2148,16 +2163,16 @@ packages:
       '@react-spring/core': 9.5.5_react@18.2.0
       '@react-spring/shared': 9.5.5_react@18.2.0
       '@react-spring/types': 9.5.5
-      '@react-three/fiber': 8.11.2_xor7byvqlg4baqj6ymfbcmaax4
+      '@react-three/fiber': 8.11.2_gakqpsbfvtbrms2jsdpne74z5q
       react: 18.2.0
-      three: 0.149.0
+      three: 0.169.0
     dev: false
 
   /@react-spring/types/9.5.5:
     resolution: {integrity: sha512-7I/qY8H7Enwasxr4jU6WmtNK+RZ4Z/XvSlDvjXFVe7ii1x0MoSlkw6pD7xuac8qrHQRm9BTcbZNyeeKApYsvCg==}
     dev: false
 
-  /@react-three/drei/9.56.25_ceh54bdkswdljeyl3jd54pj65e:
+  /@react-three/drei/9.56.25_k2vcvpzbtyqb6qvh46iqv6mkvq:
     resolution: {integrity: sha512-Wlsmp8q1yqpsHgbUbnt+R83esU4rAE21k4xmcGXaJwNx4PJHR8VZY2kpnEt6TE2uo3L2blUFU0yBMi5/mCyhyw==}
     peerDependencies:
       '@react-three/fiber': '>=8.0'
@@ -2169,34 +2184,34 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.20.7
-      '@react-spring/three': 9.5.5_mwnnnbckvcqi26tj6me4jgcpge
-      '@react-three/fiber': 8.11.2_xor7byvqlg4baqj6ymfbcmaax4
+      '@react-spring/three': 9.5.5_kpvylg23byrlphtnw6e7gunk4a
+      '@react-three/fiber': 8.11.2_gakqpsbfvtbrms2jsdpne74z5q
       '@use-gesture/react': 10.2.24_react@18.2.0
-      camera-controls: 2.3.1_three@0.149.0
+      camera-controls: 2.3.1_three@0.169.0
       detect-gpu: 5.0.12
       glsl-noise: 0.0.0
       lodash.clamp: 4.0.3
       lodash.omit: 4.5.0
       lodash.pick: 4.4.0
-      maath: 0.5.2_arp7zvamcwb6gpsp77lqxsjc74
-      meshline: 3.1.6_three@0.149.0
+      maath: 0.5.2_csnaaxefzs6disk2uepucghgxq
+      meshline: 3.1.6_three@0.169.0
       react: 18.2.0
       react-composer: 5.0.3_react@18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-merge-refs: 1.1.0
       stats.js: 0.17.0
       suspend-react: 0.0.8_react@18.2.0
-      three: 0.149.0
-      three-mesh-bvh: 0.5.23_three@0.149.0
-      three-stdlib: 2.21.8_three@0.149.0
-      troika-three-text: 0.47.1_three@0.149.0
+      three: 0.169.0
+      three-mesh-bvh: 0.5.23_three@0.169.0
+      three-stdlib: 2.21.8_three@0.169.0
+      troika-three-text: 0.47.1_three@0.169.0
       utility-types: 3.10.0
       zustand: 3.7.2_react@18.2.0
     transitivePeerDependencies:
       - '@types/three'
     dev: false
 
-  /@react-three/fiber/8.11.2_xor7byvqlg4baqj6ymfbcmaax4:
+  /@react-three/fiber/8.11.2_gakqpsbfvtbrms2jsdpne74z5q:
     resolution: {integrity: sha512-cJibYk8LtDS3QlDbmN2GzrB3YSuRaUxkOmy69jAs70sqjK/dClWbNaVJu6T/YcWhPopl+hMf+M24Uh+HEtVj2A==}
     peerDependencies:
       expo: '>=43.0'
@@ -2227,7 +2242,7 @@ packages:
       react-use-measure: 2.1.1_biqbaboplfbrettd7655fr4n2y
       scheduler: 0.21.0
       suspend-react: 0.0.8_react@18.2.0
-      three: 0.149.0
+      three: 0.169.0
       zustand: 3.7.2_react@18.2.0
     dev: false
 
@@ -2349,6 +2364,9 @@ packages:
       lz-string: 1.4.4
       pretty-format: 27.5.1
     dev: true
+
+  /@tweenjs/tween.js/23.1.3:
+    resolution: {integrity: sha512-vJmvvwFxYuGnF2axRtPYocag6Clbb5YS7kLL+SO/TeVFzHqDIWrNKYtcsPMibjDx9O+bu+psAy9NKfWklassUA==}
 
   /@types/archiver/5.3.1:
     resolution: {integrity: sha512-wKYZaSXaDvTZuInAWjCeGG7BEAgTWG2zZW0/f7IYFcoHB2X2d9lkVFnrOlXl3W6NrvO6Ml3FLLu8Uksyymcpnw==}
@@ -2528,6 +2546,9 @@ packages:
       '@types/node': 18.14.0
     dev: false
 
+  /@types/stats.js/0.17.3:
+    resolution: {integrity: sha512-pXNfAD3KHOdif9EQXZ9deK82HVNaXP5ZIF5RP2QG6OQFNTaY2YIetfrE9t528vEreGQvEPRDDc8muaoYeK0SxQ==}
+
   /@types/tar-fs/2.0.1:
     resolution: {integrity: sha512-qlsQyIY9sN7p221xHuXKNoMfUenOcvEBN4zI8dGsYbYCqHtTarXOEXSIgUnK+GcR0fZDse6pAIc5pIrCh9NefQ==}
     dependencies:
@@ -2541,10 +2562,15 @@ packages:
       '@types/node': 18.7.18
     dev: false
 
-  /@types/three/0.149.0:
-    resolution: {integrity: sha512-fgNBm9LWc65ER/W0cvoXdC0iMy7Ke9e2CONmEr6Jt8sDSY3sw4DgOubZfmdZ747dkPhbQrgRQAWwDEr2S/7IEg==}
+  /@types/three/0.169.0:
+    resolution: {integrity: sha512-oan7qCgJBt03wIaK+4xPWclYRPG9wzcg7Z2f5T8xYTNEF95kh0t0lklxLLYBDo7gQiGLYzE6iF4ta7nXF2bcsw==}
     dependencies:
+      '@tweenjs/tween.js': 23.1.3
+      '@types/stats.js': 0.17.3
       '@types/webxr': 0.5.0
+      '@webgpu/types': 0.1.46
+      fflate: 0.8.2
+      meshoptimizer: 0.18.1
 
   /@types/ua-parser-js/0.7.36:
     resolution: {integrity: sha512-N1rW+njavs70y2cApeIw1vLMYXRwfBy+7trgavGuuTfOd7j1Yh7QTRc/yqsPl6ncokt72ZXuxEU0PiCp9bSwNQ==}
@@ -2915,6 +2941,9 @@ packages:
   /@webgpu/glslang/0.0.15:
     resolution: {integrity: sha512-niT+Prh3Aff8Uf1MVBVUsaNjFj9rJAKDXuoHIKiQbB+6IUP/3J3JIhBNyZ7lDhytvXxw6ppgnwKZdDJ08UMj4Q==}
     dev: false
+
+  /@webgpu/types/0.1.46:
+    resolution: {integrity: sha512-2iogO6Zh0pTbKLGZuuGWEmJpF/fTABGs7G9wXxpn7s24XSJchSUIiMqIJHURi5zsMZRRTuXrV/3GLOkmOFjq5w==}
 
   /@xtuc/ieee754/1.2.0:
     resolution: {integrity: sha512-DX8nKgqcGwsc0eJSqYt5lwP4DH5FlHnmuWWBRy7X0NcaGR0ZtuyeESgMwTYVEtxmsNGY+qit4QYT/MIYTOTPeA==}
@@ -3595,12 +3624,12 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /camera-controls/2.3.1_three@0.149.0:
+  /camera-controls/2.3.1_three@0.169.0:
     resolution: {integrity: sha512-mGPDOqCTSUqaeX3yR3bWQ/p1M5CR8C+cnqndBxQugfGKysn1dhRtw8Q6sG1hq4GL8RPsGwRanwQk5zwQjyrxyQ==}
     peerDependencies:
       three: '>=0.126.1'
     dependencies:
-      three: 0.149.0
+      three: 0.169.0
     dev: false
 
   /caniuse-lite/1.0.30001436:
@@ -5233,6 +5262,9 @@ packages:
     resolution: {integrity: sha512-IQrh3lEPM93wVCEczc9SaAOvkmcoQn/G8Bo1e8ZPlY3X3bnAxWaBdvTdvM1hP62iZp0BXWDy4vTAy4fF0+Dlpg==}
     dev: false
 
+  /fflate/0.8.2:
+    resolution: {integrity: sha512-cPJU47OaAoCbg0pBvzsgpTPhmhqI5eJjh/JIu8tPj5q+T7iLvW/JAYUqmE7KOB4R1ZyEhzBaIQpQpardBF5z8A==}
+
   /figures/3.2.0:
     resolution: {integrity: sha512-yaduQFRKLXYOGgEn6AZau90j3ggSOyiqXU0F9JZfeXYhNa+Jk4X+s45A2zg5jns87GAFa34BBm2kXw4XpNcbdg==}
     engines: {node: '>=8'}
@@ -6641,14 +6673,14 @@ packages:
     hasBin: true
     dev: true
 
-  /maath/0.5.2_arp7zvamcwb6gpsp77lqxsjc74:
+  /maath/0.5.2_csnaaxefzs6disk2uepucghgxq:
     resolution: {integrity: sha512-MFjfnXF5CzZaVnBuKc9y1FJh/BiPGqf19NH8Jm4o/jKTxuQ3RyPkcSIpuwdDhXrWROVKAxi3KjmHFUNMuIndbg==}
     peerDependencies:
       '@types/three': '>=0.144.0'
       three: '>=0.144.0'
     dependencies:
-      '@types/three': 0.149.0
-      three: 0.149.0
+      '@types/three': 0.169.0
+      three: 0.169.0
     dev: false
 
   /make-dir/3.1.0:
@@ -6700,13 +6732,16 @@ packages:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
 
-  /meshline/3.1.6_three@0.149.0:
+  /meshline/3.1.6_three@0.169.0:
     resolution: {integrity: sha512-8JZJOdaL5oz3PI/upG8JvP/5FfzYUOhrkJ8np/WKvXzl0/PZ2V9pqTvCIjSKv+w9ccg2xb+yyBhXAwt6ier3ug==}
     peerDependencies:
       three: '>=0.137'
     dependencies:
-      three: 0.149.0
+      three: 0.169.0
     dev: false
+
+  /meshoptimizer/0.18.1:
+    resolution: {integrity: sha512-ZhoIoL7TNV4s5B6+rx5mC//fw8/POGyNxS/DZyCJeiZ12ScLfVwRE/GfsxwiTkMYYD5DmK2/JXnEVXqL4rF+Sw==}
 
   /metaviewport-parser/0.2.0:
     resolution: {integrity: sha512-qL5NtY18LGs7lvZCkj3ep2H4Pes9rIiSLZRUyfDdvVw7pWFA0eLwmqaIxApD74RGvUrNEtk9e5Wt1rT+VlCvGw==}
@@ -8714,15 +8749,15 @@ packages:
     resolution: {integrity: sha512-X9Mha8cVeBwakunlZXkXL6xRzw8VCcDGWqT59EzeTYAJIi8ien3CuufnEGEx4ZUFahumNQdoOwf4H2T9Ca6lBg==}
     dev: true
 
-  /three-mesh-bvh/0.5.23_three@0.149.0:
+  /three-mesh-bvh/0.5.23_three@0.169.0:
     resolution: {integrity: sha512-nyk+MskdyDgECqkxdv57UjazqqhrMi+Al9PxJN6yFtx1CTW4r0eCQ27FtyYKY5gCIWhxjtNfWYDPVy8lzx6LkA==}
     peerDependencies:
       three: '>= 0.123.0'
     dependencies:
-      three: 0.149.0
+      three: 0.169.0
     dev: false
 
-  /three-stdlib/2.21.8_three@0.149.0:
+  /three-stdlib/2.21.8_three@0.169.0:
     resolution: {integrity: sha512-kqisiKvO4mSy59v5vWqBQSH8famLxp7Z51LxpMJI9GwDxqODaW02rhIwmjYDEzZWNFpjZpoDHVGbdpeHf8h3SA==}
     peerDependencies:
       three: '>=0.122.0'
@@ -8737,12 +8772,12 @@ packages:
       mmd-parser: 1.0.4
       opentype.js: 1.3.4
       potpack: 1.0.2
-      three: 0.149.0
+      three: 0.169.0
       zstddec: 0.0.2
     dev: false
 
-  /three/0.149.0:
-    resolution: {integrity: sha512-tohpUxPDht0qExRLDTM8sjRLc5d9STURNrdnK3w9A+V4pxaTBfKWWT/IqtiLfg23Vfc3Z+ImNfvRw1/0CtxrkQ==}
+  /three/0.169.0:
+    resolution: {integrity: sha512-Ed906MA3dR4TS5riErd4QBsRGPcx+HBDX2O5yYE5GqJeFQTPU+M56Va/f/Oph9X7uZo3W3o4l2ZhBZ6f6qUv0w==}
     dev: false
 
   /throttleit/1.0.0:
@@ -8809,24 +8844,24 @@ packages:
   /tr46/0.0.3:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
 
-  /troika-three-text/0.47.1_three@0.149.0:
+  /troika-three-text/0.47.1_three@0.169.0:
     resolution: {integrity: sha512-/fPRUmxCkXxyUT8k6REC/aWeFzKbNr37ivrkrplSJNb3JcBUXvVt8MT0Ac5wTUvFsYTviYWprYS4/8Laen08WA==}
     peerDependencies:
       three: '>=0.125.0'
     dependencies:
       bidi-js: 1.0.2
-      three: 0.149.0
-      troika-three-utils: 0.47.0_three@0.149.0
+      three: 0.169.0
+      troika-three-utils: 0.47.0_three@0.169.0
       troika-worker-utils: 0.47.0
       webgl-sdf-generator: 1.1.1
     dev: false
 
-  /troika-three-utils/0.47.0_three@0.149.0:
+  /troika-three-utils/0.47.0_three@0.169.0:
     resolution: {integrity: sha512-yoVTQxVbpQX3a55giIwqwq6hyJA6oYvq7kaNGwFTeicoWmTZCqqTbytafx1gcuL5umrtw5MYgsxYUSOha+xp5w==}
     peerDependencies:
       three: '>=0.125.0'
     dependencies:
-      three: 0.149.0
+      three: 0.169.0
     dev: false
 
   /troika-worker-utils/0.47.0:
