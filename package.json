@@ -36,7 +36,7 @@
     "ua-parser-js": "^1.0.34"
   },
   "devDependencies": {
-    "@cypress/code-coverage": "^3.10.0",
+    "@cypress/code-coverage": "^3.13.4",
     "@netlify/plugin-lighthouse": "^4.0.7",
     "@netlify/plugin-nextjs": "^4.33.0",
     "@testing-library/cypress": "^8.0.7",
