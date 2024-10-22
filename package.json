@@ -15,7 +15,7 @@
     "prettier": "prettier --check 'src/**/*.{js,jsx,ts,tsx}'"
   },
   "dependencies": {
-    "@babel/types": "^7.21.0",
+    "@babel/types": "^7.25.9",
     "@react-three/drei": "^9.56.25",
     "@react-three/fiber": "^8.11.2",
     "@reduxjs/toolkit": "^1.9.3",
